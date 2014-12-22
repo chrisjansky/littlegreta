@@ -1,0 +1,68 @@
+{
+  "people": [
+    {
+      "name": "Jan",
+      "image": "person_jan.png",
+      "position": "Managing partner",
+      "education": "Masters degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic<br />Master of Science degree in International Real Estate, Faculty of Art, Design and the Built Environment, University of Ulster, Northern Ireland",
+      "hobbies": "Work, politics, going out (mainly to discuss work and politics), film and music, travelling, swimming, TRX and basketball",
+      "favourites": "Onitsuka Tiger, Respekt magazine, Spotify"
+    },
+    {
+      "name": "Gabriela",
+      "image": "person_gabriela.jpg",
+      "position": "Business Development CZ, Flaneurs",
+      "education": "Bachelors degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Books and movies, snowboarding, architecture, travelling",
+      "favourites": "Tim Burton, Mango, Moleskine"
+    },
+    {
+      "name": "Jan",
+      "image": "person_david.png",
+      "position": "Head of development",
+      "education": "Master of Science degree in Economics and management, Brno University of Technology<br />Bachelors degree in Information Technologies, Brno University of Technology",
+      "hobbies": "Sport, coffee, family",
+      "favourites": "Apple, Nespresso, Quiksilver"
+    },
+    {
+      "name": "Jan",
+      "image": "person_jan_strelec.png",
+      "position": "Designer, illustrator",
+      "education": "Masters degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Fan of concrete and parties; amateur front crawl swimmer",
+      "favourites": "Cleptomanicx, Deus Ex Machina, Bifi"
+    },
+    {
+      "name": "Marketa",
+      "image": "person_marketa.jpg",
+      "position": "Account manager",
+      "education": "Bachelors degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Dance, Egon Schiele, Marvel movies, fashion/fashion blogs",
+      "favourites": "Rajec, Prim, WWF"
+    },
+    {
+      "name": "Petr",
+      "image": "person_petr.jpg",
+      "position": "Business Development DE/AT",
+      "education": "Bachelor of Arts degree in Multimedia and Design, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Music, spatial design, tattoo",
+      "favourites": "Puma, Kofola, Young Primitive"
+    },
+    {
+      "name": "Anna",
+      "image": "person_anna.png",
+      "position": "Digital &amp; social media specialist",
+      "education": "Masters degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "100% philanthropist, freedom at workplace enthusiast, inline skater, fan of Joni Mitchell",
+      "favourites": "Zappos, KOSS, Studentska-ambulance.cz"
+    },
+    {
+      "name": "Juraj",
+      "image": "person_juraj.jpg",
+      "position": "Designer",
+      "education": "Bachelor of Arts degree in Multimedia and Design, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Sport, movies, sex, design, art, media and technology",
+      "favourites": "Nike, Bang &amp; Olufsen, Apple"
+    }
+  ]
+}
