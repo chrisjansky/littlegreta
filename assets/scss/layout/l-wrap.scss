@@ -1,0 +1,10 @@
+.l-wrap--bottom-big {
+  padding-bottom: em($ratio--m);
+
+  @include media($tablet--portrait) {
+    padding-bottom: em($ratio--l);
+  }
+  @include media($tablet--landscape__up) {
+    padding-bottom: em($ratio--xl);
+  }
+}
