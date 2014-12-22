@@ -1,0 +1,18 @@
+.t-link--light {
+  @include state--link {
+    // color: $c-grey3;
+    color: rgba(white, .6);
+  }
+  @include state--hover {
+    color: $c-grey2;
+  }
+}
+.t-link--dark {
+  @include state--link {color: $c-grey4; }
+  @include state--hover {color: $c-grey6; }
+}
+.t-link--selected {
+  cursor: default;
+  color: $c-grey4;
+  @include state--hover {color: $c-grey4; }
+}
