@@ -1,0 +1,62 @@
+.o-main-title {
+  text-align: center;
+  font-family: Georgia, serif;
+  h1 {
+    font-weight: normal;
+    margin-top: 0;
+    padding-left: 6px;
+  }
+}
+.o-main-title__primary {
+  font-size: 68px;
+  color: #575C66;
+}
+.o-main-title__secondary {
+  font-size: 36px;
+  font-style: italic;
+  padding: 14px 0;
+  color: #8F9BB3;
+  border-style: solid;
+  border-color: #D6D8DC;
+  border-width: 2px 0;
+  vertical-align: 20%;
+}
+.o-divider--thick {
+  width: 100%;
+  border-bottom: 2px solid #E2E4E8;
+}
+.o-headline__bar {
+  margin-left: auto;
+  margin-right: auto;
+  width: $ratio--m;
+  height: 2px;
+  td {
+    height: 2px;
+    padding: 0;
+    margin: 0;
+    background-color: shade($c-grey1, 10%);
+    opacity: .5;
+  }
+}
+.o-headline__bar--light td {
+  background-color: lighten($c-grey2, 15%);
+}
+.o-quote {
+  font-family: $font--sans;
+  line-height: 150%;
+  color: $c-color3--dark;
+  font-style: italic;
+}
+.o-quote__author {
+  font-family: $font--serif;
+  color: $c-grey2;
+  font-size: $unit--b;
+}
+.o-image-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  @include state--hover {
+    opacity: .75;
+  }
+}
