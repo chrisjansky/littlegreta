@@ -1,0 +1,91 @@
+// .o-person__filters {
+//   @include clearfix;
+//   margin-bottom: em($ratio--m);
+//   text-align: center;
+// }
+
+.o-person {
+  @include span-columns(3);
+  @include omega(4n);
+
+  margin-bottom: em($ratio--m);
+
+  @include pseudo-center--parent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.o-person--big {
+  @include span-columns(6);
+  margin-right: 0;
+
+  .o-person__portrait {
+    background-color: white;
+    // width: em(130);
+  }
+  .o-person__info {
+    text-align: left;
+  }
+  .o-person__detail {
+    display: block;
+    margin-top: em($ratio--b);
+  }
+  .o-person__name {
+    font-size: em($ratio--m);
+    text-transform: none;
+    letter-spacing: 0;
+    padding-left: 0;
+  }
+}
+
+.o-person__portrait {
+  float: left;
+
+  width: em(110);
+
+  padding: $line--l;
+  margin-right: em($ratio--b);
+
+  background-color: transparent;
+  border-radius: 50%;
+
+  transition: background-color $duration--s;
+
+  .o-person:hover & {
+    background-color: white;
+  }
+}
+
+.o-person__image {
+  border-radius: 50%;
+  transition: opacity $duration--s;
+
+  .o-person:hover & {
+    opacity: .75;
+  }
+  .o-person--big:hover & {
+    opacity: 1;
+  }
+}
+
+.o-person__position {
+  display: block;
+
+  color: $c-grey4;
+
+  line-height: $spacing--s;
+}
+
+.o-person__info {
+  overflow: auto;
+}
+
+.o-person__detail {
+  display: none;
+  font-size: em($unit--s);
+
+  strong {
+    display: block;
+  }
+}

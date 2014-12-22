@@ -1,0 +1,33 @@
+.o-slider__item {
+  color: white;
+}
+
+.o-slider__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: $index--b;
+}
+
+.o-slider__content {
+  p {
+    opacity: .75;
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 40vh;
+
+    z-index: -1;
+    pointer-events: none;
+
+    @include linear-gradient(to bottom, rgba($c-grey7, 0), rgba($c-grey7, .875));
+  }
+}

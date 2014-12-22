@@ -1,0 +1,15 @@
+.o-top-nav {
+  display: inline-block;
+  list-style: none;
+}
+
+.o-top-nav__list {
+  padding-left: em($ratio--l);
+}
+
+.o-top-nav__item {
+  display: inline-block;
+  & + & {
+    margin-left: em($ratio--l);
+  }
+}

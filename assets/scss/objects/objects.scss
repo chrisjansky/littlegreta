@@ -1,0 +1,88 @@
+// Basic anchor with an image inside.
+.o-image-link {
+  display: inline-block;
+  vertical-align: middle;
+
+  & + & {
+    margin-left: em($ratio--s);
+  }
+  @include state--hover {
+    opacity: .625;
+  }
+}
+
+// Horizontal rule, no margins.
+.o-divider {
+  display: block;
+  border-bottom: $line--s solid $c-grey1;
+}
+
+// Blurred background.
+[class^="o-blur--"],
+[class*=" o-blur--"] {
+  background: center / cover;
+  @include media($desktop) {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+.o-blur--blue {background-image: url("../images/bg_blue.jpg"); }
+// .o-blur--red {background-image: url("../images/color_bg/bg_red.jpg"); }
+// .o-blur--green {background-image: url("../images/color_bg/bg_green.jpg"); }
+// .o-blur--purple {background-image: url("../images/color_bg/bg_purple.jpg"); }
+// @include media($desktop--wide) {
+//   .o-blur--blue {background-image: url("../images/color_bg/bg_blue_big.jpg"); }
+//   .o-blur--red {background-image: url("../images/color_bg/bg_red_big.jpg"); }
+//   .o-blur--green {background-image: url("../images/color_bg/bg_green_big.jpg"); }
+//   .o-blur--purple {background-image: url("../images/color_bg/bg_purple_big.jpg"); }
+// }
+
+// Tooltip on hover.
+// .no-touch .o-tooltip {
+//   position: relative;
+//   &:hover:after {
+//     content: attr(data-title);
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     color: white;
+//     padding: em($ratio--s) em($ratio--b);
+//     background-color: $c-grey8;
+//     background-color: rgba($c-grey8, .9);
+//     border-radius: $radius--b;
+//     font-size: em($unit--s);
+//     z-index: 300;
+//   }
+//   &:hover:before {
+//     content: "";
+//     position: absolute;
+//     border: solid;
+//     border-color: $c-grey8 transparent;
+//     border-color: rgba($c-grey8, .9) transparent;
+//     border-width: em($ratio--xs);
+//     z-index: 301;
+//   }
+// }
+// .no-touch .o-tooltip--top {
+//   &:hover:after {bottom: 2.875em; }
+//   &:hover:before {bottom: 1.75em; border-bottom-width: 0; }
+// }
+
+[class^="o-gradient"],
+[class*=" o-gradient"] {
+  position: relative;
+  &:after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: $line--m;
+  }
+}
+
+.o-gradient--1:after {
+  @include linear-gradient(to right, $c-color1--light, $c-color2);
+}

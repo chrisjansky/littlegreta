@@ -1,0 +1,52 @@
+.o-logo {
+  display: inline-block;
+  position: relative;
+
+  text-align: center;
+
+  margin-top: em(80);
+  margin-left: 7.5vw;
+
+  transition: margin $duration--b $timing--b;
+  // @include margin(em(90) null null em($ratio--xl));
+
+  // border-radius: 50%;
+  // background-color: rgba($c-grey8, .25);
+}
+
+.o-logo__big {
+  // position: absolute;
+  // top: 0;
+
+  transition: opacity $duration--s;
+
+  svg {
+    fill: rgba($c-grey8, .875);
+  }
+}
+
+.o-logo__small {
+  position: absolute;
+  top: 0;
+
+  transition: opacity $duration--s, width $duration--s;
+  opacity: 0;
+
+  svg {
+    width: 100%;
+    fill: rgba($c-grey8, .75);
+  }
+}
+
+.top--is-off {
+  .o-logo {
+    margin-left: 2.5vw;
+  }
+  .o-logo__big {
+    opacity: 0;
+  }
+  .o-logo__small {
+    width: em(80);
+    opacity: 1;
+  }
+}
