@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Christian Jansky -- Designer
+    Christian Jansky -- Designer, Developer
     Jakub Kriz -- Programmer
 
 # THANKS

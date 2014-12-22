@@ -5,6 +5,7 @@
     "styleguide": "public/styleguide",
 
     "pages": "*.html",
+
     "jade": "assets/jade/*.jade",
     "jade_glob": "assets/jade/**/*.jade",
     "jade_ignore": "!assets/jade/**/_*",
