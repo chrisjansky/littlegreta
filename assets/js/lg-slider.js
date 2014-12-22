@@ -1,44 +1,23 @@
-var
-  sliderStartClass = "slider--start",
-  sliderEndClass = "slider--end";
+// $("[data-carousel]").royalSlider({
+//   keyboardNavEnabled: true,
+//   controlNavigation: false,
+//   imageScaleMode: "fill",
+//   slidesSpacing: 0,
 
-$("[data-slider]").each(function(index, instance) {
-  var sliderSwiper = new Swiper(instance, {
-    cssWidthAndHeight: false,
-    calculateHeight: false,
-    keyboardControl: true,
-    visibilityFullFit: true,
+//   visibleNearby: {
+//     enabled: true,
+//     center: false,
+//     centerArea: .8
+//   }
+// });
 
-    onFirstInit: function(swiper) {
-      $(swiper.container).addClass(sliderStartClass);
-    },
-
-    onSlideChangeStart: function(swiper) {
-      sliderPosition(swiper);
-    },
-
-    onSlideReset: function(swiper) {
-      sliderPosition(swiper);
-    }
-  });
-
-  $(instance).find("[data-swiper--prev]").on("click", function(event) {
-    event.preventDefault();
-    sliderSwiper.swipePrev();
-  });
-  $(instance).find("[data-swiper--next]").on("click", function(event) {
-    event.preventDefault();
-    sliderSwiper.swipeNext();
-  });
-
+$("[data-slider]").owlCarousel({
+  dots: false,
+  items: 1
 });
 
-function sliderPosition(instance) {
-  var
-    firstIsActive = instance.activeIndex === 0,
-    lastIsActive = (" " + instance.getLastSlide().className + " ").indexOf(" swiper-slide-visible ") > -1;
-
-  $(instance.container)
-    .toggleClass(sliderStartClass, firstIsActive)
-    .toggleClass(sliderEndClass, lastIsActive);
-}
+$("[data-carousel]").owlCarousel({
+  autoWidth: true,
+  dots: false,
+  items: 1
+});

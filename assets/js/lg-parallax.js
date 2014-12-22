@@ -4,7 +4,7 @@ document.onreadystatechange = function() {
 
     var config = {
       selector: "[data-parallax]",
-      scrollSpeed: .25,
+      scrollSpeed: 1.5,
       triggerOffset: .05
     }
 
@@ -47,7 +47,7 @@ document.onreadystatechange = function() {
 
         // Start at 0 if it's the first in array
         matrix[i].start = matrix[i-1] ? $(matrix[i].el).parent().offset().top - trigger : 0
-        matrix[i].stop = matrix[i].start + matrix[i].el.parentNode.offsetHeight + trigger
+        matrix[i].stop = matrix[i].start + matrix[i].el.offsetHeight + trigger
       }
     }
 
@@ -69,7 +69,7 @@ document.onreadystatechange = function() {
       for (i = 0; i < elAmount; i++) {
 
         // Check if visible
-        if (lastPosition >= matrix[i].start - wHeight && lastPosition <= matrix[i].stop){
+        if (lastPosition >= matrix[i].start - wHeight && lastPosition <= matrix[i].stop) {
           matrix[i].el.style.display = "block"
 
           setTop(matrix[i], (matrix[i].start - lastPosition) * config.scrollSpeed)

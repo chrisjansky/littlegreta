@@ -8,19 +8,33 @@ $(document).on("ready", function() {
   var
     $body = $("body")
 
-  if (!Modernizr.touch) {
-    $body
-      .waypoint(function(direction) {
-        $body
+  if (isDesktop()) {
+
+    var newsWaypoint = $("body").waypoint({
+      handler: function(direction) {
+        $(this.element)
           .toggleClass("top--is-off", direction === "down")
-          .toggleClass("top--is-on", direction !== "down");
+          .toggleClass("top--is-on", direction === "up");
       },
-      {
-        offset: -250
-        // function() {
-          // return -Math.round(($.waypoints("viewportHeight") * .15));
-        // }
-      });
+      offset: function() {
+        return -Waypoint.viewportHeight() * .20
+      }
+    })
+
   }
+
+  var
+    $packeryContainer = $("[data-packery]"),
+    $packeryItems = $("[data-packery-item]")
+
+  $packeryContainer.packery({
+    itemSelector: "[data-packery-item]"
+  });
+
+  $packeryItems.on("click", function() {
+    $(this).toggleClass("o-person--big");
+    $(this).siblings().removeClass("o-person--big");
+    $packeryContainer.packery();
+  });
 
 });
