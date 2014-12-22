@@ -1,0 +1,37 @@
+section.m-people.l-section--light
+  .l-wrap.l-wrap--push
+    h1.m-people__title.t-h1.t-h1--small
+      span.t-gradient--dark Our People
+
+    //- .m-group__filters
+    //-   a.o-filter.o-filter--account.o-filter--active(href="#", data-target="account") Account & Finance
+    //-   a.o-filter.o-filter--sales(href="#", data-target="sales") Sales
+    //-   a.o-filter.o-filter--dev(href="#", data-target="dev") Development
+    //-   a.o-filter.o-filter--creative(href="#", data-target="creative") Creative
+
+    ul.m-people__list(data-packery)
+      - var i = 0
+      while i < 25
+        - var random = Math.floor((Math.random() * 8))
+        - var person = people[random]
+
+        li.o-person(data-packery-item)
+          .o-person__portrait
+            img.o-person__image(src="assets/images/#{person.image}", alt="Person")
+
+          .o-person__info
+            strong.o-person__name.t-caps= person.name
+            small.o-person__position.t-small!= person.position
+
+            .o-person__detail
+
+              strong Education
+              != person.education
+
+              strong Hobbies
+              != person.hobbies
+
+              strong 3 Love Brands
+              != person.favourites
+
+        - i++

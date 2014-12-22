@@ -1,0 +1,13 @@
+section.m-portfolio.owl-carousel.o-blur--blue(data-carousel)
+  each instance in [534, 527, 513, 403]
+    article.m-portfolio__item.o-slider__item
+      .m-portfolio__overlay.o-slider__overlay.l-wrap.l-wrap--push
+
+        .m-portfolio__content.o-slider__content
+          h3.t-h3
+            +dummy(5, "words")
+          p
+            +dummy(10, "text")
+          a(href="#").o-button--text.ss-zoomin.right Read More
+
+      img(src="http://unsplash.it/1280/900/?image=#{instance}", alt="unsplash.it")

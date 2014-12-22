@@ -1,0 +1,22 @@
+section.m-top(data-parallax)
+  .m-top__overlay.l-wrap.l-wrap--push
+    .m-top__content.o-gradient--1
+      h1.m-top__intro.t-h1--small A little but great team of creatives, providing a complete design and communication service.
+      section.m-top__menu
+        .l-inline
+          .l-inline__cell
+            strong.t-smallcaps--1 Go to
+            nav.o-top-nav
+              ul.o-top-nav__list
+                each instance in ["News", "About", "Portfolio", "Blog", "Contact"]
+                  li.o-top-nav__item: a.t-link--light(href="#")= instance 
+          .l-inline__cell
+            a(href="#").o-dropdown.ss-navigatedown.right EN
+  .m-top__background
+    img(src="assets/images/bg_top1.jpg", alt="Top Background")
+  //- aside.m-top__background.o-slider.swiper-container(data-slider)
+  
+//- ul.m-top__list.o-slider__list.swiper-wrapper
+  //- each instance in [445, 341, 304, 201]
+    //- li.m-top__item.swiper-slide
+      //- img.o-slider__image(src="http://unsplash.it/1440/780/?image=#{instance}&blur", alt="unsplash.it")

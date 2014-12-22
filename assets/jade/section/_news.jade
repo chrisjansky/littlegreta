@@ -1,0 +1,13 @@
+section.m-news.owl-carousel(data-slider)
+  each instance in [445, 341, 304, 201]
+    article.m-news__item.o-slider__item
+      .m-news__overlay.o-slider__overlay.l-wrap.l-wrap--push
+
+        .m-news__content.o-slider__content
+          h2.t-h2
+            +dummy(5, "words")
+          p
+            +dummy(10, "text")
+          a(href="#").o-button--text.ss-play.right Watch
+
+      img(src="http://unsplash.it/1280/1000/?image=#{instance}", alt="unsplash.it")
