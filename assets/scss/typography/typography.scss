@@ -1,0 +1,60 @@
+.t-small {
+  font-size: em($unit--s);
+}
+.t-tiny {
+  font-size: em($unit--xs);
+}
+.t-lead {
+  font-size: em($ratio--m);
+  font-family: $font--serif;
+  font-weight: $font--serif__regular;
+}
+
+.t-underline--dark {
+  border-bottom: $line--b solid $c-grey3;
+}
+
+[class^="t-gradient"],
+[class*=" t-gradient"] {
+  position: relative;
+  &:after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: $line--m;
+  }
+}
+
+.t-gradient--1:after {
+  @include linear-gradient(to left, $c-color1--white, $c-color1--black);
+}
+.t-gradient--2:after {
+  @include linear-gradient(to right, $c-color2--white, $c-color2--black);
+}
+.t-gradient--dark:after {
+  @include linear-gradient(to left, $c-grey2, $c-grey4);
+}
+
+.t-caps {
+  font-weight: $font__sans--semibold;
+  letter-spacing: em($ratio--t);
+  text-transform: uppercase;
+}
+
+[class^="t-smallcaps"],
+[class*=" t-smallcaps"] {
+  font-size: em($unit--s);
+  font-weight: $font__sans--semibold;
+  letter-spacing: em($ratio--t);
+  text-transform: uppercase;
+}
+.t-smallcaps--1 {
+  color: $c-color1--light;
+}
+.t-smallcaps--light {
+  color: $c-grey4;
+}

@@ -1,0 +1,68 @@
+.t-h1 {
+  font-family: $font__display;
+  font-size: em($unit--h);
+  font-weight: $font__display--regular;
+  
+  text-align: center;
+
+  @include margin(em($ratio--xxs) null);
+}
+
+.t-h1--small {
+  font-family: $font__display;
+  font-weight: $font__display--light;
+  font-size: em($ratio--l);
+
+  line-height: $spacing--xs;
+
+  @include margin(em($ratio--s) null);
+}
+
+.t-h1__emphasis {
+  display: inline-block;
+  vertical-align: 20%;
+
+  color: $c-grey4;
+
+  font-family: $font__sans;
+  font-weight: $font__sans--semibold;
+  font-size: .4em;
+  text-transform: uppercase;
+  letter-spacing: em($ratio--t);
+
+  @include margin(null em($ratio--s));
+  border-bottom: $line--b solid $c-grey2;
+}
+
+.t-h2 {
+  font-size: em($ratio--l);
+  font-weight: $font__sans--semibold;
+  line-height: $spacing--xxs;
+
+  @include margin(em($ratio--s) null);
+}
+.t-h2--section {
+  text-align: center;
+}
+
+.t-h3 {
+  font-size: em($ratio--m);
+  font-weight: $font__sans--semibold;
+
+  @include margin(em($ratio--xs) null);
+}
+
+.t-h4 {
+  font-size: em($unit--l);
+  font-weight: $font__sans--semibold;
+
+  @include margin(em($ratio--b) null);
+}
+
+.t-h5 {
+  font-size: em($ratio--b);
+  letter-spacing: em($ratio--t);
+  padding-left: em($ratio--t);
+  margin: em($unit--s) 0;
+  text-transform: uppercase;
+}
