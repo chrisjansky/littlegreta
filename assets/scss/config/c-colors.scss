@@ -1,0 +1,50 @@
+$c-hue1: 215;
+$c-hue2: 85;
+$c-hue3: 175;
+
+$c-offset1: 10;
+$c-offset2: 20; 
+
+// Primary colors.
+$c-color1--white: hsb($c-hue1 - $c-offset2, 91, 100); // S90 = error?
+$c-color1--light: hsb($c-hue1 - $c-offset1, 80, 95);
+$c-color1: hsb($c-hue1, 90, 90);
+$c-color1--dark: hsb($c-hue1 + $c-offset1, 90, 75);
+$c-color1--black: hsb($c-hue1 + $c-offset2, 90, 65);
+
+$c-color2--white: hsb($c-hue2 - $c-offset2, 100, 95);
+$c-color2--light: hsb($c-hue2 - $c-offset1, 95, 90);
+$c-color2: hsb($c-hue2, 90, 85);
+$c-color2--dark: hsb($c-hue2 + $c-offset1, 75, 80);
+$c-color2--black: hsb($c-hue2 + $c-offset2, 80, 75);
+
+$c-color3--white: hsb($c-hue3 - $c-offset2, 65, 100);
+$c-color3--light: hsb($c-hue3 - $c-offset1, 90, 90);
+$c-color3: hsb($c-hue3, 85, 85);
+$c-color3--dark: hsb($c-hue3 + $c-offset1, 90, 80);
+$c-color3--black: hsb($c-hue3 + $c-offset2, 100, 75);
+
+// Neutral colors.
+$c-grey1: hsb($c-hue1, 04, 97);
+$c-grey2: hsb($c-hue1, 07, 90);
+$c-grey3: hsb($c-hue1, 09, 80);
+$c-grey4: hsb($c-hue1 + $c-offset1, 10, 65);
+$c-grey5: hsb($c-hue1 + $c-offset1, 11, 50);
+$c-grey6: hsb($c-hue1 + $c-offset2, 12, 35);
+$c-grey7: hsb($c-hue1 + $c-offset2, 13, 18);
+$c-grey8: hsb($c-hue1 + $c-offset2, 14, 12);
+
+// Interactive.
+$c-link--light: $c-color2--light;
+$c-link: $c-color2;
+$c-link--dark: $c-color2--dark;
+
+$c-visited: $c-link;
+$c-hover: $c-color1--light;
+
+$c-active: $c-color3;
+$c-active--light: $c-color3--light;
+$c-active--dark: $c-color3--dark;
+
+$c-select__background: $c-color1--light;
+$c-select__text: $c-color1--dark;
