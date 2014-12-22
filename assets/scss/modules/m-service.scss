@@ -1,0 +1,54 @@
+.m-services {
+  @include clearfix;
+}
+
+.m-service {
+  @include span-columns(4);
+  text-align: center;
+}
+
+.m-service__icon {
+  @include margin(null em($ratio--m));
+}
+
+.m-service__circle {
+  padding-bottom: 100%;
+  border-radius: 50%;
+
+  background: white no-repeat center / 90%;
+}
+
+.m-service__title {
+  margin-bottom: 0;
+}
+
+.m-service--digital {
+  .m-service__title {
+    color: $c-color1;
+  }
+  .m-service__circle {
+    background-image: url("../images/about_digital.png");
+  }
+}
+.m-service--graphic {
+  .m-service__title {
+    color: $c-color2;
+  }
+  .m-service__circle {
+    background-image: url("../images/about_graphic.png");
+  }
+}
+.m-service--creation {
+  .m-service__title {
+    color: $c-color3;
+  }
+  .m-service__circle {
+    background-image: url("../images/about_creation.png");
+  }
+}
+.m-service__list {
+  display: inline-block;
+
+  line-height: $spacing--m;
+  text-align: left;
+}

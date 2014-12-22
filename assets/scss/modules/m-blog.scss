@@ -1,0 +1,127 @@
+.m-post {
+  margin-bottom: 1.625em;
+  border-top: 3px solid rgba($c-grey6, 0.35);
+  padding-top: 1em;
+  position: relative;
+  strong {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba($c-grey6, 0.35);
+    padding: .6em 1em;
+    font-size: em(12);
+    font-weight: 500;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -webkit-font-smoothing: antialiased;
+   }
+  .btn {
+    display: inline-block;
+    max-width: 0;
+    padding: .4em 0;
+    @include transition(all .25s);
+    background-color: $c-grey6 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: $c-grey6;
+    opacity: 0;
+  }
+  &:hover .btn {
+    max-width: 210px;
+    padding: .4em .8em;
+    opacity: 1;
+    margin-right: 1em;
+  }
+  small {
+    color: #ccc;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &:first-child + div, &:first-child + div + div + div + div {
+    .m-post__link {
+      @include state--link {color: $c-color3; }
+    }
+  }
+  &:first-child + div + div, &:first-child + div + div + div + div + div {
+    .m-post__link {
+      @include state--link {color: $c-color1; }
+    }
+  }
+}
+.m-post--photo {
+  border-top: 0;
+  padding-top: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.m-post__info {
+  margin-top: 1em;
+}
+.m-post__photos {
+  overflow: hidden;
+  max-height: 16em;
+  .btn {
+    color: #fff;
+    border-radius: 4px;
+  }
+  h4 {margin-right: 1em; }
+  a {
+    display: inline-block;
+    width: 100%;
+    background-color: $c-grey6;
+    img {width: 100%; opacity: .25; }
+  }
+  a:hover {background-color: $c-grey4; }
+}
+.m-post__overlay {
+  position: absolute;
+  top: 1.2em;
+  left: 1.5em;
+  z-index: 10;
+}
+.m-post__author {
+  margin-right: .5em;
+  a {display: none; }
+}
+.m-post__title {
+  display: block;
+  font-size: em(36);
+  font-weight: 300;
+  margin: 0 1em 0 0;
+  line-height: 1.5;
+  max-height: 4.5em;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  & > span {
+    border-bottom: 1px solid rgba($c-grey3, 0.5);
+  }
+}
+.m-post__link {
+  text-decoration: none;
+  @include state--link {
+    color: $c-color2;
+  }
+  @include state--hover {
+    color: white !important;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .m-post__title {
+    font-size: em(26);
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1031px) {
+  .m-post {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+    &:first-child + div,
+    &:first-child + div + div + div,
+    &:first-child + div + div + div + div + div {
+      margin-right: 0;
+    }
+  }
+}

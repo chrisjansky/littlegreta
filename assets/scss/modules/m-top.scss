@@ -1,0 +1,43 @@
+.m-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  // opacity: .5;
+  // outline: 3px solid red;
+
+  // height: 60vh;
+  overflow-y: hidden;
+
+  z-index: $index--s;
+
+  // transition: transform $duration--l $timing--out;
+}
+
+.m-top__background {
+  @include stretch-overlay;
+  z-index: -1;
+}
+
+.m-top__overlay {
+  padding-bottom: 0;
+
+  background-color: rgba($c-grey8, .25);
+  z-index: $index--s;
+}
+
+.m-top__content {
+  @include shift(3);
+  padding-bottom: em($ratio--m);
+}
+.m-top__intro {
+  color: white;
+  margin-bottom: em($ratio--xl);
+}
+
+// .top--is-off {
+//   .m-top {
+//     transform: translateY(-100%);
+//   }
+// }

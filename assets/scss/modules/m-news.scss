@@ -1,0 +1,16 @@
+.m-news {
+  margin-top: 15vh;
+}
+
+.m-news__overlay {
+  transition: transform $duration--b;
+  transform: translateY(100%);
+
+  .top--is-off & {
+    transform: translateY(0);
+  }
+}
+
+.m-news__content {
+  @include shift(6);
+}

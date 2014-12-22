@@ -1,0 +1,30 @@
+// .m-portfolio {
+//   overflow: hidden;
+// }
+// .m-portfolio__list {
+//   @include reset-list;
+//   white-space: nowrap;
+// }
+// .m-portfolio__item {
+//   display: inline-block;
+//   width: 90%;
+//   white-space: normal;
+// }
+// .m-portfolio__content {
+//   overflow: auto;
+//   img {
+//     width: 100%;
+//     display: block;
+//   }
+// }
+// .m-portfolio__info {
+//   width: 40%;
+//   padding: em($ratio--m);
+//   background-color: rgba($c-grey8, .5);
+//   float: left;
+//   @include collapse-children;
+// }
+
+.m-portfolio__item {
+  width: 80vw;
+}

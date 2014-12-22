@@ -1,0 +1,83 @@
+.o-filter {
+  display: inline-block;
+  border-radius: $radius--b;
+  padding: em($ratio--s) em($ratio--m);
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: em($ratio--t);
+  font-size: em($unit--s);
+  font-weight: 700;
+  @include transition(all $duration--b ease);
+  text-decoration: none;
+  & + & {
+    margin-left: em($ratio--b);
+  }
+}
+.o-filter--account {
+  @include state--link {color: $c-color1; }
+}
+.o-filter--sales {
+  @include state--link {color: $c-color2; }
+}
+.o-filter--dev {
+  @include state--link {color: $c-grey5; }
+}
+.o-filter--creative {
+  @include state--link {color: $c-color3; }
+}
+.o-filter--o-filter--active {
+  color: white;
+  &.o-filter--account {background-color: $c-color1; }
+  &.o-filter--sales {background-color: $c-color2; }
+  &.o-filter--dev {background-color: $c-grey5; }
+  &.o-filter--creative {background-color: $c-color3; }
+}
+.m-feed__list {
+  @include reset-list;
+  @include clearfix;
+  text-align: center;
+  clear: both;
+}
+.m-feed__item {
+  border: $line--b solid white;
+  border-radius: $radius--b;
+  padding-bottom: em($ratio--b);
+  @include span-columns(3);
+}
+.m-feed__text {
+  margin-bottom: em($ratio--s);
+}
+.m-feed__author {
+  color: $c-grey4;
+}
+.m-bar {width: 100%;
+  td:first-child {text-align: left; }
+  td:last-child {text-align: right; }
+}
+.m-contact {
+  margin-top: em($ratio--l);
+}
+.m-contact__list {
+  @include reset-list;
+  @include clearfix;
+}
+.m-contact__item {
+  @include span-columns(3);
+}
+.m-social {
+  @include reset-list;
+  margin-top: em($ratio--m);
+  li {display: inline-block; }
+  li + li {margin-left: em($ratio--b); }
+  a {
+    text-decoration: none;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: em($ratio--m);
+  }
+}
+.m-social__newsletter a {background-image: url("../images/icon_newsletter.png"); }
+.m-social__twitter a {background-image: url("../images/icon_twitter.png"); }
+.m-social__youtube a {background-image: url("../images/icon_youtube.png"); }
+.m-social__tumblr a {background-image: url("../images/icon_tumblr.png"); }

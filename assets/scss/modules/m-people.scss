@@ -1,0 +1,10 @@
+.m-people__title {
+  color: $c-grey8;
+}
+
+.m-people__list {
+  @include clearfix;
+  @include reset-list;
+
+  margin-top: em($ratio--l);
+}

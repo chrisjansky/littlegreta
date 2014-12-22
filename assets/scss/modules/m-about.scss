@@ -1,0 +1,21 @@
+.m-about__header {
+  @include collapse-children;
+  @include clearfix;
+}
+.m-about__title {
+  color: $c-grey8;
+}
+.m-about__intro {
+  text-align: center;
+  @include span-columns(8);
+  @include shift(2);
+}
+.m-about__outro {
+  // @include span-columns(10);
+  // @include shift(1);
+  margin-top: em($ratio--m);
+}
+.m-about__smallcaps {
+  display: block;
+  margin-bottom: em($ratio--b);
+}
