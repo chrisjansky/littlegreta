@@ -24,6 +24,8 @@
     "owl-carousel2": "*",
     "jquery-waypoints": "~3.0.1",
     "moment": "~2.8.4",
-    "livestampjs": "~1.1.2"
+    "livestampjs": "~1.1.2",
+    "twitter-api-php": "git@github.com:J7mbo/twitter-api-php.git",
+    "twitter-feed-parser": "git@github.com:zadro/twitter-feed-parser.git"
   }
 }
