@@ -1,229 +1,205 @@
 /*
-jQuery plugin for read-only Tumblr API implementation.
-For more info on the Tumblr API, please visit http://www.tumblr.com/docs/en/api/v2
-2011 ian.ainley (@ gmail)
+Original: https://github.com/Iaaan/jQuery-plugin-for-Tumblr-API
+Removed pagination; audio post, deleted loading crap replacing blog.html()
 */
 
 ;(function ($) {
 
-$.fn.getTumblrPosts = function (APIKey, options) {
-  return $.fn.getTumblrPosts.init(this, APIKey, options);
-}
+$.fn.embedTumblr = function (APIKey, options) {
+  return this.each(function(){
+    var target = $(this);
 
-$.fn.getTumblrPosts.defaults = {
-  postsPerPage: 6,
-  pagination: false,
-  currentPage: 1,
-  loading: "<div class='spinner'>Please wait</div>",
-  previousBtn: "<div class='prev'>&laquo; Prev</div>",
-  nextBtn: "<div class='next'>Next &raquo;</div>",
-  error: "<h2>Error!</h2><p>There was an error accessing the Tumblr API, LAME!</p>"
-}
+    if (target.data("embedTumblr")) {
+      return;
+    }
 
-$.fn.getTumblrPosts.obj = {
+    var tumblrPosts = new AccessTumlbrApi(target, APIKey, options);
+
+    target.data('embedTumblr', tumblrPosts);
+
+    tumblrPosts.init();
+  });
+};
+
+$.fn.embedTumblr.defaults = {
+  postsPerPage: 9,
+  error: "<p>There was an error accessing the Tumblr API, sorry!</p>"
+};
+
+function AccessTumlbrApi(target, APIKey, options) {
+  var s = this;
+
+  s.settings = $.extend({}, $.fn.embedTumblr.defaults, options);
 
   /*** POSTS ***/
-  formatPosts : function (blog, data) {
-    var s = this;
-    var count = 0;
+  var formatPosts = function (blog, data) {
+    var loopContainer = $("<div />");
+     
     $.each(data.response.posts, function () {
-  
       var postType = this.type,
-        thisPost = $("<div class='m-post'/>"),
-        thisCont = $("<div class='m-post__content'/>"),
-        thisInfo = $("<div class='m-post__info'/>"),
-//                postDate = s.formatedPostDate(this.timestamp),
-        postDate = this.timestamp,
+        thisPost = $("<article class='o-media o-post'/>"),
+        postDate = '<small class="o-post__date t-small" data-livestamp="' + this.timestamp + '"></small>',
         linkURL = this.post_url;
 
-//        count = count + 1;
-        thisPost.show();
-//        thisPost.delay(count).fadeIn(100);
-
       switch (postType) {
-  
-        /*** LINK POST ***/
-        case "link":
-
-          thisInfo.append(
-            '<small class="m-post__date" data-livestamp="' + postDate + '">' + '</small>'
-          );
-          thisCont.append(
-            '<a class="m-post__link" href="' + linkURL + '" target="_blank"><h4 class="m-post__title"><span>' + title + '</span></h4></a>',
-            thisInfo
-          );
-          thisPost.addClass('m-post--link').append(thisCont);
-          blog.append(thisPost);
-          break; /*** END LINK POST***/
-
-      /*** AUDIO POST ***/
-      case "audio":
-        var title = 'AUDIO: ' + this.artist + ' - ' + this.track_name;
-        
-        thisInfo.append(
-          '<a class="btn" href="' + linkURL + '" target="_blank">Hear on Tumblr</a>',
-          '<small class="m-post__date" data-livestamp="' + postDate + '">' + '</small>'
-        );
-        thisCont.append(
-          '<a class="m-post__link" href="' + linkURL + '" target="_blank"><h4 class="m-post__title"><span>' + title + '</span></h4></a>',
-          thisInfo
-        );
-        thisPost.addClass('m-post--audio').append(thisCont);
-        blog.append(thisPost);
-        break; /*** END AUDIO POST***/
 
       /*** TEXT POST ***/
       case "text":
-        var title = this.title;
-        
-        thisCont.append(
-          '<a class="m-post__link" href="' + linkURL + '" target="_blank"><h4 class="m-post__title"><span>' + title + '</span></h4></a>'
-        );
-        thisInfo.append(
-          '<a class="btn" href="' + linkURL + '" target="_blank">Read More on Tumblr</a>',
-          '<small class="m-post__date" data-livestamp="' + postDate + '">' + '</small>'
-        );
-        thisPost.addClass('m-post--text')
+        var
+          titleLength = 30,
+          shortTitle = (this.title).length > titleLength ? (this.title).substring(0, titleLength) + "&hellip;" : this.title;
+
+        thisPost.addClass('o-post--text')
             .append(
-                thisCont,
-                thisInfo
-              );
-        blog.append(thisPost);
+              '<strong class="o-post__title"><span class="o-post__underline">' + shortTitle + '</span></strong>', 
+              postDate,
+              // '<div class="o-post__content">' + this.body + '</div>',
+              '<a class="o-button--text ss-navigateright right" href="' + linkURL + '">Read post on Tumblr</a>'
+            );
+        loopContainer.append(thisPost);
         break; /*** END TEXT POST***/
 
       /*** PHOTO POST ***/
       case "photo":
-        var photoText = $(this.caption).text(),
-          photos = this.photos,
-          photoContainer = $('<div class="m-post__photos" />');
+        // Pick only the first photo, delete for loop
+        var
+          postPhoto = this.photos[0],
+          captionLength = 60,
+          shortCaption = (this.caption).length > captionLength ? (this.caption).substring(0, captionLength) + "&hellip;" : this.caption;
 
+        var
+          figure = $('<figure class="o-post__figure" />'),
+          photoSizeURL,
+          caption;
         // Check for photo size options. Prevents really large original images from being called.
-        if (photos[0].alt_sizes[0].width >= 500) {
+        if (postPhoto.alt_sizes[0].width >= 500) {
           var n = 0;
-          for ( ; n < photos[0].alt_sizes.length; n++) {
-            if (photos[0].alt_sizes[n].width === 500) {
-              var photoSizeURL = photos[0].alt_sizes[n].url;
+          for ( ; n < postPhoto.alt_sizes.length; n++) {
+            if (postPhoto.alt_sizes[n].width === 500) {
+              photoSizeURL = postPhoto.alt_sizes[n].url;
             }
           }
         } else {
-          var photoSizeURL = photos[0].original_size.url;
+          photoSizeURL = postPhoto.original_size.url;
         }
-        photoContainer.append('<a class="m-post__link" href="' + linkURL + '" target="_blank" title="' + photos[0].caption + '"><span class="m-post__overlay"><h4 class="m-post__title"><span>' + photoText + '</span></h4><div class="m-post__info"><span class="btn">View on Tumblr</span><small class="m-post__date" data-livestamp="' + postDate + '">' + '</small></div></span><img src="' + photoSizeURL + '"/></a>');
-        thisPost.addClass('m-post--photo')
-            .append(
-                photoContainer
-                 );
-        blog.append(thisPost);
-        break; /*** END PHOTO POST***/
+        if (postPhoto.caption !== "") {
+          caption = $('<figcaption />');
+          caption.append(postPhoto.caption);
+        } else {
+          caption = "";
+        }
+        figure.append('<a href="' + postPhoto.original_size.url + '" target="_blank" title="' + postPhoto.caption + '"><img src="' + photoSizeURL + '"/></a>', caption);
+        // End for photo loop
 
+        thisPost.addClass('o-post--photo')
+            .append(
+              figure, 
+              '<div class="o-post__overlay">' + shortCaption + postDate + '<a href="' + linkURL + '">View photos on Tumblr</a></div>'
+            );
+        loopContainer.append(thisPost);
+        break; /*** END PHOTO POST***/
+      
       /*** QUOTE POST ***/
       case "quote":
-        var quote = this.text,
-          author = this.source;
-
-        thisInfo.append(
-          '<a class="btn" href="' + linkURL + '" target="_blank">Read More on Tumblr</a>',
-          '<small class="m-post__author"> &#8212; ' + author + '</small>',
-          '<small class="m-post__date" data-livestamp="' + postDate + '">' + '</small>'
-        );
-        thisCont.append('<a class="m-post__link" href="' + linkURL + '" target="_blank"><q class="m-post__title"><span>' + quote + '</span></q></a>');
-        thisCont.wrapInner('<div class="pad"></div>');
-        thisPost.addClass('m-post--quote')
+        var
+          quoteLength = 90,
+          shortQuote = (this.text).length > quoteLength ? (this.text).substring(0, quoteLength) + "&hellip;" : this.text;
+        thisPost.addClass('o-post--quote')
             .append(
-              thisCont,
-              // '<div class="m-post__author"> &#8212; ' + author + '</div>',
-              thisInfo
+              '<q class="o-post__quote">' + shortQuote + '</q>', 
+              '<p class="o-post__source"> &#8212; ' + this.source + '</p>', 
+              postDate,
+              '<a href="' + linkURL + '">View quote on Tumblr</a>'
             );
-//                thisPost.addClass('quote-post').append('<p class="post-date">' + postDate + '</p>', '<q class="quote-text">' + quote + '</q>', '<p class="quote-author"> &#8212; ' + author + '</p>', '<a class="tumblr-link" href="' + linkURL + '">View on Tumblr</a>');
-        blog.append(thisPost);
+        loopContainer.append(thisPost);
         break; /*** END QUOTE POST***/
-
 
       /*** VIDEO POST ***/
       case "video":
-        var caption = $(this.caption).text();
-//                    embeddedVideo = this.player[2].embed_code;
-
-        thisInfo.append(
-          '<a class="btn" href="' + linkURL + '" target="_blank">Watch Video on Tumblr</a>',
-          '<small class="m-post__date" data-livestamp="' + postDate + '">' + '</small>'
-        );
-        thisCont.append(
-          '<a class="m-post__link" href="' + linkURL + '" target="_blank"><h4 class="m-post__title"><span>' + caption + '</span></h4></a>'
-//              '<a href="' + linkURL + '"><img src="'+ this.thumbnail_url +'" /></a>'
-        );
-//                thisCont.wrapInner('<div class="pad"></div>');
-        thisPost.addClass('m-post--video')
+        thisPost.addClass('o-post--video')
             .append(
-                thisCont,
-                thisInfo
-              );
-        blog.append(thisPost);
+              this.player[2].embed_code, 
+              postDate,
+              // this.caption,
+              '<a href="' + linkURL + '">Watch video on Tumblr</a>'
+            );
+        loopContainer.append(thisPost);
         break; /*** END VIDEO POST ***/
 
-      
+      /*** LINK POST ***/
+      case "link":
+        var description;
+          
+        if (this.description) {
+          description = this.description;
+        } else {
+          description = "";
+        }
+
+        thisPost.addClass('o-post--link')
+            .append(
+              postDate,
+              '<a href="' + this.url + '">' + this.title + '</a>',
+              description,
+              '<a href="' + linkURL + '">Go to tumblr post...</a>'
+            );
+        loopContainer.append(thisPost);
+        break; /*** END LINK POST ***/
+
+      /*** CHAT POST ***/
+      case "chat":
+        thisPost.addClass('o-post--chat')
+            .append(
+              postDate
+              );
+
+        for (var i = 0; i < this.dialogue.length; i++){
+          thisPost.append(
+            '<span class="chat-post-name">' + this.dialogue[i].name + '</span>',
+            '<p class="chat-post-phrase">' + this.dialogue[i].phrase + '</p>'
+          );
+        }
+
+        thisPost.append('<a href="' + linkURL + '">Go to tumblr post...</a>');
+
+        loopContainer.append(thisPost);
+        break; /*** END CHAT POST ***/
       }
     });
-  }, /*** END POSTS ***/
-} /*** END OBJ ***/
+    
+    blog.append(loopContainer.html());
+    blogPack();
+  }; /*** END POSTS ***/
 
-$.fn.getTumblrPosts.init = function (target, APIKey, options) {
-  var blog = target,
-    settings = $.extend({}, $.fn.getTumblrPosts.defaults, options),
-    ppPage = settings.postsPerPage,
-    currentPage = settings.currentPage;
+  s.getPosts = function (target, APIKey) {
+    var postsPerPage = s.settings.postsPerPage;
 
-  blog.html("");
-
-  $.ajax({
-    url: APIKey + "&limit=" + ppPage + "&offset=" + (currentPage - 1) * ppPage,
-    dataType: "jsonp",
-    jsonp: "&jsonp",
-    beforeSend: function () {
-      blog.html(settings.loading); // While Loading...
-    },
-    success: function (data) {
-      blog.html("");
-
-      $.fn.getTumblrPosts.obj.formatPosts(blog, data);
-
-      /*** PAGINATION ***/
-      if (settings.pagination === true) {
-        var paginationContainer = $("<div class='blog-pagination clearfix'></div>");
-
-           if (Math.ceil(data.response.total_posts / ppPage) != currentPage) {
-             var nextBtn = $("<div class='blog-next-btn'>" + settings.nextBtn + "</div>").css({
-               "cursor": "pointer"
-             });
-             paginationContainer.append(nextBtn);
-           }
-           if (currentPage !== 1) {
-             var prevBtn = $("<div class='blog-prev-btn'>" + settings.previousBtn + "</div>").css({
-               "cursor": "pointer"
-             });
-             paginationContainer.append(prevBtn);
-           }
-
-           function bindPagination() {
-             $(".blog-next-btn").click(function () {
-               $.fn.getTumblrPosts.defaults.currentPage++;
-               blog.getTumblrPosts(APIKey, options);
-             });
-             $(".blog-prev-btn").click(function () {
-               $.fn.getTumblrPosts.defaults.currentPage--;
-               blog.getTumblrPosts(APIKey, options);
-             });
+    $.ajax({
+        url: APIKey + "&limit=" + postsPerPage + "&offset=0",
+        dataType: "jsonp",
+        jsonp: "&jsonp",
+        success: function (data) {
+          formatPosts(target, data);
+        },
+        error: function () {
+          target.append(s.settings.error);
         }
-        blog.append(paginationContainer);
-        bindPagination();
-      } /*** END PAGINATION ***/
-         
-    },/*** END SUCCESS ***/
+    });
+  };
 
-    error: function () {
-      blog.append(settings.error);
+  s.init = function () {
+    s.getPosts(target, APIKey);
+  };
+
+  s.destroy = function (clearContainer) {
+    if(clearContainer === true) {
+      target.html("");
     }
-  });
+
+    $('.blog-btn').off('.embedTumblr');
+
+    target.removeData('embedTumblr');
+  };
 }
 
 })(jQuery);
