@@ -16,7 +16,7 @@ var
 
 gulp.task("server", function() {
   plugins.browserSync({
-    proxy: "http://localhost/littlegreta-2014/",
+    proxy: "localhost/littlegreta-2014",
     xip: true,
     notify: false
   });
@@ -78,6 +78,9 @@ gulp.task("templates", ["fetch-data"], function() {
       pretty: true,
       locals: JSON.parse(jsonGroup),
       basedir: config.paths.development
+    }))
+    .pipe(plugins.rename(function (path) {
+        path.extname = ".php";
     }))
     .pipe(gulp.dest(config.paths.development));
 });
