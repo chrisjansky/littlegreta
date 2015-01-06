@@ -1,0 +1,59 @@
+{
+  "contact": [
+    {
+      "name": "London",
+      "address": [
+        "65 Deans Road",
+        "W7 3QD London",
+        "United Kingdom"
+      ],
+      "contact": [
+        "Des Brady",
+        "07799 161 162"
+      ],
+      "person": "Des",
+      "email": "des.brady@littlegreta.co.uk"
+    },
+    {
+      "name": "Munich",
+      "address": [
+        "Türkenstrasse 103",
+        "80799 Munich",
+        "Germany"
+      ],
+      "contact": [
+        "Petr Danes"
+      ],
+      "person": "Petr",
+      "email": "petr.danes@littlegreta.cz"
+    },
+    {
+      "name": "Prague",
+      "address": [
+        "Vysehradska 1349/2",
+        "128 00 Prague",
+        "Czech Republic"
+      ],
+      "contact": [
+        "Jan Blazek",
+        "+420 776 717 609"
+      ],
+      "person": "Jan",
+      "email": "jan.blazek@littlegreta.cz"
+    },
+    {
+      "name": "Zlin",
+      "address": [
+        "Osvoboditelu 523",
+        "760 01 Zlin",
+        "Czech Republic"
+      ],
+      "contact": [
+        "Tomas Nedved",
+        "+420 602 957 530"
+      ],
+      "person": "Tomas",
+      "email": "tomas.nedved@littlegreta.cz"
+    }
+  ]
+}
