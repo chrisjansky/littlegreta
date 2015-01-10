@@ -6,13 +6,32 @@
 }
 .t-lead {
   font-size: em($ratio--m);
-  font-family: $font--serif;
-  font-weight: $font--serif__regular;
+  font-family: $font__serif;
+  font-weight: $font__serif--book;
+}
+.t-big {
+  font-size: em($unit--l);
 }
 
-.t-underline--dark {
-  border-bottom: $line--b solid $c-grey3;
+[class^="t-underline--"],
+[class*=" t-underline--"] {
+  border-bottom: $line--s solid;
 }
+.t-underline--1 {
+  border-bottom-color: $color-1--lighter;
+}
+.t-underline--2 {
+  border-bottom-color: $color-3--light;
+}
+.t-underline--3 {
+  border-bottom-color: $color-2;
+}
+.t-underline--4 {
+  border-bottom-color: $color-2--lighter;
+}
+// .t-underline--dark {
+//   border-bottom: $line--b solid $grey-3;
+// }
 
 [class^="t-gradient"],
 [class*=" t-gradient"] {
@@ -21,26 +40,40 @@
     content: "";
 
     position: absolute;
-    left: 0;
-    right: 0;
+    // Optical offset
+    left: 1%;
+    right: 1%;
     bottom: 0;
 
     height: $line--m;
   }
 }
 
+.t-gradient--small {
+  // padding-bottom: em($ratio--t);
+  &:after {
+    height: $line--b;
+  }
+}
+
 .t-gradient--1:after {
-  @include linear-gradient(to left, $c-color1--white, $c-color1--black);
+  @include linear-gradient(to left, $color-1--lighter, $color-1--darker);
 }
 .t-gradient--2:after {
-  @include linear-gradient(to right, $c-color2--white, $c-color2--black);
+  @include linear-gradient(to right, $color-2--lighter, $color-2--darker);
+}
+.t-gradient--3:after {
+  @include linear-gradient(to left, $color-3--light, $color-3--dark);
+}
+.t-gradient--light:after {
+  @include linear-gradient(to left, $grey-2, $grey-4);
 }
 .t-gradient--dark:after {
-  @include linear-gradient(to left, $c-grey2, $c-grey4);
+  @include linear-gradient(to right, $grey-5, $grey-7);
 }
 
 .t-caps {
-  font-weight: $font__sans--semibold;
+  font-weight: $font__sans--bold;
   letter-spacing: em($ratio--t);
   text-transform: uppercase;
 }
@@ -48,13 +81,13 @@
 [class^="t-smallcaps"],
 [class*=" t-smallcaps"] {
   font-size: em($unit--s);
-  font-weight: $font__sans--semibold;
+  font-weight: $font__sans--medium;
   letter-spacing: em($ratio--t);
   text-transform: uppercase;
 }
 .t-smallcaps--1 {
-  color: $c-color1--light;
+  color: $color-1--light;
 }
 .t-smallcaps--light {
-  color: $c-grey4;
+  color: $grey-4;
 }
