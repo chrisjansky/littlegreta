@@ -1,64 +1,22 @@
-// A basic button.
-// .o-button {
-//   display: inline-block;
-//   padding: .4em .8em;
-//   border-radius: $radius--b;
-//   text-decoration: none;
-//   // @include transition(background-color $duration--b, color $duration--b);
-//   @include state--link {
-//     color: white;
-//     background-color: $c-color1;
-//   }
-//   @include state--hover {
-//     background-color: $c-hover;
-//   }
-// }
-// .o-button--dark {
-//   @include state--link {
-//     background-color: $c-grey4;
-//   }
-//   @include state--hover {
-//     background-color: $c-grey3;
-//   }
-// }
-// .o-button--light {
-//   @include state--link {
-//     background-color: $c-grey2;
-//   }
-//   @include state--hover {
-//     background-color: $c-grey3;
-//   }
-// }
-// .o-button--white {
-//   // background-color: white !important;
-//   @include state--link {
-//     color: $c-color1;
-//   }
-//   @include state--hover {
-//     color: $c-hover;
-//   }
-// }
-// .o-button--big {
-//   font-size: em($unit--l);
-//   font-weight: 600;
-// }
-// .o-button--small {
-//   font-size: em(14);
-// }
-
 .o-button--text {
-  font-size: em($unit--l);
-
   text-decoration: none;
+
   &:before, &:after {
-    line-height: 1;
-    vertical-align: middle;
-    font-size: #{$icon--b}px;
+    font-size: #{$icon--s}px;
   }
+  
   &:before {
-    margin-right: em($ratio--xs);
+    margin-right: em($ratio--xxs);
   }
   &:after {
-    margin-left: em($ratio--xs);
+    margin-left: em($ratio--xxs);
+  }
+}
+
+.o-button--big {
+  font-size: em($unit--l);
+
+  &:before, &:after {
+    font-size: #{$icon--b}px;
   }
 }

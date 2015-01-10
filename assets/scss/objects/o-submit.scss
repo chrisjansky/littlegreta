@@ -1,0 +1,16 @@
+[class^="o-submit"],
+[class*=" o-submit"] {
+  padding: em($ratio--s);
+
+  background-color: transparent;
+
+  border: none;
+  // iOS reset.
+  border-radius: 0;
+
+  font-size: em($unit--l);
+
+  @include state--focus {
+    outline: 0;
+  }
+}

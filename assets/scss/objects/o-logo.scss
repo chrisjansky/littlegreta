@@ -11,7 +11,7 @@
   // @include margin(em(90) null null em($ratio--xl));
 
   // border-radius: 50%;
-  // background-color: rgba($c-grey8, .25);
+  // background-color: rgba($grey-8, .25);
 }
 
 .o-logo__big {
@@ -21,7 +21,7 @@
   transition: opacity $duration--s;
 
   svg {
-    fill: rgba($c-grey8, .875);
+    fill: rgba($grey-8, .875);
   }
 }
 
@@ -34,7 +34,7 @@
 
   svg {
     width: 100%;
-    fill: rgba($c-grey8, .75);
+    fill: rgba($grey-8, .75);
   }
 }
 

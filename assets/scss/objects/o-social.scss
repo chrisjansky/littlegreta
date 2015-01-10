@@ -1,0 +1,66 @@
+.o-social {
+  text-align: center;
+}
+
+.o-social__list {
+  @include reset-list;
+
+  display: inline-block;
+
+  vertical-align: middle;
+
+  margin-left: em($ratio--l);
+}
+
+[class^="o-social__item--"],
+[class*=" o-social__item--"] {
+  display: inline-block;
+
+  & + & {
+    margin-left: em($ratio--b);
+  }
+}
+
+.o-social__link--twitter {
+  @include state--link {
+    color: $c-twitter;
+  }
+}
+.o-social__link--youtube {
+  @include state--link {
+    color: $c-youtube;
+  }
+}
+.o-social__link--tumblr {
+  @include state--link {
+    color: $c-tumblr;
+  }
+}
+
+[class^="o-social__link--"],
+[class*=" o-social__link--"] {
+  text-decoration: none;
+
+  display: block;
+
+  width: em(60);
+  height: em(60);
+
+  overflow: hidden;
+
+  border: $line--s solid $grey-7;
+
+  border-radius: 50%;
+
+  @include state--active {
+    color: white;
+    border-color: $grey-6;
+  }
+}
+
+.o-social__icon {
+  line-height: em(60);
+  &:before {
+    vertical-align: -20%; // Optical magic number
+  }
+}

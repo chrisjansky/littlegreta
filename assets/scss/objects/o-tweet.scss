@@ -1,0 +1,78 @@
+.o-tweet {
+  // outline: 1px solid rgba(white, .25);
+  // position: relative;
+
+  // margin-bottom: em($ratio--b);
+
+  // @include span-columns(3);
+  // margin-right: 0;
+  // @include omega(3n);
+}
+
+.o-tweet__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: em($ratio--b);
+
+  z-index: $index--s;
+}
+
+.o-tweet--image {
+  border-radius: $radius--b;
+  overflow: hidden;
+
+  &:after {
+    @include overlay-gradient;
+  }
+}
+
+.o-tweet--basic {
+  border-top: $line--b solid rgba($grey-8, .25);
+
+  padding-top: em($ratio--b);
+}
+
+.o-tweet__image {
+  opacity: .6;
+}
+
+.o-tweet__text {
+  font-size: em($unit--m);
+
+  margin-top: 0;
+
+  color: white;
+
+  a {
+    text-decoration: none;
+    border-bottom: $line--s solid;
+
+    @include state--link {
+      color: $grey-1;
+      border-color: rgba($grey-1, .25);
+    }
+    @include state--active {
+      color: white;
+      border-color: rgba(white, .75);
+    }
+  }
+}
+
+.o-tweet__date {
+  text-decoration: none;
+
+  @include state--link {
+    color: rgba($grey-4, .75);
+  }
+  @include state--active {
+    color: white;
+    &:before {
+      color: $c-twitter;
+    }
+  }
+}
+// .o-tweet__note {
+//   margin-left: em($ratio--s);
+// }
