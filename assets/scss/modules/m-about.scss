@@ -3,7 +3,7 @@
   @include clearfix;
 }
 .m-about__title {
-  color: $c-grey8;
+  color: $grey-8;
 }
 .m-about__intro {
   text-align: center;
@@ -13,9 +13,18 @@
 .m-about__outro {
   // @include span-columns(10);
   // @include shift(1);
+  // margin-top: em($ratio--b);
+}
+.m-about__subtitle {
+  text-align: center;
+
+  margin-bottom: em($ratio--m);
+}
+.m-about__partners {
   margin-top: em($ratio--m);
+
+  text-align: center;
 }
 .m-about__smallcaps {
-  display: block;
-  margin-bottom: em($ratio--b);
+  margin-right: em($ratio--m);
 }

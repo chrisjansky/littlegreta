@@ -10,21 +10,31 @@
 //   width: 90%;
 //   white-space: normal;
 // }
-// .m-portfolio__content {
-//   overflow: auto;
+.m-portfolio__content {
+  // :after already taken with linear-gradient
+  overflow: auto;
 //   img {
 //     width: 100%;
 //     display: block;
 //   }
-// }
+}
 // .m-portfolio__info {
 //   width: 40%;
 //   padding: em($ratio--m);
-//   background-color: rgba($c-grey8, .5);
+//   background-color: rgba($grey-8, .5);
 //   float: left;
 //   @include collapse-children;
 // }
 
 .m-portfolio__item {
   width: 80vw;
+}
+
+.m-portfolio__info {
+  width: 75%;
+
+  float: left;
+
+  margin-top: 0;
+  margin-right: em($ratio--m);
 }

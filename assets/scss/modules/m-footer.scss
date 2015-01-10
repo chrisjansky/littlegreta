@@ -1,0 +1,14 @@
+.m-footer__title {
+  text-align: center;
+
+  color: white;
+}
+
+.m-footer__note {
+  display: block;
+
+  color: $grey-6;
+  text-align: center;
+
+  margin-top: em($ratio--xl);
+}
