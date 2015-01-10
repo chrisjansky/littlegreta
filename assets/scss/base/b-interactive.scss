@@ -1,18 +1,19 @@
+// Used in header nav.
 .t-link--light {
   @include state--link {
-    // color: $c-grey3;
+    // color: $grey-3;
     color: rgba(white, .6);
   }
   @include state--hover {
-    color: $c-grey2;
+    color: $grey-2;
   }
 }
-.t-link--dark {
-  @include state--link {color: $c-grey4; }
-  @include state--hover {color: $c-grey6; }
-}
-.t-link--selected {
-  cursor: default;
-  color: $c-grey4;
-  @include state--hover {color: $c-grey4; }
-}
+// .t-link--dark {
+//   @include state--link {color: $grey-4; }
+//   @include state--hover {color: $grey-6; }
+// }
+// .t-link--selected {
+//   cursor: default;
+//   color: $grey-4;
+//   @include state--hover {color: $grey-4; }
+// }
