@@ -8,15 +8,16 @@
 
 // Class for <section> instances.
 .l-section--light {
-  color: $c-grey6;
-  background-color: $c-grey1;
+  color: $grey-5;
+  background-color: $grey-1;
 }
 .l-section--dark {
-  background-color: $c-grey8;
-  color: white;
-  .t-h2 {
-    -webkit-font-smoothing: antialiased;
-  }
+  background-color: $grey-8;
+  color: $grey-2;
+}
+.l-section--black {
+  background-color: rgba($grey-9, .25);
+  color: $grey-2;
 }
 
 // Column grid.
