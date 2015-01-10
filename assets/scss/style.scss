@@ -9,6 +9,7 @@
 @import "chj-framework/assets/scss/mixins/_reset";
 @import "chj-framework/assets/scss/mixins/_state";
 @import "chj-framework/assets/scss/mixins/_wrap";
+@import "mixins/_lg-mixins";
 
 // Config
 @import "config/c-colors";
@@ -23,7 +24,9 @@
 // Vendor
 @import "chj-framework/assets/scss/vendor/neat";
 @import "chj-framework/assets/scss/vendor/symbolset";
-@import "vendor/owlcarousel";
+@import "vendor/symbolset";
+@import "vendor/symbolset-social";
+// @import "vendor/owlcarousel";
 
 // Base
 @import "chj-framework/assets/scss/base/b-default";
@@ -57,9 +60,18 @@
 @import "objects/o-button";
 @import "objects/o-dropdown";
 @import "objects/o-header";
+@import "objects/o-input";
+@import "objects/icons";
+// @import "chj-framework/assets/scss/objects/o-icon";
+// @import "chj-framework/assets/scss/objects/o-icon-button";
 @import "objects/o-logo";
+@import "objects/o-media";
 @import "objects/o-person";
+@import "objects/o-post";
+@import "objects/o-social";
 @import "objects/o-slider";
+@import "objects/o-submit";
+@import "objects/o-tweet";
 
 // Modules
 @import "modules/modules";
@@ -67,9 +79,8 @@
 // @import "modules/m-header";
 @import "modules/m-news";
 @import "modules/m-about";
-@import "modules/m-service";
+@import "modules/m-services";
 @import "modules/m-portfolio";
 @import "modules/m-people";
-// @import "modules/m-blog";
-
-@import "styleguide/sg-color";
+@import "modules/m-blog";
+@import "modules/m-footer";
