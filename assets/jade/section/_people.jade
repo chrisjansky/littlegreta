@@ -1,23 +1,18 @@
 section.m-people.l-section--light
   .l-wrap.l-wrap--push
-    h1.m-people__title.t-h1.t-h1--small
-      span.t-gradient--dark Our People
 
-    //- .m-group__filters
-    //-   a.o-filter.o-filter--account.o-filter--active(href="#", data-target="account") Account & Finance
-    //-   a.o-filter.o-filter--sales(href="#", data-target="sales") Sales
-    //-   a.o-filter.o-filter--dev(href="#", data-target="dev") Development
-    //-   a.o-filter.o-filter--creative(href="#", data-target="creative") Creative
+    h2.m-people__title.t-h2
+      span.t-gradient--light Our People
 
-    ul.m-people__list(data-packery)
+    .m-people__list
       - var i = 0
-      while i < 25
+      while i < 24
         - var random = Math.floor((Math.random() * 8))
         - var person = people[random]
 
-        li.o-person(data-packery-item)
+        article.o-person
           .o-person__portrait
-            img.o-person__image(src="assets/images/#{person.image}", alt="Person")
+            img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
 
           .o-person__info
             strong.o-person__name.t-caps= person.name

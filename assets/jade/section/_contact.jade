@@ -1,85 +1,55 @@
-footer.l-section.l-section--light
-  .l-wrapper
-    main.m-feed
-      table.m-bar
-        tr
-          td
-            h3.t-h3 Twitter Feed
-          td
-            a.o-button.o-button--light(href='https://twitter.com/littlegretacz', title='Follow Us on Twitter!') Follow Us
-      ul.m-feed__list
-        include ../partial/tweet
-        include ../partial/tweet
-        include ../partial/tweet
-        include ../partial/tweet
-    aside.m-contact
-      h3.t-h3 Get in Touch
-      //- h5.t-h5 Little Greta Ltd.
-      ul.m-contact__list
-        li.m-contact__item
-          h5.t-h5
-            span London Office
+footer.m-footer.l-section--dark
+  .l-wrap.l-wrap--push
+
+    h2.m-footer__title.t-h2
+      span.t-gradient--2.t-gradient--small Stay Connected
+
+    .m-subscribe
+      p.m-subscribe__text.t-lead We publish interesting stuff. Be part of it. 
+        +dummy(10, "text")
+      form.m-subscribe__form.o-form
+        input.o-input(type="text", placeholder="Your e-mail address")
+        span.m-subscribe__submit.o-iconed--basic.ss-plus.right
+          input.o-submit(type="submit", value="Subscribe")
+      .m-subscribe__hint
+        span.m-subscribe__note or 
+        a.o-button--text.ss-navigateright.right(href="#") View the latest newsletter
+
+  .l-section--black.l-wrap.l-wrap--small.l-wrap--push
+    .o-social
+      strong.o-social__title.t-caps We&rsquo;re social, too!
+
+      ul.o-social__list
+        li.o-social__item--twitter
+          a.o-social__link--twitter(href="https://twitter.com/littlegretacz")
+            .o-social__icon.o-icon--b.ss-twitter.ss-social
+            span.o-social__caption Twitter
+        li.o-social__item--youtube
+          a.o-social__link--youtube(href="http://www.youtube.com/user/LittleGreta")
+            .o-social__icon.o-icon--b.ss-youtube.ss-social
+            span.o-social__caption YouTube channel
+        li.o-social__item--tumblr
+          a.o-social__link--tumblr(href="http://littlegreta.tumblr.com")
+            .o-social__icon.o-icon--b.ss-tumblr.ss-social
+            span.o-social__caption Tumblr blog
+
+  .m-contact.l-wrap.l-wrap--push
+    h3.m-contact__title.t-h3
+      span.t-gradient--dark Get in Touch
+
+    .m-contact__list.l-grid--4
+
+      each item, index in contact
+        .m-contact__item.l-grid__item--4
+          h5.m-contact__name.t-h5
+            span(class="t-underline--#{index + 1}") #{item.name} Office
           .m-contact__details
-            | 87-89 Saffron Hill
-            br
-            | EC1N 8QU London
-            br
-            br
-            | Owen Morgan
-            br
-            | +420 776 717 609
-            br
-            a(href='#') owen@littlegreta.co.uk
-        li.m-contact__item
-          h5.t-h5
-            span Edinburgh Office
-          .m-contact__details
-            | Belgrave Business Centre
-            br
-            | 45 Frederick St
-            br
-            | EH2 1EP Edinburgh
-            br
-            br
-            | Owen Morgan
-            br
-            | +420 776 717 609
-            br
-            a(href='#') owen@littlegreta.co.uk
-        li.m-contact__item
-          h5.t-h5
-            span Prague Office
-          .m-contact__details
-            | Vysehradska 1349/2
-            br
-            | 128 00 Prague
-            br
-            br
-            | Owen Morgan
-            br
-            | +420 776 717 609
-            br
-            a(href='#') owen@littlegreta.co.uk
-        li.m-contact__item
-          h5.t-h5
-            span Zlin Office
-          .m-contact__details
-            | Vysehradska 1349/2
-            br
-            | 128 00 Prague
-            br
-            br
-            | Owen Morgan
-            br
-            | +420 776 717 609
-            br
-            a(href='#') owen@littlegreta.co.uk
-    ul.m-social
-      li.m-social__newsletter
-        a.t-link--dark.o-tooltip.o-tooltip--top(href='#', data-title='Subscribe to Our Newsletter') Subscribe to Newsletter
-      li.m-social__twitter
-        a.t-link--dark.o-tooltip.o-tooltip--top(href='https://twitter.com/littlegretacz', data-title='Follow Us on Twitter') Twitter
-      li.m-social__youtube
-        a.t-link--dark.o-tooltip.o-tooltip--top(href='http://www.youtube.com/user/LittleGreta', data-title='Watch Our YouTube channel') YouTube channel
-      li.m-social__tumblr
-        a.t-link--dark.o-tooltip.o-tooltip--top(href='http://littlegreta.tumblr.com', data-title='View Our Tumblr blog') Tumblr blog
+            ul
+              each line in item.address
+                li= line
+            ul
+              each line in item.contact
+                li= line
+          a.m-contact__button.o-button--text.ss-mail(href="mailto:#{item.email}", class="m-contact__button--#{index + 1}") Contact #{item.person}
+
+    small.m-footer__note.t-small &copy; 2015 Little Greta Ltd.
