@@ -22,7 +22,7 @@ $.fn.embedTumblr = function (APIKey, options) {
 };
 
 $.fn.embedTumblr.defaults = {
-  postsPerPage: 9,
+  postsPerPage: 3,
   error: "<p>There was an error accessing the Tumblr API, sorry!</p>"
 };
 
@@ -38,8 +38,8 @@ function AccessTumlbrApi(target, APIKey, options) {
     $.each(data.response.posts, function () {
       var postType = this.type,
         thisPost = $("<article class='o-media o-post'/>"),
-        postDate = '<small class="o-post__date t-small" data-livestamp="' + this.timestamp + '"></small>',
-        linkURL = this.post_url;
+        linkURL = this.post_url,
+        postDate = '<a href="' + linkURL + '" class="o-post__date o-iconed--small ss-tumblr ss-social" data-livestamp="' + this.timestamp + '"></a>';
 
       switch (postType) {
 
@@ -52,9 +52,9 @@ function AccessTumlbrApi(target, APIKey, options) {
         thisPost.addClass('o-post--text')
             .append(
               '<strong class="o-post__title"><span class="o-post__underline">' + shortTitle + '</span></strong>', 
-              postDate,
+              postDate
               // '<div class="o-post__content">' + this.body + '</div>',
-              '<a class="o-button--text ss-navigateright right" href="' + linkURL + '">Read post on Tumblr</a>'
+              // '<a class="o-button--text ss-navigateright right" href="' + linkURL + '">Read post on Tumblr</a>'
             );
         loopContainer.append(thisPost);
         break; /*** END TEXT POST***/
@@ -64,11 +64,12 @@ function AccessTumlbrApi(target, APIKey, options) {
         // Pick only the first photo, delete for loop
         var
           postPhoto = this.photos[0],
-          captionLength = 60,
+          captionLength = 90,
           shortCaption = (this.caption).length > captionLength ? (this.caption).substring(0, captionLength) + "&hellip;" : this.caption;
 
         var
           figure = $('<figure class="o-post__figure" />'),
+          overlay = $('<div class="o-post__overlay" />'),
           photoSizeURL,
           caption;
         // Check for photo size options. Prevents really large original images from being called.
@@ -88,13 +89,16 @@ function AccessTumlbrApi(target, APIKey, options) {
         } else {
           caption = "";
         }
-        figure.append('<a href="' + postPhoto.original_size.url + '" target="_blank" title="' + postPhoto.caption + '"><img src="' + photoSizeURL + '"/></a>', caption);
+        figure.append('<img src="' + photoSizeURL + '"/>', caption);
         // End for photo loop
 
+        // $(shortCaption).wrap('<div class="o-post__text"></div>');
+        shortCaption = '<div class="o-post__text">' + shortCaption + '</div>';
+        overlay.append(shortCaption, postDate);
         thisPost.addClass('o-post--photo')
             .append(
               figure, 
-              '<div class="o-post__overlay">' + shortCaption + postDate + '<a href="' + linkURL + '">View photos on Tumblr</a></div>'
+              overlay
             );
         loopContainer.append(thisPost);
         break; /*** END PHOTO POST***/
@@ -108,8 +112,8 @@ function AccessTumlbrApi(target, APIKey, options) {
             .append(
               '<q class="o-post__quote">' + shortQuote + '</q>', 
               '<p class="o-post__source"> &#8212; ' + this.source + '</p>', 
-              postDate,
-              '<a href="' + linkURL + '">View quote on Tumblr</a>'
+              postDate
+              // '<a href="' + linkURL + '">View quote on Tumblr</a>'
             );
         loopContainer.append(thisPost);
         break; /*** END QUOTE POST***/
@@ -119,9 +123,9 @@ function AccessTumlbrApi(target, APIKey, options) {
         thisPost.addClass('o-post--video')
             .append(
               this.player[2].embed_code, 
-              postDate,
+              postDate
               // this.caption,
-              '<a href="' + linkURL + '">Watch video on Tumblr</a>'
+              // '<a href="' + linkURL + '">Watch video on Tumblr</a>'
             );
         loopContainer.append(thisPost);
         break; /*** END VIDEO POST ***/
@@ -140,8 +144,8 @@ function AccessTumlbrApi(target, APIKey, options) {
             .append(
               postDate,
               '<a href="' + this.url + '">' + this.title + '</a>',
-              description,
-              '<a href="' + linkURL + '">Go to tumblr post...</a>'
+              description
+              // '<a href="' + linkURL + '">Go to tumblr post...</a>'
             );
         loopContainer.append(thisPost);
         break; /*** END LINK POST ***/
