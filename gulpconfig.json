@@ -4,7 +4,7 @@
     "production": "public/",
     "styleguide": "public/styleguide/",
 
-    "pages": "*.html",
+    "pages": "*.php",
     "jade": "assets/jade/*.jade",
     "jade_glob": "assets/jade/**/*.jade",
     "jade_ignore": "!assets/jade/**/_*",
@@ -36,7 +36,8 @@
   },
   "files": [
     "assets/fonts/*",
-    "assets/favicon.ico"
+    "assets/favicon.ico",
+    "assets/php/**/*"
   ],
   "styleguide": [
     "bower_components/chj-framework/assets/kss/assets/prism.css"
