@@ -80,9 +80,10 @@
 
           <p class="o-tweet__text"><?php echo $tweet_text ?></p>
           <div class="o-tweet__info">
-            <span class="ss-twitter"></span>
-            <a class="o-tweet__date" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id ?>" data-livestamp="<?php echo strtotime($tweet->created_at) ?>"></a>
-            <?php if ($is_retweet) : ?><span class="o-tweet__note">Retweet</span><?php endif; ?>
+            <a class="o-tweet__date o-iconed--small ss-twitter ss-social" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id ?>">
+              <?php if ($is_retweet) : ?><span class="t-smallcaps">Retweeted </span><?php endif; ?>
+              <span data-livestamp="<?php echo strtotime($tweet->created_at) ?>"></span>
+            </a>
           </div>
 
           <?php if ($tweet_type === "image" || $tweet_type === "instagram") { // Close overlay ?>
