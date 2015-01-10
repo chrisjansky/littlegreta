@@ -6,17 +6,17 @@ $font__mono: monospace;
 
 // Weights.
 $font__sans--light: 300;
-$font__sans--regular: 400;
-$font__sans--medium: 500;
-$font__sans--semibold: 600;
+// $font__sans--book: 400;
+$font__sans--medium: 500; // With italics
+// $font__sans--semibold: 600;
 $font__sans--bold: 700;
 
-$font__serif--light: 300;
-$font__serif--regular: 400;
-$font__serif--bold: 700;
+// $font__serif--light: 300;
+$font__serif--book: 400; // With italics
+// $font__serif--bold: 700;
 
 $font__display--light: 300;
-$font__display--regular: 400;
+$font__display--book: 400;
 
 $font__mono--regular: regular;
 $font__mono--bold: bold;
