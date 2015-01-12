@@ -24,9 +24,9 @@
 // Vendor
 @import "chj-framework/assets/scss/vendor/neat";
 @import "chj-framework/assets/scss/vendor/symbolset";
+@import "vendor/royalslider";
 @import "vendor/symbolset";
 @import "vendor/symbolset-social";
-// @import "vendor/owlcarousel";
 
 // Base
 @import "chj-framework/assets/scss/base/b-default";
@@ -75,7 +75,7 @@
 
 // Modules
 @import "modules/modules";
-@import "modules/m-top";
+@import "modules/m-intro";
 // @import "modules/m-header";
 @import "modules/m-news";
 @import "modules/m-about";
@@ -84,3 +84,6 @@
 @import "modules/m-people";
 @import "modules/m-blog";
 @import "modules/m-footer";
+
+@import "misc/svg";
+@import "misc/temp";
