@@ -1,5 +1,5 @@
 section.m-people.l-section--light
-  .l-wrap.l-wrap--push
+  .l-wrap.l-wrap--section
 
     h2.m-people__title.t-h2
       span.t-gradient--light Our People
@@ -19,14 +19,14 @@ section.m-people.l-section--light
             small.o-person__position.t-small!= person.position
 
             .o-person__detail
+              .o-person__content
+                strong Education
+                != person.education
 
-              strong Education
-              != person.education
+                strong Hobbies
+                != person.hobbies
 
-              strong Hobbies
-              != person.hobbies
-
-              strong 3 Love Brands
-              != person.favourites
+                strong 3 Love Brands
+                != person.favourites
 
         - i++
