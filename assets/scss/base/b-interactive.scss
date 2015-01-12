@@ -1,16 +1,31 @@
 // Used in header nav.
-.t-link--light {
+.i-link--light {
   @include state--link {
     // color: $grey-3;
     color: rgba(white, .6);
   }
   @include state--hover {
-    color: $grey-2;
+    color: $grey-1;
   }
 }
-// .t-link--dark {
-//   @include state--link {color: $grey-4; }
-//   @include state--hover {color: $grey-6; }
+// Used in portfolio hint.
+.i-link--2 {
+  @include state--link {
+    color: $color-1;
+  }
+  @include state--hover {
+    color: $color-1--lighter;
+  }
+}
+
+// not used atm
+// .i-link--dark {
+//   @include state--link {
+//     color: rgba($grey-2, .25);
+//   }
+//   @include state--hover {
+//     color: rgba(white, .5);
+//   }
 // }
 // .t-link--selected {
 //   cursor: default;
