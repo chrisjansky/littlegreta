@@ -11,3 +11,9 @@
 
   @include linear-gradient(to bottom, transparent, rgba($grey-8, .85));
 }
+
+@mixin wrap-push {
+  @include media($desktop) {
+    @include padding(null em(80) null em(130));
+  }
+}
