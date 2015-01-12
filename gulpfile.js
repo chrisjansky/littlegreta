@@ -141,8 +141,7 @@ gulp.task("build-images", ["build-wipe"], function() {
   if (argv.full) {
     return gulp.src([config.paths.images_glob, config.paths.images_ignore], {base: config.paths.development})
       .pipe(plugins.imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}]
+        progressive: true
       }))
       .pipe(gulp.dest(config.paths.production));
   };
@@ -187,21 +186,40 @@ gulp.task("deploy", function() {
 
 // Delete the PNG fallbacks/ folder.
 gulp.task("svg-wipe", function() {
-  return gulp.src([config.paths.fallbacks, config.paths.svg_glob], {read: false})
+  return gulp.src([config.paths.fallbacks, config.paths.svg_build_glob], {read: false})
     .pipe(vinyl(del));
 });
 
 // Optimize SVG.
 gulp.task("svg-optimize", ["svg-wipe"], function() {
   return gulp.src(config.paths.svg_source_glob)
-    .pipe(plugins.imagemin())
+    .pipe(plugins.imagemin({
+      svgoPlugins: [{collapseGroups: false}]
+    }))
+    .pipe(gulp.dest(config.paths.svg_build));
+});
+
+gulp.task("svg-combine", ["svg-optimize"], function() {
+  return gulp.src(config.paths.svg_build_glob)
+    .pipe(plugins.svgSprites({
+      mode: "symbols",
+      svg: {
+        symbols: "complete.svg"
+      },
+      preview: {
+        symbols: "index.html"
+      }
+    }))
+    .pipe(plugins.size({
+      showFiles: true
+    }))
     .pipe(gulp.dest(config.paths.svg));
 });
 
 // Render PNG fallbacks for SVG.
-gulp.task("svg", ["svg-optimize"], function() {
+gulp.task("svg", ["svg-combine"], function() {
   // WTF error, needs src with ".svg".
-  return gulp.src(config.paths.svg_glob + ".svg")
+  return gulp.src(config.paths.svg_build_glob + ".svg")
     .pipe(plugins.svg2png())
     .pipe(gulp.dest(config.paths.fallbacks));
 });
