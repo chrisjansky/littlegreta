@@ -39,7 +39,7 @@ function AccessTumlbrApi(target, APIKey, options) {
       var postType = this.type,
         thisPost = $("<article class='o-media o-post'/>"),
         linkURL = this.post_url,
-        postDate = '<a href="' + linkURL + '" class="o-post__date o-iconed--small ss-tumblr ss-social" data-livestamp="' + this.timestamp + '"></a>';
+        postDate = '<a href="' + linkURL + '" class="o-media__date--tumblr o-iconed--small ss-tumblr ss-social" data-livestamp="' + this.timestamp + '"></a>';
 
       switch (postType) {
 
@@ -49,9 +49,9 @@ function AccessTumlbrApi(target, APIKey, options) {
           titleLength = 30,
           shortTitle = (this.title).length > titleLength ? (this.title).substring(0, titleLength) + "&hellip;" : this.title;
 
-        thisPost.addClass('o-post--text')
+        thisPost.addClass('o-post--basic')
             .append(
-              '<strong class="o-post__title"><span class="o-post__underline">' + shortTitle + '</span></strong>', 
+              '<a href="' + linkURL + '" class="o-post__title"><span class="o-post__underline">' + shortTitle + '</span></a>', 
               postDate
               // '<div class="o-post__content">' + this.body + '</div>',
               // '<a class="o-button--text ss-navigateright right" href="' + linkURL + '">Read post on Tumblr</a>'
@@ -68,10 +68,9 @@ function AccessTumlbrApi(target, APIKey, options) {
           shortCaption = (this.caption).length > captionLength ? (this.caption).substring(0, captionLength) + "&hellip;" : this.caption;
 
         var
-          figure = $('<figure class="o-post__figure" />'),
-          overlay = $('<div class="o-post__overlay" />'),
-          photoSizeURL,
-          caption;
+          overlay = $('<div class="o-media__overlay" />'),
+          photoSizeURL;
+
         // Check for photo size options. Prevents really large original images from being called.
         if (postPhoto.alt_sizes[0].width >= 500) {
           var n = 0;
@@ -83,21 +82,13 @@ function AccessTumlbrApi(target, APIKey, options) {
         } else {
           photoSizeURL = postPhoto.original_size.url;
         }
-        if (postPhoto.caption !== "") {
-          caption = $('<figcaption />');
-          caption.append(postPhoto.caption);
-        } else {
-          caption = "";
-        }
-        figure.append('<img src="' + photoSizeURL + '"/>', caption);
         // End for photo loop
 
-        // $(shortCaption).wrap('<div class="o-post__text"></div>');
-        shortCaption = '<div class="o-post__text">' + shortCaption + '</div>';
+        shortCaption = '<div class="o-post__content">' + shortCaption + '</div>';
         overlay.append(shortCaption, postDate);
         thisPost.addClass('o-post--photo')
             .append(
-              figure, 
+              '<img class="o-media__image" src="' + photoSizeURL + '"/>', 
               overlay
             );
         loopContainer.append(thisPost);
@@ -111,7 +102,7 @@ function AccessTumlbrApi(target, APIKey, options) {
         thisPost.addClass('o-post--quote')
             .append(
               '<q class="o-post__quote">' + shortQuote + '</q>', 
-              '<p class="o-post__source"> &#8212; ' + this.source + '</p>', 
+              '<span class="o-post__source"> &#8212; ' + this.source + '<span>', 
               postDate
               // '<a href="' + linkURL + '">View quote on Tumblr</a>'
             );
@@ -122,7 +113,7 @@ function AccessTumlbrApi(target, APIKey, options) {
       case "video":
         thisPost.addClass('o-post--video')
             .append(
-              this.player[2].embed_code, 
+              '<div class="o-post__player">' + this.player[2].embed_code + '</div>',
               postDate
               // this.caption,
               // '<a href="' + linkURL + '">Watch video on Tumblr</a>'
