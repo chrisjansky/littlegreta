@@ -8,3 +8,9 @@
     padding-bottom: em($ratio--xl);
   }
 }
+
+.l-wrap--section {
+  max-width: em(1400);
+
+  @include wrap-push;
+}
