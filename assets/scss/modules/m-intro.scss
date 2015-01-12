@@ -1,0 +1,95 @@
+.m-intro {
+  @include position(fixed, 0 0 null 0);
+
+  z-index: $index--b;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// .m-intro__background {
+  // @include stretch-overlay;
+  // z-index: -1;
+
+  // overflow-y: hidden;
+
+  // background: center top / cover;
+// }
+
+.m-intro__overlay {
+  @include linear-gradient(to bottom, transparent, rgba(white, .375));
+  @include wrap-push;
+  // background-image: linear-gradient(to top, rgba(white, .25), rgba($grey-9, .25), $fallback: transparent);
+
+  // @include linear-gradient(to bottom, transparent, rgba($color-1--lighter, .25));
+  // z-index: $index--s;
+}
+
+.m-intro__content {
+  position: relative;
+
+  @include shift(4);
+
+  min-height: 62vh;
+  // height: 400px;
+  padding-top: em($ratio--xl);
+
+}
+
+.m-intro__text {
+  color: white;
+
+  // margin-top: 0;
+  @include margin(0 null);
+  // margin-bottom: em($ratio--xl);
+}
+
+.m-intro__menu {
+  @include position(absolute, null 0 0 0);
+
+  padding-bottom: em($ratio--b);
+}
+
+// .top--is-off {
+//   .m-intro {
+//     transform: translateY(-100%);
+//   }
+// }
+
+.m-intro__lift {
+  @include position(fixed, null 0 0 0);
+
+  @include wrap-push;
+
+  @include padding(0 null em($ratio--m));
+
+  z-index: $index--s;
+
+  text-decoration: none;
+
+  transition: transform $duration--l, opacity $duration--l, color $duration--b;
+
+  @include state--link {
+    color: $color-4;
+  }
+  @include state--hover {
+    color: $color-4--lighter;
+  }
+
+  // @include state--focus {
+  //   color: white;
+  // }
+
+  .top--is-off & {
+    opacity: 0;
+    transform: translateY(em($ratio--l));
+  }
+}
+
+.m-intro__mark {
+  // Reset <mark>
+  background-color: transparent;
+  color: inherit;
+
+  @include shift(4);
+}

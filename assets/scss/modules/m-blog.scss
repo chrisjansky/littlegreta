@@ -13,7 +13,8 @@
 }
 
 .m-blog__sizer {
-  @include span-columns(1);
+  @include span-columns(4);
+  margin-right: 0;
 }
 .m-blog__gutter {
   width: flex-gutter();

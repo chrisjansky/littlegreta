@@ -1,33 +1,27 @@
-// .m-portfolio {
-//   overflow: hidden;
-// }
-// .m-portfolio__list {
-//   @include reset-list;
-//   white-space: nowrap;
-// }
-// .m-portfolio__item {
-//   display: inline-block;
-//   width: 90%;
-//   white-space: normal;
-// }
-.m-portfolio__content {
-  // :after already taken with linear-gradient
-  overflow: auto;
-//   img {
-//     width: 100%;
-//     display: block;
-//   }
+.m-portfolio {
+  position: relative;
 }
-// .m-portfolio__info {
-//   width: 40%;
-//   padding: em($ratio--m);
-//   background-color: rgba($grey-8, .5);
-//   float: left;
-//   @include collapse-children;
+
+// .m-portfolio__slider {
+//   z-index: $index--xs;
 // }
 
+.m-portfolio__content {
+  // :after for clearfix already taken with linear-gradient
+  overflow: auto;
+}
+
 .m-portfolio__item {
-  width: 80vw;
+  // width: 80vw;
+
+  .rsImg {
+    transition: opacity $duration--b;
+    opacity: .25;
+  }
+
+  .rsActiveSlide & .rsImg {
+    opacity: 1;
+  }
 }
 
 .m-portfolio__info {
@@ -37,4 +31,26 @@
 
   margin-top: 0;
   margin-right: em($ratio--m);
+}
+
+.m-portfolio__button {
+  float: right;
+}
+
+.m-portfolio__hint {
+  @include position(absolute, null 0 22.5% null);
+
+  width: 20%;
+
+  text-align: center;
+
+  transition: transform $duration--b, opacity $duration--b;
+
+  opacity: 0;
+  transform: translateX(em($ratio--l));
+
+  .carousel--at-end & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
