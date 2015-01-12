@@ -22,8 +22,9 @@
     "images_glob": "assets/images/**/*",
     "images_ignore": "!assets/images/_ignore{,/**}",
 
-    "svg": "assets/svg/_build/",
-    "svg_glob": "assets/svg/_build/**/*",
+    "svg": "assets/svg/",
+    "svg_build": "assets/svg/_build/",
+    "svg_build_glob": "assets/svg/_build/**/*",
     "svg_source_glob": "assets/svg/_source/**/*",
 
     "fallbacks": "assets/images/fallbacks/",
