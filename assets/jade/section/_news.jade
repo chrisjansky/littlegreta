@@ -1,15 +1,17 @@
-section.m-news.o-slider.owl-carousel(data-slider)
+section#news.m-news(data-news)
+  #js-fog.m-news__fog
 
-  each instance in [182, 177, 304, 341, 201]
+  .m-news__slider.o-slider.royalSlider(data-slider)
+    each instance in [182, 177, 304, 341]
 
-    article.m-news__item.o-slider__item
+      article.m-news__item.o-slider__item
 
-      .m-news__overlay.o-slider__overlay.l-wrap.l-wrap--push
-        .m-news__content.o-slider__content
-          h2.t-h2
-            +dummy(6, "words")
-          p.t-big
-            +dummy(20, "text")
-          a(href="#").o-button--text.o-button--big.ss-play.right Watch
+        .m-news__overlay.o-slider__overlay.l-wrap
+          .m-news__content.o-slider__content
+            h2.t-h2
+              +dummy(6, "words")
+            p.t-big
+              +dummy(20, "text")
+            a(href="#").o-button--text.o-button--big.ss-play.right Watch
 
-      img.o-slider__image(src="http://unsplash.it/1280/800/?image=#{instance}", alt="unsplash.it")
+        a.o-slider__image.rsImg(href="http://unsplash.it/1280/800/?image=#{instance}") unsplash.it
