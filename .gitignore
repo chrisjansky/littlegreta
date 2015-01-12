@@ -36,6 +36,7 @@ $RECYCLE.BIN/
 
 ## Custom
 /*.html
+/*.php
 
 _ignore
 _build
@@ -46,4 +47,5 @@ public
 assets/css
 assets/royal
 assets/fonts
+assets/svg
 assets/images/fallbacks
