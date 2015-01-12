@@ -1,6 +1,7 @@
 $c-hue1: 215;
 $c-hue2: 85;
 $c-hue3: 175;
+$c-hue4: 255;
 
 $c-offset1: 10;
 $c-offset2: 20;
@@ -8,7 +9,7 @@ $c-offset2: 20;
 // Primary colors.
 $color-1--lighter: hsb($c-hue1 - $c-offset2, 091, 100); // S90 = error?
 $color-1--light:   hsb($c-hue1 - $c-offset1, 085, 095);
-$color-1:          hsb($c-hue1, 090, 090);
+$color-1:          hsb($c-hue1, 085, 100);
 $color-1--dark:    hsb($c-hue1 + $c-offset1, 090, 080);
 $color-1--darker:  hsb($c-hue1 + $c-offset2, 090, 070);
 
@@ -23,6 +24,9 @@ $color-3--light:   hsb($c-hue3 - $c-offset1, 090, 090);
 $color-3:          hsb($c-hue3, 085, 085);
 $color-3--dark:    hsb($c-hue3 + $c-offset1, 090, 080);
 $color-3--darker:  hsb($c-hue3 + $c-offset2, 100, 075);
+
+$color-4--lighter:   hsb($c-hue4 - $c-offset2, 015, 100);
+$color-4:          hsb($c-hue4, 035, 100);
 
 // Neutral colors.
 $grey-1: hsb($c-hue1, 04, 97);
