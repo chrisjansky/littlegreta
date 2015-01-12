@@ -1,4 +1,4 @@
-.o-tweet {
+// .o-tweet {
   // outline: 1px solid rgba(white, .25);
   // position: relative;
 
@@ -7,35 +7,17 @@
   // @include span-columns(3);
   // margin-right: 0;
   // @include omega(3n);
-}
+// }
 
-.o-tweet__overlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  padding: em($ratio--b);
-
-  z-index: $index--s;
-}
-
-.o-tweet--image {
-  border-radius: $radius--b;
-  overflow: hidden;
-
-  &:after {
-    @include overlay-gradient;
-  }
-}
+// .o-tweet--image {
+  // border-radius: $radius--b;
+  // overflow: hidden;
+// }
 
 .o-tweet--basic {
-  border-top: $line--b solid rgba($grey-8, .25);
+  border-top: $line--b solid rgba($grey-9, .25);
 
   padding-top: em($ratio--b);
-}
-
-.o-tweet__image {
-  opacity: .6;
 }
 
 .o-tweet__text {
@@ -59,20 +41,12 @@
     }
   }
 }
-
-.o-tweet__date {
-  text-decoration: none;
-
-  @include state--link {
-    color: rgba($grey-4, .75);
-  }
-  @include state--active {
-    color: white;
-    &:before {
-      color: $c-twitter;
-    }
-  }
-}
 // .o-tweet__note {
 //   margin-left: em($ratio--s);
 // }
+
+.o-tweet--photo {
+  &:after {
+    @include overlay-gradient;
+  }
+}

@@ -6,3 +6,43 @@
   margin-right: 0;
   margin-bottom: em($ratio--m);
 }
+
+.o-media__image {
+  opacity: .8;
+}
+
+.o-media__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: em($ratio--b);
+
+  z-index: $index--s;
+}
+
+[class^="o-media__date"],
+[class*=" o-media__date"] {
+  text-decoration: none;
+
+  @include state--link {
+    color: rgba($grey-4, .75);
+  }
+  @include state--active {
+    color: white;
+  }
+}
+.o-media__date--twitter {
+  @include state--active {
+    &:before {
+      color: $c-twitter;
+    }
+  }
+}
+.o-media__date--tumblr {
+  @include state--active {
+    &:before {
+      color: $color-2;
+    }
+  }
+}
