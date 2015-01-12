@@ -37,8 +37,8 @@
             case "media":
 
               if (isset($value->media_url)) {
-                $tweet_type = "image";
-                $tweet_media = "<img class=\"o-tweet__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\" >";
+                $tweet_type = "photo";
+                $tweet_media = "<img class=\"o-media__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\" >";
               // } else if (strpos($value->display_url, "instagram") !== false) {
               //   $zkouska = "instagram";
               // }
@@ -73,20 +73,20 @@
       ?>
 
         <article class="o-media o-tweet o-tweet--<?php echo $tweet_type; ?>">
-          <?php if ($tweet_type === "image" || $tweet_type === "instagram") { ?>
+          <?php if ($tweet_type === "photo" || $tweet_type === "instagram") { ?>
             <?php echo $tweet_media ?>
-            <div class="o-tweet__overlay">
+            <div class="o-media__overlay">
           <?php } ?>
 
           <p class="o-tweet__text"><?php echo $tweet_text ?></p>
           <div class="o-tweet__info">
-            <a class="o-tweet__date o-iconed--small ss-twitter ss-social" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id ?>">
+            <a class="o-media__date--twitter o-iconed--small ss-twitter ss-social" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id ?>">
               <?php if ($is_retweet) : ?><span class="t-smallcaps">Retweeted </span><?php endif; ?>
               <span data-livestamp="<?php echo strtotime($tweet->created_at) ?>"></span>
             </a>
           </div>
 
-          <?php if ($tweet_type === "image" || $tweet_type === "instagram") { // Close overlay ?>
+          <?php if ($tweet_type === "photo" || $tweet_type === "instagram") { // Close overlay ?>
             </div>
           <?php } ?>
         </article>
