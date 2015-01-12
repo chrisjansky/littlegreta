@@ -1,3 +1,5 @@
+// Not used in favour of lg-royal.js
+
 // $("[data-carousel]").royalSlider({
 //   keyboardNavEnabled: true,
 //   controlNavigation: false,
