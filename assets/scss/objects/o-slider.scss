@@ -3,17 +3,32 @@
 }
 
 .o-slider__item {
-  position: relative;
+  // position: relative;
 
   color: white;
 
-  height: 105vh;
+  // height: 105vh;
+  height: 100%;
 }
 
 .o-slider__overlay {
   @include position(absolute, null 0 0 0);
+  @include wrap-push;
 
   z-index: $index--b;
+
+  transition: transform $duration--l, opacity $duration--l;
+
+  .csstransforms.no-touch & {
+    opacity: 0;
+    transform: translateY(em($ratio--l));
+  }
+  .csstransforms.no-touch .top--is-off .rsActiveSlide & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  // .rsActiveSlide & {
+  // }
 }
 
 .o-slider__content {
@@ -40,11 +55,11 @@
   }
 }
 
-.o-slider__image {
-  @include position(absolute, 0 0 0 0);
+// .o-slider__image {
+//   @include position(absolute, 0 0 0 0);
 
-  margin: auto;
+//   margin: auto;
 
-  min-width: 100%;
-  min-height: 100%;
-}
+//   min-width: 100%;
+//   min-height: 100%;
+// }

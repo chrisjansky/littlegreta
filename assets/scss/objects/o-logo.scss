@@ -1,52 +1,85 @@
 .o-logo {
-  display: inline-block;
+  display: block;
+
   position: relative;
 
-  text-align: center;
+  @include margin(em($ratio--xl) null null em($ratio--b));
 
-  margin-top: em(80);
-  margin-left: 7.5vw;
+  transform: translateX(em($ratio--l));
 
-  transition: margin $duration--b $timing--b;
-  // @include margin(em(90) null null em($ratio--xl));
-
-  // border-radius: 50%;
-  // background-color: rgba($grey-8, .25);
-}
-
-.o-logo__big {
-  // position: absolute;
-  // top: 0;
-
-  transition: opacity $duration--s;
+  transition: transform $duration--b;
 
   svg {
-    fill: rgba($grey-8, .875);
+    fill: rgba($grey-9, .85);
+
+    width: em(120);
+
+    margin: em($ratio--t);
+  }
+
+  .top--is-off & {
+    transform: translateX(0);
   }
 }
 
-.o-logo__small {
-  position: absolute;
-  top: 0;
+.o-logo__content {
+  overflow: hidden;
 
-  transition: opacity $duration--s, width $duration--s;
+  width: em(120);
+  height: em(60);
+
+  padding: em($ratio--t);
+
+  box-sizing: content-box;
+
+  transition: transform $duration--b, opacity $duration--s;
+
+  .top--is-off & {
+    transform: scale(.75);
+  }
+
+  @include state--hover {
+    opacity: .75;
+  }
+}
+
+.o-logo__title {
+  display: block;
+}
+
+.o-logo__tooltip {
+  @include position(absolute, 15% null null 75%);
+
+
+  font-size: em($unit--xs);
+  color: white;
+
+  white-space: nowrap;
+
   opacity: 0;
+  transform: translateX(25%);
 
-  svg {
-    width: 100%;
-    fill: rgba($grey-8, .75);
-  }
-}
+  transition: opacity $duration--b, transform $duration--b;
 
-.top--is-off {
-  .o-logo {
-    margin-left: 2.5vw;
+  &:before {
+    display: inline-block;
+
+    content: "";
+    @include triangle(em($ratio--s), rgba($grey-9, $opacity--b), left);
   }
-  .o-logo__big {
-    opacity: 0;
+  &:after {
+    display: inline-block;
+    content: "Back to Top Menu";
+
+    line-height: em($height--b);
+    @include padding(null em($ratio--b));
+
+    background-color: rgba($grey-9, $opacity--b);
+    border-radius: $radius--b;
   }
-  .o-logo__small {
-    width: em(80);
+
+  .top--is-off .o-logo:hover & {
     opacity: 1;
+    transform: translateX(0);
   }
 }

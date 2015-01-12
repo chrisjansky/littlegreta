@@ -21,10 +21,10 @@
 [class^="o-blur--"],
 [class*=" o-blur--"] {
   background: center / cover;
-  @include media($desktop) {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+  // @include media($desktop) {
+  //   background-repeat: no-repeat;
+  //   background-attachment: fixed;
+  // }
 }
 .o-blur--blue {background-image: url("../images/bg_blue.jpg"); }
 // .o-blur--red {background-image: url("../images/color_bg/bg_red.jpg"); }
