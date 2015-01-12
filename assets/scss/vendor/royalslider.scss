@@ -1,0 +1,47 @@
+.royalSlider {
+  width: 100%;
+  height: 110vh;
+}
+
+.rsArrow {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  @include padding(null em($ratio--b));
+
+  text-align: center;
+  color: rgba(white, .25);
+
+  user-select: none;
+
+  @include pseudo-center--parent;
+
+  &:after {
+    font-family: "SSGizmo";
+    font-size: #{$icon--b}px;
+
+    vertical-align: -90%; // Magic number alignment
+  }
+}
+.rsArrowIcn {
+  display: inline-block;
+}
+
+.rsArrowLeft {
+  left: 0;
+  padding-left: em($ratio--l);
+
+  &:after {
+    content: "◅";
+  }
+}
+.rsArrowRight {
+  right: 0;
+  padding-right: em($ratio--l);
+
+  &:after {
+    content: "▻";
+  }
+}
