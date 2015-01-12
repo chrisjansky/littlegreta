@@ -73,6 +73,7 @@
 .t-h3 {
   font-size: em($ratio--l);
   font-weight: $font__sans--bold;
+  line-height: $spacing--xs;
 
   @include margin(em($ratio--xs) null);
 }
