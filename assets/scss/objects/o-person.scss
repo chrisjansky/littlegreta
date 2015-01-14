@@ -12,58 +12,35 @@
     cursor: pointer;
   }
 }
-.o-person--big {
-  @include span-columns(6);
-  margin-right: 0;
-
-  .o-person__portrait {
-    background-color: white;
-    // width: em(130);
-  }
-  .o-person__info {
-    text-align: left;
-  }
-  .o-person__detail {
-    display: block;
-    margin-top: em($ratio--b);
-  }
-  .o-person__name {
-    font-size: em($ratio--m);
-    text-transform: none;
-    letter-spacing: 0;
-    padding-left: 0;
-  }
-}
 
 .o-person__portrait {
   float: left;
 
   width: em(110);
 
-  padding: $line--l;
   margin-right: em($ratio--b);
 
-  background-color: transparent;
+  background-color: white;
   border-radius: 50%;
-
-  transition: background-color $duration--s;
-
-  // .o-person:hover & {
-  //   background-color: white;
-  // }
 }
 
 .o-person__image {
   border-radius: 50%;
-  transition: opacity $duration--s;
+  transition: transform $duration--s;
 
-  // .o-person:hover & {
-  //   opacity: .75;
-  // }
-  // .o-person--big:hover & {
-  //   opacity: 1;
-  // }
+  .o-person:hover & {
+    transform: scale(.95);
+  }
 }
+
+.o-person__name {
+  transition: color $duration--s;
+  
+  .o-person:hover & {
+    color: $grey-8;
+  }
+}
+
 
 .o-person__position {
   display: block;
@@ -80,13 +57,13 @@
 .o-person__detail {
   visibility: hidden;
 
-  @include position(absolute, 100% -20% null -20%);
+  @include position(absolute, 85% -15% null -15%);
   z-index: $index--s;
 
   opacity: 0;
   transform: translateY(em($ratio--b));
 
-  transition: opacity $duration--b, transform $duration--b;
+  transition: opacity $duration--b, transform $duration--b, visibility 0 $duration--b;
 
   &:before {
     display: block;
@@ -98,6 +75,7 @@
 
   .o-person:hover & {
     visibility: visible;
+    transition-delay: $duration--l;
 
     opacity: 1;
     transform: translateY(0);
