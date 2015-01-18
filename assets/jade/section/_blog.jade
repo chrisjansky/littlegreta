@@ -1,11 +1,11 @@
-section.m-blog.l-section--dark.o-blur--purple.o-blur--fixed
+section#blog.m-blog.l-section--dark.o-blur--purple.o-blur--fixed
   .l-wrap.l-wrap--section
 
     h3.m-blog__title.t-h3 &hellip;&thinsp;and their Thoughts
     
     .m-blog__feed(data-tumblr, data-feed)
-      .m-blog__sizer
-      .m-blog__gutter
+      .o-sizer--column(data-column)
+      .o-sizer--gutter(data-gutter)
       <?php require "assets/php/vendor/TwitterAPIExchange.php"; ?>
       <?php require "assets/php/twitter-config.php"; ?>
       <?php require "assets/php/twitter-setup.php"; ?>
