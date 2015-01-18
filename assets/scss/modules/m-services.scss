@@ -5,7 +5,7 @@
 }
 
 .m-services__title {
-  color: $grey-7;
+  color: $grey-2;
 
   text-align: center;
 }
@@ -36,23 +36,31 @@
     color: $color-1;
   }
   .m-services__circle {
-    background-image: url("../images/about_digital2.png");
+    background-image: url("../images/about_digital.png");
   }
 }
 .m-services__item--graphic {
   .m-services__name {
-    color: $color-2;
+    color: $color-4;
   }
   .m-services__circle {
-    background-image: url("../images/about_graphic2.png");
+    background-image: url("../images/about_graphic.png");
   }
 }
-.m-services__item--creation {
+.m-services__item--multimedia {
   .m-services__name {
     color: $color-3;
   }
   .m-services__circle {
-    // background-image: url("../images/about_creation.png");
+    background-image: url("../images/about_multimedia.png");
+  }
+}
+.m-services__item--creation {
+  .m-services__name {
+    color: $color-2;
+  }
+  .m-services__circle {
+    background-image: url("../images/about_creation.png");
   }
 }
 .m-services__list {

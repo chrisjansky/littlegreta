@@ -1,16 +1,9 @@
 .m-news {
   position: relative;
 
-  margin-top: 38vh;
+  margin-top: 40vh;
 
-  background-color: $grey-7;
-}
-
-.m-news__fog {
-  @include stretch-overlay;
-  background-color: rgba($grey-7, .75);
-
-  z-index: $index--xs;
+  background-color: $grey-2;
 }
 
 .m-news__item {
@@ -23,7 +16,6 @@
     opacity: 1;
   }
 }
-
 
 .m-news__content {
   @include shift(4);

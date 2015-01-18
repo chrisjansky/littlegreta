@@ -1,9 +1,16 @@
+.m-about {
+  position: relative;
+  z-index: $index--b;
+}
+
 .m-about__header {
   @include collapse-children;
   @include clearfix;
 }
 .m-about__title {
-  color: $grey-8;
+  text-align: center;
+  
+  color: $grey-1;
 }
 .m-about__intro {
   text-align: center;

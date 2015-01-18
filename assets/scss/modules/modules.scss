@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.m-contact__list {
+  @include clearfix;
+}
+
+.m-contact__item {
+  @include span-columns(2 of 10);
+}
+
 .m-contact__title {
   color: white;
 
@@ -34,7 +42,7 @@
     list-style: none;
 
     &:last-child {
-      color: $grey-4;
+      color: $grey-6;
     }
   }
 }
@@ -81,13 +89,15 @@
 .m-subscribe__text {
   text-align: center;
 
+  color: $grey-9;
+
   @include span-columns(8);
   @include shift(2);
 }
 .m-subscribe__form {
   display: inline-block;
 
-  margin-right: em($ratio--m);
+  margin-right: em($ratio--b);
 
   clear: left;
 }
