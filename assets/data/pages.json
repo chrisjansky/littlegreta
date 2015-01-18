@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "name": "News",
+      "anchor": "news"
+    },
+    {
+      "name": "About",
+      "anchor": "about"
+    },
+    {
+      "name": "Portfolio",
+      "anchor": "portfolio"
+    },
+    {
+      "name": "Blog",
+      "anchor": "blog"
+    },
+    {
+      "name": "Contact",
+      "anchor": "contact"
+    }
+  ]
+}
