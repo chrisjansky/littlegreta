@@ -1,0 +1,63 @@
+.o-hero {
+  position: relative;
+
+  margin-top: 40vh;
+
+  height: 110vh;
+  max-height: em($height--xxl);
+
+  overflow: hidden;
+
+  background-color: $grey-2;
+}
+
+.o-hero__image {
+  @include position(absolute, 50% null null 50%);
+  transform: translate(-50%, -50%);
+
+  width: auto;
+  height: auto;
+
+  max-width: none;
+  max-height: none;
+
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.o-hero__overlay {
+  // Same as o-slider__overlay, beware
+  @include position(absolute, null 0 0 0);
+  @include wrap-push;
+
+  z-index: $index--b;
+
+  transition: transform $duration--l, opacity $duration--l;
+
+  .csstransforms.no-touch & {
+    opacity: 0;
+    transform: translateY(em($ratio--l));
+  }
+  .csstransforms.no-touch .top--is-off & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.o-hero__content {
+  // Same as o-slider__content, except shift(4)
+  @include shift(4);
+
+  color: white;
+
+  p {
+    opacity: .75;
+  }
+  
+  &:after {
+    content: "";
+    @include overlay-gradient;
+
+    z-index: -1;
+  }
+}
