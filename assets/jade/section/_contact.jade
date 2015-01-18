@@ -1,4 +1,4 @@
-footer.m-footer.l-section--dark
+footer#contact.m-footer.l-section--dark
   .l-wrap.l-wrap--section
 
     h2.m-footer__title.t-h2
@@ -6,14 +6,14 @@ footer.m-footer.l-section--dark
 
     .m-subscribe
       p.m-subscribe__text.t-lead We publish interesting stuff. Be part of it. 
-        +dummy(10, "text")
+
       form.m-subscribe__form.o-form
         input.o-input(type="text", placeholder="Your e-mail address")
         span.m-subscribe__submit.o-iconed--basic.ss-plus.right
           input.o-submit(type="submit", value="Subscribe")
       .m-subscribe__hint
         span.m-subscribe__note or 
-        a.o-button--text.ss-navigateright.right(href="#") View the latest newsletter
+        a.o-button--text.o-button--big.ss-navigateright.right(href="http://littlegreta.co.uk/newsletter/august") View the latest newsletter
 
   .l-section--black
     .o-social.l-wrap.l-wrap--small.l-wrap--section
@@ -37,12 +37,12 @@ footer.m-footer.l-section--dark
     h3.m-contact__title.t-h3
       span.t-gradient--dark Get in Touch
 
-    .m-contact__list.l-grid--4
+    .m-contact__list
 
       each item, index in contact
-        .m-contact__item.l-grid__item--4
+        .m-contact__item
           h5.m-contact__name.t-h5
-            span(class="t-underline--#{index + 1}") #{item.name} Office
+            span(class="t-underline--#{index + 1}") #{item.name}
           .m-contact__details
             ul
               each line in item.address
