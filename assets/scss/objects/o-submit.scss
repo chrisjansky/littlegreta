@@ -1,6 +1,7 @@
 [class^="o-submit"],
 [class*=" o-submit"] {
-  padding: em($ratio--s);
+  padding: 0 0 0 em($ratio--s);
+  line-height: em($height--b);
 
   background-color: transparent;
 

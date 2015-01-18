@@ -1,9 +1,8 @@
 .o-media {
   position: relative;
 
-  @include span-columns(4);
-  
-  margin-right: 0;
+  width: flex-grid(4);
+
   margin-bottom: em($ratio--m);
 }
 
@@ -26,7 +25,7 @@
   text-decoration: none;
 
   @include state--link {
-    color: rgba($grey-4, .75);
+    color: rgba($grey-8, .5);
   }
   @include state--active {
     color: white;

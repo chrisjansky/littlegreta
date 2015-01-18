@@ -5,12 +5,12 @@
 
   @include margin(em($ratio--xl) null null em($ratio--b));
 
-  transform: translateX(em($ratio--l));
+  transform: translateX(em($ratio--xl));
 
   transition: transform $duration--b;
 
   svg {
-    fill: rgba($grey-9, .85);
+    fill: rgba($grey-0, .85);
 
     width: em(120);
 
@@ -65,7 +65,7 @@
     display: inline-block;
 
     content: "";
-    @include triangle(em($ratio--s), rgba($grey-9, $opacity--b), left);
+    @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), left);
   }
   &:after {
     display: inline-block;
@@ -74,7 +74,7 @@
     line-height: em($height--b);
     @include padding(null em($ratio--b));
 
-    background-color: rgba($grey-9, $opacity--b);
+    background-color: rgba($grey-0, $opacity--b);
     border-radius: $radius--b;
   }
 

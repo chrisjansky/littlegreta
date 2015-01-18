@@ -37,7 +37,7 @@
   transition: color $duration--s;
   
   .o-person:hover & {
-    color: $grey-8;
+    color: $grey-2;
   }
 }
 
@@ -45,7 +45,7 @@
 .o-person__position {
   display: block;
 
-  color: $grey-4;
+  color: $grey-6;
 
   line-height: $spacing--s;
 }
@@ -70,7 +70,7 @@
     @include margin(null auto);
 
     content: "";
-    @include triangle(em($ratio--s), rgba($grey-9, $opacity--b), up);
+    @include triangle(em($ratio--s), rgba($grey-1, $opacity--m), up);
   }
 
   .o-person:hover & {
@@ -84,8 +84,8 @@
 
 
 .o-person__content {
-  background-color: rgba($grey-8, $opacity--m);
-  color: $grey-3;
+  background-color: rgba($grey-1, $opacity--m);
+  color: $grey-8;
 
   padding: em($ratio--b);
 
@@ -95,7 +95,7 @@
 
   strong {
     display: block;
-    color: $grey-1;
+    color: $grey-9;
 
     margin-top: em($ratio--xxs);
 

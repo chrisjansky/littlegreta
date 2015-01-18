@@ -1,5 +1,7 @@
 .o-dropdown {
   position: relative;
+
+  display: inline-block;
 }
 
 .o-dropdown__toggle {
@@ -13,7 +15,7 @@
 
   letter-spacing: em($ratio--t);
 
-  color: $color-2;
+  color: $color-2--light;
 
   transition: color $duration--b;
 
@@ -47,7 +49,7 @@
 
     @include margin(null auto);
 
-    @include triangle(em($ratio--s), rgba($grey-9, $opacity--b), up);
+    @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), up);
   }
 }
 
@@ -57,7 +59,7 @@
 
   display: inline-block;
 
-  background-color: rgba($grey-9, $opacity--b);
+  background-color: rgba($grey-0, $opacity--b);
   border-radius: $radius--b;
 
   list-style: none;

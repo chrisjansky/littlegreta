@@ -27,8 +27,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-  // .rsActiveSlide & {
-  // }
 }
 
 .o-slider__content {
@@ -37,18 +35,7 @@
   }
   
   &:after {
-    // content: "";
-    // position: absolute;
-    // left: 0;
-    // bottom: 0;
-
-    // width: 100%;
-    // height: 40vh;
-
-    // z-index: -1;
-    // pointer-events: none;
-
-    // @include linear-gradient(to bottom, rgba($grey-7, 0), rgba($grey-7, .875));
+    content: "";
     @include overlay-gradient;
 
     z-index: -1;

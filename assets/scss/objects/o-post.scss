@@ -3,7 +3,7 @@
 
   // outline: 1px solid black;
   // margin-bottom: em($ratio--b);
-  // border-top: 3px solid rgba($grey-6, 0.35);
+  // border-top: 3px solid rgba($grey-4, 0.35);
   // padding-top: 1em;
 
   // @include span-columns(6);
@@ -16,7 +16,7 @@
   //   top: 0;
   //   right: 0;
   //   color: #fff;
-  //   background-color: rgba($grey-6, 0.35);
+  //   background-color: rgba($grey-4, 0.35);
   //   padding: .6em 1em;
   //   font-size: em(12);
   //   font-weight: 500;
@@ -29,11 +29,11 @@
   //   max-width: 0;
   //   padding: .4em 0;
   //   @include transition(all .25s);
-  //   background-color: $grey-6 !important;
+  //   background-color: $grey-4 !important;
   //   overflow: hidden;
   //   white-space: nowrap;
   //   vertical-align: middle;
-  //   background-color: $grey-6;
+  //   background-color: $grey-4;
   //   opacity: 0;
   // }
   // &:hover .btn {
@@ -49,7 +49,7 @@
   // }
 }
 .o-post--photo {
-  // background-color: $grey-8;
+  // background-color: $grey-2;
 
   // border-radius: $radius--b;
   // overflow: hidden;
@@ -67,7 +67,7 @@
 // .o-post__figure {
   // margin: 0;
 
-  // background-color: $grey-8;
+  // background-color: $grey-2;
 
   // border-radius: $radius--l;
 
@@ -98,7 +98,7 @@
 //   a {
 //     display: inline-block;
 //     width: 100%;
-//     background-color: $grey-6;
+//     background-color: $grey-4;
 //     img {width: 100%; opacity: .25; }
 //   }
 //   a:hover {background-color: $grey-4; }
@@ -119,13 +119,13 @@
   // &:after {
     // content: "";
     // @include stretch-overlay;
-    // @include linear-gradient(to bottom, transparent, $grey-8);
+    // @include linear-gradient(to bottom, transparent, $grey-2);
 
     // pointer-events: none;
   // }
   // @include stretch-overlay;
 
-  // background-color: rgba($grey-8, .75);
+  // background-color: rgba($grey-2, .75);
 
   // z-index: $index--s;
 //   position: absolute;
@@ -136,6 +136,8 @@
 
 .o-post__content {
   font-size: em($unit--m);
+
+  color: white;
 }
 // .o-post__author {
 //   margin-right: .5em;
@@ -180,7 +182,7 @@
 }
 
 .o-post__underline {
-  border-bottom: $line--s solid rgba($grey-2, .25);
+  border-bottom: $line--s solid rgba(white, .25);
 
   .o-post__title:hover & {
     border-bottom-color: rgba(white, .5);
@@ -209,13 +211,13 @@
 // }
 
 .o-post--basic {
-  border-top: $line--b solid rgba($grey-9, .25);
+  border-top: $line--b solid rgba($grey-0, .25);
 
   padding-top: em($ratio--s);
 }
 
 .o-post--quote {
-  border-top: $line--b solid rgba($grey-9, .25);
+  border-top: $line--b solid rgba($grey-0, .25);
 
   padding-top: em($ratio--b);
 }
@@ -252,6 +254,7 @@
 // }
 .o-post--photo {
   &:after {
+    content: "";
     @include overlay-gradient;
   }
 }

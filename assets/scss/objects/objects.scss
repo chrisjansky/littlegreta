@@ -14,7 +14,7 @@
 // Horizontal rule, no margins.
 // .o-divider {
 //   display: block;
-//   border-bottom: $line--s solid $grey-1;
+//   border-bottom: $line--s solid $grey-0;
 // }
 
 // Blurred background.
@@ -28,10 +28,12 @@
     background-attachment: fixed;
   }
 }
-.o-blur--blue {background-image: url("../images/bg_blue.jpg"); }
+.o-blur--blue {background-image: url("../images/blur/bg_blue.jpg"); }
 // .o-blur--red {background-image: url("../images/color_bg/bg_red.jpg"); }
-// .o-blur--green {background-image: url("../images/color_bg/bg_green.jpg"); }
-.o-blur--purple {background-image: url("../images/bg_purple.jpg"); }
+.o-blur--grey {background-image: url("../images/blur/bg_grey.jpg"); }
+.o-blur--teal {background-image: url("../images/blur/bg_teal.jpg"); }
+.o-blur--green {background-image: url("../images/blur/bg_green.jpg"); }
+.o-blur--purple {background-image: url("../images/blur/bg_purple.jpg"); }
 // @include media($desktop--wide) {
 //   .o-blur--blue {background-image: url("../images/color_bg/bg_blue_big.jpg"); }
 //   .o-blur--red {background-image: url("../images/color_bg/bg_red_big.jpg"); }
@@ -49,8 +51,8 @@
 //     left: 0;
 //     color: white;
 //     padding: em($ratio--s) em($ratio--b);
-//     background-color: $grey-8;
-//     background-color: rgba($grey-8, .9);
+//     background-color: $grey-2;
+//     background-color: rgba($grey-2, .9);
 //     border-radius: $radius--b;
 //     font-size: em($unit--s);
 //     z-index: 300;
@@ -59,8 +61,8 @@
 //     content: "";
 //     position: absolute;
 //     border: solid;
-//     border-color: $grey-8 transparent;
-//     border-color: rgba($grey-8, .9) transparent;
+//     border-color: $grey-2 transparent;
+//     border-color: rgba($grey-2, .9) transparent;
 //     border-width: em($ratio--xs);
 //     z-index: 301;
 //   }
@@ -76,10 +78,7 @@
   &:after {
     content: "";
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include position(absolute, null 0 0 0);
 
     height: $line--m;
   }
@@ -87,4 +86,48 @@
 
 .o-gradient--1:after {
   @include linear-gradient(to right, $color-1--light, $color-2);
+}
+
+.o-outro {
+  margin-bottom: em($ratio--xl);
+}
+.o-outro__title {
+  margin-top: em($ratio--s);
+}
+
+.o-exit {
+  @include shift(4);
+}
+
+.o-quote {
+  margin: 0;
+
+  font-size: em($ratio--m);
+  font-family: $font__serif;
+  font-weight: $font__serif--book;
+
+  font-style: italic;
+
+  color: white;
+}
+
+.o-quote__source {
+  display: block;
+
+  color: rgba(white, .6);
+  text-align: right;
+}
+
+.o-fog {
+  @include stretch-overlay;
+  background-color: rgba($grey-2, .85);
+
+  z-index: $index--xs;
+}
+
+.o-description__title {
+  margin-top: em($ratio--s);
+}
+.o-description__primary {
+  color: $grey-4;
 }

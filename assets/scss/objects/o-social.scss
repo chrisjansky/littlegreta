@@ -48,13 +48,13 @@
 
   overflow: hidden;
 
-  border: $line--s solid $grey-7;
+  border: $line--s solid $grey-2;
 
   border-radius: 50%;
 
   @include state--active {
     color: white;
-    border-color: $grey-6;
+    border-color: $grey-3;
   }
 }
 

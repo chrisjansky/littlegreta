@@ -14,12 +14,6 @@
   // overflow: hidden;
 // }
 
-.o-tweet--basic {
-  border-top: $line--b solid rgba($grey-9, .25);
-
-  padding-top: em($ratio--b);
-}
-
 .o-tweet__text {
   font-size: em($unit--m);
 
@@ -32,14 +26,24 @@
     border-bottom: $line--s solid;
 
     @include state--link {
-      color: $grey-1;
-      border-color: rgba($grey-1, .25);
+      color: rgba(white, .85);
+      border-color: rgba(white, .25);
     }
     @include state--active {
       color: white;
       border-color: rgba(white, .75);
     }
   }
+
+  .o-tweet--basic & {
+    color: rgba(white, .85);
+  }
+}
+
+.o-tweet--basic {
+  border-top: $line--b solid rgba($grey-0, .25);
+
+  padding-top: em($ratio--b);
 }
 // .o-tweet__note {
 //   margin-left: em($ratio--s);
@@ -47,6 +51,7 @@
 
 .o-tweet--photo {
   &:after {
+    content: "";
     @include overlay-gradient;
   }
 }
