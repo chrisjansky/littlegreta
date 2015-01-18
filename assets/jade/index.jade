@@ -1,13 +1,19 @@
 extends templates/_basic
 
 append template-body
-  include partial/_header
+  include partial/_sticky
 
-  include section/_top
+  - var introBg = "top/photo1.jpg"
+  - var introNavMode = "index"
+  - var introNavText = "Scroll to"
+  - var introText = "A little but great team of creatives, providing a&nbsp;complete design and communication service."
+  - var introScrollTo = "#news"
+  - var introHint = "Continue"
+  include section/_intro
+
   include section/_news
   include section/_about
   include section/_portfolio
   include section/_people
-
-  //- include section/blog
-  //- include section/contact
+  include section/_blog
+  include section/_contact
