@@ -11,8 +11,6 @@
   font-family: $font__display;
   font-size: em($ratio--xxl);
   font-weight: $font__display--book;
-  
-  text-align: center;
 
   @include margin(em($ratio--t) null);
 }
@@ -31,7 +29,7 @@
   display: inline-block;
   vertical-align: 20%;
 
-  color: $grey-3;
+  color: $grey-7;
 
   font-family: $font__sans;
   font-weight: $font__sans--bold;
@@ -39,8 +37,7 @@
   text-transform: uppercase;
   letter-spacing: em($ratio--t);
 
-  @include margin(null em($ratio--s));
-  border-bottom: $line--b solid $grey-2;
+  border-bottom: $line--b solid $grey-8;
 }
 
 // Second headline
@@ -88,6 +85,8 @@
 .t-h4 {
   font-size: em($ratio--m);
   font-weight: $font__sans--bold;
+
+  line-height: $spacing--s;
 
   @include margin(em($ratio--b) null);
 }
