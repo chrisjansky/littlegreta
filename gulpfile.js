@@ -194,7 +194,9 @@ gulp.task("svg-wipe", function() {
 gulp.task("svg-optimize", ["svg-wipe"], function() {
   return gulp.src(config.paths.svg_source_glob)
     .pipe(plugins.imagemin({
-      svgoPlugins: [{collapseGroups: false}]
+      svgoPlugins: [{
+        collapseGroups: false
+      }]
     }))
     .pipe(gulp.dest(config.paths.svg_build));
 });
