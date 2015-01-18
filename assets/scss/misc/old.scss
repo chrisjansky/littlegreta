@@ -48,9 +48,9 @@ footer.sub .wrap {padding: 3em 0 3.5em; text-align: left;
 			span {color: $grey-4;} }
 		&:visited {color: $grey-3;
 			span {color: $grey-4;} }
-		&:hover {color: $grey-6;
+		&:hover {color: $grey-4;
 			span {border-color: $c-hover;} }
-		&:active {color: $grey-6;
+		&:active {color: $grey-4;
 			span {border-color: $c-hover;} }
 		span {border-bottom: .15em solid $grey-3; padding-bottom: .1em; }}
 	// .btn {float: right; }
@@ -87,7 +87,7 @@ footer.sub .wrap {padding: 3em 0 3.5em; text-align: left;
 // CASE STUDY
 body#study {
 	// #workIntro h1 {margin-bottom: 0; }
-.details {background-color: $grey-1; width: 100%; display: inline-block; color: $grey-4;
+.details {background-color: $grey-0; width: 100%; display: inline-block; color: $grey-4;
 	h2 {letter-spacing: 1px; text-transform: uppercase; font-weight: 700; font-size: em(17); border-bottom: .2em solid $color-2;
 		display: inline-block;
 		}
@@ -105,7 +105,7 @@ body#study {
 		&.full {width: 100%; @include box-sizing(border-box); margin-left: 0; margin-right: 0; height: auto; }
 		}
 	}
-.gallery {display: inline-block; width: 100%; background-color: $grey-6;
+.gallery {display: inline-block; width: 100%; background-color: $grey-4;
 	img {display: inline-block; float: left; margin-bottom: 2%;
 		&.three {width: 32%; margin-left: 2%; }
 		&.two {width: 49%; margin-left: 2%; }
@@ -130,9 +130,9 @@ body#study {
 		span {color: $grey-4;} }
 	&:visited {color: $grey-3;
 		span {color: $grey-4;} }
-	&:hover {color: $grey-6;
+	&:hover {color: $grey-4;
 		span {border-color: $c-hover;} }
-	&:active {color: $grey-6;
+	&:active {color: $grey-4;
 		span {border-color: $c-hover;} }
 	span {border-bottom: .15em solid $grey-3; padding-bottom: .1em; margin-left: .5em; }
 	}
@@ -147,7 +147,7 @@ a#logo h1 .small {@include transition(opacity .5s ease-in-out); }
 
 #basic-modal-content {display:none;}
 #simplemodal-overlay {background-color:#000;}
-#simplemodal-container {color:$grey-3; background-color:$grey-6; padding: 17px; border-radius: 4px; max-height: 380px;
+#simplemodal-container {color:$grey-3; background-color:$grey-4; padding: 17px; border-radius: 4px; max-height: 380px;
 	iframe {position: relative; z-index: 500; }
 	p {position: relative; margin-top: -250px; text-align: center; width: 100%; z-index: 1; }}
 html.video #simplemodal-container p {display: none; }
