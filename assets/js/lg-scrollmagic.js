@@ -2,15 +2,15 @@ function lgScrollMagic() {
   
   // Initialize
   var
-    elScroll = document.getElementById("js-scrollmagic"),
-    elFog = document.getElementById("js-fog"),
+    elScroll = document.getElementById("js-smTarget"),
+    elFog = document.getElementById("js-smFog"),
     scrollDuration,
     scrollLength;
 
   // Fetch parameters from DOM
   this.setup = function() {
     // Multiply to balance the easing
-    scrollDuration = parseInt($news.css("margin-top"));
+    scrollDuration = parseInt($toward.css("margin-top"));
     scrollLength = elScroll.offsetHeight;
   }
   // Fetch on init
@@ -84,10 +84,10 @@ function lgScrollMagic() {
 }
 
 // Run it!
-var newsParallax = new lgScrollMagic();
+var introParallax = new lgScrollMagic();
 
 $(document).on("ready", function() {
-  newsParallax.build();
+  introParallax.build();
 
-  newsParallax.attach(true);
+  introParallax.attach(true);
 });

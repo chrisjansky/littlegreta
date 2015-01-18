@@ -37,7 +37,7 @@ function AccessTumlbrApi(target, APIKey, options) {
      
     $.each(data.response.posts, function () {
       var postType = this.type,
-        thisPost = $("<article class='o-media o-post'/>"),
+        thisPost = $("<article class='o-media o-post' />"),
         linkURL = this.post_url,
         postDate = '<a href="' + linkURL + '" class="o-media__date--tumblr o-iconed--small ss-tumblr ss-social" data-livestamp="' + this.timestamp + '"></a>';
 
@@ -163,7 +163,7 @@ function AccessTumlbrApi(target, APIKey, options) {
     });
     
     blog.append(loopContainer.html());
-    blogPack();
+    blogMason();
   }; /*** END POSTS ***/
 
   s.getPosts = function (target, APIKey) {

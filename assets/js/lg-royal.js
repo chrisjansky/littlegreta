@@ -34,23 +34,25 @@ var
   $topSliderConfig = $topSlider.data("royalSlider"),
   $workCarouselConfig = $workCarousel.data("royalSlider");
 
-// Remove class if just moved from the last slide.
-$workCarouselConfig.ev.on("rsBeforeAnimStart", function(event) {
-  var
-    fromEnd = event.target._prevSlideId == event.target.numSlides - 1
+if ($workCarouselConfig) {
+  // Remove class if just moved from the last slide.
+  $workCarouselConfig.ev.on("rsBeforeAnimStart", function(event) {
+    var
+      fromEnd = event.target._prevSlideId == event.target.numSlides - 1
 
-  if (fromEnd) {
-    $portfolio.removeClass("carousel--at-end");
-  }
-});
+    if (fromEnd) {
+      $portfolio.removeClass("carousel--at-end");
+    }
+  });
 
-// Add class if now sliding to the last slide.
-$workCarouselConfig.ev.on("rsAfterSlideChange", function(event) {
-  var
-    atEnd = event.target.currSlideId == event.target.numSlides - 1
+  // Add class if now sliding to the last slide.
+  $workCarouselConfig.ev.on("rsAfterSlideChange", function(event) {
+    var
+      atEnd = event.target.currSlideId == event.target.numSlides - 1
 
-  $portfolio.toggleClass("carousel--at-end", atEnd);
-});
+    $portfolio.toggleClass("carousel--at-end", atEnd);
+  });
+}
 
 // Custom keyboard nav for topSlider
 $(document.documentElement).on("keydown", function(event) {

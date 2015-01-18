@@ -4,9 +4,9 @@ $(window).on("resize orientationchange", function() {
 
   this.id = setTimeout(function() {
     // Get parallax units again
-    newsParallax.setup();
+    introParallax.setup();
     // Update tweens
-    newsParallax.attach(false);
+    introParallax.attach(false);
 
   }, durBasic)
 

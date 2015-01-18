@@ -11,6 +11,6 @@ jQuery.easing.def = transBasic;
 
 var
   $body = $("body"),
-  $news = $("[data-news]"),
+  $toward = $("[data-toward]"),
   $portfolio = $("[data-portfolio]"),
   $feed = $("[data-feed]");
