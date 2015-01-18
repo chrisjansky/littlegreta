@@ -1,6 +1,8 @@
 .royalSlider {
   width: 100%;
   height: 110vh;
+
+  max-height: em($height--xxl);
 }
 
 .rsArrow {
