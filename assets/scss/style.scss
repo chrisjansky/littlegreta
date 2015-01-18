@@ -39,7 +39,7 @@
 // Styleguide 1.
 @import "chj-framework/assets/scss/layout/l-grid";
 @import "chj-framework/assets/scss/layout/l-inline";
-@import "chj-framework/assets/scss/layout/l-spacer";
+// @import "chj-framework/assets/scss/layout/l-spacer";
 @import "chj-framework/assets/scss/layout/l-wrap";
 @import "layout/layout";
 @import "layout/l-wrap";
@@ -65,6 +65,7 @@
 // @import "chj-framework/assets/scss/objects/o-icon";
 // @import "chj-framework/assets/scss/objects/o-icon-button";
 @import "objects/o-logo";
+@import "objects/o-hero";
 @import "objects/o-media";
 @import "objects/o-person";
 @import "objects/o-post";
