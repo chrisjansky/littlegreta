@@ -1,0 +1,69 @@
+extends templates/_basic
+
+append template-body
+  include partial/_sticky
+
+  - var introBg = "top/photo2.jpg"
+  - var introNavMode = "subpage"
+  - var introNavText = "Back to"
+  - var introText = "Our Work"
+  - var introScrollTo = "#latest"
+  - var introHint = "See Selected Works"
+  include section/_intro
+
+  #latest.o-hero(data-toward)
+    #js-smFog.o-fog
+
+    .o-hero__overlay.l-wrap
+      .o-hero__content
+        h2.t-h2 Latest Work
+        p.t-big
+          +dummy(20, "text")
+        a(href="case-study").o-button--text.o-button--big.ss-zoomin.right See Case Study
+
+    img.o-hero__image(src="http://unsplash.it/1440/800/?image=534", alt="unsplash.it")
+
+  section.l-section--dark
+    .l-wrap.l-wrap--section
+
+      .m-works(data-masonry)
+        .o-sizer--column(data-column)
+        .o-sizer--gutter(data-gutter)
+
+        article.o-work(class="o-work--small", data-masonry-item)
+          img.o-work__image(src="assets/images/work/work_ibm.jpg", alt="unsplash.it")
+          .o-work__overlay
+            h4.t-h4 IBM
+            .o-work__more
+              p: +dummy(15, "text")
+
+        each size in ["big", "small", "medium"]
+
+          - var count, width = 800, height = 450
+          case size
+            when "small"
+              - count = 3
+              - width = 390
+            when "medium"
+              - count = 1
+              - width = 600
+            when "big"
+              - count = 1
+
+          - var n = 1
+          while n <= count
+            article.o-work(class="o-work--#{size}", data-masonry-item)
+              img.o-work__image(src="http://unsplash.it/#{width}/#{height}/?image=#{n * 10}", alt="unsplash.it")
+              .o-work__overlay
+                h4.t-h4 Work that&rsquo;s #{size}
+                .o-work__more
+                  p: +dummy(15, "text")
+                  a.o-button--text.ss-right.right(href="#") View Case Study
+            - n++
+
+        article.o-work(class="o-work--small", data-masonry-item)
+          img.o-work__image(src="assets/images/work/work_google.jpg", alt="unsplash.it")
+          .o-work__overlay
+            h4.t-h4 Google
+            .o-work__more
+              p: +dummy(15, "text")
