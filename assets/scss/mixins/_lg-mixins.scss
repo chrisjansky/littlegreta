@@ -1,15 +1,8 @@
 @mixin overlay-gradient {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include position(absolute, 0 0 0 0);
+  background-image: #{"linear"}-gradient(to bottom, transparent, rgba($grey-2, .85));
 
   pointer-events: none;
-
-  @include linear-gradient(to bottom, transparent, rgba($grey-8, .85));
 }
 
 @mixin wrap-push {
