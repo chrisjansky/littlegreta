@@ -1,0 +1,86 @@
+extends templates/_basic
+
+append template-body
+  include partial/_sticky
+
+  - var introBg = "top/photo3.jpg"
+  - var introNavMode = "subpage"
+  - var introNavText = "Back to"
+  - var introText = "Design labels for a&nbsp;Czech craft brewery&rsquo;s new range of beers"
+  - var introScrollTo = "#more"
+  - var introHint = "Continue to Case Study"
+  include section/_intro
+
+  #more.o-hero(data-toward)
+    #js-smFog.o-fog
+
+    .o-hero__overlay.l-wrap
+      .o-hero__content
+        p.t-big
+          | Caption that is totally optional. 
+          +dummy(20, "text")
+
+    img.o-hero__image(src="http://unsplash.it/1440/800/?image=201", alt="unsplash.it")
+
+  main.l-section--light
+    .l-wrap.l-wrap--section
+
+      .o-description.l-asym
+        .o-description__title.l-asym__title
+          strong.t-caps--1 Project Brief
+        .o-description__primary.l-asym__content
+          p.t-lead: +dummy(40, "text")
+
+        .l-asym__title
+          strong.t-smallcaps Action
+        .l-asym__content
+          p: +dummy(60, "text")
+
+        .l-asym__title
+          strong.t-smallcaps Result
+        .l-asym__content
+          p: +dummy(40, "text")
+
+  section.l-section--dark
+    .l-wrap.l-wrap--section
+
+      .o-gallery(data-masonry)
+        .o-sizer--column(data-column)
+        .o-sizer--gutter(data-gutter)
+
+        each size in ["full", "small", "medium"]
+
+            - var count = 1, width = 800, height = 450
+            case size
+              when "full"
+                - width = 1280
+                - height = 600
+              when "small"
+                - count = 3
+                - width = 390
+              when "medium"
+                - count = 2
+                - width = 600
+
+            - var n = 1
+            while n <= count
+              img.o-gallery__image(src="http://unsplash.it/#{width}/#{height}/?image=#{n * 10}", alt="unsplash.it", class="o-gallery__image--#{size}", data-masonry-item)
+              - n++
+
+  section.l-section--dark.o-blur--teal
+    .l-wrap.l-wrap--section
+
+      .o-outro.l-asym
+        .o-outro__title.l-asym__title
+          strong.t-caps Testimonial
+        .o-outro__content.l-asym__content
+          blockquote.o-quote: +dummy(30, "text")
+          include ../svg/_source/quote_line.svg
+          span.o-quote__source Andy Hertzfeld
+
+      .o-exit
+        .l-inline
+          .l-inline__cell
+            a(href="index").o-button--text.i-link--light.ss-home Back to Homepage
+          .l-inline__cell
+            a(href="work").o-button--text.i-link--light.ss-thumbnails.right View More Projects
