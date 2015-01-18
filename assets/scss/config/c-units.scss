@@ -56,8 +56,10 @@ $width--s:  220;
 $width--xs: 140;
 
 // Heights
-$height--m: round(golden-ratio($unit--b * $spacing--m, 1));
-$height--b: round(golden-ratio($unit--b * $spacing--b, 1));
+$height--xxl: 800;
+$height--xl:  520;
+$height--m:   round(golden-ratio($unit--b * $spacing--m, 1));
+$height--b:   round(golden-ratio($unit--b * $spacing--b, 1));
 
 // Ratios
 $ratio--xxh: round(golden-ratio($unit--b,  7));

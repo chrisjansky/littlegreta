@@ -25,20 +25,32 @@ $color-3:          hsb($c-hue3, 085, 085);
 $color-3--dark:    hsb($c-hue3 + $c-offset1, 090, 080);
 $color-3--darker:  hsb($c-hue3 + $c-offset2, 100, 075);
 
-$color-4--lighter:   hsb($c-hue4 - $c-offset2, 015, 100);
-$color-4:          hsb($c-hue4, 035, 100);
+$color-4--lighter: hsb($c-hue4 - $c-offset2, 015, 100);
+$color-4--light:   hsb($c-hue4 - $c-offset1, 035, 100);
+$color-4:          hsb($c-hue4, 045, 090);
 
 // Neutral colors.
-$grey-1: hsb($c-hue1, 04, 97);
-$grey-2: hsb($c-hue1, 06, 88);
-$grey-3: hsb($c-hue1, 08, 79);
-$grey-4: hsb($c-hue1 + $c-offset1, 10, 70);
-// Not using B61 and B52.
-$grey-5: hsb($c-hue1 + $c-offset1, 12, 43);
-$grey-6: hsb($c-hue1 + $c-offset1, 14, 34);
-$grey-7: hsb($c-hue1 + $c-offset2, 16, 25);
-$grey-8: hsb($c-hue1 + $c-offset2, 18, 16);
-$grey-9: hsb($c-hue1 + $c-offset2, 20, 07);
+$grey-9:  hsb($c-hue1, 04, 97);
+$grey-8:  hsb($c-hue1, 06, 87);
+$grey-7:  hsb($c-hue1, 08, 77);
+$grey-6:  hsb($c-hue1 + $c-offset1, 10, 67);
+$grey-5:  hsb($c-hue1 + $c-offset1, 12, 57);
+$grey-4:  hsb($c-hue1 + $c-offset1, 14, 47);
+$grey-3:  hsb($c-hue1 + $c-offset2, 16, 37);
+$grey-2:  hsb($c-hue1 + $c-offset2, 18, 27);
+$grey-1:  hsb($c-hue1 + $c-offset2, 20, 17);
+$grey-0:  hsb($c-hue1 + $c-offset2, 22, 07);
+
+// 97
+// 88
+// 79
+// 63
+// 52
+// 43
+// 34
+// 25
+// 16
+// 07
 
 // Interactive.
 $c-link--light: $color-2--light;
