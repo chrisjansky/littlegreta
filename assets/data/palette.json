@@ -79,7 +79,7 @@
   "greys": [
     {
       "name": "bright",
-      "value": "$grey-1"
+      "value": "$grey-0"
     },
     {
       "name": "lightest",
@@ -99,19 +99,19 @@
     },
     {
       "name": "dark",
-      "value": "$grey-6"
+      "value": "$grey-4"
     },
     {
       "name": "darker",
-      "value": "$grey-7"
+      "value": "$grey-3"
     },
     {
       "name": "darkest",
-      "value": "$grey-8"
+      "value": "$grey-2"
     },
     {
       "name": "black",
-      "value": "$grey-9"
+      "value": "$grey-0"
     }
   ]
 }
