@@ -4,12 +4,12 @@
 }
 
 .o-top-nav__list {
-  padding-left: em($ratio--l);
+  padding-left: em($ratio--m);
 }
 
 .o-top-nav__item {
   display: inline-block;
   & + & {
-    margin-left: em($ratio--l);
+    margin-left: em($ratio--m);
   }
 }
