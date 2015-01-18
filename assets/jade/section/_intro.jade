@@ -1,31 +1,32 @@
-section.m-intro#js-scrollmagic(style="background-image: url('assets/images/bg_blur1s.jpg')")
+section.m-intro#js-smTarget(style="background-image: url('assets/images/#{introBg}')")
 
   .m-intro__overlay.l-wrap.l-wrap--horizontal
 
     .m-intro__content
-      h1.temp-h1.m-intro__text
-        span.temp-h1__strong A little but great team of creatives, 
-        | providing a&nbsp;complete design and communication service.
+      .m-intro__menu.l-inline
 
-      .m-intro__menu.o-gradient--1
-        .l-inline
-          .l-inline__cell
-            strong.t-smallcaps--1 Go to
-            nav.o-top-nav
-              ul.o-top-nav__list
-                each instance in ["News", "About", "Portfolio", "Blog", "Contact"]
-                  li.o-top-nav__item: a.i-link--light(href="#")= instance 
-          .l-inline__cell
-            .o-dropdown
-              button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
-              .o-dropdown__content
-                ul.o-dropdown__list
+        .l-inline__cell
+          strong.t-smallcaps--1= introNavText
+          nav.o-top-nav
+            ul.o-top-nav__list
+              each instance in pages
+                if (introNavMode === "index")
+                  li.o-top-nav__item: a.i-link--light(href="#" + instance.anchor, data-scrollto)= instance.name
+                else
+                  li.o-top-nav__item: a.i-link--light(href="index#section-" + instance.anchor)= instance.name
+
+        .l-inline__cell
+          .o-dropdown
+            button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
+            .o-dropdown__content
+              ul.o-dropdown__list
+                li.o-dropdown__item
+                  span.o-dropdown__selected EN
+                each instance in ["DE", "CZ"]
                   li.o-dropdown__item
-                    span.o-dropdown__selected EN
-                  each instance in ["DE", "CZ"]
-                    li.o-dropdown__item
-                      a(href="#").o-dropdown__link.i-link--light= instance
+                    a(href="#").o-dropdown__link.i-link--light= instance
 
+      h1.temp-h1.m-intro__text.o-gradient--1!= introText
 
-a(href="#news", data-scrollto="false").m-intro__lift
-  mark.m-intro__mark.t-smallcaps.o-iconed--small.ss-down Continue
+a(href=introScrollTo, data-scrollto="center").m-intro__lift
+  mark.m-intro__mark.t-smallcaps.o-iconed--small.ss-down= introHint
