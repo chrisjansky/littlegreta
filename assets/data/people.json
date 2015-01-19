@@ -1,6 +1,7 @@
 {
   "people": [
     {
+      "group": "account",
       "name": "Jan",
       "image": "person_jan.png",
       "position": "Managing partner",
@@ -9,30 +10,7 @@
       "favourites": "Onitsuka Tiger, Respekt magazine, Spotify"
     },
     {
-      "name": "Gabriela",
-      "image": "person_gabriela.jpg",
-      "position": "Business Development CZ, Flaneurs",
-      "education": "Bachelors degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
-      "hobbies": "Books and movies, snowboarding, architecture, travelling",
-      "favourites": "Tim Burton, Mango, Moleskine"
-    },
-    {
-      "name": "Jan",
-      "image": "person_david.png",
-      "position": "Head of development",
-      "education": "Master of Science degree in Economics and management, Brno University of Technology<br />Bachelors degree in Information Technologies, Brno University of Technology",
-      "hobbies": "Sport, coffee, family",
-      "favourites": "Apple, Nespresso, Quiksilver"
-    },
-    {
-      "name": "Jan",
-      "image": "person_jan_strelec.png",
-      "position": "Designer, illustrator",
-      "education": "Masters degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
-      "hobbies": "Fan of concrete and parties; amateur front crawl swimmer",
-      "favourites": "Cleptomanicx, Deus Ex Machina, Bifi"
-    },
-    {
+      "group": "account",
       "name": "Marketa",
       "image": "person_marketa.jpg",
       "position": "Account manager",
@@ -41,6 +19,16 @@
       "favourites": "Rajec, Prim, WWF"
     },
     {
+      "group": "sales",
+      "name": "Gabriela",
+      "image": "person_gabriela.jpg",
+      "position": "Business Development CZ, Flaneurs",
+      "education": "Bachelors degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Books and movies, snowboarding, architecture, travelling",
+      "favourites": "Tim Burton, Mango, Moleskine"
+    },
+    {
+      "group": "sales",
       "name": "Petr",
       "image": "person_petr.jpg",
       "position": "Business Development DE/AT",
@@ -49,6 +37,16 @@
       "favourites": "Puma, Kofola, Young Primitive"
     },
     {
+      "group": "development",
+      "name": "David",
+      "image": "person_david.png",
+      "position": "Head of development",
+      "education": "Master of Science degree in Economics and management, Brno University of Technology<br />Bachelors degree in Information Technologies, Brno University of Technology",
+      "hobbies": "Sport, coffee, family",
+      "favourites": "Apple, Nespresso, Quiksilver"
+    },
+    {
+      "group": "development",
       "name": "Anna",
       "image": "person_anna.png",
       "position": "Digital &amp; social media specialist",
@@ -57,6 +55,16 @@
       "favourites": "Zappos, KOSS, Studentska-ambulance.cz"
     },
     {
+      "group": "creative",
+      "name": "Jan",
+      "image": "person_jan_strelec.png",
+      "position": "Designer, illustrator",
+      "education": "Masters degree in Marketing Communications, Faculty of Multimedia Communications, Tomas Bata University, Czech Republic",
+      "hobbies": "Fan of concrete and parties; amateur front crawl swimmer",
+      "favourites": "Cleptomanicx, Deus Ex Machina, Bifi"
+    },
+    {
+      "group": "creative",
       "name": "Juraj",
       "image": "person_juraj.jpg",
       "position": "Designer",
