@@ -24,6 +24,35 @@
   border-radius: 50%;
 }
 
+.o-person__group {
+  display: block;
+
+  @include position(absolute, em($ratio--s) null null null);
+
+  font-size: em($unit--s);
+
+  opacity: 0;
+
+  transition: opacity $duration--b;
+
+  .o-person:hover & {
+    opacity: 1;
+  }
+
+  .o-person--finance & {
+    color: $color-1;
+  }
+  .o-person--sales & {
+    color: $color-3;
+  }
+  .o-person--development & {
+    color: $grey-7;
+  }
+  .o-person--creative & {
+    color: $color-2;
+  }
+}
+
 .o-person__image {
   border-radius: 50%;
   transition: transform $duration--s;
@@ -52,6 +81,8 @@
 
 .o-person__info {
   overflow: auto;
+
+  padding-top: em($ratio--s);
 }
 
 .o-person__detail {
