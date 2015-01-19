@@ -1,32 +1,43 @@
-section.m-people.l-section--light
+section#people.m-people.l-section--light
   .l-wrap.l-wrap--section
 
     h2.m-people__title.t-h2
       span.t-gradient--light Our People
 
     .m-people__list
-      - var i = 0
-      while i < 24
-        - var random = Math.floor((Math.random() * 8))
-        - var person = people[random]
 
-        div.o-person
-          .o-person__portrait
-            img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
+      each group in departments
 
-          .o-person__info
-            strong.o-person__name.t-caps= person.name
-            small.o-person__position.t-small!= person.position
+        - var memberCount = 5
+        case group.title
+          when "sales"
+            - memberCount = 4
+          when "creative"
+            - memberCount = 11
 
-            .o-person__detail
-              .o-person__content
-                strong Education
-                != person.education
+        - var i = 0
+        while i < memberCount
 
-                strong Hobbies
-                != person.hobbies
+          - var random = Math.floor((Math.random() * 2))
+          - var person = group.members[random]
 
-                strong 3 Love Brands
-                != person.favourites
+          div.o-person(class="o-person--#{group.title}")
+            .o-person__portrait
+              img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
 
-        - i++
+            .o-person__info
+              span.o-person__group= group.title.charAt(0).toUpperCase() + group.title.slice(1)
+              strong.o-person__name.t-caps= person.name
+              small.o-person__position.t-small!= person.position
+
+              .o-person__detail
+                .o-person__content
+                  strong Education
+                  != person.education
+
+                  strong Hobbies
+                  != person.hobbies
+
+                  strong 3 Love Brands
+                  != person.favourites
+          - i++
