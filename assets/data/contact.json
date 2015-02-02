@@ -54,6 +54,20 @@
       ],
       "person": "Tomas",
       "email": "tomas.nedved@littlegreta.cz"
+    },
+    {
+      "name": "Test",
+      "address": [
+        "Osvoboditelu 523",
+        "760 01 Zlin",
+        "Czech Republic"
+      ],
+      "contact": [
+        "Tomas Nedved",
+        "+420 602 957 530"
+      ],
+      "person": "Tomas",
+      "email": "tomas.nedved@littlegreta.cz"
     }
   ]
 }
