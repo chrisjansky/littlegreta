@@ -1,0 +1,88 @@
+.m-contact {
+  text-align: center;
+}
+
+.m-contact__list {
+  // @include clearfix;
+}
+
+.m-contact__item {
+  // @include span-columns(2 of 10);
+  & + & {
+    margin-top: em($ratio--m);
+  }
+}
+
+.m-contact__title {
+  color: white;
+
+  margin-bottom: em($ratio--b);
+}
+
+.m-contact__name {
+  color: white;
+
+  // .m-contact__item:first-child & {
+  //   color: $color-1--lighter;
+  // }
+  // .m-contact__item:nth-child(2) & {
+  //   color: $color-3--light;
+  // }
+  // .m-contact__item:nth-child(3) & {
+  //   color: $color-2;
+  // }
+  // .m-contact__item:last-child & {
+  //   color: $color-2--lighter;
+  // }
+}
+
+.m-contact__details {
+  // min-height: em(140);
+
+  ul {
+    padding-left: 0;
+
+    list-style: none;
+
+    &:last-child {
+      color: $grey-6;
+      margin-bottom: em($ratio--s);
+    }
+  }
+}
+
+// .m-contact__button {
+// }
+
+.m-contact__button--1 {
+  @include state--link {
+    color: $color-1--lighter;
+  }
+  @include state--active {
+    color: $color-1;
+  }
+}
+.m-contact__button--2 {
+  @include state--link {
+    color: $color-3--light;
+  }
+  @include state--active {
+    color: $color-3--dark;
+  }
+}
+.m-contact__button--3 {
+  @include state--link {
+    color: $color-2;
+  }
+  @include state--active {
+    color: $color-2--darker;
+  }
+}
+.m-contact__button--4 {
+  @include state--link {
+    color: $color-2--lighter;
+  }
+  @include state--active {
+    color: $color-2;
+  }
+}
