@@ -22,7 +22,7 @@ $.fn.embedTumblr = function (APIKey, options) {
 };
 
 $.fn.embedTumblr.defaults = {
-  postsPerPage: 3,
+  postsPerPage: 4,
   error: "<p>There was an error accessing the Tumblr API, sorry!</p>"
 };
 
