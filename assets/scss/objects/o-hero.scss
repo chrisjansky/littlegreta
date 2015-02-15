@@ -1,9 +1,10 @@
 .o-hero {
   position: relative;
 
-  margin-top: 40vh;
+  // margin-top: 40vh;
 
-  height: 110vh;
+  // height: 110vh;
+  min-height: em(400);
   max-height: em($height--xxl);
 
   overflow: hidden;
@@ -34,24 +35,33 @@
 
   transition: transform $duration--l, opacity $duration--l;
 
-  .csstransforms.no-touch & {
+  .csstransforms.device--is-desktop & {
     opacity: 0;
     transform: translateY(em($ratio--l));
   }
-  .csstransforms.no-touch .top--is-off & {
+  .csstransforms.device--is-desktop .top--is-off & {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @include media($phone) {
+    // Stretch gradient overlay for better legibility and arrow visibility
+    padding-top: em($ratio--xl);
   }
 }
 
 .o-hero__content {
+  @include collapse-children;
+
   // Same as o-slider__content, except shift(4)
-  @include shift(4);
+  // @include shift(4);
 
   color: white;
 
-  p {
-    opacity: .75;
+  @include media($large) {
+    p {
+      opacity: .75;
+    }
   }
   
   &:after {

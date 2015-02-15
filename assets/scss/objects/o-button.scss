@@ -13,10 +13,12 @@
   }
 }
 
-.o-button--big {
-  font-size: em($unit--l);
+@include media($large) {
+  .o-button--big {
+    font-size: em($unit--l);
 
-  &:before, &:after {
-    font-size: #{$icon--b}px;
+    &:before, &:after {
+      font-size: #{$icon--b}px;
+    }
   }
 }

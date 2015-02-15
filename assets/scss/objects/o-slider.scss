@@ -3,12 +3,9 @@
 }
 
 .o-slider__item {
-  // position: relative;
+  // height: 100%;
 
   color: white;
-
-  // height: 105vh;
-  height: 100%;
 }
 
 .o-slider__overlay {
@@ -27,11 +24,18 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  @include media($small) {
+    // Stretch gradient overlay for better legibility and arrow visibility
+    padding-top: em($ratio--xl);
+  }
 }
 
 .o-slider__content {
-  p {
-    opacity: .75;
+  @include media($large) {
+    p {
+      opacity: .75;
+    }
   }
   
   &:after {
@@ -42,11 +46,12 @@
   }
 }
 
-// .o-slider__image {
-//   @include position(absolute, 0 0 0 0);
+.o-slider__button {
+  @include media($phone) {
+    display: block;
 
-//   margin: auto;
+    text-align: center;
 
-//   min-width: 100%;
-//   min-height: 100%;
-// }
+    @include margin(null em($ratio--l));
+  }
+}

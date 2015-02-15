@@ -5,11 +5,16 @@
 .o-social__list {
   @include reset-list;
 
-  display: inline-block;
+  @include media($phone) {
+    margin-top: em($ratio--s);
+  }
+  @include media($portable) {
+    display: inline-block;
 
-  vertical-align: middle;
+    vertical-align: middle;
 
-  margin-left: em($ratio--l);
+    margin-left: em($ratio--m);
+  }
 }
 
 [class^="o-social__item--"],
@@ -18,6 +23,27 @@
 
   & + & {
     margin-left: em($ratio--b);
+  }
+}
+
+[class^="o-social__link--"],
+[class*=" o-social__link--"] {
+  text-decoration: none;
+
+  display: block;
+
+  width: em($circle--s);
+  height: em($circle--s);
+
+  overflow: hidden;
+
+  border: $line--s solid $grey-2;
+
+  border-radius: 50%;
+
+  @include state--active {
+    color: white;
+    border-color: $grey-3;
   }
 }
 
@@ -37,29 +63,8 @@
   }
 }
 
-[class^="o-social__link--"],
-[class*=" o-social__link--"] {
-  text-decoration: none;
-
-  display: block;
-
-  width: em(60);
-  height: em(60);
-
-  overflow: hidden;
-
-  border: $line--s solid $grey-2;
-
-  border-radius: 50%;
-
-  @include state--active {
-    color: white;
-    border-color: $grey-3;
-  }
-}
-
 .o-social__icon {
-  line-height: em(60);
+  line-height: em($circle--s);
   &:before {
     vertical-align: -20%; // Optical magic number
   }

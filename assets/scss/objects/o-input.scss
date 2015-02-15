@@ -5,7 +5,9 @@
 
   background-color: transparent;
 
-  font-size: em($unit--l);
+  @include media($large) {
+    font-size: em($unit--l);
+  }
 
   border: $line--s solid $grey-3;
   border-radius: em($ratio--m);

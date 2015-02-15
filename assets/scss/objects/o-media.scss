@@ -1,9 +1,17 @@
 .o-media {
   position: relative;
 
-  width: flex-grid(4);
+  // width: flex-grid(4);
 
-  margin-bottom: em($ratio--m);
+  // margin-bottom: em($ratio--m);
+  margin-bottom: em($ratio--b);
+
+  @include media($phablet) {
+    width: flex-grid(3, $columns__phablet);
+  }
+  @include media($tablet) {
+    width: flex-grid(3, $columns__tablet)
+  }
 }
 
 .o-media__image {
@@ -15,7 +23,11 @@
   left: 0;
   bottom: 0;
 
-  padding: em($ratio--b);
+  padding: em($ratio--s);
+
+  @include media($large) {
+    padding: em($ratio--b);
+  }
 
   z-index: $index--s;
 }

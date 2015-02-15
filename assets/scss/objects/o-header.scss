@@ -1,8 +1,21 @@
 .o-header {
-  @include position(fixed, 0 null null 0);
-  // position: fixed;
-  // top: 0;
-  // left: 0;
+  .device--is-desktop & {
+    position: fixed;
+  }
+  .device--is-mobile & {
+    position: absolute;
+  }
+
+  top: 0;
+  left: 0;
 
   z-index: $index--xl;
+
+
+  @include media($phone) {
+    right: 0;
+    
+    text-align: center;
+  }
+
 }

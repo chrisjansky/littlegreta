@@ -1,22 +1,44 @@
 .o-person {
   position: relative;
-
-  @include span-columns(3);
-  @include omega(4n);
-
-  margin-bottom: em($ratio--m);
-
-  @include pseudo-center--parent;
+  margin-bottom: em($ratio--b);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover {
     cursor: pointer;
   }
+
+  @include media($phablet) {
+    @include span-columns(3);
+    @include omega(2n);
+  }
+
+  @include media($tablet) {
+    @include span-columns(3);
+    @include omega(3n);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3);
+    @include omega(4n);
+
+    margin-bottom: em($ratio--m);
+  }
 }
 
 .o-person__portrait {
-  float: left;
+  display: table-cell;
+}
 
-  width: em(110);
+.o-person__circle {
+  @include media($mobile) {
+    width: em($ratio--xl);
+  }
+  @include media($desktop) {
+    width: em(110);
+  }
 
   margin-right: em($ratio--b);
 
@@ -24,20 +46,52 @@
   border-radius: 50%;
 }
 
-.o-person__group {
-  display: block;
-
-  @include position(absolute, em($ratio--s) null null null);
-
-  font-size: em($unit--s);
-
-  opacity: 0;
-
-  transition: opacity $duration--b;
+.o-person__image {
+  border-radius: 50%;
+  transition: transform $duration--s;
 
   .o-person:hover & {
-    opacity: 1;
+    transform: scale(.95);
   }
+}
+
+.o-person__name {
+  display: block;
+
+  transition: color $duration--s;
+  
+  .o-person:hover & {
+    color: $grey-2;
+  }
+}
+
+
+.o-person__position {
+  display: block;
+
+  color: $grey-6;
+
+  // font-size: em($unit--xs);
+  // line-height: $spacing--s;
+}
+
+.o-person__group {
+  // display: block;
+
+  // @include position(absolute, em($ratio--s) null null null);
+
+  // font-size: em($unit--s);
+  // line-height: $spacing--s;
+
+  margin-right: em($ratio--s);
+
+  // opacity: 0;
+
+  // transition: opacity $duration--b;
+
+  // .o-person:hover & {
+  //   opacity: 1;
+  // }
 
   .o-person--finance & {
     color: $color-1;
@@ -53,44 +107,20 @@
   }
 }
 
-.o-person__image {
-  border-radius: 50%;
-  transition: transform $duration--s;
-
-  .o-person:hover & {
-    transform: scale(.95);
-  }
-}
-
-.o-person__name {
-  transition: color $duration--s;
-  
-  .o-person:hover & {
-    color: $grey-2;
-  }
-}
-
-
-.o-person__position {
-  display: block;
-
-  color: $grey-6;
-
-  line-height: $spacing--s;
-}
-
 .o-person__info {
-  overflow: auto;
+  display: table-cell;
+  vertical-align: middle;
 
-  padding-top: em($ratio--s);
+  // padding-top: em($ratio--s);
 }
 
 .o-person__detail {
-  visibility: hidden;
-
-  @include position(absolute, 85% -15% null -15%);
+  @include position(absolute, 85% 0% null 0%);
   z-index: $index--s;
 
+  // @include position(absolute, 85% -15% null -15%);
+
+  visibility: hidden;
   opacity: 0;
   transform: translateY(em($ratio--b));
 
@@ -106,10 +136,11 @@
 
   .o-person:hover & {
     visibility: visible;
-    transition-delay: $duration--l;
-
     opacity: 1;
     transform: translateY(0);
+
+    // transition-delay: $duration--l;
+    transition-delay: 0;
   }
 }
 

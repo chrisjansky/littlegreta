@@ -9,7 +9,9 @@
   // iOS reset.
   border-radius: 0;
 
-  font-size: em($unit--l);
+  @include media($large) {
+    font-size: em($unit--l);
+  }
 
   @include state--focus {
     outline: 0;

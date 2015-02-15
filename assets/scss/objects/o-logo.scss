@@ -1,20 +1,40 @@
 .o-logo {
-  display: block;
+  display: inline-block;
 
   position: relative;
 
-  @include margin(em($ratio--xl) null null em($ratio--b));
-
-  transform: translateX(em($ratio--xl));
-
-  transition: transform $duration--b;
+  margin-top: em($ratio--b);
 
   svg {
     fill: rgba($grey-0, .85);
 
-    width: em(120);
-
     margin: em($ratio--t);
+  }
+
+  @include media($mobile) {
+    svg {
+      width: em(90);
+    }
+  }
+
+  @include media($portable) {
+    margin-left: em($ratio--m);
+
+    margin-top: em($ratio--m);
+  }
+
+  @include media($desktop) {
+    transform: translateX(em($ratio--xl));
+
+    margin-left: em($ratio--b);
+
+    svg {
+      width: em(120);
+    }
+  }
+
+  .device--is-desktop & {
+    transition: transform $duration--b;  
   }
 
   .top--is-off & {
@@ -25,8 +45,14 @@
 .o-logo__content {
   overflow: hidden;
 
-  width: em(120);
-  height: em(60);
+  @include media($mobile) {
+    width: em(90);
+    height: em(45);
+  }
+  @include media($desktop) {
+    width: em(120);
+    height: em(60);
+  }
 
   padding: em($ratio--t);
 
@@ -47,9 +73,8 @@
   display: block;
 }
 
-.o-logo__tooltip {
+.no-touch .o-logo__tooltip {
   @include position(absolute, 15% null null 75%);
-
 
   font-size: em($unit--xs);
   color: white;
@@ -67,6 +92,7 @@
     content: "";
     @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), left);
   }
+
   &:after {
     display: inline-block;
     content: "Back to Top Menu";

@@ -1,21 +1,5 @@
-// .o-tweet {
-  // outline: 1px solid rgba(white, .25);
-  // position: relative;
-
-  // margin-bottom: em($ratio--b);
-
-  // @include span-columns(3);
-  // margin-right: 0;
-  // @include omega(3n);
-// }
-
-// .o-tweet--image {
-  // border-radius: $radius--b;
-  // overflow: hidden;
-// }
-
 .o-tweet__text {
-  font-size: em($unit--m);
+  // font-size: em($unit--m);
 
   margin-top: 0;
 
@@ -45,9 +29,6 @@
 
   padding-top: em($ratio--b);
 }
-// .o-tweet__note {
-//   margin-left: em($ratio--s);
-// }
 
 .o-tweet--photo {
   &:after {

@@ -1,154 +1,17 @@
-.o-post {
-  // position: relative;
-
-  // outline: 1px solid black;
-  // margin-bottom: em($ratio--b);
-  // border-top: 3px solid rgba($grey-4, 0.35);
-  // padding-top: 1em;
-
-  // @include span-columns(6);
-  // margin-right: 0;
-  // @include omega(3n);
-
-  // @include collapse-children;
-  // strong {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   color: #fff;
-  //   background-color: rgba($grey-4, 0.35);
-  //   padding: .6em 1em;
-  //   font-size: em(12);
-  //   font-weight: 500;
-  //   border-bottom-left-radius: 4px;
-  //   border-bottom-right-radius: 4px;
-  //   -webkit-font-smoothing: antialiased;
-  //  }
-  // .btn {
-  //   display: inline-block;
-  //   max-width: 0;
-  //   padding: .4em 0;
-  //   @include transition(all .25s);
-  //   background-color: $grey-4 !important;
-  //   overflow: hidden;
-  //   white-space: nowrap;
-  //   vertical-align: middle;
-  //   background-color: $grey-4;
-  //   opacity: 0;
-  // }
-  // &:hover .btn {
-  //   max-width: 210px;
-  //   padding: .4em .8em;
-  //   opacity: 1;
-  //   margin-right: 1em;
-  // }
-  // small {
-  //   color: #ccc;
-  //   vertical-align: middle;
-  //   display: inline-block;
-  // }
-}
-.o-post--photo {
-  // background-color: $grey-2;
-
-  // border-radius: $radius--b;
-  // overflow: hidden;
-  // @include span-columns(6);
-}
-
-// .o-post__content {
-  // max-height: em(100);
-  // overflow: hidden;
-
-  // @include collapse-children;
-  // outline: 1px solid blue;
-// }
-
-// .o-post__figure {
-  // margin: 0;
-
-  // background-color: $grey-2;
-
-  // border-radius: $radius--l;
-
-  // overflow: hidden;
-
-  // img {
-  //   opacity: .6;
-  // }
-// }
-
-// .o-post--photo {
-//   border-top: 0;
-//   padding-top: 0;
-//   border-radius: 4px;
-//   overflow: hidden;
-// }
-// .o-post__info {
-//   margin-top: 1em;
-// }
-// .o-post__photos {
-//   overflow: hidden;
-//   max-height: 16em;
-//   .btn {
-//     color: #fff;
-//     border-radius: 4px;
-//   }
-//   h4 {margin-right: 1em; }
-//   a {
-//     display: inline-block;
-//     width: 100%;
-//     background-color: $grey-4;
-//     img {width: 100%; opacity: .25; }
-//   }
-//   a:hover {background-color: $grey-4; }
-// }
-// .o-post__overlay {
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-
-//   padding: em($ratio--b);
-
-//   color: white;
-
-  // .o-post--photo & {
-    // bottom: 0;
-  // }
-  // &:after {
-    // content: "";
-    // @include stretch-overlay;
-    // @include linear-gradient(to bottom, transparent, $grey-2);
-
-    // pointer-events: none;
-  // }
-  // @include stretch-overlay;
-
-  // background-color: rgba($grey-2, .75);
-
-  // z-index: $index--s;
-//   position: absolute;
-//   top: 1.2em;
-//   left: 1.5em;
-//   z-index: 10;
-// }
-
 .o-post__content {
-  font-size: em($unit--m);
+  // font-size: em($unit--m);
 
   color: white;
 }
-// .o-post__author {
-//   margin-right: .5em;
-//   a {display: none; }
-// }
 
 .o-post__title {
   display: block;
   
-  font-size: em($ratio--l);
-  font-weight: $font__sans--light;
+  // font-size: em($ratio--l);
+  // font-weight: $font__sans--light;
+
+  font-size: em($ratio--m);
+  font-weight: $font__sans--medium;
 
   margin-bottom: em($ratio--s);
   line-height: $spacing--xs;
@@ -200,20 +63,15 @@
     display: none;
   }
 }
-// .o-post__link {
-//   text-decoration: none;
-//   @include state--link {
-//     color: $color-2;
-//   }
-//   @include state--hover {
-//     color: white !important;
-//   }
-// }
 
 .o-post--basic {
   border-top: $line--b solid rgba($grey-0, .25);
 
   padding-top: em($ratio--s);
+
+  @include media($phone) {
+    width: 100%;
+  }
 }
 
 .o-post--quote {
@@ -249,9 +107,6 @@
   }
 }
 
-// .o-post--quote:before {
-//   content: "quote";
-// }
 .o-post--photo {
   &:after {
     content: "";
@@ -262,13 +117,3 @@
 .o-post__player {
   margin-bottom: em($ratio--b);
 }
-// .o-post--link:before {
-//   content: "link";
-// }
-// .o-post--video {
-  // [class^="o-media__date"],
-  // [class*=" o-media__date"] {
-  //   margin-top: em($ratio--b);
-  // }
-//   content: "video";
-// }
