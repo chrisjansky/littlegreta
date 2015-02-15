@@ -19,14 +19,15 @@
 .o-iconed--small {
   &:before,
   &:after {
-    font-size: #{$icon--s}px;
+    font-size: #{$icon--xs}px;
   }
 }
 
 // Standalone
 .o-icon--b {
   &:before, &:after {
-    font-size: #{$icon--b}px;
+    // font-size: #{$icon--b}px;
+    font-size: #{$icon--xs}px;
   }
 }
 
