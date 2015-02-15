@@ -3,19 +3,21 @@ section.m-intro#js-smTarget(style="background-image: url('assets/images/#{introB
   .m-intro__overlay.l-wrap.l-wrap--horizontal
 
     .m-intro__content
-      .m-intro__menu.l-inline
+      .m-intro__table
 
-        .l-inline__cell
-          strong.t-smallcaps--1= introNavText
+        .m-intro__cell
+          strong.m-intro__explanation.t-smallcaps--1= introNavText
           nav.o-top-nav
-            ul.o-top-nav__list
-              each instance in pages
-                if (introNavMode === "index")
-                  li.o-top-nav__item: a.i-link--light(href="#" + instance.anchor, data-scrollto)= instance.name
-                else
-                  li.o-top-nav__item: a.i-link--light(href="index#section-" + instance.anchor)= instance.name
+            button.o-top-nav__toggle.o-iconed--small.ss-rows Menu
+            .o-top-nav__dropdown
+              ul.o-top-nav__list
+                each instance in pages
+                  if (introNavMode === "index")
+                    li.o-top-nav__item: a.o-top-nav__link.i-link--light(href="#" + instance.anchor, data-scrollto)= instance.name
+                  else
+                    li.o-top-nav__item: a.o-top-nav__link.i-link--light(href="index#section-" + instance.anchor)= instance.name
 
-        .l-inline__cell
+        .m-intro__cell
           .o-dropdown
             button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
             .o-dropdown__content

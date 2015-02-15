@@ -23,12 +23,14 @@ section#people.m-people.l-section--light
 
           div.o-person(class="o-person--#{group.title}")
             .o-person__portrait
-              img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
+              .o-person__circle
+                img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
 
             .o-person__info
-              span.o-person__group= group.title.charAt(0).toUpperCase() + group.title.slice(1)
               strong.o-person__name.t-caps= person.name
-              small.o-person__position.t-small!= person.position
+              small.o-person__position.t-small
+                span.o-person__group= group.title.charAt(0).toUpperCase() + group.title.slice(1)
+                != person.position
 
               .o-person__detail
                 .o-person__content
