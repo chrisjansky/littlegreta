@@ -10,6 +10,7 @@ $topSlider.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
+  loopRewind: true,
   
   numImagesToPreload: 1,
 });
@@ -19,14 +20,17 @@ $workCarousel.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
+  loopRewind: true,
   
   keyboardNavEnabled: true,
-  loopRewind: true,
   visibleNearby: {
     enabled: true,
     center: false,
     centerArea: .8,
-    navigateByCenterClick: true
+    navigateByCenterClick: true,
+
+    breakpoint: 980,
+    breakpointCenterArea: 1
   }
 });
 

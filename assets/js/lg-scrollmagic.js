@@ -87,7 +87,9 @@ function lgScrollMagic() {
 var introParallax = new lgScrollMagic();
 
 $(document).on("ready", function() {
-  introParallax.build();
-
-  introParallax.attach(true);
+  if (currentDevice === "desktop") {
+    introParallax.build();
+      
+    introParallax.attach(true);
+  }
 });
