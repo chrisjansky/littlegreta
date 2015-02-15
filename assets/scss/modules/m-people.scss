@@ -7,5 +7,6 @@
 .m-people__list {
   @include clearfix;
 
-  margin-top: em($ratio--l);
+  // margin-top: em($ratio--l);
+  margin-top: em($ratio--m);
 }

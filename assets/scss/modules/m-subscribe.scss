@@ -6,20 +6,30 @@
 
   color: $grey-9;
 
-  // @include span-columns(8);
-  // @include shift(2);
+  @include media($desktop) {
+    @include span-columns(8);
+    @include shift(2);
+  }
 }
 .m-subscribe__form {
-  display: inline-block;
+  @include media($tablet) {
+    margin-bottom: em($unit--l);
+  }
 
-  // margin-right: em($ratio--b);
+  @include media($desktop) {
+    display: inline-block;
 
-  // clear: left;
+    margin-right: em($ratio--b);
+
+    clear: left;
+  }
 }
 .m-subscribe__submit {
-  display: block;
+  @include media($small) {
+    display: block;
 
-  margin-top: em($ratio--s);
+    margin-top: em($ratio--xs);
+  }
 
   color: $color-2--lighter;
 

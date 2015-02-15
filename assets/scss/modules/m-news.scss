@@ -1,33 +1,34 @@
 .m-news {
   position: relative;
 
-  margin-top: 40vh;
+  // margin-top: 40vh;
 
   background-color: $grey-2;
 }
 
 .m-news__item {
-  .top--is-off & .rsImg {
+  .top--is-off & .rsImg,
+  .device--is-mobile & .rsImg {
     transition: opacity $duration--b;
     opacity: .25;
   }
 
-  .top--is-off .rsActiveSlide & .rsImg {
+  .top--is-off .rsActiveSlide & .rsImg,
+  .device--is-mobile .rsActiveSlide & .rsImg {
     opacity: 1;
   }
 }
 
 .m-news__content {
-  @include shift(4);
-}
+  @include media($phablet) {
+    @include shift(2 of $columns__phablet);
+  }
 
-// .m-news__overlay {
-  // .csstransforms & {
-  //   transform: translateY(em($ratio--l));
-  //   opacity: 0;
-  // }
-  // .top--is-off & {
-  //   transform: translateY(0);
-  //   opacity: 1;
-  // }
-// }
+  @include media($tablet) {
+    @include shift(2 of $columns__tablet);
+  }
+
+  @include media($desktop) {
+    @include shift(4 of $columns__desktop);
+  }
+}
