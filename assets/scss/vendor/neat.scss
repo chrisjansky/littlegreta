@@ -1,19 +1,23 @@
-$device__phablet: 440;
-$device__tablet:  720;
-$device__desktop: 980;
+$device__phablet:    440;
+$device__tablet:     720;
+$device__desktop:    980;
+$device__widescreen: 1260;
 
-$bp__phone: new-breakpoint(max-width em($device__phablet - 1));
-$bp__phablet: new-breakpoint(min-width em($device__phablet) max-width em($device__tablet - 1));
-$bp__tablet: new-breakpoint(min-width em($device__tablet) max-width em($device__desktop - 1));
-$bp__desktop: new-breakpoint(min-width em($device__desktop));
+$phone: new-breakpoint(max-width em($device__phablet - 1), $columns__phone);
+$phablet: new-breakpoint(min-width em($device__phablet) max-width em($device__tablet - 1), $columns__phablet);
+$tablet: new-breakpoint(min-width em($device__tablet) max-width em($device__desktop - 1), $columns__tablet);
+$desktop: new-breakpoint(min-width em($device__desktop), $columns__desktop);
+
+// $laptop: new-breakpoint(min-width em($device__desltop) max-width em($device__widescreen - 1), $columns__desktop);
+// $widescreen: new-breakpoint(min-width em($device__widescreen), $columns__desktop);
 
 // Phone & phablet <<
-$bp__small: new-breakpoint(max-width em($device__tablet - 1));
+$small: new-breakpoint(max-width em($device__tablet - 1));
 // >> Phablet
-$bp__portable: new-breakpoint(min-width em($device__phablet));
+$portable: new-breakpoint(min-width em($device__phablet));
 // Phablet & tablet
-$bp__medium: new-breakpoint(min-width em($device__phablet) max-width em($device__desktop - 1));
+$medium: new-breakpoint(min-width em($device__phablet) max-width em($device__desktop - 1));
 // >> Tablet
-$bp__large: new-breakpoint(min-width em($device__tablet));
+$large: new-breakpoint(min-width em($device__tablet));
 // << Desktop
-$bp__mobile: new-breakpoint(max-width em($device__desktop - 1));
+$mobile: new-breakpoint(max-width em($device__desktop - 1));

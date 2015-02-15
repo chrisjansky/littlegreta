@@ -1,6 +1,6 @@
 .royalSlider {
   width: 100%;
-  height: 110vh;
+  // height: 110vh;
 
   max-height: em($height--xxl);
 }
@@ -8,23 +8,38 @@
 .rsArrow {
   position: absolute;
 
-  top: 0;
   bottom: 0;
 
   @include padding(null em($ratio--b));
 
   text-align: center;
-  color: rgba(white, .25);
+  color: rgba(white, .375);
 
   user-select: none;
 
   @include pseudo-center--parent;
 
+  @include media($phone) {
+    padding-bottom: em($ratio--b);
+  }
+  @include media($phablet) {
+    padding-bottom: em($unit--xl);
+  }
+
   &:after {
     font-family: "SSGizmo";
     font-size: #{$icon--b}px;
 
-    vertical-align: -90%; // Magic number alignment
+    vertical-align: bottom;
+  }
+
+  @include media($large) {
+    top: 0;
+
+    &:after {
+      // Magic number alignment
+      vertical-align: -90%;
+    }
   }
 }
 .rsArrowIcn {
@@ -33,7 +48,10 @@
 
 .rsArrowLeft {
   left: 0;
-  padding-left: em($ratio--l);
+  // padding-left: em($ratio--l);
+  @include media($phone) {
+    padding-left: em($ratio--s);
+  }
 
   &:after {
     content: "◅";
@@ -41,7 +59,10 @@
 }
 .rsArrowRight {
   right: 0;
-  padding-right: em($ratio--l);
+  // padding-right: em($ratio--l);
+  @include media($phone) {
+    padding-right: em($ratio--s);
+  }
 
   &:after {
     content: "▻";
