@@ -1,8 +1,8 @@
 // Units
 $unit--xh: 120;
 $unit--h:   82;
-$unit--xxl: 48;
-$unit--xl:  22;
+$unit--xxl: 32;
+$unit--xl:  24;
 $unit--l:   20;
 $unit--m:   18;
 $unit--b:   16;
@@ -32,10 +32,14 @@ $line--b: 2px;
 $line--s: 1px;
 
 // Icons
-$icon--l: 48;
-$icon--m: 32;
-$icon--b: 24;
-$icon--s: 20;
+$icon--l:  48;
+$icon--m:  32;
+$icon--b:  24;
+$icon--s:  20;
+$icon--xs: 16;
+
+$circle--b: 60;
+$circle--s: 40;
 
 // Z-index
 $index--xl:  400;
@@ -60,6 +64,7 @@ $height--xxl: 800;
 $height--xl:  520;
 $height--m:   round(golden-ratio($unit--b * $spacing--m, 1));
 $height--b:   round(golden-ratio($unit--b * $spacing--b, 1));
+$height--xs:  round(golden-ratio($unit--b * $spacing--xs, 1));
 
 // Ratios
 $ratio--xxh: round(golden-ratio($unit--b,  7));

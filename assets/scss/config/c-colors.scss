@@ -11,7 +11,7 @@ $color-1--lighter: hsb($c-hue1 - $c-offset2, 091, 100); // S90 = error?
 $color-1--light:   hsb($c-hue1 - $c-offset1, 085, 095);
 $color-1:          hsb($c-hue1, 085, 100);
 $color-1--dark:    hsb($c-hue1 + $c-offset1, 090, 080);
-$color-1--darker:  hsb($c-hue1 + $c-offset2, 090, 070);
+$color-1--darker:  hsb($c-hue1 + $c-offset2, 095, 065);
 
 $color-2--lighter: hsb($c-hue2 - $c-offset2, 100, 095);
 $color-2--light:   hsb($c-hue2 - $c-offset1, 095, 090);
