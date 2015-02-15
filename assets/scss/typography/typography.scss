@@ -1,16 +1,19 @@
 .t-small {
   font-size: em($unit--s);
+  // line-height: $spacing--s;
 }
 .t-tiny {
   font-size: em($unit--xs);
 }
 .t-lead {
-  font-size: em($ratio--m);
-  font-family: $font__serif;
-  font-weight: $font__serif--book;
+  // font-size: em($ratio--m);
+  
+  // font-size: em($unit--m);
+  // font-family: $font__serif;
+  // font-weight: $font__serif--book;
 }
 .t-big {
-  font-size: em($unit--l);
+  // font-size: em($unit--l);
 }
 
 [class^="t-underline--"],
@@ -36,6 +39,8 @@
 [class^="t-gradient"],
 [class*=" t-gradient"] {
   position: relative;
+
+  padding-bottom: em($ratio--t);
   &:after {
     content: "";
 
@@ -45,12 +50,12 @@
     right: 1%;
     bottom: 0;
 
-    height: $line--m;
+    // height: $line--m;
+    height: $line--b;
   }
 }
 
 .t-gradient--small {
-  // padding-bottom: em($ratio--t);
   &:after {
     height: $line--b;
   }
@@ -74,6 +79,8 @@
 
 [class^="t-caps"],
 [class*=" t-caps"] {
+  font-size: em($unit--s);
+
   font-weight: $font__sans--bold;
   letter-spacing: em($ratio--t);
   text-transform: uppercase;
@@ -84,7 +91,9 @@
 
 [class^="t-smallcaps"],
 [class*=" t-smallcaps"] {
-  font-size: em($unit--s);
+  font-size: em($unit--xs);
+
+  // font-size: em($unit--s);
   font-weight: $font__sans--medium;
   letter-spacing: em($ratio--t);
   text-transform: uppercase;
