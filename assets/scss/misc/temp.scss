@@ -2,15 +2,18 @@
   font-family: $font__display;
   font-weight: $font__display--light;
 
-  font-size: em($ratio--l);
-
+  font-size: em($unit--xl);
   line-height: $spacing--s;
-}
 
-// .temp-h1__strong {
-  // font-family: $font__sans;
-  // font-weight: $font__display--book;
-// }
+  @include media($tablet) {
+    font-size: em($unit--xxl);
+  }
+  @include media($desktop) {
+    font-size: em($ratio--l);
+  }
+
+  @include margin(em($ratio--b) null);
+}
 
 .m-works {
   @include clearfix;
@@ -19,14 +22,14 @@
 .o-work {
   position: relative;
 
-  margin-bottom: flex-gutter();
+  // margin-bottom: flex-gutter();
+  @include media($small) {
+    width: 100%;
 
-  // &:after {
-    // content: "";
-    // @include overlay-gradient;
-
-    // top: 50%;
-  // }
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
 }
 
 .o-work__overlay {
@@ -34,7 +37,13 @@
 
   color: white;
 
-  @include padding(null em($ratio--m));
+  @include media($small) {
+    @include padding(em($ratio--l) em($ratio--b) null);
+  }
+
+  @include media($large) {
+    @include padding(null em($ratio--m));
+  }
 
   z-index: $index--s;
 
@@ -49,64 +58,145 @@
 .o-work__more {
   overflow: hidden;
 
-  max-height: 0;
-  opacity: 0;
-
-  transition: max-height $duration--l, opacity $duration--xl, padding $duration--l;
-
   p {
     margin-top: 0;
   }
 
-  .o-work:hover & {
+  > :last-child {
+    display: block;
+
+    margin-bottom: em($unit--l);
+  }
+
+  .no-touch & {
+    max-height: 0;
+    opacity: 0;
+
+    transition: max-height $duration--l, opacity $duration--xl, padding $duration--l;
+  }
+
+  .no-touch .o-work:hover & {
     max-height: em($ratio--h);
     opacity: 1;
-
-    padding-bottom: em($ratio--b);
   }
+
 }
 
 .o-work__image {
+  @include media($small) {
+    width: 100%;
+  }
+
   transition: opacity $duration--b;
 
-  opacity: .8;
+  .no-touch & {
+    opacity: .8;
+  }
 
-  .o-work:hover & {
+  .no-touch .o-work:hover & {
     opacity: 1;
   }
 }
 
 .o-work--big {
-  width: flex-grid(8);
+//   width: flex-grid(8);
+
+  @include media($phone) {
+    & .o-work__more p {
+      max-height: em($unit--b * $spacing--b);
+
+      overflow-y: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
 }
-.o-work--medium {
-  width: flex-grid(6);
-}
+// .o-work--medium {
+//   width: flex-grid(6);
+// }
 .o-work--small {
-  width: flex-grid(4);
+  @include media($phablet) {
+    width: flex-grid(3, $columns__phablet);
+  }
+//   width: flex-grid(4);
 }
 
 .o-sizer--column {
-  width: flex-grid(1);
+  // @include media($phone) {
+  //   width: 100%;
+  // }
+  // @include media($phone--landscape) {
+  //   width: flex-grid(1, $columns__phone);
+  // }
+  @include media($phablet) {
+    width: flex-grid(1, $columns__portrait);
+  }
+  @include media($tablet) {
+    width: flex-grid(1, $columns__landscape);
+  }
+  @include media($desktop) {
+    width: flex-grid(1, $columns__desktop);
+  }
 }
 .o-sizer--gutter {
-  width: flex-gutter();
+  // @include media($phone) {
+  //   width: flex-gutter($columns__phone);
+  // }
+  @include media($phablet) {
+    width: flex-gutter($columns__portrait);
+  }
+  @include media($tablet) {
+    width: flex-gutter($columns__landscape);
+  }
+  @include media($desktop) {
+    width: flex-gutter($columns__desktop);
+  }
 }
-
 
 .o-gallery {
   @include clearfix;
 }
 
 .o-gallery__image {
-  margin-bottom: flex-gutter();
+
+  @include media($phone) {
+    width: 100%;
+
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
+
+  // @include media($phone--landscape) {
+  //   margin-bottom: flex-gutter($columns__phone);
+  // }
+  @include media($phablet) {
+    margin-bottom: flex-gutter($columns__portrait);
+  }
+  @include media($tablet) {
+    margin-bottom: flex-gutter($columns__landscape);
+  }
+  @include media($desktop) {
+    margin-bottom: flex-gutter($columns__desktop);
+  }
 }
-.o-gallery__image--big {
-  width: flex-grid(8);
-}
-.o-gallery__image--medium {
-  width: flex-grid(6);
-}
+// .o-gallery__image--big {
+//   width: flex-grid(8);
+// }
+// .o-gallery__image--medium {
+//   width: flex-grid(6);
+// }
+
 .o-gallery__image--small {
-  width: flex-grid(4);
+//   width: flex-grid(4);
+
+  @include media($phablet) {
+    width: flex-grid(3, $columns__phablet);
+
+    .o-gallery__image--full + &,
+    .o-gallery__image--big + &,
+    .o-gallery__image--medium + & {
+      width: 100%;
+    }
+  }
 }
