@@ -15,27 +15,20 @@
 .l-asym {
   @include clearfix;
 }
+
 .l-asym__title {
-  @include span-columns(4);
+  // @include span-columns(4);
 }
+
 .l-asym__content {
-  @include span-columns(8);
-  @include omega;
+  // @include span-columns(8);
+  // @include omega;
 
-  @include collapse-children;
+  // @include collapse-children;
 
-  margin-bottom: em($ratio--m);
+  // margin-bottom: em($ratio--m);
+
+  &:last-child > * {
+    margin-bottom: 0;
+  }
 }
-
-// Column grid.
-// .l-column {
-//   @include collapse-children;
-// }
-// .l-column--primary {
-//   @include media($desktop) {
-//     @include span-columns(4 of 6);
-//   }
-// }
-// .l-column--secondary {
-//   overflow: auto;
-// }
