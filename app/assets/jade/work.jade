@@ -1,6 +1,6 @@
-extends templates/_basic
+extends templates/_site
 
-append template-body
+block template-content
   include partial/_sticky
 
   - var introBg = "top/photo2.jpg"
@@ -58,7 +58,7 @@ append template-body
                 h4.t-h4 Work that&rsquo;s #{size}
                 .o-work__more
                   p: +dummy(15, "text")
-                  a.o-button--text.ss-right.right(href="#") View Case Study
+                  a.o-button--text.ss-right.right(href="case-study") View Case Study
             - n++
 
         article.o-work(class="o-work--small", data-masonry-item)
