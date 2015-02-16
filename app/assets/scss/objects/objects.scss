@@ -1,0 +1,127 @@
+// Basic anchor with an image inside.
+.o-image-link {
+  display: inline-block;
+  vertical-align: middle;
+
+  & + & {
+    margin-left: em($ratio--s);
+  }
+  @include state--hover {
+    opacity: .625;
+  }
+}
+
+// Blurred background.
+[class^="o-blur--"],
+[class*=" o-blur--"] {
+  background: center / cover;
+}
+.o-blur--fixed {
+  @include media($desktop) {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+.o-blur--blue {background-image: url("../images/blur/bg_blue.jpg"); }
+// .o-blur--red {background-image: url("../images/color_bg/bg_red.jpg"); }
+.o-blur--grey {background-image: url("../images/blur/bg_grey.jpg"); }
+.o-blur--teal {background-image: url("../images/blur/bg_teal.jpg"); }
+.o-blur--green {background-image: url("../images/blur/bg_green.jpg"); }
+.o-blur--purple {background-image: url("../images/blur/bg_purple.jpg"); }
+// @include media($desktop--wide) {
+//   .o-blur--blue {background-image: url("../images/color_bg/bg_blue_big.jpg"); }
+//   .o-blur--red {background-image: url("../images/color_bg/bg_red_big.jpg"); }
+//   .o-blur--green {background-image: url("../images/color_bg/bg_green_big.jpg"); }
+//   .o-blur--purple {background-image: url("../images/color_bg/bg_purple_big.jpg"); }
+// }
+
+[class^="o-gradient"],
+[class*=" o-gradient"] {
+  position: relative;
+  &:after {
+    content: "";
+
+    @include position(absolute, null 0 0 0);
+
+    height: $line--m;
+  }
+}
+
+.o-gradient--1:after {
+  @include linear-gradient(to right, $color-1--light, $color-2);
+}
+
+.o-outro {
+  @include media($small) {
+    margin-bottom: em($ratio--m);
+  }
+
+  @include media($large) {
+    margin-bottom: em($ratio--xl);
+  }
+}
+.o-outro__title {
+  @include media($small) {
+    margin-bottom: em($ratio--s);
+  }
+
+  @include media($large) {
+    margin-top: em($ratio--s);
+  }
+}
+
+.o-exit {
+  @include media($tablet) {
+    @include shift(2 of $columns__tablet);
+  }
+
+  @include media($desktop) {
+    @include shift(4 of $columns__desktop);
+  }
+}
+.o-exit__cell {
+  @include media($phone) {
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
+}
+
+.o-quote {
+  margin: 0;
+
+  font-size: em($ratio--m);
+  font-family: $font__serif;
+  font-weight: $font__serif--book;
+
+  font-style: italic;
+
+  color: white;
+}
+
+.o-quote__source {
+  display: block;
+
+  color: rgba(white, .6);
+  text-align: right;
+}
+
+.o-fog {
+  .device--is-mobile & {
+    display: none;
+  }
+  
+  @include stretch-overlay;
+  background-color: rgba($grey-2, .85);
+
+  z-index: $index--m;
+}
+
+.o-description__title {
+  @include media($large) {
+    margin-top: em($ratio--xxs);
+  }
+}
+.o-description__primary {
+  color: $grey-4;
+}

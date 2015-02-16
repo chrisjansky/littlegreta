@@ -1,0 +1,135 @@
+.m-intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .device--is-desktop & {
+    @include position(fixed, 0 0 null 0);
+
+    z-index: $index--l;
+  }
+}
+
+.m-intro__overlay {
+  background-image: #{"linear"}-gradient(to bottom, rgba($grey-1, .625), transparent);
+
+  @include wrap-push;
+}
+
+.m-intro__content {
+  position: relative;
+
+  padding-top: em($ratio--m);
+
+  @include media($phone) {
+    padding-top: em($unit--xxh);
+  }
+
+  @include media($phablet) {
+    @include shift(2 of $columns__phablet);
+  }
+
+  @include media($tablet) {
+    @include shift(2 of $columns__tablet);
+  }
+
+  @include media($desktop) {
+    padding-top: em($ratio--xl);
+
+    @include shift(4 of $columns__desktop);
+  }
+
+  @include media($desktop) {
+    height: 62vh;
+
+    min-height: em(300);
+    max-height: em($height--xl);
+  }
+}
+
+.m-intro__explanation {
+  display: none;
+
+  @include media($widescreen) {
+    display: inline-block;
+  }
+}
+
+.m-intro__text {
+  color: white;
+
+  margin-bottom: 0;
+  padding-bottom: em($ratio--b);
+  
+  @include media($phone) {
+    text-align: center;
+  }
+  @include media($desktop) {
+    @include position(absolute, null 0 0 0);
+  }
+}
+
+.m-intro__table {
+  display: table;
+
+  width: 100%;
+}
+.m-intro__cell {
+  display: table-cell;
+  width: 50%;
+
+  text-align: center;
+
+  @include media($portable) {
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  @include media($desktop) {
+    &:last-child {
+      width: 2%;
+    }
+  }
+}
+
+.m-intro__lift {
+  .device--is-mobile & {
+    display: none;
+  }
+
+  @include position(fixed, null 0 0 0);
+
+  @include wrap-push;
+
+  @include padding(0 null em($ratio--m));
+
+  z-index: $index--l;
+
+  text-decoration: none;
+
+  transition: transform $duration--l, opacity $duration--l, color $duration--b;
+
+  @include state--link {
+    color: $color-4--light;
+  }
+  @include state--hover {
+    color: $color-4--lighter;
+  }
+
+  .top--is-moved & {
+    opacity: 0;
+    transform: translateY(em($ratio--l));
+  }
+}
+
+.m-intro__mark {
+  // Reset <mark>
+  background-color: transparent;
+  color: inherit;
+
+  @include shift(4);
+}

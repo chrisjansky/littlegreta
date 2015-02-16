@@ -1,0 +1,24 @@
+.o-button--text {
+  text-decoration: none;
+
+  &:before, &:after {
+    font-size: #{$icon--s}px;
+  }
+  
+  &:before {
+    margin-right: em($ratio--xxs);
+  }
+  &:after {
+    margin-left: em($ratio--xxs);
+  }
+}
+
+@include media($large) {
+  .o-button--big {
+    font-size: em($unit--m);
+
+    &:before, &:after {
+      font-size: #{$icon--b}px;
+    }
+  }
+}

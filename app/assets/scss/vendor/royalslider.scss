@@ -1,0 +1,80 @@
+.royalSlider {
+  width: 100%;
+
+  @include media($large) {
+    height: 110vh;
+  }
+
+  max-height: em($height--xxl);
+}
+
+.rsArrow {
+  position: absolute;
+
+  bottom: 0;
+
+  @include padding(null em($ratio--b));
+
+  text-align: center;
+  color: rgba(white, .375);
+
+  user-select: none;
+
+  @include pseudo-center--parent;
+
+  @include media($phone) {
+    padding-bottom: em($ratio--b);
+  }
+  @include media($phablet) {
+    padding-bottom: em($unit--xl);
+  }
+
+  &:after {
+    font-family: "SSGizmo";
+    font-size: #{$icon--b}px;
+
+    vertical-align: bottom;
+  }
+
+  @include media($large) {
+    top: 0;
+
+    &:after {
+      // Magic number alignment
+      vertical-align: -90%;
+    }
+  }
+}
+.rsArrowIcn {
+  display: inline-block;
+}
+
+.rsArrowLeft {
+  left: 0;
+
+  @include media($small) {
+    padding-left: em($ratio--s);
+  }
+
+  @include media($large) {
+    padding-left: em($ratio--l);
+  }
+
+  &:after {
+    content: "◅";
+  }
+}
+.rsArrowRight {
+  right: 0;
+
+  @include media($small) {
+    padding-right: em($ratio--s);
+  }
+  @include media($large) {
+    padding-right: em($ratio--l);
+  }
+
+  &:after {
+    content: "▻";
+  }
+}

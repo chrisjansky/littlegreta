@@ -1,0 +1,44 @@
+// Bourbon
+@import "bourbon";
+
+// Mixins
+@import "chj-framework/app/assets/scss/mixins/_mixins";
+@import "chj-framework/app/assets/scss/mixins/_center";
+@import "chj-framework/app/assets/scss/mixins/_color";
+@import "chj-framework/app/assets/scss/mixins/_reset";
+@import "chj-framework/app/assets/scss/mixins/_state";
+@import "chj-framework/app/assets/scss/mixins/_wrap";
+
+// Config
+@import "config/c-colors";
+@import "config/c-units";
+@import "config/c-fonts";
+@import "config/c-transitions";
+@import "config/c-bourbon";
+
+// Neat
+@import "neat";
+
+// Vendor
+@import "chj-framework/app/assets/scss/vendor/neat";
+
+// Styleguide
+@import "chj-framework/app/assets/scss/guide/kss";
+@import "chj-framework/app/assets/scss/guide/specific";
+
+@import "styleguide/json"; // Must be the local one
+
+@import "chj-framework/app/assets/scss/guide/g-config";
+@import "chj-framework/app/assets/scss/guide/g-temp";
+@import "chj-framework/app/assets/scss/guide/g-swatch";
+@import "chj-framework/app/assets/scss/guide/g-color";
+
+/*
+Basics
+
+Styleguide 1.
+*/
+@import "chj-framework/app/assets/scss/guide/g-unit";
+@import "chj-framework/app/assets/scss/guide/g-ratio";
+@import "chj-framework/app/assets/scss/guide/g-height";
+@import "chj-framework/app/assets/scss/guide/g-spacing";

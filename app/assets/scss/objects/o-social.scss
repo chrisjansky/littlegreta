@@ -1,0 +1,81 @@
+.o-social {
+  text-align: center;
+}
+
+.o-social__list {
+  @include reset-list;
+
+  @include media($phone) {
+    margin-top: em($ratio--s);
+  }
+  @include media($portable) {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    margin-left: em($ratio--m);
+  }
+}
+
+[class^="o-social__item--"],
+[class*=" o-social__item--"] {
+  display: inline-block;
+
+  & + & {
+    margin-left: em($ratio--b);
+  }
+}
+
+[class^="o-social__link--"],
+[class*=" o-social__link--"] {
+  text-decoration: none;
+
+  display: block;
+
+  width: em($circle--s);
+  height: em($circle--s);
+
+  @include media($large) {
+    width: em($circle--b);
+    height: em($circle--b);
+  }
+
+  overflow: hidden;
+
+  border: $line--s solid $grey-2;
+
+  border-radius: 50%;
+
+  @include state--active {
+    color: white;
+    border-color: $grey-3;
+  }
+}
+
+.o-social__link--twitter {
+  @include state--link {
+    color: $c-twitter;
+  }
+}
+.o-social__link--youtube {
+  @include state--link {
+    color: $c-youtube;
+  }
+}
+.o-social__link--tumblr {
+  @include state--link {
+    color: $c-tumblr;
+  }
+}
+
+.o-social__icon {
+  line-height: em($circle--s);
+
+  @include media($large) {
+    line-height: em($circle--b);
+  }
+
+  &:before {
+    vertical-align: -20%; // Optical magic number
+  }
+}

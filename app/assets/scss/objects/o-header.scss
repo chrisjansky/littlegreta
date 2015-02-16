@@ -1,0 +1,20 @@
+.o-header {
+  .device--is-desktop & {
+    position: fixed;
+  }
+  .device--is-mobile & {
+    position: absolute;
+  }
+
+  top: 0;
+  left: 0;
+
+  z-index: $index--xl;
+
+  @include media($phone) {
+    right: 0;
+    
+    text-align: center;
+  }
+
+}

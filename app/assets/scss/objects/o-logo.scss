@@ -1,0 +1,115 @@
+.o-logo {
+  display: inline-block;
+
+  position: relative;
+
+  margin-top: em($ratio--b);
+
+  svg {
+    fill: rgba($grey-0, .85);
+
+    margin: em($ratio--t);
+  }
+
+  @include media($mobile) {
+    svg {
+      width: em(90);
+    }
+  }
+
+  @include media($portable) {
+    margin-left: em($ratio--m);
+
+    margin-top: em($ratio--m);
+  }
+
+  @include media($desktop) {
+    transform: translateX(em($ratio--xl));
+
+    margin-left: em($ratio--b);
+    margin-top: em($ratio--xl);
+
+    svg {
+      width: em(120);
+    }
+  }
+
+  .device--is-desktop & {
+    transition: transform $duration--b;  
+  }
+
+  .top--is-off & {
+    transform: translateX(0);
+  }
+}
+
+.o-logo__content {
+  overflow: hidden;
+
+  @include media($mobile) {
+    width: em(90);
+    height: em(45);
+  }
+  @include media($desktop) {
+    width: em(120);
+    height: em(60);
+  }
+
+  padding: em($ratio--t);
+
+  box-sizing: content-box;
+
+  transition: transform $duration--b, opacity $duration--s;
+
+  .top--is-off & {
+    transform: scale(.75);
+  }
+
+  @include state--hover {
+    opacity: .75;
+  }
+}
+
+.o-logo__title {
+  display: block;
+}
+
+.o-logo__tooltip {
+
+  .device--is-desktop & {
+    @include position(absolute, 15% null null 75%);
+
+    font-size: em($unit--xs);
+    color: white;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    transform: translateX(25%);
+
+    transition: opacity $duration--b, transform $duration--b;
+
+    &:before {
+      display: inline-block;
+
+      content: "";
+      @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), left);
+    }
+
+    &:after {
+      display: inline-block;
+      content: "Back to Top Menu";
+
+      line-height: em($height--b);
+      @include padding(null em($ratio--b));
+
+      background-color: rgba($grey-0, $opacity--b);
+      border-radius: $radius--b;
+    }
+  }
+
+  .top--is-off .o-logo:hover & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

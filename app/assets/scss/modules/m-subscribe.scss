@@ -1,0 +1,60 @@
+.m-subscribe {
+  text-align: center;
+
+  margin-top: em($ratio--m);
+
+  @include media($desktop) {
+    margin-top: em($ratio--l);
+  }
+}
+.m-subscribe__text {
+  text-align: center;
+
+  color: $grey-9;
+
+  margin-top: 0;
+
+  @include media($desktop) {
+    @include span-columns(8 of $columns__desktop);
+    @include shift(2);
+  }
+}
+
+.m-subscribe__form {
+  @include media($tablet) {
+    margin-bottom: em($unit--m);
+  }
+
+  @include media($desktop) {
+    display: inline-block;
+
+    margin-right: em($ratio--b);
+
+    clear: left;
+  }
+}
+.m-subscribe__submit {
+  @include media($small) {
+    display: block;
+
+    margin-top: em($ratio--xs);
+  }
+
+  color: $color-2--lighter;
+
+  @include state--hover {
+    color: $color-2;
+  }
+
+  // Optical alignment of icon
+  &:after {
+    position: relative;
+    top: .125em;
+  }
+}
+.m-subscribe__hint {
+  display: inline-block;
+}
+.m-subscribe__note {
+  margin-right: em($ratio--b);
+}

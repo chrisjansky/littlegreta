@@ -1,0 +1,61 @@
+.o-media {
+  position: relative;
+
+  margin-bottom: em($ratio--b);
+
+  @include media($phablet) {
+    width: flex-grid(3, $columns__phablet);
+  }
+  @include media($tablet) {
+    width: flex-grid(3, $columns__tablet)
+  }
+  @include media($desktop) {
+    width: flex-grid(3, $columns__desktop);
+  }
+}
+
+.o-media__image {
+  opacity: .8;
+}
+
+.o-media__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: em($ratio--s);
+
+  @include media($large) {
+    padding: em($ratio--b);
+  }
+
+  z-index: $index--s;
+}
+
+[class^="o-media__date"],
+[class*=" o-media__date"] {
+  text-decoration: none;
+
+  font-size: em($unit--s);
+
+  @include state--link {
+    color: rgba($grey-8, .5);
+  }
+  @include state--active {
+    color: white;
+  }
+}
+.o-media__date--twitter {
+  @include state--active {
+    &:before {
+      color: $c-twitter;
+    }
+  }
+}
+.o-media__date--tumblr {
+  @include state--active {
+    &:before {
+      color: $color-2;
+    }
+  }
+}
