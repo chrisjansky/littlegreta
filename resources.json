@@ -1,0 +1,64 @@
+{
+  "toMove": [
+    "app/assets/fonts/*",
+    "app/assets/favicon.ico",
+    "!app/assets/**/*.php",
+    "app/assets/php/**/*",
+    "app/**/*.php"
+  ],
+  "injectDev": {
+    "site": [
+      "bower_components/normalize-css/normalize.css",
+      "app/assets/css/vendor/royalslider.css",
+      "app/assets/css/style.css",
+
+      "bower_components/jquery-easing-original/jquery.easing.1.3.js",
+      "bower_components/jquery-waypoints/lib/jquery.waypoints.js",
+      "bower_components/imagesloaded/imagesloaded.pkgd.js",
+      "bower_components/masonry/dist/masonry.pkgd.js",
+      "bower_components/gsap/src/uncompressed/TweenMax.js",
+      "bower_components/ScrollMagic/js/jquery.scrollmagic.js",
+      "bower_components/moment/moment.js",
+      "bower_components/livestampjs/livestamp.js",
+
+      "app/assets/js/vendor/jquery.royalslider.js",
+      "app/assets/js/vendor/jquery.rs.active-class.js",
+      "app/assets/js/vendor/jquery.rs.visible-nearby.js",
+
+      "bower_components/chj-framework/app/assets/js/chj-detect.js",
+      "bower_components/chj-framework/app/assets/js/chj-external.js",
+      
+      "app/assets/js/lg-base.js",
+      "app/assets/js/lg-tumblr.js",
+      "app/assets/js/lg-main.js",
+      "app/assets/js/lg-royal.js",
+      "app/assets/js/lg-waypoints.js",
+      "app/assets/js/lg-logo.js",
+      "app/assets/js/lg-scrollmagic.js",
+      "app/assets/js/lg-scrollto.js",
+      "app/assets/js/lg-resize.js"
+    ],
+    "vendor": [
+      "bower_components/modernizr/modernizr.js"
+    ],
+    "guide": [
+      "app/assets/css/guide.css",
+      "bower_components/chj-framework/app/assets/kss/public/prism.css",
+      "bower_components/chj-framework/app/assets/kss/public/prism.js",
+      "bower_components/chj-framework/app/assets/kss/public/guide.js"
+    ]
+  },
+  "injectDist": {
+    "site": [
+      "dist/assets/css/style-min.css",
+      "dist/assets/js/site-min.js"
+    ],
+    "vendor": [
+      "dist/assets/js/vendor-min.js"
+    ],
+    "guide": [
+      "dist/assets/css/guide-min.css",
+      "dist/assets/js/guide-min.js"
+    ]
+  }
+}
