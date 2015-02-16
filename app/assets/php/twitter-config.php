@@ -8,7 +8,7 @@
 
   // Some variables
   $twitter_username    = "littlegretacz";
-  $number_tweets       = 10; // How many tweets to display? max 20
+  $number_tweets       = 6; // How many tweets to display? max 20
   $ignore_replies      = true; // Should we ignore replies?
   $twitter_caching     = true; // You can change to false for some reason
   $twitter_cache_time  = 60 * 60; // 1 Hour
