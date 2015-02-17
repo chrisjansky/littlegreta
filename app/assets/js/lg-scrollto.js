@@ -4,18 +4,28 @@ $("[data-scrollto]").click(function(event) {
 
   var
     $target = $($(this).attr("href")),
-    $scrollPos = $(this).data("scrollto"),
-    $targetOffset = $target.offset().top,
-    $targetHeight = $target.height(),
+    $scrollPos = $(this).data("scrollto");
+
+  var
+    $targetOffset,
+    $targetHeight,
     viewHeight = window.innerHeight,
     destination;
 
-  // Scroll to middle if larger than viewport, else to top of it
-  if ($targetHeight > viewHeight && $scrollPos === "center") {
-    destination = ($targetHeight - viewHeight) / 2 + $targetOffset;
+  if ($target.selector === "#") {
+    destination = 0;
   } else {
-    // +1 to trigger waypoint
-    destination = $targetOffset + 1;
+
+    $targetOffset = $target.offset().top;
+    $targetHeight = $target.height();
+    
+    // Scroll to middle if larger than viewport, else to top of it
+    if ($targetHeight > viewHeight && $scrollPos === "center") {
+      destination = ($targetHeight - viewHeight) / 2 + $targetOffset;
+    } else {
+      // +1 to trigger waypoint
+      destination = $targetOffset + 1;
+    }
   }
 
   $("html, body").animate({
