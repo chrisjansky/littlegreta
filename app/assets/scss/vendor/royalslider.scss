@@ -26,7 +26,7 @@
     padding-bottom: em($ratio--b);
   }
   @include media($phablet) {
-    padding-bottom: em($unit--xl);
+    padding-bottom: em($ratio--m);
   }
 
   &:after {

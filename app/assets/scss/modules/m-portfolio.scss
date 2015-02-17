@@ -6,9 +6,6 @@
 // }
 
 .m-portfolio__content {
-  @include media($phablet) {
-    @include shift(2 of $columns__phablet);
-  }
 
   @include media($tablet) {
     @include shift(2 of $columns__tablet);
@@ -43,9 +40,15 @@
 }
 
 .m-portfolio__button {
+  @include media($phablet) {
+    display: block;
+
+    text-align: center;
+  }
+
   @include media($mobile) {
     .rsSlide:last-child & {
-      margin-bottom: em($ratio--l);
+      margin-bottom: em($unit--xl);
     }
   }
 
