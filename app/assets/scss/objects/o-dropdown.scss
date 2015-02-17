@@ -24,11 +24,9 @@
 }
 
 .o-dropdown__content {
-  @include position(absolute, 100% -100% null -100%);
+  @include position(absolute, 100% -50% null -50%);
 
   text-align: center;
-
-  // font-size: em($unit--s);
 
   z-index: $index--m;
 
@@ -57,7 +55,7 @@
 }
 
 .o-dropdown__list {
-  @include padding(null em($ratio--b));
+  @include padding(em($ratio--s) em($ratio--b));
   @include margin(0 null);
 
   display: inline-block;
@@ -71,12 +69,14 @@
 }
 
 .o-dropdown__item {
-  display: inline-block;
+  line-height: em($height--xs);
 
-  line-height: em($height--m);
+  & > * {
+    font-size: em($unit--s);
+  }
+
   @include padding(null em($ratio--xs));
 
-  font-size: em($unit--s);
   letter-spacing: em($ratio--t);
 }
 
