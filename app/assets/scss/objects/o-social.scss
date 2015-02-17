@@ -26,6 +26,22 @@
   }
 }
 
+.o-social__link--twitter {
+  @include state--link {
+    color: $c-twitter;
+  }
+}
+.o-social__link--youtube {
+  @include state--link {
+    color: $c-youtube;
+  }
+}
+.o-social__link--tumblr {
+  @include state--link {
+    color: $c-tumblr;
+  }
+}
+
 [class^="o-social__link--"],
 [class*=" o-social__link--"] {
   text-decoration: none;
@@ -49,22 +65,6 @@
   @include state--active {
     color: white;
     border-color: $grey-3;
-  }
-}
-
-.o-social__link--twitter {
-  @include state--link {
-    color: $c-twitter;
-  }
-}
-.o-social__link--youtube {
-  @include state--link {
-    color: $c-youtube;
-  }
-}
-.o-social__link--tumblr {
-  @include state--link {
-    color: $c-tumblr;
   }
 }
 
