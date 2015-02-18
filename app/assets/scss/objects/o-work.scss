@@ -1,0 +1,130 @@
+.o-work {
+  position: relative;
+
+  @include media($small) {
+    width: 100%;
+
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
+
+  @include media($tablet) {
+    margin-bottom: flex-gutter($columns__tablet);
+  }
+
+  @include media($desktop) {
+    margin-bottom: flex-gutter($columns__desktop);
+  }
+}
+
+.o-work__overlay {
+  @include position(absolute, null 0 0 0);
+
+  color: white;
+
+  padding-top: em($ratio--l);
+
+  @include media($small) {
+    @include padding(null em($ratio--b));
+  }
+
+  @include media($large) {
+    @include padding(null em($ratio--m));
+  }
+
+  z-index: $index--s;
+
+  &:after {
+    content: "";
+    @include overlay-gradient;
+
+    z-index: -1;
+  }
+}
+
+.o-work__more {
+  overflow: hidden;
+
+  p {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    display: block;
+
+    margin-bottom: em($unit--l);
+  }
+
+  .device--is-desktop & {
+    margin-top: em($ratio--m);
+
+    max-height: 0;
+    opacity: 0;
+
+    transition: max-height $duration--l, opacity $duration--xl, padding $duration--l;
+  }
+
+  .device--is-desktop .o-work:hover & {
+    max-height: em($ratio--h);
+    opacity: 1;
+  }
+}
+
+.o-work__image {
+  width: 100%;
+
+  transition: opacity $duration--b;
+
+  .no-touch & {
+    opacity: .8;
+  }
+
+  .no-touch .o-work:hover & {
+    opacity: 1;
+  }
+}
+
+.o-work--big {
+  @include media($phone) {
+    & .o-work__more p {
+      max-height: em($unit--b * $spacing--b);
+
+      overflow-y: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @include media($tablet) {
+    width: flex-grid(6, $columns__tablet);
+  }
+
+  @include media($desktop) {
+    width: flex-grid(8, $columns__desktop);
+  }
+}
+
+.o-work--medium {
+  @include media($tablet) {
+    width: flex-grid(6, $columns__tablet);
+  }
+
+  @include media($desktop) {
+    width: flex-grid(6, $columns__desktop);
+  }
+}
+
+.o-work--small {
+  @include media($phablet) {
+    width: flex-grid(3, $columns__phablet);
+  }
+
+  @include media($tablet) {
+    width: flex-grid(3, $columns__tablet);
+  }
+
+  @include media($desktop) {
+    width: flex-grid(4, $columns__desktop);
+  }
+}

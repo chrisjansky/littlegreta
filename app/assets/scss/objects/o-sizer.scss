@@ -1,0 +1,22 @@
+.o-sizer--column {
+  @include media($phablet) {
+    width: flex-grid(1, $columns__portrait);
+  }
+  @include media($tablet) {
+    width: flex-grid(1, $columns__landscape);
+  }
+  @include media($desktop) {
+    width: flex-grid(1, $columns__desktop);
+  }
+}
+.o-sizer--gutter {
+  @include media($phablet) {
+    width: flex-gutter($columns__portrait);
+  }
+  @include media($tablet) {
+    width: flex-gutter($columns__landscape);
+  }
+  @include media($desktop) {
+    width: flex-gutter($columns__desktop);
+  }
+}
