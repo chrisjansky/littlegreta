@@ -51,3 +51,5 @@ app/assets/fonts
 app/assets/svg/*.svg
 app/assets/svg/*.html
 app/assets/images/fallbacks
+
+app/assets/php/twitter-config.php
