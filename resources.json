@@ -2,7 +2,6 @@
   "toMove": [
     "app/assets/fonts/*",
     "app/assets/favicon.ico",
-    "!app/assets/**/*.php",
     "app/assets/php/**/*",
     "app/**/*.php"
   ],

@@ -187,7 +187,7 @@ gulp.task("build:compile", ["build:move"], function() {
 
 // Inject production assets into all pages.
 gulp.task("build:inject", ["build:compile"], function() {
-  return gulp.src(config.dist.root + "**/*.html")
+  return gulp.src(config.dist.root + "**/*.php")
     .pipe(plugins.inject(gulp.src(
         resources.injectDist.site, {read: false}), {
           relative: true,
