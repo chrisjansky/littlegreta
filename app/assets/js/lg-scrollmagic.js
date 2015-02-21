@@ -2,8 +2,7 @@ function lgScrollMagic() {
   
   // Initialize
   var
-    elScroll = document.getElementById("js-smTarget"),
-    elFog = document.getElementById("js-smFog"),
+    elScroll = document.getElementById("js-scrollmagic"),
     scrollDuration,
     scrollLength;
 
@@ -33,20 +32,12 @@ function lgScrollMagic() {
 
   var
     scrollTween,
-    fogTween,
+    // blockerTween,
     homeScene,
     homeTimeline;
 
   this.build = function() {
     homeTimeline = new TimelineMax();
-
-    fogTween = TweenMax.fromTo(elFog, .75, 
-      {
-        css: {opacity: 1, display: "block"}, ease: Linear.easeNone
-      },
-      {
-        css: {opacity: 0, display: "none"}, ease: Linear.easeNone
-      });
   }
 
   // Attach to controller
@@ -69,15 +60,10 @@ function lgScrollMagic() {
       }, true);
     }
 
-    homeTimeline.add([scrollTween, fogTween]);
+    homeTimeline.add([scrollTween]);
 
     homeScene
       .setTween(homeTimeline);
-
-      // .addIndicators({
-      //   zindex: 500,
-      //   colorStart: "yellow"
-      // });
   }
   // End attaching
 
