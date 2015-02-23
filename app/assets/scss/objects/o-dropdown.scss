@@ -13,13 +13,13 @@
   padding: 0;
   line-height: em($height--xs);
 
-  color: $color-2--light;
+  color: $color-2;
   letter-spacing: em($ratio--t);
 
   transition: color $duration--b;
 
   .o-dropdown:hover & {
-    color: $color-2--lighter;
+    color: $color-1--lighter;
   }
 }
 

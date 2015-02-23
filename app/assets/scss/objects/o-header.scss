@@ -8,12 +8,20 @@
 
   top: 0;
   left: 0;
+  right: 0;
+
+  transition: background-color $duration--b, padding $duration--b;
+
+  .top--is-moved &:hover {
+    background-color: white;
+
+    // box-shadow: 0 0 em($ratio--s) rgba($grey-0, .125);
+    // border-bottom: $line--s solid rgba($grey-0, .125);
+  }
 
   z-index: $index--xl;
 
   @include media($phone) {
-    right: 0;
-    
     text-align: center;
   }
 

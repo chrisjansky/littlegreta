@@ -1,20 +1,24 @@
 .o-hero {
   position: relative;
 
-  min-height: em(400);
-  max-height: em($height--xxl);
+  // min-height: em(400);
+  // max-height: em($height--xxl);
 
   @include media($large) {
     height: 110vh;
   }
 
   .device--is-desktop & {
-    margin-top: 40vh;
+    margin-top: 42vh;
   }
 
   overflow: hidden;
 
   background-color: $grey-2;
+}
+
+.o-hero--slim {
+  height: 60vh;
 }
 
 .o-hero__image {

@@ -11,17 +11,17 @@
   }
 
   @include media($phablet) {
-    @include span-columns(3);
+    @include span-columns(3 of $columns__phablet);
     @include omega(2n);
   }
 
   @include media($tablet) {
-    @include span-columns(3);
+    @include span-columns(3 of $columns__tablet);
     @include omega(3n);
   }
 
   @include media($desktop) {
-    @include span-columns(3);
+    @include span-columns(3 of $columns__desktop);
     @include omega(4n);
 
     margin-bottom: em($ratio--m);
@@ -33,17 +33,7 @@
 }
 
 .o-person__circle {
-  @include media($mobile) {
-    width: em($ratio--xl);
-  }
-  @include media($desktop) {
-    width: em($unit--xxh);
-  }
-
   margin-right: em($ratio--b);
-
-  background-color: white;
-  border-radius: 50%;
 }
 
 .o-person__image {

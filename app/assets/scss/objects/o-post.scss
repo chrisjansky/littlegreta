@@ -1,17 +1,17 @@
 .o-post__content {
-  // font-size: em($unit--m);
-
   color: white;
 }
 
 .o-post__title {
   display: block;
   
-  // font-size: em($ratio--l);
-  // font-weight: $font__sans--light;
-
   font-size: em($ratio--m);
   font-weight: $font__sans--medium;
+
+  @include media($large) {
+    font-size: em($ratio--l);
+    font-weight: $font__sans--light;
+  }
 
   margin-bottom: em($ratio--s);
   line-height: $spacing--xs;
@@ -28,7 +28,7 @@
   }
   .o-post:nth-child(2n) & {
     @include state--link {
-      color: $color-1;
+      color: $color-1--light;
     }
     @include state--hover {
       color: $color-1--lighter;
