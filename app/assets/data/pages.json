@@ -1,28 +1,20 @@
 {
   "pages": [
     {
-      "name": "News",
-      "anchor": "news"
+      "name": "Home",
+      "anchor": "index"
     },
     {
-      "name": "About",
-      "anchor": "about"
+      "name": "About Us",
+      "anchor": "about-us"
     },
     {
-      "name": "Portfolio",
-      "anchor": "portfolio"
+      "name": "Our Work",
+      "anchor": "our-work"
     },
     {
-      "name": "People",
-      "anchor": "people"
-    },
-    {
-      "name": "Blog",
-      "anchor": "blog"
-    },
-    {
-      "name": "Contact",
-      "anchor": "contact"
+      "name": "Get in Touch",
+      "anchor": "contact-us"
     }
   ]
 }

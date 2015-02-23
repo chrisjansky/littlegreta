@@ -12,6 +12,7 @@
         "07799 161 162"
       ],
       "person": "Des",
+      "image": "person_marketa.jpg",
       "email": "des.brady@littlegreta.co.uk"
     },
     {
@@ -25,6 +26,7 @@
         "Petr Danes"
       ],
       "person": "Petr",
+      "image": "person_petr.jpg",
       "email": "petr.danes@littlegreta.cz"
     },
     {
@@ -39,6 +41,7 @@
         "+420 776 717 609"
       ],
       "person": "Jan",
+      "image": "person_jan.png",
       "email": "jan.blazek@littlegreta.cz"
     },
     {
@@ -53,6 +56,7 @@
         "+420 602 957 530"
       ],
       "person": "Tomas",
+      "image": "person_juraj.jpg",
       "email": "tomas.nedved@littlegreta.cz"
     },
     {
@@ -67,6 +71,7 @@
         "+420 602 957 530"
       ],
       "person": "Tomas",
+      "image": "person_anna.png",
       "email": "tomas.nedved@littlegreta.cz"
     }
   ]
