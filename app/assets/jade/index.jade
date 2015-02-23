@@ -1,19 +1,25 @@
 extends templates/_site
 
 block template-content
+  - var sticky = {current: "Home"}
   include partial/_sticky
 
-  - var introBg = "top/photo1.jpg"
-  - var introNavMode = "index"
-  - var introNavText = "Scroll to"
-  - var introText = "A little but great team of creatives, providing a&nbsp;complete design and communication service."
-  - var introScrollTo = "#news"
-  - var introHint = "Continue"
+  - var intro = {background: "top/photo1.jpg", text: "We are Little Greta, a&nbsp;little but great team of creatives, providing a&nbsp;complete design and communication service.", anchor: "#news", hint: "Continue"}
   include section/_intro
 
   include section/_news
-  include section/_about
+  include section/_about--short
   include section/_portfolio
-  include section/_people
-  include section/_blog
-  include section/_contact
+  
+  footer.m-footer.l-section--dark
+    include section/_contact--short
+
+    include partial/_social
+
+    .l-wrap.l-wrap--small.l-wrap--section
+      .m-footer__outro
+        p.m-footer__claim.t-lead.t-antiqua Like what we do? Let&rsquo;s make something brilliant together!
+        a.o-cta.o-cta--dark.ss-chat(href="contact-us") Contact Us
+
+      - var exit = {current: "Home", theme: "dark"}
+      include partial/_exit

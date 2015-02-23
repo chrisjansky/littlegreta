@@ -1,0 +1,29 @@
+extends templates/_site
+
+block template-content
+  - var sticky = {current: "Get in Touch"}
+  include partial/_sticky
+
+  - var intro = {background: "map_blur5b.jpg", text: "We are a&nbsp;mere e-mail away from starting something amazing together.", anchor: "#contact", hint: "Continue"}
+  include section/_intro
+
+  section.o-hero.o-hero--slim(data-toward)
+    .o-fog
+    img.o-hero__image(src="assets/images/map_pins1.jpg", alt="Little Greta Office Locations")
+
+  include section/_contact--long
+
+  section.l-section--dark
+    include partial/_social
+
+    .l-wrap.l-wrap--section
+      h3.m-footer__title.t-h3
+        span.t-gradient--2 Stay Connected
+
+      .m-subscribe
+        p.m-subscribe__text.t-lead We publish interesting stuff. Be part of it.
+
+        include partial/_mailchimp.html
+
+      - var exit = {current: "Get in Touch", theme: "dark"}
+      include partial/_exit

@@ -1,18 +1,14 @@
 extends templates/_site
 
 block template-content
+  - var sticky = {current: "Our Work"}
   include partial/_sticky
 
-  - var introBg = "top/photo2.jpg"
-  - var introNavMode = "subpage"
-  - var introNavText = "Back to"
-  - var introText = "Our Work"
-  - var introScrollTo = "#latest"
-  - var introHint = "See Selected Works"
+  - var intro = {background: "top/photo3.jpg", text: "Our Work", anchor: "#featured", hint: "Continue"}
   include section/_intro
 
-  #latest.o-hero(data-toward)
-    #js-smFog.o-fog
+  section#featured.o-hero(data-toward)
+    .o-fog
 
     .o-hero__overlay.l-wrap
       .o-hero__content
@@ -21,12 +17,12 @@ block template-content
           +dummy(20, "text")
         a(href="case-study").o-button--text.o-button--big.ss-zoomin.right See Case Study
 
-    img.o-hero__image(src="http://unsplash.it/1440/800/?image=534", alt="unsplash.it")
+    img.o-hero__image(src="http://unsplash.it/1440/800/?image=201", alt="unsplash.it")
 
-  section.l-section--dark
+  main.m-works.l-section--dark
     .l-wrap.l-wrap--section
 
-      .m-works(data-masonry)
+      .m-works__list(data-masonry)
         .o-sizer--column(data-column)
         .o-sizer--gutter(data-gutter)
 
@@ -46,7 +42,7 @@ block template-content
               - width = 390
             when "medium"
               - count = 1
-              - width = 600
+              - width = 595
             when "big"
               - count = 1
 
@@ -68,10 +64,5 @@ block template-content
             .o-work__more
               p: +dummy(15, "text")
 
-  footer.o-blur--grey
-    .l-wrap.l-wrap--small.l-wrap--section
-      .l-inline
-        .o-exit__cell.l-inline__cell
-          a(href="index#section-portfolio").o-button--text.i-link--light.ss-left Back to Portfolio
-        .o-exit__cell.l-inline__cell
-          a(href="#", data-scrollto).o-button--text.i-link--light.ss-up.right Scroll to Top
+      - var exit = {current: "Our Work", theme: "dark"}
+      include partial/_exit

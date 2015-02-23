@@ -1,0 +1,24 @@
+extends templates/_site
+
+block template-content
+  - var sticky = {current: "About Us"}
+  include partial/_sticky
+
+  - var intro = {background: "top/photo2.jpg", text: "We are little, but we are great. Learn more about how we work.", anchor: "#about", hint: "Continue"}
+  include section/_intro
+
+  section.o-hero.o-hero--slim(data-toward)
+    .o-fog
+    img.o-hero__image(src="http://unsplash.it/1440/800/?image=534", alt="unsplash.it")
+
+  include section/_about--long
+
+  include section/_people
+
+  .l-section--dark.o-blur--purple.o-blur--fixed
+    .l-wrap.l-wrap--section
+
+      include section/_blog
+
+      - var exit = {current: "About Us", theme: "light"}
+      include partial/_exit

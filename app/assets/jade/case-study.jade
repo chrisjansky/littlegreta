@@ -1,18 +1,14 @@
 extends templates/_site
 
 block template-content
+  - var sticky = {current: ""}
   include partial/_sticky
 
-  - var introBg = "top/photo3.jpg"
-  - var introNavMode = "subpage"
-  - var introNavText = "Back to"
-  - var introText = "Design labels for a&nbsp;Czech craft brewery&rsquo;s new range of beers"
-  - var introScrollTo = "#more"
-  - var introHint = "Continue to Case Study"
+  - var intro = {background: "top/photo3.jpg", text: "Design labels for a&nbsp;Czech craft brewery&rsquo;s new range of beers.", anchor: "#more", hint: "Continue to Case Study"}
   include section/_intro
 
   #more.o-hero(data-toward)
-    #js-smFog.o-fog
+    .o-fog
 
     .o-hero__overlay.l-wrap
       .o-hero__content
@@ -78,9 +74,14 @@ block template-content
           include ../svg/_source/quote_line.svg
           span.o-quote__source Andy Hertzfeld
 
-      .o-exit
+      - var exit = {current: "", theme: "light"}
+      footer.o-exit.o-exit--push(class="o-exit--#{exit.theme}")
         .l-inline
           .o-exit__cell.l-inline__cell
-            a(href="index").o-button--text.i-link--light.ss-home Back to Homepage
+            include partial/_context
+
           .o-exit__cell.l-inline__cell
-            a(href="work").o-button--text.i-link--light.ss-thumbnails.right View More Projects
+            a(href="our-work", class="i-link--#{exit.theme}").o-button--text.ss-thumbnails.right View More Projects
+
+        small.o-exit__copyright.t-small &copy; 2015 Little Greta Ltd.
+
