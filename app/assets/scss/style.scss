@@ -28,6 +28,7 @@
 @import "vendor/royalslider";
 @import "vendor/symbolset";
 @import "vendor/symbolset-social";
+@import "vendor/mailchimp";
 
 // Base
 @import "chj-framework/app/assets/scss/base/b-default";
@@ -50,6 +51,7 @@ Styleguide 2.
 */
 @import "typography/typography";
 @import "typography/t-headline";
+@import "typography/t-sizes";
 
 /*
 Objects
@@ -58,9 +60,12 @@ Styleguide 3.
 */
 @import "objects/objects";
 @import "objects/navigation";
-@import "objects/o-dotlist";
 @import "objects/o-button";
+@import "objects/o-context";
+@import "objects/o-cta";
+@import "objects/o-dotlist";
 @import "objects/o-dropdown";
+@import "objects/o-exit";
 @import "objects/o-gallery";
 @import "objects/o-header";
 @import "objects/o-input";
