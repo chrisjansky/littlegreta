@@ -140,8 +140,6 @@
   @include media($desktop) {
     display: inline-block;
 
-    max-width: em(190);
-
     line-height: $spacing--m;
   }
 }

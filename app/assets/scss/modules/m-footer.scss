@@ -4,12 +4,11 @@
   color: white;
 }
 
-.m-footer__note {
-  display: block;
-
-  color: $grey-3;
+.m-footer__outro {
   text-align: center;
 
-  // margin-top: em($ratio--xl);
-  margin-top: em($ratio--m, $unit--s);
+  @include media($desktop) {
+    width: flex-grid(8, $columns__desktop);
+    @include shift(2 of $columns__desktop);
+  }
 }

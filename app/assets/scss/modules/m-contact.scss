@@ -1,5 +1,15 @@
-.m-contact {
+[class^="m-contact--"],
+[class*=" m-contact--"] {
   text-align: center;
+}
+
+.m-contact--short {
+  background: url("../images/map3.png") no-repeat center / cover;
+}
+
+.m-contact--long {
+  position: relative;
+  z-index: $index--l;
 }
 
 .m-contact__list {
@@ -31,20 +41,30 @@
 }
 
 .m-contact__title {
-  color: white;
+  .m-contact--short & {
+    color: white;
+  }
+  .m-contact--long & {
+    color: $grey-2;
+  }
 
   margin-bottom: em($ratio--b);
 }
 
 .m-contact__name {
-  color: white;
+  .m-contact--short & {
+    color: white;
+  }
+  .m-contact--long & {
+    color: $grey-2;
+  }
+}
+
+.m-contact__circle {
+  @include margin(em($ratio--m) auto null);
 }
 
 .m-contact__details {
-  @include media($portable) {
-    min-height: em(140);
-  }
-
   ul {
     padding-left: 0;
 
@@ -53,39 +73,59 @@
     &:last-child {
       color: $grey-6;
       margin-bottom: em($ratio--s);
+
+      @include media($portable) {
+        min-height: em(48);
+      }
     }
   }
 }
 
 .m-contact__button--1 {
   @include state--link {
-    color: $color-1--lighter;
+    color: $color-4--light;
   }
   @include state--active {
-    color: $color-1;
+    color: $color-4;
   }
 }
 .m-contact__button--2 {
   @include state--link {
-    color: $color-3--light;
+    color: $color-1--lighter;
+  }
+  @include state--active {
+    color: $color-1--light;
+  }
+}
+.m-contact__button--3 {
+  @include state--link {
+    color: $color-3;
   }
   @include state--active {
     color: $color-3--dark;
   }
 }
-.m-contact__button--3 {
+.m-contact__button--4 {
   @include state--link {
     color: $color-2;
   }
   @include state--active {
-    color: $color-2--darker;
+    color: $color-2--dark;
   }
 }
-.m-contact__button--4 {
+.m-contact__button--5 {
   @include state--link {
     color: $color-2--lighter;
   }
   @include state--active {
-    color: $color-2;
+    color: $color-2--light;
+  }
+}
+.m-contact__button--6 {
+  @include state--link {
+    color: $color-2--dark;
+  }
+  @include state--active {
+    color: $color-2--darker;
   }
 }

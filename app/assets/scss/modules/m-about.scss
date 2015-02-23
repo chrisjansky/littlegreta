@@ -1,21 +1,26 @@
 .m-about {
   position: relative;
-  z-index: $index--b;
+  z-index: $index--l;
 }
 
 .m-about__header {
   @include collapse-children;
   @include clearfix;
 }
+
 .m-about__title {
   text-align: center;
   
-  color: $grey-1;
+  .m-about--short & {
+    color: $grey-1;
+  }
+  .m-about--long & {
+    color: $grey-2;
+  }
 }
+
 .m-about__intro {
   text-align: center;
-
-  margin-top: 0;
 
   @include media($tablet) {
     @include span-columns(7 of $columns__tablet);
@@ -24,27 +29,38 @@
 
   @include media($desktop) {
     @include span-columns(8 of $columns__desktop);
-    @include shift(2);
+    @include shift(2 of $columns__desktop);
+  }
+
+  .m-about--short & {
+    margin-top: 0;
+  }
+  .m-about--long & {
+    color: $grey-4;
   }
 }
 .m-about__outro {
-  // @include span-columns(10);
-  // @include shift(1);
-  // @include media($large) {
-  //   margin-top: em($ratio--b);
-  // }
-}
-.m-about__subtitle {
   text-align: center;
 
-  @include media($large) {
-    margin-bottom: em($ratio--m);
-  }
-}
-.m-about__partners {
-  @include media($large) {
+  @include media($desktop) {
+    @include span-columns(6 of $columns__desktop);
+    @include shift(3 of $columns__desktop);
+
     margin-top: em($ratio--m);
   }
+}
+// .m-about__subtitle {
+//   text-align: center;
+
+//   @include media($large) {
+//     margin-bottom: em($ratio--m);
+//   }
+// }
+.m-about__partners {
+  // clear: both;
+  // @include media($large) {
+  //   margin-top: em($ratio--m);
+  // }
 
   text-align: center;
 }
@@ -52,4 +68,9 @@
   display: block;
 
   margin-bottom: em($ratio--b);
+}
+
+.m-about__text {
+  margin-top: em($ratio--l);
+  margin-bottom: em($ratio--m);
 }
