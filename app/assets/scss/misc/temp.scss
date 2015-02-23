@@ -1,16 +1,1 @@
-.temp-h1 {
-  font-family: $font__display;
-  font-weight: $font__display--light;
 
-  font-size: em($ratio--m);
-  line-height: $spacing--s;
-
-  @include media($tablet) {
-    font-size: em($unit--xxl);
-  }
-  @include media($desktop) {
-    font-size: em($ratio--l);
-  }
-
-  @include margin(em($ratio--s) null);
-}

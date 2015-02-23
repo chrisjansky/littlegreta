@@ -1,46 +1,33 @@
-.t-small {
-  font-size: em($unit--s);
-  // line-height: $spacing--s;
-}
-.t-tiny {
-  font-size: em($unit--xs);
-}
-.t-lead {
-  @include media($tablet) {
-    font-size: em($unit--m);
-  }
-
-  @include media($desktop) {
-    font-size: em($unit--l);
-  }
-  // font-family: $font__serif;
-  // font-weight: $font__serif--book;
-}
-.t-big {
-  @include media($large) {
-    font-size: em($unit--m);
-  }
-}
-
 [class^="t-underline--"],
 [class*=" t-underline--"] {
   border-bottom: $line--s solid;
 }
 .t-underline--1 {
-  border-bottom-color: $color-1--lighter;
+  border-bottom-color: $color-4;
 }
 .t-underline--2 {
-  border-bottom-color: $color-3--light;
+  border-bottom-color: $color-1--lighter;
 }
 .t-underline--3 {
-  border-bottom-color: $color-2;
+  border-bottom-color: $color-3--light;
 }
 .t-underline--4 {
+  border-bottom-color: $color-2;
+}
+.t-underline--5 {
   border-bottom-color: $color-2--lighter;
+}
+.t-underline--6 {
+  border-bottom-color: $color-2--dark;
 }
 // .t-underline--dark {
 //   border-bottom: $line--b solid $grey-3;
 // }
+
+.t-antiqua {
+  font-family: $font__serif;
+  font-weight: $font__serif--book;
+}
 
 [class^="t-gradient"],
 [class*=" t-gradient"] {
@@ -89,6 +76,9 @@
 }
 .t-gradient--dark:after {
   @include linear-gradient(to right, $grey-5, $grey-3);
+}
+.t-gradient--opaque:after {
+  background-image: #{"linear"}-gradient(to right, rgba(white, .5), rgba(white, .25));
 }
 
 [class^="t-caps"],

@@ -1,0 +1,40 @@
+.t-small {
+  font-size: em($unit--s);
+}
+
+.t-tiny {
+  font-size: em($unit--xs);
+}
+
+.t-lead {
+  @include media($tablet) {
+    font-size: em($unit--m);
+  }
+
+  @include media($desktop) {
+    font-size: em($unit--l);
+  }
+}
+
+.t-big {
+  @include media($large) {
+    font-size: em($unit--m);
+  }
+}
+
+.t-huge {
+  font-family: $font__display;
+  font-weight: $font__display--light;
+
+  font-size: em($ratio--m);
+  line-height: $spacing--s;
+
+  @include media($tablet) {
+    font-size: em($unit--xxl);
+  }
+  @include media($desktop) {
+    font-size: em($ratio--l);
+  }
+
+  @include margin(em($ratio--s) null);
+}
