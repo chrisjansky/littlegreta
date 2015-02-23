@@ -1,0 +1,40 @@
+.o-cta {
+  display: inline-block;
+
+  @include padding(null em($ratio--b));
+
+  text-decoration: none;
+  font-size: em($unit--m);
+  line-height: em($height--m, $unit--m);
+
+  border: $line--b solid;
+  border-radius: $radius--l;
+
+  &:before, &:after {
+    font-size: #{$icon--b}px;
+  }
+  &:before {
+    margin-right: em($ratio--xxs);
+  }
+}
+
+.o-cta--light {
+  @include state--link {
+    color: $color-1;
+    border-color: $grey-8;
+  }
+  @include state--active {
+    color: $color-1--dark;
+    border-color: $grey-7;
+  }
+}
+.o-cta--dark {
+  @include state--link {
+    color: $color-2;
+    border-color: $grey-2;
+  }
+  @include state--active {
+    color: $color-3;
+    border-color: $grey-3;
+  }
+}

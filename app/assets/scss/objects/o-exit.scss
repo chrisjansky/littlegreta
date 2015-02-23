@@ -1,0 +1,43 @@
+.o-exit {
+  border-top-width: $line--s;
+  border-top-style: solid;
+
+  margin-top: em($ratio--l);
+  padding-top: em($ratio--b);
+}
+
+.o-exit--push {
+  @include media($tablet) {
+    @include shift(2 of $columns__tablet);
+  }
+
+  @include media($desktop) {
+    @include shift(4 of $columns__desktop);
+  }
+}
+
+.o-exit--dark {
+  border-top-color: rgba($grey-2, .5);
+
+  color: $grey-3;
+}
+
+.o-exit--light {
+  border-top-color: rgba(white, .125);
+
+  color: rgba(white, .5);
+}
+
+.o-exit__cell {
+  @include media($phone) {
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
+}
+
+.o-exit__copyright {
+  display: block;
+
+  margin-top: em($ratio--m);
+}

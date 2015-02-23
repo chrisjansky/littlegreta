@@ -70,23 +70,6 @@
   }
 }
 
-.o-exit {
-  @include media($tablet) {
-    @include shift(2 of $columns__tablet);
-  }
-
-  @include media($desktop) {
-    @include shift(4 of $columns__desktop);
-  }
-}
-.o-exit__cell {
-  @include media($phone) {
-    & + & {
-      margin-top: em($ratio--b);
-    }
-  }
-}
-
 .o-quote {
   margin: 0;
 
@@ -112,9 +95,14 @@
   }
   
   @include stretch-overlay;
-  background-color: rgba($grey-2, .85);
 
-  z-index: $index--m;
+  z-index: $index--b;
+
+  .top--is-off & {
+    visibility: hidden;
+    
+    z-index: -1;
+  }
 }
 
 .o-description__title {
@@ -124,4 +112,20 @@
 }
 .o-description__primary {
   color: $grey-4;
+}
+
+.o-circle {
+  @include media($mobile) {
+    width: em($ratio--xl);
+  }
+  @include media($desktop) {
+    width: em($unit--xxh);
+  }
+
+  background-color: white;
+  border-radius: 50%;
+}
+
+.o-circle__image {
+  border-radius: 50%;
 }
