@@ -1,34 +1,9 @@
-section.m-intro#js-smTarget(style="background-image: url('assets/images/#{introBg}')")
+section.m-intro#js-scrollmagic(style="background-image: url('assets/images/#{intro.background}')")
 
   .m-intro__overlay.l-wrap.l-wrap--horizontal
 
     .m-intro__content
-      .m-intro__table
+      h1.m-intro__text.t-huge.o-gradient--1!= intro.text
 
-        .m-intro__cell
-          strong.m-intro__explanation.t-smallcaps--1= introNavText
-          nav.o-top-nav
-            button.o-top-nav__toggle.o-iconed--small.ss-rows Menu
-            .o-top-nav__dropdown
-              ul.o-top-nav__list
-                each instance in pages
-                  if (introNavMode === "index")
-                    li.o-top-nav__item: a.o-top-nav__link.i-link--light(href="#" + instance.anchor, data-scrollto)= instance.name
-                  else
-                    li.o-top-nav__item: a.o-top-nav__link.i-link--light(href="index#section-" + instance.anchor)= instance.name
-
-        .m-intro__cell
-          .o-dropdown
-            button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
-            .o-dropdown__content
-              ul.o-dropdown__list
-                li.o-dropdown__item
-                  span.o-dropdown__selected EN
-                each instance in ["DE", "CZ"]
-                  li.o-dropdown__item
-                    a(href="#").o-dropdown__link.i-link--light= instance
-
-      h1.temp-h1.m-intro__text.o-gradient--1!= introText
-
-a(href=introScrollTo, data-scrollto="center").m-intro__lift
-  mark.m-intro__mark.t-smallcaps.o-iconed--small.ss-down= introHint
+a(href=intro.anchor, data-scrollto="center").m-intro__lift
+  mark.m-intro__mark.t-smallcaps.o-iconed--small.ss-down= intro.hint
