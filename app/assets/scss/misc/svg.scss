@@ -1,7 +1,7 @@
 .svg-logo__text {
   transition: opacity $duration--b;
 
-  .top--is-off & {
+  .top--is-moved & {
     opacity: 0;
   }
 }

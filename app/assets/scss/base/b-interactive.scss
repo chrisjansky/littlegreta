@@ -1,13 +1,23 @@
-// Used in header nav.
+// Used in language switch, exit--light.
 .i-link--light {
   @include state--link {
-    // color: $grey-3;
-    color: rgba(white, .6);
+    color: rgba(white, .75);
   }
   @include state--hover {
-    color: $grey-9;
+    color: white;
   }
 }
+
+// Used in works exit
+.i-link--dark {
+  @include state--link {
+    color: $grey-4;
+  }
+  @include state--hover {
+    color: $grey-6;
+  }
+}
+
 // Used in portfolio hint.
 .i-link--2 {
   @include state--link {
