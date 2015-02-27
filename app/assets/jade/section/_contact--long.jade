@@ -1,4 +1,4 @@
-main#contact.m-contact--long.l-section--light
+main#contact.m-contact.l-section--light
   .l-wrap.l-wrap--section
 
     h2.m-contact__title.t-h2
@@ -7,10 +7,6 @@ main#contact.m-contact--long.l-section--light
     .m-contact__list
 
       each item, index in contact
-        //- Force index change to style color links
-        case index
-          when 4
-            - index = 5
         .m-contact__item
           h5.m-contact__name.t-h5
             span(class="t-underline--#{index + 1}") #{item.name}
