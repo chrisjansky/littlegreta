@@ -1,18 +1,19 @@
 .m-subscribe {
   text-align: center;
-
-  margin-top: em($ratio--m);
-
-  @include media($desktop) {
-    margin-top: em($ratio--l);
-  }
 }
-.m-subscribe__text {
-  text-align: center;
 
+.m-subscribe__title {
+  color: white;
+}
+
+.m-subscribe__text {
   color: $grey-9;
 
-  margin-top: 0;
+  margin-top: em($ratio--b);
+
+  @include media($desktop) {
+    margin-top: em($ratio--m);
+  }
 
   @include media($desktop) {
     width: flex-grid(8, $columns__desktop);

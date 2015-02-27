@@ -28,6 +28,7 @@ $color-3--darker:  hsb($c-hue3 + $c-offset2, 100, 075);
 $color-4--lighter: hsb($c-hue4 - $c-offset2, 015, 100);
 $color-4--light:   hsb($c-hue4 - $c-offset1, 035, 100);
 $color-4:          hsb($c-hue4, 045, 090);
+$color-4--dark:    hsb($c-hue4, 055, 080);
 
 // Neutral colors.
 $grey-9:  hsb($c-hue1, 04, 97);

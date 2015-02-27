@@ -2,13 +2,19 @@
   text-align: center;
 
   color: white;
+
+  margin-bottom: em($ratio--b);
+}
+
+.m-footer__wrap {
+  background: url("../images/map1.png") no-repeat center 85%;
 }
 
 .m-footer__outro {
   text-align: center;
 
   @include media($desktop) {
-    width: flex-grid(8, $columns__desktop);
-    @include shift(2 of $columns__desktop);
+    width: flex-grid(6, $columns__desktop);
+    @include shift(3 of $columns__desktop);
   }
 }

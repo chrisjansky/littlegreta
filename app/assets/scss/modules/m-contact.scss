@@ -1,13 +1,6 @@
-[class^="m-contact--"],
-[class*=" m-contact--"] {
+.m-contact {
   text-align: center;
-}
 
-.m-contact--short {
-  background: url("../images/map3.png") no-repeat center / cover;
-}
-
-.m-contact--long {
   position: relative;
   z-index: $index--l;
 }
@@ -41,23 +34,13 @@
 }
 
 .m-contact__title {
-  .m-contact--short & {
-    color: white;
-  }
-  .m-contact--long & {
-    color: $grey-2;
-  }
+  color: $grey-2;
 
-  margin-bottom: em($ratio--b);
+  margin-bottom: em($ratio--s);
 }
 
 .m-contact__name {
-  .m-contact--short & {
-    color: white;
-  }
-  .m-contact--long & {
-    color: $grey-2;
-  }
+  color: $grey-2;
 }
 
 .m-contact__circle {
@@ -83,13 +66,21 @@
 
 .m-contact__button--1 {
   @include state--link {
-    color: $color-4--light;
+    color: $color-4;
   }
   @include state--active {
-    color: $color-4;
+    color: $color-4--dark;
   }
 }
 .m-contact__button--2 {
+  @include state--link {
+    color: $color-1--light;
+  }
+  @include state--active {
+    color: $color-1;
+  }
+}
+.m-contact__button--3 {
   @include state--link {
     color: $color-1--lighter;
   }
@@ -97,7 +88,7 @@
     color: $color-1--light;
   }
 }
-.m-contact__button--3 {
+.m-contact__button--4 {
   @include state--link {
     color: $color-3;
   }
@@ -105,27 +96,11 @@
     color: $color-3--dark;
   }
 }
-.m-contact__button--4 {
+.m-contact__button--5 {
   @include state--link {
     color: $color-2;
   }
   @include state--active {
     color: $color-2--dark;
-  }
-}
-.m-contact__button--5 {
-  @include state--link {
-    color: $color-2--lighter;
-  }
-  @include state--active {
-    color: $color-2--light;
-  }
-}
-.m-contact__button--6 {
-  @include state--link {
-    color: $color-2--dark;
-  }
-  @include state--active {
-    color: $color-2--darker;
   }
 }

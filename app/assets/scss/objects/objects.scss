@@ -4,7 +4,7 @@
   vertical-align: middle;
 
   & + & {
-    margin-left: em($ratio--s);
+    margin-left: em($ratio--b);
   }
   @include state--hover {
     opacity: .625;

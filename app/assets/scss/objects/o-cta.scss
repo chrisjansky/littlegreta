@@ -16,6 +16,10 @@
   &:before {
     margin-right: em($ratio--xxs);
   }
+
+  & + & {
+    margin-left: em($ratio--s);
+  }
 }
 
 .o-cta--light {
@@ -31,6 +35,16 @@
 .o-cta--dark {
   @include state--link {
     color: $color-2;
+    border-color: $grey-2;
+  }
+  @include state--active {
+    color: $color-3;
+    border-color: $grey-3;
+  }
+}
+.o-cta--black {
+  @include state--link {
+    color: $color-4;
     border-color: $grey-2;
   }
   @include state--active {
