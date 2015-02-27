@@ -1,7 +1,7 @@
 extends templates/_site
 
 block template-content
-  - var sticky = {current: "Get in Touch"}
+  - var sticky = {current: "Contact"}
   include partial/_sticky
 
   - var intro = {background: "map_blur5b.jpg", text: "We are a&nbsp;mere e-mail away from starting something amazing together.", anchor: "#contact", hint: "Continue"}
@@ -17,13 +17,13 @@ block template-content
     include partial/_social
 
     .l-wrap.l-wrap--section
-      h3.m-footer__title.t-h3
-        span.t-gradient--2 Stay Connected
-
       .m-subscribe
+        h3.m-subscribe__title.t-h3
+          span.t-gradient--2 Stay Connected
+
         p.m-subscribe__text.t-lead We publish interesting stuff. Be part of it.
 
         include partial/_mailchimp.html
 
-      - var exit = {current: "Get in Touch", theme: "dark"}
+      - var exit = {current: "Contact", theme: "dark"}
       include partial/_exit

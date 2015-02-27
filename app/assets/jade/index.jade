@@ -12,14 +12,5 @@ block template-content
   include section/_portfolio
   
   footer.m-footer.l-section--dark
-    include section/_contact--short
-
     include partial/_social
-
-    .l-wrap.l-wrap--small.l-wrap--section
-      .m-footer__outro
-        p.m-footer__claim.t-lead.t-antiqua Like what we do? Let&rsquo;s make something brilliant together!
-        a.o-cta.o-cta--dark.ss-chat(href="contact-us") Contact Us
-
-      - var exit = {current: "Home", theme: "dark"}
-      include partial/_exit
+    include section/_contact--short
