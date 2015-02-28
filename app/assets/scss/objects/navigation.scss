@@ -1,11 +1,7 @@
 .o-menu {
   position: relative;
 
-  @include shift(4);
-
   transition: transform $duration--b, margin $duration--b;
-
-  margin-top: em($unit--l);
 
   .top--is-moved & {
     transform: translateY(em(-$unit--xxh));
@@ -14,6 +10,49 @@
 
   .top--is-moved .o-header:hover & {
     transform: translateY(0);
+  }
+
+  @include media($phone) {
+    margin-top: em($ratio--b);
+  }
+
+  @include media($phablet) {
+    @include shift(2 of $columns__phablet);
+  }
+
+  @include media($tablet) {
+    @include shift(2 of $columns__tablet);
+  }
+
+  @include media($desktop) {
+    margin-top: em($unit--l);
+
+    @include shift(4 of $columns__desktop);
+  }
+}
+
+.o-menu__table {
+  display: table;
+  width: 100%;
+}
+
+.o-menu__container {
+  display: inline-block;
+
+  position: relative;
+}
+
+.o-menu__cell {
+  display: table-cell;
+  vertical-align: middle;
+
+  @include collapse-children;
+
+  &:first-child {
+    text-align: left;
+  }
+  &:last-child {
+    text-align: right;
   }
 }
 

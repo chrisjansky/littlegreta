@@ -52,7 +52,7 @@
 .m-subscribe__hint {
   display: inline-block;
 
-  @include media($desktop) {
+  @include media($large) {
     margin-left: em($ratio--b);
   }
 }

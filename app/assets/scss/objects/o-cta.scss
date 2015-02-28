@@ -4,8 +4,13 @@
   @include padding(null em($ratio--b));
 
   text-decoration: none;
-  font-size: em($unit--m);
-  line-height: em($height--m, $unit--m);
+
+  line-height: em($height--b);
+
+  @include media($large) {
+    font-size: em($unit--m);
+    line-height: em($height--m, $unit--m);
+  }
 
   border: $line--b solid;
   border-radius: $radius--l;
@@ -17,8 +22,21 @@
     margin-right: em($ratio--xxs);
   }
 
-  & + & {
-    margin-left: em($ratio--s);
+
+  @include media($phone) {
+    display: block;
+
+    max-width: em(220);
+    @include margin(null auto);
+
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
+  @include media($portable) {
+    & + & {
+      margin-left: em($ratio--s);
+    }
   }
 }
 

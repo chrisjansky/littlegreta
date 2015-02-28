@@ -18,14 +18,19 @@
 .m-intro__content {
   position: relative;
 
-  padding-top: em($ratio--m);
 
   @include media($phone) {
-    padding-top: em($unit--xxh);
+    padding-top: em($ratio--xxl);
   }
 
   @include media($phablet) {
+    padding-top: em($ratio--l);
+
     @include shift(2 of $columns__phablet);
+  }
+
+  @include media($large) {
+    padding-top: em($ratio--xl);
   }
 
   @include media($tablet) {
@@ -33,12 +38,8 @@
   }
 
   @include media($desktop) {
-    padding-top: em($ratio--xl);
-
     @include shift(4 of $columns__desktop);
-  }
 
-  @include media($desktop) {
     height: 62vh;
 
     min-height: em(300);

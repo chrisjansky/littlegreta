@@ -7,6 +7,8 @@
 }
 
 .t-lead {
+  font-size: em($unit--b);
+
   @include media($tablet) {
     font-size: em($unit--m);
   }

@@ -3,7 +3,10 @@
   border-top-style: solid;
 
   margin-top: em($ratio--l);
-  padding-top: em($ratio--b);
+  
+  @include media($portable) {
+    padding-top: em($ratio--b);
+  }
 }
 
 .o-exit--push {
@@ -40,4 +43,8 @@
   display: block;
 
   margin-top: em($ratio--m);
+
+  @include media($phone) {
+    text-align: center;
+  }
 }

@@ -23,6 +23,10 @@
   left: 0;
   bottom: 0;
 
+  max-height: 100%;
+  
+  overflow: hidden;
+
   padding: em($ratio--s);
 
   @include media($large) {

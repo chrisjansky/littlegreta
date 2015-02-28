@@ -1,12 +1,7 @@
 .o-logo {
-  display: inline-block;
+  display: block;
 
-  position: absolute;
-
-  left: 0;
-  top: em($unit--b);
-
-  // margin-top: em($ratio--b);
+  transition: transform $duration--b;
 
   svg {
     fill: black;
@@ -14,31 +9,25 @@
     margin: em($ratio--t);
   }
 
-  // @include media($mobile) {
-  //   svg {
-  //     width: em(90);
-  //   }
-  // }
+  @include media($mobile) {
+    svg {
+      width: em(90);
+    }
+  }
 
-  // @include media($portable) {
-  //   margin-left: em($ratio--m);
-
-  //   margin-top: em($ratio--m);
-  // }
+  @include media($portable) {
+    position: absolute;
+  }
 
   @include media($desktop) {
-    transform: translate(em($ratio--xl), em($ratio--m));
+    top: em($unit--b);
+    left: 0;
 
-    margin-left: em($ratio--b);
-    // margin-top: em($ratio--xl);
+    transform: translate(em($ratio--xl), em($ratio--m));
 
     svg {
       width: em(120);
     }
-  }
-
-  .device--is-desktop & {
-    transition: transform $duration--b;
   }
 
   .top--is-moved & {
@@ -49,10 +38,13 @@
 .o-logo__content {
   overflow: hidden;
 
+  @include margin(null auto);
+
   @include media($mobile) {
     width: em(90);
     height: em(45);
   }
+
   @include media($desktop) {
     width: em(120);
     height: em(60);
@@ -76,43 +68,3 @@
 .o-logo__title {
   display: block;
 }
-
-// .o-logo__tooltip {
-
-//   .device--is-desktop & {
-//     @include position(absolute, 15% null null 75%);
-
-//     font-size: em($unit--xs);
-//     color: white;
-
-//     white-space: nowrap;
-
-//     opacity: 0;
-//     transform: translateX(25%);
-
-//     transition: opacity $duration--b, transform $duration--b;
-
-//     &:before {
-//       display: inline-block;
-
-//       content: "";
-//       @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), left);
-//     }
-
-//     &:after {
-//       display: inline-block;
-//       content: "Back to Top Menu";
-
-//       line-height: em($height--b);
-//       @include padding(null em($ratio--b));
-
-//       background-color: rgba($grey-0, $opacity--b);
-//       border-radius: $radius--b;
-//     }
-//   }
-
-//   .top--is-moved .o-logo:hover & {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-// }

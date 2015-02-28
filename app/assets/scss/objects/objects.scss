@@ -1,11 +1,26 @@
 // Basic anchor with an image inside.
 .o-image-link {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
+  
+  @include media($small) {
+    img {
+      @include margin(null auto);
+    }
 
-  & + & {
-    margin-left: em($ratio--b);
+    & + & {
+      margin-top: em($ratio--b);
+    }
   }
+
+  @include media($large) {
+    display: inline-block;
+
+    & + & {
+      margin-left: em($ratio--b);
+    }
+  }
+  
   @include state--hover {
     opacity: .625;
   }
