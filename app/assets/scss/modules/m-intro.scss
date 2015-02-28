@@ -3,9 +3,13 @@
   background-size: cover;
 
   .device--is-desktop & {
-    @include position(fixed, 0 0 null 0);
+    @include position(absolute, 0 0 null 0);
 
     z-index: $index--l;
+  }
+
+  .scrollmagic--is-on & {
+    position: fixed;
   }
 }
 

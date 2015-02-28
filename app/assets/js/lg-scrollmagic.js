@@ -74,6 +74,8 @@ var introParallax = new lgScrollMagic();
 
 $(document).on("ready", function() {
   if (currentDevice === "desktop") {
+    $body.addClass("scrollmagic--is-on");
+
     introParallax.build();
       
     introParallax.attach(true);
