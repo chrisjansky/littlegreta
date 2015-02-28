@@ -10,8 +10,8 @@ $topSlider.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
-  loopRewind: true,
   
+  loopRewind: true,
   numImagesToPreload: 1,
 });
 
@@ -20,7 +20,6 @@ $workCarousel.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
-  loopRewind: true,
   
   keyboardNavEnabled: true,
   visibleNearby: {
