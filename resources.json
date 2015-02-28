@@ -27,7 +27,6 @@
       "app/assets/js/vendor/jquery.rs.visible-nearby.js",
 
       "bower_components/chj-framework/app/assets/js/chj-detect.js",
-      "bower_components/chj-framework/app/assets/js/chj-external.js",
       
       "app/assets/js/lg-base.js",
       "app/assets/js/lg-tumblr.js",
