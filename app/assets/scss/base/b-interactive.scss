@@ -21,10 +21,10 @@
 // Used in portfolio hint.
 .i-link--2 {
   @include state--link {
-    color: $color-1;
+    color: $color-1--lighter;
   }
   @include state--hover {
-    color: $color-1--lighter;
+    color: $color-1;
   }
 }
 
