@@ -5,20 +5,21 @@ header.o-header.l-wrap.l-wrap--small.l-wrap--section
       strong.o-logo__title Little Greta
 
   nav.o-menu
-    button.o-menu__toggle.o-iconed--small.ss-rows Menu
+    .o-menu__table
+      .o-menu__cell
+        .o-menu__container
+          button.o-menu__toggle.o-iconed--small.ss-rows Menu
 
-    .l-inline
-      .l-inline__cell
-        .o-menu__dropdown
-          ul.o-menu__list
-            each instance in pages
-              if (sticky.current == instance.name)
-                unless (sticky.current == "Home")
-                  li.o-menu__item: span.o-menu__selected= instance.name
-              else
-                li.o-menu__item: a.o-menu__link(href=instance.anchor)= instance.name
+          .o-menu__dropdown
+            ul.o-menu__list
+              each instance in pages
+                if (sticky.current == instance.name)
+                  unless (sticky.current == "Home")
+                    li.o-menu__item: span.o-menu__selected= instance.name
+                else
+                  li.o-menu__item: a.o-menu__link(href=instance.anchor)= instance.name
 
-      .l-inline__cell
+      .o-menu__cell
         .o-dropdown
           button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
           .o-dropdown__content
