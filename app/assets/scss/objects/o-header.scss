@@ -1,22 +1,14 @@
 .o-header {
+  @include position(absolute, 0 0 null 0);
+
   .device--is-desktop & {
     position: fixed;
   }
-  .device--is-mobile & {
-    position: absolute;
-  }
-
-  top: 0;
-  left: 0;
-  right: 0;
 
   transition: background-color $duration--b, padding $duration--b;
 
   .top--is-moved &:hover {
     background-color: white;
-
-    // box-shadow: 0 0 em($ratio--s) rgba($grey-0, .125);
-    // border-bottom: $line--s solid rgba($grey-0, .125);
   }
 
   z-index: $index--xl;
