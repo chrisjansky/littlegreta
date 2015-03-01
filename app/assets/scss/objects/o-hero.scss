@@ -1,11 +1,11 @@
 .o-hero {
   position: relative;
 
-  min-height: em(400);
-  max-height: em($height--xxl);
+  height: 110vh;
+  max-height: em(480);
 
   @include media($large) {
-    height: 110vh;
+    max-height: em(960);
   }
 
   .device--is-desktop & {
@@ -19,20 +19,27 @@
 
 .o-hero--slim {
   height: 60vh;
+  max-height: em(320);
+
+  @include media($large) {
+    max-height: em(640);
+  }
+}
+
+.o-hero__background {
+  @include position(absolute, -50% null null -50%);
+  @include size(200%);
 }
 
 .o-hero__image {
-  @include position(absolute, 50% null null 50%);
-  transform: translate(-50%, -50%);
+  @include position(absolute, 0 0 0 0);
 
-  width: auto;
-  height: auto;
+  margin: auto;
 
-  max-width: none;
-  max-height: none;
+  min-width: 50%;
+  min-height: 50%;
 
-  min-width: 100%;
-  min-height: 100%;
+  overflow-x: hidden;
 }
 
 .o-hero__overlay {
