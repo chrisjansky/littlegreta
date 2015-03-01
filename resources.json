@@ -1,9 +1,10 @@
 {
   "toMove": [
     "app/assets/fonts/*",
+    "app/assets/css/*.png",
     "app/assets/favicon.ico",
     "app/assets/php/**/*",
-    "app/**/*.php"
+    "app/*.php"
   ],
   "injectDev": {
     "site": [
