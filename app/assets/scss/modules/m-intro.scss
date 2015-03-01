@@ -30,6 +30,10 @@
   @include media($phablet) {
     padding-top: em($ratio--l);
 
+    height: 80vh;
+    min-height: em(240);
+    max-height: em(320);
+
     @include shift(2 of $columns__phablet);
   }
 
@@ -37,9 +41,8 @@
     padding-top: em($ratio--xl);
 
     height: 62vh;
-
-    min-height: em(300);
-    max-height: em($height--xl);
+    min-height: em(320);
+    max-height: em(640);
   }
 
   @include media($tablet) {
@@ -60,8 +63,8 @@
   @include media($phone) {
     text-align: center;
   }
-  
-  @include media($large) {
+
+  @include media($portable) {
     @include position(absolute, null 0 0 0);
   }
 }
@@ -111,5 +114,5 @@
   background-color: transparent;
   color: inherit;
 
-  @include shift(4);
+  @include shift(4 of $columns__desktop);
 }
