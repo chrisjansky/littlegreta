@@ -12,11 +12,6 @@
   @include media($tablet) {
     @include shift(2 of $columns__tablet);
   }
-
-  // @include media($desktop) {
-    // :after for clearfix already taken with linear-gradient
-    // overflow: auto;
-  // }
 }
 
 .m-portfolio__item {
@@ -38,7 +33,6 @@
   }
 
   margin-top: 0;
-  // margin-right: em($ratio--m);
 }
 
 .m-portfolio__button {
