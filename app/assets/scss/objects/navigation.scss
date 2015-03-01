@@ -72,13 +72,13 @@
     color: $color-1--darker;
   }
 
-  @include media($desktop) {
+  @include media($large) {
     display: none;
   }
 }
 
 .o-menu__dropdown {
-  @include media($mobile) {
+  @include media($small) {
     @include position(absolute, 100% -50% null -50%);
     
     text-align: center;
@@ -118,7 +118,7 @@
 
   padding-left: 0;
   
-  @include media($mobile) {
+  @include media($small) {
     background-color: rgba($grey-0, $opacity--b);
     border-radius: $radius--b;
 
@@ -127,9 +127,14 @@
 }
 
 .o-menu__item {
-  @include media($desktop) {
+  @include media($large) {
     display: inline-block;
 
+    & + & {
+      margin-left: em($ratio--m);
+    }
+  }
+  @include media($desktop) {
     & + & {
       margin-left: em($ratio--l);
     }
