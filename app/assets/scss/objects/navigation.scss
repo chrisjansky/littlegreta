@@ -21,6 +21,8 @@
   }
 
   @include media($tablet) {
+    margin-top: em($ratio--s);
+
     @include shift(2 of $columns__tablet);
   }
 
@@ -101,7 +103,7 @@
     }
   }
 
-  .o-menu__toggle:hover + & {
+  .o-menu__container:hover & {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
