@@ -4,20 +4,32 @@
   background-color: $grey-2;
 
   .device--is-desktop & {
-    margin-top: 42vh;
+    margin-top: 38vh;
   }
 }
 
 .m-news__item {
+  transition: opacity $duration--b;
+
   .top--is-off & .rsImg,
   .device--is-mobile & .rsImg {
-    transition: opacity $duration--b;
     opacity: .25;
   }
 
   .top--is-off .rsActiveSlide & .rsImg,
   .device--is-mobile .rsActiveSlide & .rsImg {
     opacity: 1;
+  }
+}
+
+.m-news__overlay {
+  .csstransforms .device--is-desktop & {
+    opacity: 0;
+    transform: translateY(em($ratio--l));
+  }
+  .csstransforms .top--is-off & {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
