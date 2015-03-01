@@ -35,6 +35,11 @@
 
   @include media($large) {
     padding-top: em($ratio--xl);
+
+    height: 62vh;
+
+    min-height: em(300);
+    max-height: em($height--xl);
   }
 
   @include media($tablet) {
@@ -43,21 +48,8 @@
 
   @include media($desktop) {
     @include shift(4 of $columns__desktop);
-
-    height: 62vh;
-
-    min-height: em(300);
-    max-height: em($height--xl);
   }
 }
-
-// .m-intro__explanation {
-//   display: none;
-
-//   @include media($widescreen) {
-//     display: inline-block;
-//   }
-// }
 
 .m-intro__text {
   color: white;
@@ -68,42 +60,17 @@
   @include media($phone) {
     text-align: center;
   }
-  @include media($desktop) {
+  
+  @include media($large) {
     @include position(absolute, null 0 0 0);
   }
 }
 
-// .m-intro__table {
-//   display: table;
-
-//   width: 100%;
-// }
-// .m-intro__cell {
-//   display: table-cell;
-//   width: 50%;
-
-//   text-align: center;
-
-//   @include media($portable) {
-//     &:first-child {
-//       text-align: left;
-//     }
-
-//     &:last-child {
-//       text-align: right;
-//     }
-//   }
-
-//   @include media($desktop) {
-//     &:last-child {
-//       width: 2%;
-//     }
-//   }
-// }
-
 .m-intro__lift {
-  .device--is-mobile & {
-    display: none;
+  display: none;
+
+  .device--is-desktop & {
+    display: block;
   }
 
   @include position(fixed, null 0 0 0);
