@@ -2,7 +2,9 @@
   @include position(absolute, 0 0 null 0);
 
   .device--is-desktop & {
-    position: fixed;
+    @include media($large) {
+      position: fixed;
+    }
   }
 
   transition: background-color $duration--b, padding $duration--b;
