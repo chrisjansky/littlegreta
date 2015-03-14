@@ -21,7 +21,7 @@ section.m-people.l-section--light
           - var random = Math.floor((Math.random() * 2))
           - var person = group.members[random]
 
-          div.o-person(class="o-person--#{group.title}")
+          div.o-person(class="o-person--#{group.title}", data-hover)
             .o-person__portrait
               .o-person__circle.o-circle
                 img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
