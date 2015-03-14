@@ -32,6 +32,7 @@
       "app/assets/js/lg-base.js",
       "app/assets/js/lg-tumblr.js",
       "app/assets/js/lg-main.js",
+      "app/assets/js/lg-hover.js",
       "app/assets/js/lg-royal.js",
       "app/assets/js/lg-waypoints.js",
       "app/assets/js/lg-scrollmagic.js",
