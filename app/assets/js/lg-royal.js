@@ -3,10 +3,11 @@ var
   $workCarousel = $("[data-carousel]");
 
 var
-  sliderLock = true;
+  sliderLock = true,
+  sliderWatch = isDesktop();
 
 $topSlider.royalSlider({
-  addActiveClass: true,
+  addActiveClass: sliderWatch,
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
@@ -16,7 +17,7 @@ $topSlider.royalSlider({
 });
 
 $workCarousel.royalSlider({
-  addActiveClass: true,
+  addActiveClass: sliderWatch,
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
