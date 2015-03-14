@@ -9,4 +9,10 @@
     a.o-cta.o-cta--black.ss-globe(href="contact-us") Where to Find Us
 
   - var exit = {current: "Home", theme: "dark"}
-  include ../partial/_exit
+  footer.o-exit(class="o-exit--#{exit.theme}")
+    .l-inline
+      .o-exit__cell.l-inline__cell
+        small.t-small &copy; 2015 Little Greta Ltd.
+
+      .o-exit__cell.l-inline__cell
+        a(href="#", data-scrollto, class="i-link--#{exit.theme}").o-button--text.ss-up.right Scroll to Top
