@@ -1,6 +1,6 @@
 .l-wrap {
   // Changed
-  padding: em($ratio--m) em($unit--b);
+  padding: em($unit--xl) em($unit--b);
 
   margin-right: auto;
   margin-left: auto;
@@ -17,9 +17,6 @@
   @include media($desktop) {
     padding: em($unit--h);
   }
-  // @include media($desktop--wide) {
-  //   padding: em($ratio--xxl);
-  // }
 }
 
 .l-wrap--small {
@@ -57,18 +54,6 @@
   padding-bottom: 0;
 }
 
-// LG specific
-// .l-wrap--bottom-big {
-//   padding-bottom: em($ratio--m);
-
-//   @include media($tablet) {
-//     padding-bottom: em($ratio--l);
-//   }
-//   @include media($desktop) {
-//     padding-bottom: em($ratio--xl);
-//   }
-// }
-
 .l-wrap--section {
   // Always max-width --85%-- 90% of next breakpoint
   // @include media($phone) {
@@ -86,9 +71,3 @@
 
   @include wrap-push;
 }
-
-
-$device__phablet:    440;
-$device__tablet:     720;
-$device__desktop:    980;
-$device__widescreen: 1260;
