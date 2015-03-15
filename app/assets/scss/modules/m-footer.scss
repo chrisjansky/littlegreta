@@ -7,7 +7,11 @@
 }
 
 .m-footer__wrap {
-  background: url("../images/map1.png") no-repeat center 85%;
+  background: url("../images/map_no_pins1.png") no-repeat center / cover;
+
+  @include media($large) {
+    background-image: url("../images/map_pins1.png");
+  }
 }
 
 .m-footer__outro {
