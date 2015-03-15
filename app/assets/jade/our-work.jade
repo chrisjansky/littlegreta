@@ -27,7 +27,7 @@ block template-content
         .o-sizer--column(data-column)
         .o-sizer--gutter(data-gutter)
 
-        article.o-work(class="o-work--small", data-masonry-item)
+        article.o-work(class="o-work--small", data-masonry-item, data-hover)
           img.o-work__image(src="assets/images/work/work_ibm.jpg", alt="unsplash.it")
           .o-work__overlay
             h4.t-h4 IBM
@@ -49,7 +49,7 @@ block template-content
 
           - var n = 1
           while n <= count
-            article.o-work(class="o-work--#{size}", data-masonry-item)
+            article.o-work(class="o-work--#{size}", data-masonry-item, data-hover)
               img.o-work__image(src="http://unsplash.it/#{width}/#{height}/?image=#{n * 10}", alt="unsplash.it")
               .o-work__overlay
                 h4.t-h4 Work that&rsquo;s #{size}
@@ -58,7 +58,7 @@ block template-content
                   a.o-button--text.ss-right.right(href="case-study") View Case Study
             - n++
 
-        article.o-work(class="o-work--small", data-masonry-item)
+        article.o-work(class="o-work--small", data-masonry-item, data-hover)
           img.o-work__image(src="assets/images/work/work_google.jpg", alt="unsplash.it")
           .o-work__overlay
             h4.t-h4 Google
