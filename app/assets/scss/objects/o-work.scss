@@ -92,10 +92,6 @@
     }
   }
 
-  @include media($tablet) {
-    width: flex-grid(6, $columns__tablet);
-  }
-
   @include media($desktop) {
     width: flex-grid(8, $columns__desktop);
   }
@@ -103,7 +99,7 @@
 
 .o-work--medium {
   @include media($tablet) {
-    width: flex-grid(6, $columns__tablet);
+    width: flex-grid(4, 8);
   }
 
   @include media($desktop) {
@@ -117,7 +113,7 @@
   }
 
   @include media($tablet) {
-    width: flex-grid(3, $columns__tablet);
+    width: flex-grid(4, 8);
   }
 
   @include media($desktop) {

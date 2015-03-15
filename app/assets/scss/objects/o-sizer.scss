@@ -8,6 +8,13 @@
   @include media($desktop) {
     width: flex-grid(1, $columns__desktop);
   }
+
+  // Fuck this, not going to break neat for just one exception
+  .m-works & {
+    @include media($tablet) {
+      width: flex-grid(1, 8);
+    }
+  }
 }
 .o-sizer--gutter {
   @include media($phablet) {
@@ -18,5 +25,12 @@
   }
   @include media($desktop) {
     width: flex-gutter($columns__desktop);
+  }
+
+  // Again, fuck this
+  .m-works & {
+    @include media($tablet) {
+      width: flex-gutter(8);
+    }
   }
 }
