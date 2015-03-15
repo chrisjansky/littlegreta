@@ -104,7 +104,7 @@ Styleguide 2.1.
     font-weight: $font__sans--bold;
   }
 
-  @include margin(em($ratio--s) null);
+  @include margin(em($ratio--b, $unit--l) null);
 }
 
 // Fifth headline

@@ -32,7 +32,7 @@
   line-height: $spacing--s;
 
   @include media($tablet) {
-    font-size: em($unit--xxl);
+    font-size: em($unit--h);
   }
   @include media($desktop) {
     font-size: em($ratio--l);
