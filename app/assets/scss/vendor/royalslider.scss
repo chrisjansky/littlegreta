@@ -78,3 +78,9 @@
     content: "▻";
   }
 }
+
+.rsImg {
+  .device--is-desktop & {
+    transition: opacity $duration--b;
+  }
+}
