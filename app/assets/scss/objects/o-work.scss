@@ -53,19 +53,16 @@
   > :last-child {
     display: block;
 
-    margin-bottom: em($unit--l);
+    margin-bottom: em($unit--m);
   }
 
-  .device--is-desktop & {
-    margin-top: em($ratio--m);
+  max-height: 0;
+  opacity: 0;
 
-    max-height: 0;
-    opacity: 0;
+  transition: max-height $duration--l, opacity $duration--xl, padding $duration--l;
 
-    transition: max-height $duration--l, opacity $duration--xl, padding $duration--l;
-  }
-
-  .device--is-desktop .o-work:hover & {
+  .device--is-desktop .o-work:hover &,
+  .hover--is-active & {
     max-height: em($ratio--h);
     opacity: 1;
   }
@@ -76,11 +73,10 @@
 
   transition: opacity $duration--b;
 
-  .no-touch & {
-    opacity: .8;
-  }
+  opacity: .8;
 
-  .no-touch .o-work:hover & {
+  .device--is-desktop .o-work:hover &,
+  .hover--is-active & {
     opacity: 1;
   }
 }
@@ -88,7 +84,7 @@
 .o-work--big {
   @include media($phone) {
     & .o-work__more p {
-      max-height: em($unit--b * $spacing--b);
+      max-height: em($ratio--b * $spacing--b);
 
       overflow-y: hidden;
       white-space: nowrap;

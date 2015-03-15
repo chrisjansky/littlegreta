@@ -14,11 +14,11 @@
 
   transition: transform $duration--l, opacity $duration--l;
 
-  .csstransforms & {
+  .device--is-desktop & {
     opacity: 0;
     transform: translateY(em($ratio--l));
   }
-  .csstransforms .rsActiveSlide & {
+  .device--is-desktop .rsActiveSlide & {
     opacity: 1;
     transform: translateY(0);
   }

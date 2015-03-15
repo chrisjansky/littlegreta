@@ -40,7 +40,8 @@
   border-radius: 50%;
   transition: transform $duration--s;
 
-  .o-person:hover & {
+  .device--is-desktop .o-person:hover &,
+  .hover--is-active & {
     transform: scale(.95);
   }
 }
@@ -68,7 +69,7 @@
 
 .o-person__group {
   .device--is-mobile & {
-    margin-right: em($ratio--s);
+    display: none;
   }
 
   .device--is-desktop & {
@@ -129,14 +130,16 @@
     @include triangle(em($ratio--s), rgba($grey-1, $opacity--m), up);
   }
 
-  .o-person:hover & {
+  .device--is-desktop .o-person:hover &,
+  .hover--is-active & {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
-
-    transition-delay: 0;
   }
 
+  .hover--is-active & {
+    transition-delay: 0;
+  }
   .device--is-desktop .o-person:hover & {
     transition-delay: $duration--l;
   }
