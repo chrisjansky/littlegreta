@@ -9,15 +9,11 @@
 }
 
 .m-news__item {
-  transition: opacity $duration--b;
-
-  .top--is-off & .rsImg,
-  .device--is-mobile & .rsImg {
+  .top--is-off & .rsImg {
     opacity: .25;
   }
 
-  .top--is-off .rsActiveSlide & .rsImg,
-  .device--is-mobile .rsActiveSlide & .rsImg {
+  .top--is-off .rsActiveSlide & .rsImg {
     opacity: 1;
   }
 }

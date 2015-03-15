@@ -8,15 +8,13 @@
 // }
 
 .m-portfolio__content {
-
   @include media($tablet) {
     @include shift(2 of $columns__tablet);
   }
 }
 
 .m-portfolio__item {
-  .rsImg {
-    transition: opacity $duration--b;
+  .device--is-desktop & .rsImg {
     opacity: .25;
   }
 
