@@ -32,3 +32,10 @@ if (isDesktop()) {
 
   $body.addClass("device--is-mobile");
 }
+
+// Initialize fastclick
+if ("addEventListener" in document) {
+  document.addEventListener("DOMContentLoaded", function() {
+    FastClick.attach(document.body);
+  }, false);
+}
