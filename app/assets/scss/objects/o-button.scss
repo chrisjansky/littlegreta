@@ -22,3 +22,14 @@
     }
   }
 }
+
+@include media($desktop) {
+  // Get bigger on later breakpoint
+  .o-button--medium {
+    font-size: em($unit--m);
+
+    &:before, &:after {
+      font-size: #{$icon--b}px;
+    }
+  }
+}

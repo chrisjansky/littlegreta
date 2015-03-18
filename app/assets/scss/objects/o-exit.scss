@@ -6,6 +6,15 @@
   padding-top: em($ratio--b);
 }
 
+// No l-inline used, align text like it
+.o-exit--simple {
+  text-align: center;
+
+  @include media($large) {
+    text-align: right;
+  }
+}
+
 .o-exit--push {
   @include media($tablet) {
     @include shift(2 of $columns__tablet);

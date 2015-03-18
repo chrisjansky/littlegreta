@@ -18,7 +18,8 @@
 
   transition: color $duration--b;
 
-  .o-dropdown:hover & {
+  .device--is-desktop .o-dropdown:hover &,
+  .hover--is-active & {
     color: $color-1--lighter;
   }
 }
@@ -36,7 +37,8 @@
 
   transition: opacity $duration--b, transform $duration--b, visibility 0 $duration--b;
 
-  .o-dropdown:hover & {
+  .device--is-desktop .o-dropdown:hover &,
+  .hover--is-active & {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);

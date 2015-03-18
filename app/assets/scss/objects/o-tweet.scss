@@ -20,6 +20,14 @@
   .o-tweet--basic & {
     color: rgba(white, .85);
   }
+
+  .o-tweet--photo & {
+    @include media($mobile) {
+      // Force maximum of 4 lines
+      max-height: em(96);
+      overflow-y: hidden;
+    }
+  }
 }
 
 .o-tweet--basic {

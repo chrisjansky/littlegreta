@@ -12,9 +12,9 @@
 
   z-index: $index--b;
 
-  transition: transform $duration--l, opacity $duration--l;
-
   .device--is-desktop & {
+    transition: transform $duration--l, opacity $duration--l;
+    
     opacity: 0;
     transform: translateY(em($ratio--l));
   }
