@@ -22,6 +22,7 @@
       "bower_components/moment/moment.js",
       "bower_components/livestampjs/livestamp.js",
       "bower_components/featherlight/src/featherlight.js",
+      "bower_components/fastclick/lib/fastclick.js",
 
       "app/assets/js/vendor/jquery.royalslider.js",
       "app/assets/js/vendor/jquery.rs.active-class.js",
