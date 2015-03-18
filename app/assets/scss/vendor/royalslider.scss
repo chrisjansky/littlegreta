@@ -13,10 +13,12 @@
 
   bottom: 0;
 
-  @include padding(null em($ratio--b));
+  @include padding(null em($ratio--m));
 
   text-align: center;
-  color: rgba(white, .375);
+  color: rgba(white, .75);
+
+  transition: color $duration--s;
 
   user-select: none;
 
@@ -43,6 +45,10 @@
       // Magic number alignment
       vertical-align: -90%;
     }
+  }
+
+  &:hover {
+    color: white;
   }
 }
 .rsArrowIcn {
