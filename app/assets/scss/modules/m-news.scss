@@ -19,11 +19,11 @@
 }
 
 .m-news__overlay {
-  .csstransforms .device--is-desktop & {
+  .device--is-desktop & {
     opacity: 0;
     transform: translateY(em($ratio--l));
   }
-  .csstransforms .top--is-off & {
+  .top--is-off .rsActiveSlide & {
     opacity: 1;
     transform: translateY(0);
   }

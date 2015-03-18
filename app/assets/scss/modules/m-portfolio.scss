@@ -4,9 +4,6 @@
   overflow: hidden;
 }
 
-// .m-portfolio__overlay {
-// }
-
 .m-portfolio__content {
   @include media($tablet) {
     @include shift(2 of $columns__tablet);
@@ -54,10 +51,19 @@
 .m-portfolio__hint {
   position: absolute;
 
-  @include media($mobile) {
+  @include media($small) {
     left: em($ratio--xl);
     right: em($ratio--xl);
+
     bottom: em($ratio--m);
+  }
+
+  @include media($tablet) {
+    text-align: right;
+
+    right: em($ratio--l);
+
+    bottom: em($ratio--l);
   }
 
   @include media($desktop) {

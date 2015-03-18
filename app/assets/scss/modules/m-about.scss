@@ -46,20 +46,12 @@
 .m-about__outro {
   text-align: center;
 
-  margin-top: em($ratio--l);
+  margin-top: em($ratio--m);
+  margin-bottom: em($ratio--l);
 
-  @include media($tablet) {
-    @include span-columns(7 of $columns__tablet);
-    @include shift(1 of $columns__tablet);
-
-    margin-top: em($ratio--xl);
-  }
-
-  @include media($desktop) {
-    @include span-columns(6 of $columns__desktop);
-    @include shift(3 of $columns__desktop);
-
-    margin-top: em($ratio--m);
+  @include media($large) {
+    margin-top: em($ratio--l);
+    margin-bottom: em($ratio--xl);
   }
 }
 
@@ -72,10 +64,11 @@
     margin-top: em($ratio--l);
   }
 }
+
 .m-about__smallcaps {
   display: block;
 
-  margin-bottom: em($ratio--b);
+  margin-bottom: em($ratio--m);
 }
 
 // --long only
