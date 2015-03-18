@@ -4,15 +4,10 @@
     span.t-gradient--dark.t-gradient--small Get in Touch
 
   .m-footer__outro
-    p.t-lead.t-antiqua Like what we do? We are in five countries around the globe, drop us a&nbsp;line and let&rsquo;s make it happen!
+    p.t-lead.t-antiqua We have offices in London, Munich, Boston and two in the Czech Republic, where Little Greta originates and where much of our team and infrastructure remains.
     a.o-cta.o-cta--dark.ss-mail(href="mailto:info@littlegreta.co.uk") Contact Us
     a.o-cta.o-cta--black.ss-globe(href="contact-us") Where to Find Us
 
   - var exit = {current: "Home", theme: "dark"}
-  footer.o-exit(class="o-exit--#{exit.theme}")
-    .l-inline
-      .o-exit__cell.l-inline__cell
-        small.t-small &copy; 2015 Little Greta Ltd.
-
-      .o-exit__cell.l-inline__cell
-        a(href="#", data-scrollto, class="i-link--#{exit.theme}").o-button--text.ss-up.right Scroll to Top
+  footer.o-exit.o-exit--simple(class="o-exit--#{exit.theme}")
+    small.t-small &copy; 2015 Little Greta Ltd.
