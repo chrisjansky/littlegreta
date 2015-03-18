@@ -103,7 +103,8 @@
     }
   }
 
-  .o-menu__container:hover & {
+  .device--is-desktop .o-menu__container:hover &,
+  .hover--is-active & {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
