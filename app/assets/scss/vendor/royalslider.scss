@@ -42,6 +42,8 @@
     top: 0;
 
     &:after {
+      font-size: #{$icon--m}px;
+      
       // Magic number alignment
       vertical-align: -90%;
     }
