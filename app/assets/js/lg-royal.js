@@ -4,16 +4,22 @@ var
 
 var
   sliderLock = true,
-  sliderWatch = isDesktop();
+  sliderWatch = isDesktop(),
+  playTime = 5000;
 
 $topSlider.royalSlider({
   addActiveClass: sliderWatch,
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
+  numImagesToPreload: 1,
   
   loopRewind: true,
-  numImagesToPreload: 1,
+  autoPlay: {
+    enabled: true,
+    pauseOnHover: false,
+    delay: playTime
+  }
 });
 
 $workCarousel.royalSlider({
@@ -21,6 +27,7 @@ $workCarousel.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
+  numImagesToPreload: 1,
   
   keyboardNavEnabled: true,
   visibleNearby: {
@@ -31,6 +38,11 @@ $workCarousel.royalSlider({
 
     breakpoint: 980,
     breakpointCenterArea: 1
+  },
+  autoPlay: {
+    enabled: true,
+    pauseOnHover: false,
+    delay: playTime
   }
 });
 
@@ -56,6 +68,11 @@ if ($workCarouselConfig) {
 
     $portfolio.toggleClass("carousel--at-end", atEnd);
   });
+}
+
+// Stop autoplay on init, otherwise can't be toggled later
+if ($topSliderConfig) {
+  $topSliderConfig.stopAutoPlay();
 }
 
 // Custom keyboard nav for topSlider

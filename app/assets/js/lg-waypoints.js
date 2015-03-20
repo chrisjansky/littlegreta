@@ -10,6 +10,12 @@ if (currentDevice === "desktop") {
         if ($topSliderConfig.currSlideId !== 0) {
           $topSliderConfig.goTo(0);
         }
+
+        if (sliderLock) {
+          $topSliderConfig.stopAutoPlay();
+        } else {
+          $topSliderConfig.startAutoPlay();
+        }
       }
     }
   });
