@@ -19,7 +19,8 @@
 }
 
 .m-news__overlay {
-  .device--is-desktop & {
+  // modernizr class used to overwrite when at of the page
+  .csstransforms .device--is-desktop & {
     opacity: 0;
     transform: translateY(em($ratio--l));
   }

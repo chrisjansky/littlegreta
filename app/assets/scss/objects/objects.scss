@@ -17,12 +17,14 @@
     display: inline-block;
 
     & + & {
-      margin-left: em($ratio--b);
+      margin-left: em($ratio--m);
     }
   }
   
+  opacity: .5;
+
   @include state--hover {
-    opacity: .625;
+    opacity: 1;
   }
 }
 

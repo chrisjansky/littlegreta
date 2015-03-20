@@ -4,8 +4,8 @@
 
   color: $grey-3;
 }
-.o-context__item {
 
+.o-context__item {
   @include media($phone) {
     line-height: em($height--b);
 
@@ -39,9 +39,11 @@
     }
   }
 }
+
 .o-context__link {
   text-decoration: none;
 }
+
 .o-context__selected {
   border-bottom-width: $line--b;
   border-bottom-style: solid;
