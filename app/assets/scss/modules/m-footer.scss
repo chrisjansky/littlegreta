@@ -9,6 +9,9 @@
 .m-footer__wrap {
   background: url("../images/map_no_pins1.png") no-repeat center / cover;
 
+  @include media($tablet) {
+    background-position: center 95%;
+  }
   @include media($large) {
     background-image: url("../images/map_pins1.png");
   }
@@ -17,8 +20,15 @@
 .m-footer__outro {
   text-align: center;
 
+  @include media($tablet) {
+    width: flex-grid(7, $columns__tablet);
+
+    @include margin(null auto);
+  }
+
   @include media($desktop) {
     width: flex-grid(6, $columns__desktop);
-    @include shift(3 of $columns__desktop);
+    
+    @include margin(null auto);
   }
 }
