@@ -14,12 +14,11 @@
     foreach ($twitter_stream as $tweet) {
       
       $is_retweet = isset($tweet->retweeted_status);
-      // $has_media = isset($tweet->entities->display_url);
 
       if ($is_retweet) {
-        $tweet_text = htmlspecialchars($tweet->retweeted_status->text);
+        $tweet_text = html_entity_decode($tweet->retweeted_status->text);
       } else {
-        $tweet_text = htmlspecialchars($tweet->text);
+        $tweet_text = html_entity_decode($tweet->text);
       }
       $tweet_start_char = substr($tweet_text, 0, 1);
 
@@ -39,10 +38,7 @@
               if (isset($value->media_url)) {
                 $tweet_type = "photo";
                 $tweet_media = "<img class=\"o-media__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\" >";
-              // } else if (strpos($value->display_url, "instagram") !== false) {
-              //   $zkouska = "instagram";
-              // }
-              // Loop over possible types to find the current one
+              // Loop over possible types to find the correct one
               } else foreach ($possible_types as $media_type) {
 
                 if (strpos($value->display_url, $media_type) !== false) {
@@ -64,11 +60,11 @@
       
         // Let's create links from hashtags, mentions, urls
         // Urls
-        $tweet_text = preg_replace('/(https?:\/\/[^\s"<>]+)/','<a data-lol href="$1">$1</a>', $tweet_text);
+        $tweet_text = preg_replace('/(https?:\/\/[a-z|A-Z|0-9|.|\/]+)/','<a href="$1">$1</a>', $tweet_text);
         // Mentions
-        $tweet_text = preg_replace('/(^|[\n\s])@([^\s"\t\n\r<:]*)/is', '$1<a data-lol2 href="http://twitter.com/$2">@$2</a>', $tweet_text);
+        $tweet_text = preg_replace('/(^|[\n\s])@([a-z|A-Z|0-9|\_]*)/is', '$1<a href="http://twitter.com/$2">@$2</a>', $tweet_text);
         // Hashtags
-        $tweet_text = preg_replace('/(^|[\n\s])#([^\s"\t\n\r<:]*)/is', '$1<a data-lol3 href="http://twitter.com/search?q=%23$2">#$2</a>', $tweet_text);
+        $tweet_text = preg_replace('/(^|[\n\s])#([^\s"\t\n\r<:]*)/is', '$1<a href="http://twitter.com/search?q=%23$2">#$2</a>', $tweet_text);
         
       ?>
 
