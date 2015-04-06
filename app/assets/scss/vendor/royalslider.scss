@@ -2,7 +2,7 @@
   width: 100%;
 
   @include media($large) {
-    height: 110vh;
+    height: $height--full;
   }
 
   max-height: em($height--xxl);

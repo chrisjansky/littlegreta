@@ -1,7 +1,7 @@
 .o-hero {
   position: relative;
 
-  height: 110vh;
+  height: $height--full;
   max-height: em(480);
 
   @include media($large) {
