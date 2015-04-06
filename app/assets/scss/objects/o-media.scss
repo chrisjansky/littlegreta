@@ -9,7 +9,8 @@
     width: flex-grid(3, $columns__phablet);
   }
   @include media($tablet) {
-    width: flex-grid(3, $columns__tablet)
+    // Different column count, fix later
+    width: flex-grid(4, 8);
   }
   @include media($desktop) {
     width: flex-grid(3, $columns__desktop);
@@ -35,7 +36,7 @@
     padding: em($ratio--b);
   }
 
-  z-index: $index--s;
+  z-index: $index--xs;
 }
 
 [class^="o-media__date"],

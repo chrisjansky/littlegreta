@@ -23,16 +23,20 @@
 [class*=" m-services__item"] {
   text-align: center;
 
-  margin-top: em($unit--l);
+  margin-top: em($unit--xxl);
 
+  @include media($large) {
+    margin-top: em($unit--l);
+  }
+  
   @include media($tablet) {
-    @include span-columns($columns__tablet / 2);
+    @include span-columns($columns__tablet / 2 of $columns__tablet);
     @include omega(2n);
 
     text-align: left;
   }
   @include media($desktop) {
-    @include span-columns(3);
+    @include span-columns(3 of $columns__desktop);
   }
 }
 

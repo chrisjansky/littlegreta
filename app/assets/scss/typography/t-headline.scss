@@ -52,7 +52,8 @@ Styleguide 2.1.
 */
 
 .t-h2 {
-  font-size: em($unit--xl);
+  // Strayed off from scale to force to one line with t-gradient
+  font-size: em(28);
   font-weight: $font__sans--light;
 
   @include media($tablet) {

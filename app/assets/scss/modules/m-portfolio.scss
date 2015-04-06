@@ -1,6 +1,8 @@
 .m-portfolio {
   position: relative;
 
+  background-color: $grey-0;
+
   overflow: hidden;
 }
 
@@ -21,6 +23,18 @@
 }
 
 .m-portfolio__info {
+  @include media($small) {
+    .device--is-mobile & {
+      transition: max-height $duration--l;
+      
+      max-height: 0;
+      overflow-y: hidden;
+    }
+    .hover--is-active & {
+      max-height: em(200);
+    }
+  }
+
   @include media($desktop) {
     width: 75%;
 

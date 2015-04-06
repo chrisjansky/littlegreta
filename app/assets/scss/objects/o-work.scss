@@ -73,11 +73,9 @@
 
   transition: opacity $duration--b;
 
-  opacity: .8;
-
   .device--is-desktop .o-work:hover &,
   .hover--is-active & {
-    opacity: 1;
+    opacity: .8;
   }
 }
 
@@ -112,6 +110,7 @@
     width: flex-grid(3, $columns__phablet);
   }
 
+  // Column count not compatible
   @include media($tablet) {
     width: flex-grid(4, 8);
   }
