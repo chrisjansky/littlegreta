@@ -12,8 +12,8 @@ $topSlider.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
-  numImagesToPreload: 1,
   
+  numImagesToPreload: 1,
   loopRewind: true,
   autoPlay: {
     enabled: true,
@@ -27,7 +27,6 @@ $workCarousel.royalSlider({
   controlNavigation: "none",
   imageScaleMode: "fill",
   slidesSpacing: 0,
-  numImagesToPreload: 1,
   
   keyboardNavEnabled: true,
   navigateByClick: desktopOnly,
