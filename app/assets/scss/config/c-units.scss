@@ -7,17 +7,6 @@ $multiplier-2: $major-second;
 $base-1: 16;
 $base-2: 18;
 
-// $unit--xxh: 240;
-// $unit--xh: 120;
-// $unit--h:   82;
-// $unit--xxl: 32;
-// $unit--xl:  24;
-// $unit--l:   20;
-// $unit--m:   18;
-// $unit--s:   14;
-// $unit--xs:  12;
-// $unit--xxs: 8;
-
 $unit--xxh: round(modular-scale($base-2, +13, $multiplier-2));
 $unit--xh:  round(modular-scale($base-2, +12,  $multiplier-2));
 $unit--h:   round(modular-scale($base-2, +9,  $multiplier-2));
@@ -63,6 +52,7 @@ $circle--b: 60;
 $circle--s: 40;
 
 // Z-index
+$index--xxl: 500;
 $index--xl:  400;
 $index--l:   300;
 $index--m:   200;
