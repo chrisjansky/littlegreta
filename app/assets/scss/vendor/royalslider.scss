@@ -18,7 +18,7 @@
   text-align: center;
   color: rgba(white, .75);
 
-  transition: color $duration--s;
+  transition: color $duration--s, opacity $duration--s, transform $duration--s;
 
   user-select: none;
 
@@ -84,6 +84,12 @@
 
   &:after {
     content: "▻";
+  }
+
+  .carousel--at-end & {
+    opacity: 0;
+
+    transform: translateX(em($ratio--b));
   }
 }
 
