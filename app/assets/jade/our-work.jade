@@ -27,36 +27,11 @@ block template-content
         .o-sizer--column(data-column)
         .o-sizer--gutter(data-gutter)
 
-        article.o-work(class="o-work--small", data-masonry-item, data-hover)
-          img.o-work__image(src="assets/images/work/work_ibm.jpg", alt="unsplash.it")
-          .o-work__overlay
-            h4.t-h4 IBM
-            .o-work__more
-              p: +dummy(15, "text")
+        - var width = 800, height = 450
 
-        each size in ["big", "small", "medium"]
-
-          - var count, width = 800, height = 450
-          case size
-            when "small"
-              - count = 3
-              - width = 390
-            when "medium"
-              - count = 1
-              - width = 595
-            when "big"
-              - count = 1
-
-          - var n = 1
-          while n <= count
-            article.o-work(class="o-work--#{size}", data-masonry-item, data-hover)
-              img.o-work__image(src="http://unsplash.it/#{width}/#{height}/?image=#{n * 10}", alt="unsplash.it")
-              .o-work__overlay
-                h4.t-h4 Work that&rsquo;s #{size}
-                .o-work__more
-                  p: +dummy(15, "text")
-                  a.o-button--text.ss-zoomin.right(href="case-study") View Case Study
-            - n++
+        // Big
+        - size = "big"
+        include partial/_thumbnail
 
         article.o-work(class="o-work--small", data-masonry-item, data-hover)
           img.o-work__image(src="assets/images/work/work_google.jpg", alt="unsplash.it")
@@ -64,6 +39,26 @@ block template-content
             h4.t-h4 Google
             .o-work__more
               p: +dummy(15, "text")
+        
+        // Small
+        - size = "small"
+        - width = 390
+        include partial/_thumbnail
+
+        article.o-work(class="o-work--small", data-masonry-item, data-hover)
+          img.o-work__image(src="assets/images/work/work_ibm.jpg", alt="unsplash.it")
+          .o-work__overlay
+            h4.t-h4 IBM
+            .o-work__more
+              p: +dummy(15, "text")
+
+        include partial/_thumbnail
+
+        // Medium
+        - size = "medium"
+        - width = 595
+        include partial/_thumbnail
+        include partial/_thumbnail
 
       - var exit = {current: "Our Work", theme: "dark"}
       include partial/_exit
