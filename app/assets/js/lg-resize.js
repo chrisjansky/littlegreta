@@ -11,6 +11,8 @@ $(window).on("resize orientationchange", function() {
       introParallax.attach(false);
     }
 
+    heightFix();
+
   }, durBasic)
 
 });
