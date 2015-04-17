@@ -22,11 +22,9 @@
   }
 
   .o-tweet--photo & {
-    @include media($mobile) {
-      // Force maximum of 4 lines
-      max-height: em(96);
-      overflow-y: hidden;
-    }
+    // Force maximum of 4 lines
+    max-height: em(96);
+    overflow-y: hidden;
   }
 }
 
@@ -37,8 +35,6 @@
 }
 
 .o-tweet--photo {
-  &:after {
-    content: "";
-    @include overlay-gradient;
-  }
+  background-color: $grey-2;
+  min-height: em(168);
 }
