@@ -5,6 +5,13 @@
   pointer-events: none;
 }
 
+@mixin overlay-gradient--solid {
+  @include position(absolute, 0 0 0 0);
+  background-image: #{"linear"}-gradient(to bottom, transparent, $grey-2);
+
+  pointer-events: none;
+}
+
 @mixin wrap-push {
   @include media($large) {
     .device--is-desktop & {
