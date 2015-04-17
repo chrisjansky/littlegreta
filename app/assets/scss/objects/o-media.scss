@@ -17,6 +17,15 @@
   }
 }
 
+.o-media__wrap {
+  position: relative;
+
+  &:after {
+    content: "";
+    @include overlay-gradient--solid;
+  }
+}
+
 .o-media__image {
   opacity: .8;
 }
