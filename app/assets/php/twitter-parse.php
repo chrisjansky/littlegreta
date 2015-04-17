@@ -37,7 +37,7 @@
 
               if (isset($value->media_url)) {
                 $tweet_type = "photo";
-                $tweet_media = "<img class=\"o-media__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\" >";
+                $tweet_media = "<div class=\"o-media__wrap\"><img class=\"o-media__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\"></div>";
               // Loop over possible types to find the correct one
               } else foreach ($possible_types as $media_type) {
 
@@ -77,7 +77,6 @@
           <p class="o-tweet__text"><?php echo $tweet_text ?></p>
           <div class="o-tweet__info">
             <a class="o-media__date--twitter o-iconed--small ss-twitter ss-social" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id ?>">
-              <?php if ($is_retweet) : ?><span class="t-smallcaps">Retweeted </span><?php endif; ?>
               <span data-livestamp="<?php echo strtotime($tweet->created_at) ?>"></span>
             </a>
           </div>
