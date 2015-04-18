@@ -32,7 +32,6 @@
       "bower_components/chj-framework/app/assets/js/chj-detect.js",
       
       "app/assets/js/lg-base.js",
-      "app/assets/js/lg-height-fix.js",
       "app/assets/js/lg-tumblr.js",
       "app/assets/js/lg-main.js",
       "app/assets/js/lg-hover.js",
