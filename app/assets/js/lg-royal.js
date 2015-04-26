@@ -76,6 +76,9 @@ if ($workCarouselConfig) {
 if ($topSliderConfig) {
   $topSliderConfig.stopAutoPlay();
 }
+if ($workCarouselConfig) {
+  $workCarouselConfig.stopAutoPlay();
+}
 
 // Custom keyboard nav for topSlider
 $(document.documentElement).on("keydown", function(event) {
