@@ -2,9 +2,13 @@ section#portfolio.m-portfolio.o-blur--grey(data-portfolio)
 
   .m-portfolio__slider.o-slider.royalSlider(data-carousel)
 
-    each instance in [141, 416, 426, 447]
+    each instance, index in [141, 416, 426, 447, 555, 20, 40]
 
-      article.m-portfolio__item.o-slider__item(data-hover)
+      - var itemClass
+      - if (index === 6)
+        - itemClass = "o-slider__item--last"
+
+      article.m-portfolio__item.o-slider__item(data-hover, class=itemClass)
         .m-portfolio__overlay.o-slider__overlay.l-wrap
 
           .m-portfolio__content.o-slider__content
