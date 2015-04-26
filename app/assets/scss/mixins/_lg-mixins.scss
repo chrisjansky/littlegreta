@@ -1,12 +1,14 @@
 @mixin overlay-gradient {
-  @include position(absolute, 0 0 0 0);
+  // -1px offset to fix crappy subpixel rounding
+  @include position(absolute, 0 0 -1px 0);
   background-image: #{"linear"}-gradient(to bottom, transparent, rgba($grey-2, .85));
 
   pointer-events: none;
 }
 
 @mixin overlay-gradient--solid {
-  @include position(absolute, 0 0 0 0);
+  // -1px offset to fix crappy subpixel rounding
+  @include position(absolute, 0 0 -1px 0);
   background-image: #{"linear"}-gradient(to bottom, transparent, $grey-2);
 
   pointer-events: none;
