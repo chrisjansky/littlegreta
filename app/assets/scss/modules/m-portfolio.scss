@@ -52,7 +52,7 @@
   }
 
   @include media($mobile) {
-    .rsSlide:last-child & {
+    .o-slider__item--last & {
       margin-bottom: em($unit--xl);
     }
   }

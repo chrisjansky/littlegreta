@@ -108,6 +108,8 @@
 }
 
 .o-post--photo {
+  overflow-y: hidden;
+  
   &:after {
     content: "";
     @include overlay-gradient;

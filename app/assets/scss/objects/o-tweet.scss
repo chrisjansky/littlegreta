@@ -37,4 +37,6 @@
 .o-tweet--photo {
   background-color: $grey-2;
   min-height: em(168);
+
+  overflow-y: hidden;
 }

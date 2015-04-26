@@ -3,6 +3,8 @@
 
   position: relative;
 
+  overflow: hidden;
+
   @include media($small) {
     & + & {
       margin-top: em($ratio--b);
