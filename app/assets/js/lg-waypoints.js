@@ -27,4 +27,14 @@ if (currentDevice === "desktop") {
     },
     offset: "35%"
   });
+
+  var portfolioWaypoint = $portfolio.waypoint({
+    handler: function(direction) {
+      if (direction === "down") {
+        $workCarouselConfig.startAutoPlay();
+      } else {
+        $workCarouselConfig.stopAutoPlay();
+      }
+    }, offset: "25%"
+  });
 }
