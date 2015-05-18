@@ -42,6 +42,7 @@
   @include media($phablet) {
     width: flex-grid(3, $columns__phablet);
 
+    .o-sizer--gutter + &,
     .o-gallery__image--full + &,
     .o-gallery__image--big + &,
     .o-gallery__image--medium + & {
