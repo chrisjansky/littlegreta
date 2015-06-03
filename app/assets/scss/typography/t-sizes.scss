@@ -31,10 +31,7 @@
   font-size: em($ratio--m);
   line-height: $spacing--s;
 
-  @include media($tablet) {
-    font-size: em($unit--h);
-  }
-  @include media($desktop) {
+  @include media($large) {
     font-size: em($ratio--l);
   }
 
