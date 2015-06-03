@@ -4,7 +4,7 @@
   background-size: cover;
 
   .device--is-desktop & {
-    @include position(absolute, 0 0 null 0);
+    @include position(absolute, 0 0 null -1px);
 
     z-index: $index--l;
   }
