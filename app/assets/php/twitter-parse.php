@@ -76,7 +76,7 @@
 
           <p class="o-tweet__text"><?php echo $tweet_text ?></p>
           <div class="o-tweet__info">
-            <a class="o-media__date--twitter o-iconed--small ss-twitter ss-social" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id ?>">
+            <a class="o-media__date--twitter o-iconed--small ss-twitter ss-social" href="http://twitter.com/<?php echo $tweet->user->screen_name ?>/statuses/<?php echo $tweet->id_str ?>">
               <span data-livestamp="<?php echo strtotime($tweet->created_at) ?>"></span>
             </a>
           </div>
