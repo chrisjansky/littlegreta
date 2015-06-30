@@ -20,6 +20,8 @@
 .o-media__wrap {
   position: relative;
 
+  display: block;
+
   &:after {
     content: "";
     @include overlay-gradient--solid;
@@ -46,6 +48,8 @@
   }
 
   z-index: $index--xs;
+
+  pointer-events: none;
 }
 
 [class^="o-media__date"],
@@ -53,6 +57,8 @@
   text-decoration: none;
 
   font-size: em($unit--s);
+
+  pointer-events: all;
 
   @include state--link {
     color: rgba($grey-8, .5);
