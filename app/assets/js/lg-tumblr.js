@@ -88,7 +88,8 @@ function AccessTumlbrApi(target, APIKey, options) {
         overlay.append(shortCaption, postDate);
         thisPost.addClass('o-post--photo')
             .append(
-              '<img class="o-media__image" src="' + photoSizeURL + '"/>', 
+              // Shame on me, this kind of inline nesting
+              '<a class="o-post__wrap" href="' + linkURL + '"><img class="o-media__image" src="' + photoSizeURL + '"/></a>',
               overlay
             );
         loopContainer.append(thisPost);

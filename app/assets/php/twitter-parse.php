@@ -37,7 +37,7 @@
 
               if (isset($value->media_url)) {
                 $tweet_type = "photo";
-                $tweet_media = "<div class=\"o-media__wrap\"><img class=\"o-media__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\"></div>";
+                $tweet_media = "<a href=\"http://twitter.com/{$tweet->user->screen_name}/statuses/{$tweet->id_str}\" class=\"o-media__wrap\"><img class=\"o-media__image\" src=\"{$value->media_url}:medium\" alt=\"Twitter Photo\"></a>";
               // Loop over possible types to find the correct one
               } else foreach ($possible_types as $media_type) {
 
