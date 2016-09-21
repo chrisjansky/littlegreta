@@ -17,7 +17,7 @@ block template-content
           +dummy(20, "text")
 
     .o-hero__background
-      img.o-hero__image(src="http://unsplash.it/1440/800/?image=201", alt="unsplash.it")
+      img.o-hero__image(src="http://unsplash.it/2880/1600/?image=201", alt="unsplash.it")
 
   main.l-section--light
     .l-wrap.l-wrap--section
@@ -47,17 +47,17 @@ block template-content
 
         each size in ["small", "full", "small", "medium"]
 
-            - var count = 1, width = 800, height = 450
+            - var count = 1, width = 1600, height = 900
             case size
               when "full"
-                - width = 1280
-                - height = 600
+                - width = 2560
+                - height = 1200
               when "small"
                 - count = 3
-                - width = 390
+                - width = 780
               when "medium"
                 - count = 2
-                - width = 600
+                - width = 1200
 
             - var n = 1
             while n <= count
