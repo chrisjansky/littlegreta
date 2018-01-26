@@ -44,11 +44,11 @@ $grey-0:  hsb($c-hue1 + $c-offset2, 22, 07);
 
 // Interactive.
 $c-link--light: $color-2--light;
-$c-link: $color-2;
+$c-link: $color-1;
 $c-link--dark: $color-2--dark;
 
 $c-visited: $c-link;
-$c-hover: $color-1--light;
+$c-hover: $color-1--lighter;
 
 $c-active: $color-3;
 $c-active--light: $color-3--light;
