@@ -2,3 +2,11 @@
 .device--is-desktop .m-footer .o-context {
   display: none;
 }
+
+body,
+input,
+textarea,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
