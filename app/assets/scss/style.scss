@@ -37,8 +37,6 @@
 @import "base/b-interactive";
 
 // Layout
-// 
-// Styleguide 1.
 @import "layout/l-grid";
 @import "layout/l-inline";
 @import "layout/layout";
@@ -46,15 +44,11 @@
 
 /*
 Typography
-
-Styleguide 2.
 */
 @import "typography/*";
 
 /*
 Objects
-
-Styleguide 3.
 */
 @import "objects/*";
 
