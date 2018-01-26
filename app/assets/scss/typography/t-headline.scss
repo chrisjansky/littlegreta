@@ -76,7 +76,7 @@ Styleguide 2.1.
 
 .t-h3 {
   font-size: em($ratio--m);
-  font-weight: $font__sans--medium;
+  font-weight: $font__sans--regular;
 
   @include media($large) {
     font-size: em($ratio--l);
@@ -96,7 +96,7 @@ Styleguide 2.1.
 
 .t-h4 {
   font-size: em($unit--l);
-  font-weight: $font__sans--medium;
+  font-weight: $font__sans--regular;
 
   line-height: $spacing--s;
 
@@ -116,7 +116,7 @@ Styleguide 2.1.
 
 .t-h5 {
   font-size: em($unit--m);
-  font-weight: $font__sans--medium;
+  font-weight: $font__sans--regular;
 
   @include media($large) {
     font-size: em($unit--l);

@@ -6,7 +6,7 @@
   display: block;
   
   font-size: em($ratio--m);
-  font-weight: $font__sans--medium;
+  font-weight: $font__sans--regular;
 
   @include media($large) {
     font-size: em($ratio--l);
