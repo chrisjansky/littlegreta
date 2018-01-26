@@ -1,0 +1,64 @@
+{
+  "path": "./gulp/gulpconfig.json",
+  "dev": {
+    "root": "app/",
+
+    "pagesFormat": ".html",
+    "pagesFilter": "app/**/[^_]*.html",
+
+    "templatesRoot": "app/assets/pug/",
+    "templatesPartial": "/assets/pug",
+    "templatesFilter": "app/assets/pug/**/[^_]*.pug",
+    "templatesGlob": "app/assets/pug/**/*.pug",
+
+    "dataGlob": "app/assets/data/**/*.json",
+    "dataComb": "app/assets/pug/data/",
+
+    "stylesRoot": "app/assets/scss/",
+    "stylesBase": "app/assets/scss/*.scss",
+    "stylesGlob": "app/assets/scss/**/*.scss",
+
+    "tempRoot": "app/assets/temp/",
+
+    "imagesGlob": "app/assets/images/**/*",
+
+    "svgSourceGlob": "app/assets/svg/_source/*.svg",
+    "svgBuildGlob": "app/assets/svg/*.svg",
+    "svgBuild": "app/assets/svg/",
+
+    "jsBundle": "app/assets/js/app.js"
+  },
+  "dist": {
+    "root": "dist/"
+  },
+  "move": [
+    "app/assets/svg/*.svg"
+  ],
+  "assets": [
+    "node_modules/normalize.css/normalize.css",
+    "node_modules/featherlight/src/featherlight.css",
+    "app/assets/temp/style.css",
+
+    "node_modules/featherlight/src/featherlight.js",
+    "node_modules/imagesloaded/imagesloaded.pkgd.js",
+    "node_modules/waypoints/lib/jquery.waypoints.js",
+    "node_modules/masonry-layout/dist/masonry.pkgd.js",
+
+    "bower_components/chj-framework/app/assets/js/chj-detect.js",
+
+    "app/assets/js/vendor/jquery.royalslider.js",
+    "app/assets/js/vendor/jquery.rs.autoplay.js",
+    "app/assets/js/vendor/jquery.rs.active-class.js",
+    "app/assets/js/vendor/jquery.rs.visible-nearby.js",
+
+    "app/assets/js/lg-base.js",
+    "app/assets/js/lg-tumblr.js",
+    "app/assets/js/lg-main.js",
+    "app/assets/js/lg-hover.js",
+    "app/assets/js/lg-royal.js",
+    "app/assets/js/lg-waypoints.js",
+    "app/assets/js/lg-scrollmagic.js",
+    "app/assets/js/lg-scrollto.js",
+    "app/assets/js/lg-resize.js"
+  ]
+}

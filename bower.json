@@ -15,20 +15,6 @@
     "tests"
   ],
   "devDependencies": {
-    "normalize-css": "~3.0.2",
-    "jquery": "~2.1.1",
-    "jquery-easing-original": "~1.3.1",
-    "chj-framework": "~0.4.1",
-    "modernizr": "~2.8.3",
-    "jquery-waypoints": "~3.0.1",
-    "moment": "~2.8.4",
-    "livestampjs": "~1.1.2",
-    "twitter-api-php": "git@github.com:J7mbo/twitter-api-php.git",
-    "twitter-feed-parser": "git@github.com:zadro/twitter-feed-parser.git",
-    "masonry": "~3.2.2",
-    "ScrollMagic": "~1.3.0",
-    "imagesloaded": "~3.1.8",
-    "featherlight": "~1.2.0",
-    "fastclick": "~1.0.6"
+    "chj-framework": "~0.4.1"
   }
 }
