@@ -1,7 +1,7 @@
 extends _basic
 
 append template-head
-  <!-- site:css -->
+  <!-- inject:css -->
   <!-- endinject -->
 
   <!-- vendor:js -->
@@ -10,13 +10,9 @@ append template-head
 block template-body
   include /../bower_components/chj-framework/app/assets/jade/mixins/_dummy
 
-  <!--[if lte IE 9]>
-  include ../partial/_browser
-  <![endif]-->
-
 block template-content
   p Basic template.
 
 append template-foot
-  <!-- site:js -->
+  <!-- inject:js -->
   <!-- endinject -->
