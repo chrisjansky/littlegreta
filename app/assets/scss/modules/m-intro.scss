@@ -1,115 +1,56 @@
 .m-intro {
-  background-color: $grey-0;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .device--is-desktop & {
-    @include position(absolute, 0 0 null -1px);
-
-    z-index: $index--l;
-  }
-}
-
-.m-intro__overlay {
-  background-image: #{"linear"}-gradient(to bottom, rgba($grey-1, .625), transparent);
-
-  @include wrap-push;
-}
-
-.m-intro__content {
   position: relative;
+  text-align: center;
 
-
-  @include media($phone) {
-    padding-top: em($ratio--xxl);
-  }
-
-  @include media($phablet) {
-    padding-top: em($ratio--l);
-
-    height: 80vh;
-    min-height: em(240);
-    max-height: em(320);
-
-    @include shift(2 of $columns__phablet);
-  }
-
-  @include media($large) {
-    padding-top: em($ratio--xl);
-
-    height: 62vh;
-    min-height: em(320);
-    max-height: em(640);
-  }
-
-  @include media($tablet) {
-    @include shift(2 of $columns__tablet);
-  }
-
-  @include media($desktop) {
-    @include shift(4 of $columns__desktop);
-  }
-}
-
-.m-intro__text {
-  color: white;
-
-  margin-bottom: 0;
-  padding-bottom: em($ratio--b);
+  color: $color-1;
+  background-color: white;
   
-  @include media($phone) {
-    text-align: center;
-  }
+  padding: 4em 5em;
 
-  @include media($portable) {
-    @include position(absolute, null 0 0 0);
-  }
-}
-
-.m-intro__lift {
-  display: none;
-
-  .device--is-desktop & {
-    display: block;
-  }
-
-  @include position(fixed, null 0 0 0);
-
-  @include wrap-push;
-
-  @include padding(0 null em($ratio--m));
-
-  z-index: $index--m;
-
-  text-decoration: none;
-
-  transition: transform $duration--l, opacity $duration--l, color $duration--b;
-
-  @include state--link {
-    color: $color-4--light;
-  }
-  @include state--hover {
-    color: $color-4--lighter;
-  }
-
-  .top--is-moved & {
-    opacity: 0;
-    transform: translateY(em($ratio--l));
-  }
-
-  &:after {
+  &:before {
     content: "";
-    @include overlay-gradient;
-    top: -200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    mix-blend-mode: soft-light;
+    pointer-events: none;
 
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(farthest-side at 25% 25%, cyan, indigo);
+
   }
-}
 
-.m-intro__mark {
-  // Reset <mark>
-  background-color: transparent;
-  color: inherit;
+  &__logo {
+    fill: currentColor;
+    display: inline-block;
 
-  @include shift(4 of $columns__desktop);
+    margin-bottom: 1.5em;
+  }
+
+  &__text {
+    position: relative;
+    max-width: 20em;
+    margin: 0 auto;
+
+    font-size: 4.5em;
+    font-weight: $font__sans--light;
+    line-height: 1.25;
+
+    strong {
+      font-weight: $font__sans--bold;
+    }
+  }
+
+  &__nav {
+    margin-top: 3em;
+  }
+
+  &__nav-link {
+    font-size: 1.25em;
+    padding: 1em;
+    margin: 1.5em;
+  }
 }

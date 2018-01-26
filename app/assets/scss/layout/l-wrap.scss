@@ -55,19 +55,5 @@
 }
 
 .l-wrap--section {
-  // Always max-width --85%-- 90% of next breakpoint
-  // @include media($phone) {
-  //   max-width: em(400);
-  // }
-  // @include media($phablet) {
-  //   max-width: em(650);
-  // }
-  // @include media($tablet) {
-  //   max-width: em(880);
-  // }
-  // @include media($desktop) {
-  //   max-width: em(1130);
-  // }
-
   @include wrap-push;
 }

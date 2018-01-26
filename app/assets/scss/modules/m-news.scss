@@ -1,45 +1,113 @@
 .m-news {
-  position: relative;
+  background-color: $grey-1;
 
-  background-color: $grey-2;
+  &__item {
+    display: block;
+    position: relative;
 
-  .device--is-desktop & {
-    margin-top: 38vh;
+    height: 80vmin;
+    overflow: hidden;
+
+    text-align: center;
+    text-decoration: none;
+
+    &:link {
+      color: white;
+    }
   }
-}
 
-.m-news__item {
-  .top--is-off & .rsImg {
-    opacity: .25;
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3em;
+
+    &:before {
+      content: "";
+    }
   }
 
-  .top--is-off .rsActiveSlide & .rsImg {
-    opacity: 1;
-  }
-}
+  &__title {
+    position: relative;
 
-.m-news__overlay {
-  // modernizr class used to overwrite when at of the page
-  .csstransforms .device--is-desktop & {
+    font-size: 4.5em;
+    font-weight: $font__sans--bold;
+    line-height: 1.25;
+    letter-spacing: -.125rem;
+
+    margin: 0;
+
+    transition: transform 10s;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 4px;
+
+      background-image: linear-gradient(to right, $color-1--lighter, $color-1--darker);
+
+      transform: scaleY(0);
+      transition: transform .5s;
+    }
+
+    .m-news__item:hover & {
+      transform: scale(1.15);
+      background-size: 100px 6px;
+    }
+    .m-news__item:hover &:after {
+      transform: scaleY(1);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    opacity: .5;
+
+    object-fit: cover;
+
+    transition: opacity .5s, transform 10s;
+
+    .m-news__item:hover & {
+      opacity: .75;
+      transform: scale(1.1);
+    }
+  }
+
+  &__hint {
+    font-weight: $font__sans--regular;
+    font-size: .875em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+
+    padding: 1.25em 2.5em;
+    background-color: rgba(black, .75);
+    border-radius: 1.75em;
+
+    backdrop-filter: saturate(180%) blur(20px);
+
+    transition: transform .25s, opacity .25s;
+    transform: translateY(.5em);
     opacity: 0;
-    transform: translateY(em($ratio--l));
-  }
-  .top--is-off .rsActiveSlide & {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.m-news__content {
-  @include media($phablet) {
-    @include shift(2 of $columns__phablet);
-  }
-
-  @include media($tablet) {
-    @include shift(2 of $columns__tablet);
-  }
-
-  @include media($desktop) {
-    @include shift(4 of $columns__desktop);
+    .m-news__item:hover & {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
