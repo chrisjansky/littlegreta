@@ -1,28 +1,14 @@
 .m-services {
   @include clearfix;
 
-  @include media($small) {
-    margin-top: em($ratio--m);
-  }
-  @include media($large) {
-    margin-top: em($ratio--l);
-  }
-}
-
-.m-services__title {
-  color: $grey-2;
-
-  text-align: center;
+  margin-top: 1em;
 }
 
 .m-services__container {
   @include clearfix;
 }
 
-[class^="m-services__item"],
-[class*=" m-services__item"] {
-  text-align: center;
-
+.m-services__item {
   margin-top: em($unit--xxl);
 
   @include media($large) {
@@ -32,42 +18,19 @@
   @include media($tablet) {
     @include span-columns($columns__tablet / 2 of $columns__tablet);
     @include omega(2n);
-
-    text-align: left;
   }
+
   @include media($desktop) {
     @include span-columns(3 of $columns__desktop);
   }
 }
 
-.m-services__icon {
-  max-width: em(100);
+[class^="m-services__name"],
+[class*=" m-services__name"] {
+  font-size: 1.5em;
+  font-weight: $font__sans--bold;
 
-  @include margin(null auto);
-
-  @include media($tablet) {
-    width: 100%;
-
-    float: left;
-
-    margin-right: em($ratio--m);
-  }
-  @include media($desktop) {
-    max-width: em($ratio--h);
-  }
-}
-
-.m-services__circle {
-  padding-bottom: 100%;
-  border-radius: 50%;
-
-  background: white no-repeat center / 60%;
-}
-
-.m-services__name {
-  margin-bottom: 0;
-
-  margin-top: em($ratio--s);
+  margin: 0;
 
   @include media($tablet) {
     overflow: auto;
@@ -79,71 +42,19 @@
   }
 }
 
-.m-services__item--digital {
-  .m-services__name {
-    color: $color-1;
-  }
-  .m-services__circle {
-    background-image: url("../images/about_digital.png");
-  }
-}
-.m-services__item--graphic {
-  .m-services__name {
-    color: $color-4;
-  }
-  .m-services__circle {
-    background-image: url("../images/about_graphic.png");
-  }
-}
-.m-services__item--multimedia {
-  .m-services__name {
-    color: $color-3;
-  }
-  .m-services__circle {
-    background-image: url("../images/about_multimedia.png");
-  }
-}
-.m-services__item--creation {
-  .m-services__name {
-    color: $color-2;
-  }
-  .m-services__circle {
-    background-image: url("../images/about_creation.png");
-  }
-}
+.m-services__name--digital    {color: $color-1; }
+.m-services__name--graphic    {color: $color-4; }
+.m-services__name--multimedia {color: $color-3; }
+.m-services__name--creation   {color: $color-2; }
 
 .m-services__list {
-  margin-top: em($ratio--xs);
+  margin-top: 1em;
+  padding-left: 0;
 
-  @include media($small) {
-    li {
-      display: inline-block;
-
-      &:before {
-        left: em($ratio--xxs);
-      }
-
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:first-child:before {
-        display: none;
-      }
-    }
-  }
-
-  @include media($large) {
-    text-align: left;
-  }
-
-  @include media($tablet) {
-    overflow: auto;
-  }
+  color: $grey-3;
+  list-style-type: none;
 
   @include media($desktop) {
-    display: inline-block;
-
     line-height: $spacing--m;
   }
 }

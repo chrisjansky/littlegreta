@@ -15,22 +15,6 @@
   }
 }
 
-.t-h1__emphasis {
-  display: inline-block;
-  vertical-align: 20%;
-
-  color: $grey-7;
-
-  font-family: $font__sans;
-  font-weight: $font__sans--bold;
-  font-size: .4em;
-
-  text-transform: uppercase;
-  letter-spacing: em($ratio--t);
-
-  border-bottom: $line--b solid $grey-8;
-}
-
 .t-h2 {
   font-size: em($unit--xl);
   font-weight: $font__sans--light;

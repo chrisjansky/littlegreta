@@ -1,27 +1,18 @@
-.o-cta {
+[class^="o-cta"],
+[class*=" o-cta"] {
   display: inline-block;
 
-  @include padding(null em($ratio--b));
-
+  text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: .125em;
 
-  line-height: em($height--b);
+  padding: 1em 2em;
+  line-height: 1;
 
-  @include media($large) {
-    font-size: em($unit--m);
-    line-height: em($height--m, $unit--m);
-  }
+  border-radius: 1.625em;
+  box-shadow: 0 0 0 1px $grey-8;
 
-  border: $line--b solid;
-  border-radius: $radius--l;
-
-  &:before, &:after {
-    font-size: #{$icon--b}px;
-  }
-  &:before {
-    margin-right: em($ratio--xxs);
-  }
-
+  transition: box-shadow .25s, color .25s;
 
   @include media($phone) {
     display: block;
@@ -43,11 +34,11 @@
 .o-cta--light {
   @include state--link {
     color: $color-1;
-    border-color: $grey-8;
   }
   @include state--active {
-    color: $color-1--dark;
-    border-color: $grey-7;
+    color: $color-1--lighter;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1);
   }
 }
 .o-cta--dark {

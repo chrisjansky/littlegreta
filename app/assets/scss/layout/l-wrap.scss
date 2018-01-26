@@ -15,7 +15,7 @@
     padding: em($ratio--l);
   }
   @include media($desktop) {
-    padding: em($unit--h);
+    padding: 4em;
   }
 }
 

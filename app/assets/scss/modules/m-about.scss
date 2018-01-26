@@ -1,57 +1,39 @@
 .m-about {
-  position: relative;
-  z-index: $index--l;
-}
-
-.m-about__header {
-  @include collapse-children;
-  @include clearfix;
-}
-
-.m-about__title {
-  text-align: center;
-  
-  .m-about--short & {
-    color: $grey-1;
-  }
-  .m-about--long & {
-    color: $grey-2;
-  }
-}
-
-.m-about__intro {
   text-align: center;
 
-  @include media($tablet) {
-    @include span-columns(7 of $columns__tablet);
-    @include shift(1 of $columns__tablet);
+  &__header {
+    @include collapse-children;
   }
 
-  @include media($desktop) {
-    @include span-columns(8 of $columns__desktop);
-    @include shift(2 of $columns__desktop);
+  &__title {
+    font-size: 4.5em;
+    font-weight: $font__sans--regular;
+    line-height: 1;
   }
 
-  .m-about--short & {
-    margin-top: 0;
+  &__emphasis {
+    display: inline-block;
+    vertical-align: 20%;
+
+    color: $grey-6;
+
+    font-family: $font__display;
+    font-weight: $font__display--book;
+    font-style: italic;
+    font-size: .5em;
   }
-  .m-about--long & {
+
+  &__intro {
+    font-size: 1.5em;
     color: $grey-3;
 
-    @include media($small) {
-      text-align: left;
-    }
+    max-width: 45em;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-.m-about__outro {
-  text-align: center;
 
-  margin-top: em($ratio--m);
-  margin-bottom: em($ratio--l);
-
-  @include media($large) {
-    margin-top: em($ratio--l);
-    margin-bottom: em($ratio--xl);
+  &__outro {
+    margin-top: 2.5em;
   }
 }
 
