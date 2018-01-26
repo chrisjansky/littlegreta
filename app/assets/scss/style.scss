@@ -49,52 +49,17 @@ Typography
 
 Styleguide 2.
 */
-@import "typography/typography";
-@import "typography/t-headline";
-@import "typography/t-sizes";
+@import "typography/*";
 
 /*
 Objects
 
 Styleguide 3.
 */
-@import "objects/objects";
-@import "objects/navigation";
-@import "objects/o-button";
-@import "objects/o-context";
-@import "objects/o-cta";
-@import "objects/o-dotlist";
-@import "objects/o-dropdown";
-@import "objects/o-exit";
-@import "objects/o-gallery";
-@import "objects/o-header";
-@import "objects/o-input";
-@import "objects/icons";
-@import "objects/o-logo";
-@import "objects/o-hero";
-@import "objects/o-media";
-@import "objects/o-person";
-@import "objects/o-post";
-@import "objects/o-sizer";
-@import "objects/o-social";
-@import "objects/o-slider";
-@import "objects/o-submit";
-@import "objects/o-tweet";
-@import "objects/o-triplet";
-@import "objects/o-work";
+@import "objects/*";
 
 @import "misc/temp";
 @import "misc/svg";
 
 // Modules
-@import "modules/modules";
-@import "modules/m-intro";
-@import "modules/m-contact";
-@import "modules/m-news";
-@import "modules/m-about";
-@import "modules/m-services";
-@import "modules/m-subscribe";
-@import "modules/m-portfolio";
-@import "modules/m-people";
-@import "modules/m-blog";
-@import "modules/m-footer";
+@import "modules/*";
