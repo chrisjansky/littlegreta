@@ -36,7 +36,6 @@ $RECYCLE.BIN/
 
 ## Custom
 app/*.html
-app/*.php
 
 _ignore
 _build
@@ -44,12 +43,7 @@ _source_files
 
 dist
 
-app/guide
-app/assets/css
-app/assets/royal
+app/assets/temp
 app/assets/fonts
-app/assets/svg/*.svg
-app/assets/svg/*.html
-app/assets/images/fallbacks
-
-app/assets/php/twitter-config.php
+app/assets/pug/data
+app/assets/svg/*
