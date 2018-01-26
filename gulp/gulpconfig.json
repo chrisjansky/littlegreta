@@ -46,16 +46,10 @@
 
     "bower_components/chj-framework/app/assets/js/chj-detect.js",
 
-    "app/assets/js/vendor/jquery.royalslider.js",
-    "app/assets/js/vendor/jquery.rs.autoplay.js",
-    "app/assets/js/vendor/jquery.rs.active-class.js",
-    "app/assets/js/vendor/jquery.rs.visible-nearby.js",
-
     "app/assets/js/lg-base.js",
     "app/assets/js/lg-tumblr.js",
     "app/assets/js/lg-main.js",
     "app/assets/js/lg-hover.js",
-    "app/assets/js/lg-royal.js",
     "app/assets/js/lg-waypoints.js",
     "app/assets/js/lg-scrollto.js",
     "app/assets/js/lg-resize.js"
