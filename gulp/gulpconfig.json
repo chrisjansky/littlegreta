@@ -51,7 +51,6 @@
     "app/assets/js/lg-main.js",
     "app/assets/js/lg-hover.js",
     "app/assets/js/lg-waypoints.js",
-    "app/assets/js/lg-scrollto.js",
-    "app/assets/js/lg-resize.js"
+    "app/assets/js/lg-scrollto.js"
   ]
 }
