@@ -1,9 +1,7 @@
 .o-exit {
-  border-top-width: $line--s;
-  border-top-style: solid;
+  margin-top: 3em;
 
-  margin-top: em($ratio--l);
-  padding-top: em($ratio--b);
+  text-align: center;
 }
 
 // No l-inline used, align text like it

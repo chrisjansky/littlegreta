@@ -32,3 +32,16 @@
     @include margin(null auto);
   }
 }
+
+.m-footer__actions {
+  margin-top: 3em;
+}
+
+.m-footer__copyright {
+  display: block;
+  margin-top: 5em;
+
+  font-size: .625em;
+  text-align: center;
+  color: $grey-4;
+}
