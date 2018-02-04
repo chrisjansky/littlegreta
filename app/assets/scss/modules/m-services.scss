@@ -1,45 +1,20 @@
 .m-services {
-  @include clearfix;
+  display: flex;
+  justify-content: space-around;
 
-  margin-top: 1em;
-}
-
-.m-services__container {
-  @include clearfix;
+  margin-top: 4em;
 }
 
 .m-services__item {
-  margin-top: em($unit--xxl);
-
-  @include media($large) {
-    margin-top: em($unit--l);
-  }
-  
-  @include media($tablet) {
-    @include span-columns($columns__tablet / 2 of $columns__tablet);
-    @include omega(2n);
-  }
-
-  @include media($desktop) {
-    @include span-columns(3 of $columns__desktop);
-  }
+  font-size: 1.125em;
 }
 
 [class^="m-services__name"],
 [class*=" m-services__name"] {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: $font__sans--bold;
 
   margin: 0;
-
-  @include media($tablet) {
-    overflow: auto;
-
-    padding-left: em($ratio--b, $unit--l);
-  }
-  @include media($desktop) {
-    margin-top: em($ratio--b);
-  }
 }
 
 .m-services__name--digital    {color: $color-1; }
@@ -48,7 +23,7 @@
 .m-services__name--creation   {color: $color-2; }
 
 .m-services__list {
-  margin-top: 1em;
+  margin-top: .5em;
   padding-left: 0;
 
   color: $grey-3;

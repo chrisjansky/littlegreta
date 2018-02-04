@@ -5,7 +5,7 @@
   color: $color-1;
   background-color: white;
   
-  padding: 4em 5em;
+  @include new-wrap;
 
   &:before {
     content: "";
@@ -35,7 +35,7 @@
     max-width: 20em;
     margin: 0 auto;
 
-    font-size: 4.5em;
+    font-size: $font--700;
     font-weight: $font__sans--light;
     line-height: 1.25;
 
@@ -45,7 +45,7 @@
   }
 
   &__nav {
-    margin-top: 3em;
+    margin-top: 3.5em;
   }
 
   &__nav-link {

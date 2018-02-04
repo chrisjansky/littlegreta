@@ -1,3 +1,7 @@
+@mixin new-wrap {
+  padding: 5em;
+}
+
 .l-wrap {
   // Changed
   padding: em($unit--xl) em($unit--b);

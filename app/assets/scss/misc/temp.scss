@@ -1,12 +1,23 @@
-// Not proud of this
-.device--is-desktop .m-footer .o-context {
-  display: none;
-}
-
 body,
 input,
 textarea,
 button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.m-about__partners {
+  text-align: center;
+
+  margin-top: em($ratio--m);
+
+  @include media($large) {
+    margin-top: em($ratio--l);
+  }
+}
+
+.m-about__smallcaps {
+  display: block;
+
+  margin-bottom: em($ratio--m);
 }

@@ -84,8 +84,4 @@
   @include media($large) {
     line-height: em($circle--b);
   }
-
-  &:before {
-    vertical-align: -20%; // Optical magic number
-  }
 }

@@ -93,3 +93,6 @@ $ratio--s:   round(modular-scale(-1, $base-1, $multiplier-1));
 $ratio--xs:  round(modular-scale(-2, $base-1, $multiplier-1));
 $ratio--xxs: round(modular-scale(-3, $base-1, $multiplier-1));
 $ratio--t:   round(modular-scale(-4, $base-1, $multiplier-1));
+
+// New font sizes
+$font--700: 4.5em;
