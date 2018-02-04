@@ -1,106 +1,74 @@
 .m-portfolio {
-  position: relative;
-
-  background-color: $grey-0;
-
-  overflow: hidden;
-}
-
-.m-portfolio__content {
-  @include media($tablet) {
-    @include shift(2 of $columns__tablet);
-  }
-}
-
-.m-portfolio__item {
-  .device--is-desktop & .rsImg {
-    opacity: .25;
-  }
-
-  .rsActiveSlide & .rsImg {
-    opacity: 1;
-  }
-}
-
-.m-portfolio__info {
-  @include media($small) {
-    .device--is-mobile & {
-      transition: max-height $duration--l;
-      
-      max-height: 0;
-      overflow-y: hidden;
-    }
-    .hover--is-active & {
-      max-height: em(200);
-    }
-  }
-
-  @include media($desktop) {
-    width: 75%;
-
-    float: left;
-  }
-
-  margin-top: 0;
-}
-
-.m-portfolio__button {
-  @include media($phablet) {
-    display: block;
-
-    text-align: center;
-  }
-
-  @include media($mobile) {
-    .o-slider__item--last & {
-      margin-bottom: em($unit--xl);
-    }
-  }
-
-  @include media($desktop) {
-    float: right;
-  }
-}
-
-.m-portfolio__hint {
-  position: absolute;
-
-  @include media($small) {
-    left: em($ratio--xl);
-    right: em($ratio--xl);
-
-    bottom: em($ratio--m);
-  }
-
-  @include media($tablet) {
-    text-align: right;
-
-    right: em($ratio--l);
-
-    bottom: em($ratio--l);
-  }
-
-  @include media($desktop) {
-    width: 20%;
-
-    right: 0;
-    // Magic number FTW
-    bottom: 22.5%;
-  }
-
   text-align: center;
 
-  transition: transform $duration--b, opacity $duration--b, visibility 0 $duration--b;
+  &__title {
+    font-size: 2.5em;
+    font-weight: $font__sans--light;
+    margin-bottom: 1em;
+  }
 
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(em($ratio--l));
+  &__wrap {
+    padding: 0 2em 6em;
+  }
 
-  .carousel--at-end & {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
+  &__loop {
+    @include clearfix;
+  }
 
-    transition-delay: 0;
+  &__holder {
+    overflow: hidden;
+    background-color: black;
+  }
+
+  &__item {
+    float: left;
+    width: 50%;
+
+    padding: 2em;
+
+    text-align: left;
+    text-decoration: none;
+    @include link--black;
+  }
+
+  &__image {
+    transition: opacity .25s, transform 10s;
+
+    .m-portfolio__item:hover & {
+      opacity: .75;
+      transform: scale(1.1);
+    }
+  }
+
+  &__info {
+    position: relative;
+
+    font-size: 1.25em;
+  }
+
+  &__name {
+    display: block;
+    font-weight: $font__sans--regular;
+
+    margin-top: 1em;
+
+    .m-portfolio__item:hover & {
+      visibility: hidden;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    top: 0;
+
+    margin: 0;
+
+    .m-portfolio__item:not(:hover) & {
+      visibility: hidden;
+    }
+  }
+
+  &__button {
+    margin-top: 2em;
   }
 }

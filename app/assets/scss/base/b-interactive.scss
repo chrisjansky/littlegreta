@@ -8,6 +8,15 @@
   }
 }
 
+@mixin link--black {
+  @include state--link {
+    color: black;
+  }
+  @include state--hover {
+    color: rgba(black, .75);
+  }
+}
+
 // Used in works exit
 .i-link--dark {
   @include state--link {

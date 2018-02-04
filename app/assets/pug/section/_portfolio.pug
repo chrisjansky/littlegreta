@@ -1,23 +1,16 @@
-section#portfolio.m-portfolio.o-blur--grey(data-portfolio)
+section.m-portfolio
+  .m-portfolio__wrap
+    h1.m-portfolio__title Selected Projects
 
-  .m-portfolio__slider.o-slider(data-carousel)
+    .m-portfolio__loop
+      each item in [1, 2, 3, 4]
+        a(href="javascript:").m-portfolio__item
+          .m-portfolio__holder
+            img.m-portfolio__image(src="http://source.unsplash.com/random/1440x810?sig=" + item, alt="Portfolio image")
+          .m-portfolio__info
+            strong.m-portfolio__name
+              faker-name-title/
+            p.m-portfolio__description
+              +dummy(25)
 
-    each instance, index in [141, 416, 426, 447, 555, 20, 40]
-
-      - var itemClass
-      - if (index === 6)
-        - itemClass = "o-slider__item--last"
-
-      article.m-portfolio__item.o-slider__item(data-hover, class=itemClass)
-        .m-portfolio__overlay.o-slider__overlay.l-wrap
-
-          .m-portfolio__content.o-slider__content
-            h3.t-h3
-              +dummy(5, "words")
-            p.m-portfolio__info
-              +dummy(30, "text")
-            a(href="case-study").m-portfolio__button.o-slider__button.o-button--text.ss-zoomin.right Read More
-
-        a.o-slider__image.rsImg(href="http://unsplash.it/2320/1600/?image=#{instance}") unsplash.it
-
-  a(href="our-work").m-portfolio__hint.o-button--text.o-button--medium.i-link--2.ss-right.right View Portfolio
+    a.m-portfolio__button.o-cta--light(href="javascript:") View More Projects
