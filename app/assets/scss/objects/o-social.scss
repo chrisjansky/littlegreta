@@ -26,14 +26,24 @@
   }
 }
 
+.o-social__link--facebook {
+  @include state--link {
+    color: $c-facebook;
+  }
+}
 .o-social__link--twitter {
   @include state--link {
     color: $c-twitter;
   }
 }
-.o-social__link--youtube {
+.o-social__link--instagram {
   @include state--link {
-    color: $c-youtube;
+    color: $c-instagram;
+  }
+}
+.o-social__link--vimeo {
+  @include state--link {
+    color: $c-vimeo;
   }
 }
 .o-social__link--tumblr {
