@@ -22,12 +22,13 @@
 @import "neat";
 
 // Vendor
-@import "vendor/neat";
 @import "chj-framework/app/assets/scss/vendor/symbolset";
+@import "vendor/neat";
 @import "vendor/symbolset";
 @import "vendor/symbolset-social";
 @import "vendor/mailchimp";
 @import "vendor/featherlight";
+@import "vendor/lazyload";
 
 // Base
 @import "chj-framework/app/assets/scss/base/b-default";

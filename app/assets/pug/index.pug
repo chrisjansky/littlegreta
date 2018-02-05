@@ -16,7 +16,7 @@ block template-content
           h2.m-news__title
             faker-name-title/
           strong.m-news__hint View Success Story
-        img.m-news__image(src="http://source.unsplash.com/random/1920x1000?sig=" + item, alt="Placeholder")
+        img.m-news__image(data-src="http://source.unsplash.com/random/1920x1000?sig=" + item, data-lazy, alt="Placeholder")
 
   include section/_about--short
   include section/_portfolio
