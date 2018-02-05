@@ -1,0 +1,78 @@
+mixin about(type)
+  section.m-about
+    .m-about__wrap
+      if type == "short"
+        header.m-about__header
+          h1.m-about__title
+            span.t-gradient--1 Little
+            | 
+            span.m-about__emphasis but
+            | 
+            span.t-gradient--2 Great
+
+          p.m-about__intro In 2005, still at university, we started Little Greta. Since then we've grown into a full service communication and design agency operating in four countries around the world. In 2016 we set up in London, one the world's greatest cities, to further accelerate our global growth.
+
+        section.m-services
+          article.m-services__item
+            h1.m-services__name--graphic Graphic Design
+            ul.m-services__list
+              li Corporate design
+              li Brand design
+              li POS, POP
+              li Packaging
+              li Illustration
+
+          article.m-services__item
+            h1.m-services__name--digital Digital
+            ul.m-services__list
+              li Web design and build
+              li Web apps, microsites
+              li Mobile apps
+              li UX, GUI
+              li Social media
+
+          article.m-services__item
+            h1.m-services__name--multimedia Multimedia
+            ul.m-services__list
+              li Video
+              li Animation
+              li Motion graphics
+              li Photography
+              li 3D visualization
+
+          article.m-services__item
+            h1.m-services__name--creation Creation
+            ul.m-services__list
+              li Strategy
+              li Conceptualisation
+              li Copywriting
+              li Content management
+              li Translation
+
+        .m-about__outro
+          a.o-cta--light(href="about-us") Get to know us better
+
+      if type == "full"
+        header.m-about__header
+          h1.m-about__title Meet one 
+            span.t-gradient--3 little-but-great
+            |  team
+
+          p.m-about__intro We have what it takes to cater for international clients of all sizes, while we stay true to our roots as little but greatly effective.
+
+        .m-about__text
+          p After 5 years of expansion, providing a complete design and marketing communication service from a base across the water, in 2016 we set up in London. So for clients it's the best of both worlds. Because our infrastructure remains mostly in the Czech Republic, which means your budget goes further. Plus you get international talent, Czech reliability (think modern-day Skoda), local British insight, backed up by 20+ years' agency experience from our London associates. We also cover German-speaking markets from Munich, Germany; and the USA from New York. We're members of United Advertising Network, a global pool of agencies sharing the sector's latest innovations, best practice and market research.
+          p We partner with the Faculty of Multimedia Communication, the world's 11th best arts and design faculty on the Red Dot global rankings, where we regularly offer work experience to some of the Europe’s brightest and most creative students.
+
+        aside.m-about__partners
+          strong.m-about__smallcaps.t-smallcaps--light Our Partners
+          
+          .o-imagegrid
+            a.o-imagegrid__item(href="http://www.unitedadnet.net/", title="A member of United Advertising Network")
+              img(src="assets/images/partners/logo-united.svg", width="180", alt="United Adnet")
+            a.o-imagegrid__item(href="http://web.fmk.utb.cz/?lang=en", title="Partner of FMC TBU")
+              img(src="assets/images/partners/logo-utb.svg", width="200", alt="Tomas Bata University in Zlin, FMC")
+            a.o-imagegrid__item(href="http://kreativnizlin.cz/en", title="Kreativní Zlín")
+              img(src="assets/images/partners/logo-zcc.svg", width="120", alt="Kreativní Zlín")
+            a.o-imagegrid__item(href="http://www.britishchamber.cz/", title="British Chamber of Commerce Czech Republic")
+              img(src="assets/images/partners/logo-bcc.svg", width="170", alt="British Chamber of Commerce Czech Republic")
