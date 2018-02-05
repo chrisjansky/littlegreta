@@ -31,9 +31,9 @@ $color-4:          hsb($c-hue4, 045, 090);
 $color-4--dark:    hsb($c-hue4, 055, 080);
 
 // Neutral colors.
-$grey-9:  hsb($c-hue1, 04, 97);
-$grey-8:  hsb($c-hue1, 06, 87);
-$grey-7:  hsb($c-hue1, 08, 77);
+$grey-9:  hsb($c-hue1, 01, 97);
+$grey-8:  hsb($c-hue1, 02, 87);
+$grey-7:  hsb($c-hue1, 03, 77);
 $grey-6:  hsb($c-hue1 + $c-offset1, 10, 67);
 $grey-5:  hsb($c-hue1 + $c-offset1, 12, 57);
 $grey-4:  hsb($c-hue1 + $c-offset1, 14, 47);
