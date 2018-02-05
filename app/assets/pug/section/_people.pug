@@ -1,13 +1,10 @@
-include ../../data/departments.json
-
 section.m-people.l-section--light
   .l-wrap.l-wrap--section
 
     h3.m-people__title.t-h3
-      span.t-gradient--light Our People
+      span.t-gradient--3 Our People...
 
     .m-people__list
-
       each group in departments
 
         - var memberCount = 5
@@ -23,10 +20,10 @@ section.m-people.l-section--light
           - var random = Math.floor((Math.random() * 2))
           - var person = group.members[random]
 
-          div.o-person(class="o-person--#{group.title}", data-hover)
+          div.o-person(class="o-person--" + group.title, data-hover)
             .o-person__portrait
               .o-person__circle.o-circle
-                img.o-person__image(src="assets/images/#{person.image}", alt="Portrait of #{person.name}")
+                img.o-person__image(src="assets/images/people/" + person.image, alt="Portrait of " + person.name)
 
             .o-person__info
               strong.o-person__name.t-caps= person.name

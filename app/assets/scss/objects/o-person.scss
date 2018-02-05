@@ -1,30 +1,11 @@
 .o-person {
   position: relative;
-  margin-bottom: em($ratio--b);
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
+
+  margin: 1em;
+  flex-basis: 18em;
 
   &:hover {
     cursor: pointer;
-  }
-
-  @include media($phablet) {
-    @include span-columns(3 of $columns__phablet);
-    @include omega(2n);
-  }
-
-  @include media($tablet) {
-    @include span-columns(3 of $columns__tablet);
-    @include omega(3n);
-  }
-
-  @include media($desktop) {
-    @include span-columns(3 of $columns__desktop);
-    @include omega(4n);
-
-    margin-bottom: em($ratio--m);
   }
 }
 
@@ -33,21 +14,25 @@
 }
 
 .o-person__circle {
-  margin-right: em($ratio--b);
+  margin-right: 1em;
 }
 
 .o-person__image {
   border-radius: 50%;
-  transition: transform $duration--s;
+  filter: grayscale(100%);
+
+  transition: transform $duration--s, filter $duration--s;
 
   .device--is-desktop .o-person:hover &,
   .hover--is-active & {
+    filter: grayscale(0);
     transform: scale(.95);
   }
 }
 
 .o-person__name {
   display: block;
+  font-weight: $font__sans--bold;
 
   transition: color $duration--s;
 
@@ -145,13 +130,11 @@
   }
 }
 
-
 .o-person__content {
-  background-color: rgba($grey-1, $opacity--m);
   color: $grey-8;
+  background-color: rgba($grey-1, $opacity--m);
 
   padding: em($ratio--b);
-
   border-radius: $radius--l;
 
   font-size: em($unit--s);
