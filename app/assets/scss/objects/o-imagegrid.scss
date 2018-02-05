@@ -1,0 +1,15 @@
+.o-imagegrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    margin: 1.5em;
+
+    opacity: .5;
+
+    @include state--hover {
+      opacity: 1;
+    }
+  } 
+}

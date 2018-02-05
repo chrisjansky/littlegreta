@@ -4,10 +4,8 @@ block template-content
   .m-intro
     a.m-intro__logo(href="index.html")
       include ../svg/logo_symbol.svg
-    h1.m-intro__text We are #[strong Little Greta], #[br]a multidisciplinary agency helping brands launch, relaunch and grow.
-    nav.m-intro__nav
-      each instance in pages
-        a.m-intro__nav-link(href=instance.anchor)= instance.name
+    h1.m-intro__title We are #[strong Little Greta], #[br]a multidisciplinary agency helping brands launch, relaunch and grow.
+    +introNav("index")
 
   .m-news
     each item in [1, 2, 3]

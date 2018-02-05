@@ -1,16 +1,14 @@
 extends templates/_site
 
 block template-content
-  - var sticky = {current: "About Us"}
-  include partial/_sticky
+  .m-intro
+    a.m-intro__logo(href="index.html")
+      include ../svg/logo_symbol.svg
+    h1.m-intro__text Meet good-karma believers, fair players, dreamers-but-doers and enthusiasts full of ideas.
+    +introNav("about-us")
 
-  - var intro = {background: "top/photo2.jpg", text: "We are little, but we are great. Learn more about how we work.", anchor: "#about", hint: "Continue"}
-  include section/_intro
-
-  section.o-hero.o-hero--slim(data-toward)
-    .o-fog
-    .o-hero__background
-      img.o-hero__image(src="http://unsplash.it/2880/1600/?image=534", alt="unsplash.it")
+  section.o-hero
+    img.o-hero__image(data-src="http://source.unsplash.com/wgivdx9dBdQ/1920x1080", data-lazy, alt="About Us image")
 
   include section/_about--long
 

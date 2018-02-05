@@ -1,0 +1,8 @@
+mixin introNav(active)
+  nav.m-intro__nav
+    each instance in pages
+      unless active == "index" && instance.anchor == active
+        if active == instance.anchor
+          mark.m-intro__nav-active= instance.name
+        else
+          a.m-intro__nav-link(href=instance.anchor)= instance.name
