@@ -1,70 +1,18 @@
 .o-logo {
-  display: block;
+  display: inline-block;
 
-  transition: transform $duration--b;
+  fill: currentColor;
+  text-decoration: none;
 
   svg {
-    fill: black;
-
-    margin: em($ratio--t);
+    vertical-align: middle;
   }
 
-  @include media($mobile) {
-    svg {
-      width: em(90);
-    }
+  &__text {
+    font-size: 1.375em;
+    font-weight: $font__sans--bold;
+    margin-left: .75em;
+
+    vertical-align: middle;
   }
-
-  @include media($portable) {
-    position: absolute;
-  }
-
-  @include media($desktop) {
-    top: em($unit--b);
-    left: 0;
-
-    transform: translate(em($ratio--xl), em($ratio--m));
-
-    svg {
-      width: em(120);
-    }
-  }
-
-  .top--is-moved & {
-    transform: translate(0, 0);
-  }
-}
-
-.o-logo__content {
-  overflow: hidden;
-
-  @include margin(null auto);
-
-  @include media($mobile) {
-    width: em(90);
-    height: em(45);
-  }
-
-  @include media($desktop) {
-    width: em(120);
-    height: em(60);
-  }
-
-  padding: em($ratio--t);
-
-  box-sizing: content-box;
-
-  transition: transform $duration--b, opacity $duration--s;
-
-  .top--is-moved & {
-    transform: scale(.75);
-  }
-
-  @include state--hover {
-    opacity: .75;
-  }
-}
-
-.o-logo__title {
-  display: block;
 }
