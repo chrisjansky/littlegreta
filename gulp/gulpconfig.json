@@ -51,7 +51,6 @@
     "app/assets/temp/bundle.js",
     "app/assets/js/lg-base.js",
     "app/assets/js/lg-main.js",
-    "app/assets/js/lg-hover.js",
-    "app/assets/js/lg-waypoints.js"
+    "app/assets/js/lg-hover.js"
   ]
 }
