@@ -32,7 +32,8 @@
     "root": "dist/"
   },
   "move": [
-    "app/assets/svg/*.svg"
+    "app/assets/svg/*.svg",
+    "app/assets/fonts/*"
   ],
   "assets": [
     "node_modules/normalize.css/normalize.css",
@@ -49,10 +50,8 @@
 
     "app/assets/temp/bundle.js",
     "app/assets/js/lg-base.js",
-    "app/assets/js/lg-tumblr.js",
     "app/assets/js/lg-main.js",
     "app/assets/js/lg-hover.js",
-    "app/assets/js/lg-waypoints.js",
-    "app/assets/js/lg-scrollto.js"
+    "app/assets/js/lg-waypoints.js"
   ]
 }

@@ -1,11 +1,11 @@
 extends _basic
 
 append template-head
+  = '\n'
+  <!-- build:css /assets/css/style-min.css -->
   <!-- inject:css -->
   <!-- endinject -->
-
-  <!-- vendor:js -->
-  <!-- endinject -->
+  <!-- endbuild -->
 
 block template-body
   include /../bower_components/chj-framework/app/assets/jade/mixins/_dummy
@@ -15,5 +15,8 @@ block template-content
   p Basic template.
 
 append template-foot
+  = '\n'
+  <!-- build:js /assets/js/site-min.js -->
   <!-- inject:js -->
   <!-- endinject -->
+  <!-- endbuild -->
