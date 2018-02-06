@@ -1,5 +1,7 @@
 .o-dropdown {
   position: relative;
+
+  color: $color-1;
 }
 
 .o-dropdown__toggle {
@@ -9,14 +11,12 @@
   padding: 0;
   cursor: pointer;
 
+  color: currentColor;
   font-family: inherit;
   line-height: 1;
   letter-spacing: em($ratio--t);
-
-  color: $color-1;
+  
   background-color: transparent;
-
-  transition: color $duration--b;
 
   svg {
     stroke: currentColor;
@@ -26,7 +26,7 @@
 
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
-    color: $color-1--darker;
+    color: black;
   }
 }
 
@@ -91,6 +91,8 @@
 
 .o-dropdown__link {
   text-decoration: none;
+
+  @include link--default;
 }
 
 .o-dropdown__selected {
