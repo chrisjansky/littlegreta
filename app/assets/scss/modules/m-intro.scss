@@ -48,6 +48,16 @@
   &__nav {
     font-size: 1.125em;
     margin-top: 2em;
+
+    & > * {
+      animation: fadeIn .25s backwards;
+    }
+
+    @for $i from 1 through 5 {
+      & > :nth-child(#{$i}) {
+        animation-delay: $i * .0625s;
+      }
+    }
   }
 
   &__nav-link,
@@ -90,7 +100,7 @@
   color: #4444ff;
 
   &:before {
-    mix-blend-mode: hue;
+    mix-blend-mode: overlay;
     background-image: radial-gradient(farthest-corner at 75% 25%, hsb(320, 10, 100), hsb(220, 100, 20));
   }
 }
