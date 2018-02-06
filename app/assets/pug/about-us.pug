@@ -1,8 +1,10 @@
 extends templates/_site
 
 block template-content
+  +sticky("index")
+
   .m-intro
-    a.m-intro__logo.o-logo(href="index.html")
+    a.m-intro__logo.o-logo--normal(href="index.html")
       include ../svg/logo_symbol.svg
       strong.o-logo__text Little Greta
     h1.m-intro__text Meet good-karma believers, fair players, dreamers-but-doers and enthusiasts full of ideas.

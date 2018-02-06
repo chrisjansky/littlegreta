@@ -1,0 +1,25 @@
+.m-sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+
+  background-color: rgba(white, .95);
+  backdrop-filter: saturate(250%) blur(20px);
+
+  .device--is-desktop & {
+    @include media($large) {
+      position: fixed;
+    }
+  }
+
+  &__dropdown {
+    margin-left: 5%; /* Center the navigation */
+  }
+}

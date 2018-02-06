@@ -1,4 +1,5 @@
-.o-logo {
+[class^="o-logo--"],
+[class*=" o-logo--"] {
   display: inline-block;
 
   fill: currentColor;
@@ -7,12 +8,22 @@
   svg {
     vertical-align: middle;
   }
+}
+
+.o-logo {
+  &--small svg {
+    width: 1.5em;
+  }
 
   &__text {
-    font-size: 1.375em;
+    font-size: 1.125em;
     font-weight: $font__sans--bold;
     margin-left: .75em;
 
     vertical-align: middle;
+
+    .o-logo--normal & {
+      font-size: 1.375em;
+    }
   }
 }

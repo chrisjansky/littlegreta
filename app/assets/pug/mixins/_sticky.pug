@@ -1,0 +1,23 @@
+mixin sticky(active)
+  header.m-sticky
+    a.m-sticky__logo.o-logo--small(href="index.html")
+      include ../../svg/logo_symbol.svg
+      strong.o-logo__text Little Greta
+
+    nav.o-nav
+      each instance in pages
+        unless active == "index" && instance.anchor == active
+          if active == instance.anchor
+            mark.o-nav__active= instance.name
+          else
+            a.o-nav__link(href=instance.anchor)= instance.name
+
+    .m-sticky__dropdown.o-dropdown(data-hover)
+      button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
+      .o-dropdown__content
+        ul.o-dropdown__list
+          li.o-dropdown__item
+            span.o-dropdown__selected EN
+          each instance in ["DE", "CZ"]
+            li.o-dropdown__item
+              a(href="#").o-dropdown__link.i-link--light= instance
