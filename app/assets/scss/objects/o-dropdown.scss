@@ -5,22 +5,23 @@
 }
 
 .o-dropdown__toggle {
-  // Reset
+  /* Reset */
   outline: none;
   border: none;
-  background-color: transparent;
-
   padding: 0;
-  line-height: em($height--xs);
 
-  color: $color-2;
+  font-family: inherit;
+  line-height: em($height--xs);
   letter-spacing: em($ratio--t);
+
+  color: $color-1;
+  background-color: transparent;
 
   transition: color $duration--b;
 
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
-    color: $color-1--lighter;
+    color: $color-1--darker;
   }
 }
 
