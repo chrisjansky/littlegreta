@@ -13,11 +13,13 @@ mixin sticky(active)
             a.o-nav__link(href=instance.anchor)= instance.name
 
     .m-sticky__dropdown.o-dropdown(data-hover)
-      button.o-dropdown__toggle.o-iconed--small.ss-navigatedown.right(type="button") EN
+      button.o-dropdown__toggle(type="button")
+        | EN
+        include ../../svg/caret-down.svg
       .o-dropdown__content
         ul.o-dropdown__list
           li.o-dropdown__item
             span.o-dropdown__selected EN
           each instance in ["DE", "CZ"]
             li.o-dropdown__item
-              a(href="#").o-dropdown__link.i-link--light= instance
+              a(href="javascript:").o-dropdown__link= instance

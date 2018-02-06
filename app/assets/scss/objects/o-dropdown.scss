@@ -19,6 +19,12 @@
 
   transition: color $duration--b;
 
+  svg {
+    stroke: currentColor;
+
+    margin-left: .5em;
+  }
+
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
     color: $color-1--darker;
