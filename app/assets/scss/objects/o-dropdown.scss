@@ -1,7 +1,5 @@
 .o-dropdown {
   position: relative;
-
-  display: inline-block;
 }
 
 .o-dropdown__toggle {
@@ -9,9 +7,10 @@
   outline: none;
   border: none;
   padding: 0;
+  cursor: pointer;
 
   font-family: inherit;
-  line-height: em($height--xs);
+  line-height: 1;
   letter-spacing: em($ratio--t);
 
   color: $color-1;
@@ -40,9 +39,9 @@
 
   visibility: hidden;
   opacity: 0;
-  transform: translateY(em($ratio--b));
+  transform: translateY(.5em);
 
-  transition: opacity $duration--b, transform $duration--b, visibility 0 $duration--b;
+  transition: opacity $duration--s, transform $duration--s, visibility 0 $duration--s;
 
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
@@ -71,6 +70,7 @@
 
   background-color: rgba($grey-0, $opacity--b);
   border-radius: $radius--b;
+  backdrop-filter: saturate(180%) blur(20px);
 
   list-style: none;
 

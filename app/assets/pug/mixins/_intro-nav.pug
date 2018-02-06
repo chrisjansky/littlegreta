@@ -6,3 +6,15 @@ mixin introNav(active)
           mark.m-intro__nav-active= instance.name
         else
           a.m-intro__nav-link(href=instance.anchor)= instance.name
+
+    span.m-intro__dropdown.o-dropdown(data-hover)
+      button.o-dropdown__toggle(type="button")
+        | EN
+        include ../../svg/caret-down.svg
+      .o-dropdown__content
+        ul.o-dropdown__list
+          li.o-dropdown__item
+            span.o-dropdown__selected EN
+          each instance in ["DE", "CZ"]
+            li.o-dropdown__item
+              a(href="javascript:").o-dropdown__link= instance
