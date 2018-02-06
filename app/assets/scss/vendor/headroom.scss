@@ -1,0 +1,10 @@
+.headroom {
+  transition: transform $duration--b;
+
+  &.headroom--not-top {
+    transform: translateY(0);
+  }
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+  }
+}

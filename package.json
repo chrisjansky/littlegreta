@@ -43,6 +43,7 @@
   "dependencies": {
     "bower": "^1.8.2",
     "featherlight": "^1.7.12",
+    "headroom.js": "^0.9.4",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.1",
     "node-bourbon": "^4.2.8",
