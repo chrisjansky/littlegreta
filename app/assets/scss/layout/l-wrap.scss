@@ -59,7 +59,3 @@
 .l-wrap--no-bottom {
   padding-bottom: 0;
 }
-
-.l-wrap--section {
-  @include wrap-push;
-}

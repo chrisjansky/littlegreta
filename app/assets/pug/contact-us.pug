@@ -1,20 +1,24 @@
 extends templates/_site
 
 block template-content
-  - var intro = {background: "map_blur1.jpg", text: "We are a&nbsp;mere e-mail away from starting something amazing together.", anchor: "#contact", hint: "Continue"}
-  include section/_intro
+  +sticky("contact-us")
 
-  section.o-hero.o-hero--slim
-    .o-fog
-    .o-hero__background
-      img.o-hero__image(src="assets/images/map_gradient1.jpg", alt="Little Greta Office Locations")
+  .m-intro.blur--purple
+    a.m-intro__logo.o-logo--normal(href="index")
+      include ../svg/logo_symbol.svg
+      strong.o-logo__text Little Greta
+    h1.m-intro__text We are a mere e-mail away from starting something amazing together.
+    +introNav("contact-us")
 
-  include section/_contact--long
+  section.o-hero
+    img.o-hero__image(data-src="assets/images/map_gradient1.jpg", data-lazy, alt="Little Greta Office Locations")
+
+  include section/_contact
+
+  include partial/_social
 
   section.l-section--dark
-    include partial/_social
-
-    .l-wrap.l-wrap--section
+    .l-wrap
       .m-subscribe
         h3.m-subscribe__title.t-h3
           span.t-gradient--2 Stay Connected
@@ -22,6 +26,3 @@ block template-content
         p.m-subscribe__text.t-lead We publish interesting stuff. Be part of it.
 
         include partial/_mailchimp.html
-
-      - var exit = {current: "Contact", theme: "dark"}
-      include partial/_exit

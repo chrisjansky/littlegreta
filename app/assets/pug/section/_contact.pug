@@ -1,0 +1,27 @@
+main.m-contact
+  .l-wrap
+
+    h2.m-contact__title.t-h2
+      span.t-gradient--light Get in Touch
+
+    .m-contact__list
+      each item, index in contact
+        .m-contact__item
+          h5.m-contact__name.t-h5
+            span(class="t-underline--" + (index + 1))= item.name
+
+          .m-contact__circle.o-circle
+            img.o-circle__image(src="assets/images/people/" + item.image, alt="Portrait of " + item.name)
+              
+          .m-contact__details
+            ul
+              each line in item.contact
+                li= line
+
+            a.m-contact__button.o-button--text(href="mailto:" + item.email, class="m-contact__button--" + (index + 1)) Email 
+              = item.person
+
+            if item.address
+              ul
+                each line in item.address
+                  li= line

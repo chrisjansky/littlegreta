@@ -1,35 +1,6 @@
 {
   "contact": [
     {
-      "name": "London",
-      "address": [
-        "65 Deans Road",
-        "W7 3QD London",
-        "United Kingdom"
-      ],
-      "contact": [
-        "Des Brady",
-        "07799 161 162"
-      ],
-      "person": "Des",
-      "image": "person_marketa.jpg",
-      "email": "des.brady@littlegreta.co.uk"
-    },
-    {
-      "name": "Munich",
-      "address": [
-        "Türkenstrasse 103",
-        "80799 Munich",
-        "Germany"
-      ],
-      "contact": [
-        "Petr Danes"
-      ],
-      "person": "Petr",
-      "image": "person_petr.jpg",
-      "email": "petr.danes@littlegreta.cz"
-    },
-    {
       "name": "Prague",
       "address": [
         "Vysehradska 1349/2",
@@ -41,13 +12,13 @@
         "+420 776 717 609"
       ],
       "person": "Jan",
-      "image": "person_jan.png",
-      "email": "jan.blazek@littlegreta.cz"
+      "image": "person_jan.jpg",
+      "email": "jan.blazek@littlegreta.co.uk"
     },
     {
       "name": "Zlin",
       "address": [
-        "Osvoboditelu 523",
+        "Padelky 3894",
         "760 01 Zlin",
         "Czech Republic"
       ],
@@ -56,23 +27,48 @@
         "+420 602 957 530"
       ],
       "person": "Tomas",
-      "image": "person_juraj.jpg",
+      "image": "person_tomas.jpg",
       "email": "tomas.nedved@littlegreta.cz"
     },
     {
-      "name": "Test",
+      "name": "London",
       "address": [
-        "Osvoboditelu 523",
-        "760 01 Zlin",
-        "Czech Republic"
+        "5-11 Westbourne Grove",
+        "London W2 4UA",
+        "United Kingdom"
       ],
       "contact": [
-        "Tomas Nedved",
-        "+420 602 957 530"
+        "Alex Judd",
+        "+44 7740 305115"
       ],
-      "person": "Tomas",
-      "image": "person_anna.png",
-      "email": "tomas.nedved@littlegreta.cz"
+      "person": "Alex",
+      "image": "person_alex.jpg",
+      "email": "alex.judd@littlegreta.co.uk"
+    },
+    {
+      "name": "Munich",
+      "address": [
+        "Türkenstrasse 103",
+        "80799 Munich",
+        "Germany"
+      ],
+      "contact": [
+        "Britta Weck",
+        "+49 163 3393991"
+      ],
+      "person": "Britta",
+      "image": "person_britta.jpg",
+      "email": "britta.weck@littlegreta.co.uk"
+    },
+    {
+      "name": "New York",
+      "contact": [
+        "Harrisen Kim",
+        "+1 551 486 7660"
+      ],
+      "person": "Harissen",
+      "image": "person_harrisen.jpg",
+      "email": "harrisen.kim@littlegreta.co.uk"
     }
   ]
 }
