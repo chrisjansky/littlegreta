@@ -1,3 +1,15 @@
+@mixin new-head--a {
+  font-size: $font--700;
+  font-weight: $font__sans--regular;
+  line-height: 1;
+}
+
+@mixin new-head--b {
+  font-size: $font--500;
+  font-weight: $font__sans--light;
+  margin-bottom: .25em;
+}
+
 .t-h1 {
   font-size: em($ratio--l);
   font-family: $font__display;

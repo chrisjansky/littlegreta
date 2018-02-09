@@ -1,14 +1,31 @@
 .m-portfolio {
   text-align: center;
 
-  &__title {
-    font-size: 2.5em;
-    font-weight: $font__sans--light;
-    margin-bottom: 1em;
+  &__wrap {
+    padding: 6em 2em;
+
+    @include collapse-children;
   }
 
-  &__wrap {
-    padding: 0 2em 6em;
+  &__header {
+    @include collapse-children;
+
+    margin-bottom: 3em;
+  }
+
+  &__title {
+    font-size: $font--600;
+    font-weight: $font__sans--regular;
+    line-height: 1;
+  }
+
+  &__intro {
+    font-size: 1.25em;
+    color: $grey-2;
+
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__loop {
@@ -28,14 +45,16 @@
   }
 
   &__item {
-    float: left;
-    width: 50%;
-
-    padding: 2em;
+    padding: .75em 2em;
 
     text-align: left;
     text-decoration: none;
     @include link--black;
+
+    &:nth-child(3),
+    &:nth-child(3n+5) {
+      clear: both;
+    }
   }
 
   &__image {
@@ -56,14 +75,16 @@
   &__info {
     position: relative;
 
-    font-size: 1.25em;
+    .portfolio--large & {
+      font-size: 1.25em;
+    }
   }
 
   &__name {
-    display: block;
-    font-weight: $font__sans--regular;
+    position: absolute;
+    top: 0;
 
-    margin-top: 1em;
+    font-weight: $font__sans--regular;
 
     .m-portfolio__item:hover & {
       visibility: hidden;
@@ -71,10 +92,7 @@
   }
 
   &__description {
-    position: absolute;
-    top: 0;
-
-    margin: 0;
+    margin-bottom: 0;
 
     .m-portfolio__item:not(:hover) & {
       visibility: hidden;
@@ -82,6 +100,16 @@
   }
 
   &__button {
-    margin-top: 3em;
+    margin-top: 5em;
   }
+}
+
+.portfolio--large {
+  float: left;
+  width: 50%;
+}
+
+.portfolio--small {
+  float: left;
+  width: 33.333%;
 }

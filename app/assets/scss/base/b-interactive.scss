@@ -8,6 +8,15 @@
   }
 }
 
+@mixin link--white {
+  @include state--link {
+    color: white;
+  }
+  @include state--hover {
+    color: rgba(white, .75);
+  }
+}
+
 @mixin link--black {
   @include state--link {
     color: black;

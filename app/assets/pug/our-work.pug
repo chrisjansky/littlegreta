@@ -1,78 +1,38 @@
 extends templates/_site
 
 block template-content
-  - var sticky = {current: "Our Work"}
-  include partial/_sticky
+  +sticky("our-work")
 
-  - var intro = {background: "top/photo3.jpg", text: "Our Work", anchor: "#featured", hint: "Continue"}
-  include section/_intro
+  .m-intro.blur--teal
+    a.m-intro__logo.o-logo--normal(href="index")
+      include ../svg/logo_symbol.svg
+      strong.o-logo__text Little Greta
+    h1.m-intro__text Watch the highlight reel of our multimedia work or browse through some of our projects and clients.
+    +introNav("our-work")
 
-  section#featured.o-hero
-    .o-fog
+  section.o-hero
+    a(href="javascript:").o-hero__overlay
+      .o-hero__hint Watch Highlight Reel
+    video.o-hero__video(autoplay, loop)
+      source(src="assets/video/showreel-2016.webm", type="video/webm")
 
-    .o-hero__overlay.l-wrap
-      .o-hero__content
-        h2.t-h2 Latest Work
-        p.t-big
-          +dummy(20, "text")
-        a(href="case-study").o-button--text.o-button--big.ss-zoomin.right See Case Study
+  section.m-portfolio
+    .m-portfolio__wrap
+      .m-portfolio__header
+        h1.m-portfolio__title
+          | Our 
+          span.t-gradient--2 Work
+        p.m-portfolio__intro Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
 
-    .o-hero__background
-      img.o-hero__image(src="http://unsplash.it/2880/1600/?image=201", alt="unsplash.it")
+      .m-portfolio__loop
+        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "sK06UNxxpGE", "DYROsn8AyDI"]
+          a.m-portfolio__item(href="javascript:", class=index < 4 ? "portfolio--large" : "portfolio--small")
+            .m-portfolio__holder
+              img.m-portfolio__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/1440x810", alt="Portfolio image")
+            .m-portfolio__info
+              strong.m-portfolio__name
+                faker-name-title/
+              p.m-portfolio__description
+                +dummy(90, "chars")
 
-  main.m-works.l-section--dark
-    .l-wrap.l-wrap--section
-
-      .m-works__list(data-masonry)
-        .o-sizer--column(data-column)
-        .o-sizer--gutter(data-gutter)
-
-        - var width, height = 450
-
-        // Big
-        - size = "big"
-        - width = 800
-        include partial/_thumbnail
-
-        article.o-work(class="o-work--small", data-masonry-item, data-hover)
-          img.o-work__image(src="assets/images/work/work_google.jpg", alt="unsplash.it")
-          .o-work__overlay
-            h4.t-h4 Google
-            .o-work__more
-              p: +dummy(15, "text")
-        
-        // Small
-        - size = "small"
-        - width = 390
-        include partial/_thumbnail
-
-        article.o-work(class="o-work--small", data-masonry-item, data-hover)
-          img.o-work__image(src="assets/images/work/work_ibm.jpg", alt="unsplash.it")
-          .o-work__overlay
-            h4.t-h4 IBM
-            .o-work__more
-              p: +dummy(15, "text")
-
-        include partial/_thumbnail
-
-        // Medium
-        - size = "medium"
-        - width = 595
-        include partial/_thumbnail
-        include partial/_thumbnail
-
-        // Small
-        - size = "small"
-        - width = 390
-        include partial/_thumbnail
-        include partial/_thumbnail
-        include partial/_thumbnail
-        include partial/_thumbnail
-
-        // Big
-        - size = "big"
-        - width = 800
-        include partial/_thumbnail
-
-      - var exit = {current: "Our Work", theme: "dark"}
-      include partial/_exit
+      a.m-portfolio__button.o-cta--light(href="javascript:") Load More Projects

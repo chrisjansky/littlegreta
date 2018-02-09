@@ -10,9 +10,7 @@
   }
 
   &__title {
-    font-size: $font--700;
-    font-weight: $font__sans--regular;
-    line-height: 1;
+    @include new-head--a;
   }
 
   &__emphasis {
