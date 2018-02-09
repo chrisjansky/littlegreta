@@ -20,7 +20,7 @@
     background-color: transparent;
     overflow: visible;
     
-    margin: em($unit--b);
+    margin: 1.25em;
   }
 
   .featherlight-image {
@@ -34,20 +34,24 @@
   }
 
   .featherlight-close-icon {
-    width: em($ratio--l);
-    height: em($ratio--l);
-    line-height: em($ratio--l);
+    top: -1em;
+    right: -1em;
+    
+    font-size: 1.5em;
+    line-height: 1;
 
-    top: em(-$ratio--l);
-    right: em(-$ratio--b);
+    padding: 1em;
+    box-sizing: content-box;
 
+    color: $color-4;
     background-color: transparent;
 
-    @include box-sizing(content-box);
-
-    color: $color-2;
     @include state--active {
-      color: $color-2--lighter;
+      color: $color-4--lighter;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -58,8 +62,8 @@
     height: em(200);
 
     @include media($large) {
-      width: em(600);
-      height: em(400);
+      width: 60vw;
+      height: 40vw;
     }
   }
 }
