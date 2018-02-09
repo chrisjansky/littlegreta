@@ -1,4 +1,11 @@
 .m-footer {
+  color: $grey-8;
+  background-color: $grey-1;
+
+  &__wrap {
+    @include new-wrap;
+  }
+
   &__title {
     color: white;
     text-align: center;

@@ -1,5 +1,7 @@
 @mixin new-wrap {
   padding: 5em;
+
+  @include collapse-children;
 }
 
 .l-wrap {
