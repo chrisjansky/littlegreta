@@ -1,0 +1,17 @@
+section.m-featured
+  .m-featured__wrap
+    .m-featured__header
+      h1.m-featured__title Selected Projects
+
+    .m-featured__loop
+      each item in ["IF2MIzP2wXI", "Qe_dS4-jO6E", "HmREZuu4XuY", "asZvnGnpL7Q"]
+        a(href="javascript:").m-featured__item
+          .m-featured__holder
+            img.m-featured__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/1440x810", alt="featured image")
+          .m-featured__info
+            strong.m-featured__name
+              faker-name-title/
+            p.m-featured__description
+              +dummy(25)
+
+    a.m-featured__button.o-cta--light(href="our-work") View More Projects
