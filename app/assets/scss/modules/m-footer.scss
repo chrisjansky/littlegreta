@@ -1,33 +1,22 @@
 .m-footer {
   color: $grey-8;
-  background-color: $grey-1;
+  background-color: $grey-0;
 
-  &__wrap {
-    @include new-wrap;
-  }
+  text-align: center;
 
   &__title {
     color: white;
-    text-align: center;
 
     margin-bottom: 1em;
   }
 
   &__wrap {
-    background: url("../images/map_no_pins1.png") no-repeat center/cover;
-
-    @include media($tablet) {
-      background-position: center 95%;
-    }
-    @include media($large) {
-      background-image: url("../images/map_pins1.png");
-    }
+    @include new-wrap;
   }
 
   &__outro {
     max-width: 45em;
 
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -41,7 +30,26 @@
     margin-top: 5em;
 
     font-size: .625em;
-    text-align: center;
     color: $grey-4;
+  }
+
+  /* short variant */
+  &__logo {
+    @include link--white;
+  }
+
+  &__nav {
+    margin-top: 1em;
+  }
+}
+
+.footer--full {
+  background: url("../images/map_no_pins1.png") no-repeat center/cover;
+
+  @include media($tablet) {
+    background-position: center 95%;
+  }
+  @include media($large) {
+    background-image: url("../images/map_pins1.png");
   }
 }
