@@ -1,27 +1,3 @@
-// Blurred background.
-[class^="o-blur--"],
-[class*=" o-blur--"] {
-  background: center / cover;
-}
-.o-blur--fixed {
-  @include media($desktop) {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
-.o-blur--blue {background-image: url("../images/blur/bg_blue.jpg"); }
-// .o-blur--red {background-image: url("../images/color_bg/bg_red.jpg"); }
-.o-blur--grey {background-image: url("../images/blur/bg_grey.jpg"); }
-.o-blur--teal {background-image: url("../images/blur/bg_teal.jpg"); }
-.o-blur--green {background-image: url("../images/blur/bg_green.jpg"); }
-.o-blur--purple {background-image: url("../images/blur/bg_purple.jpg"); }
-// @include media($desktop--wide) {
-//   .o-blur--blue {background-image: url("../images/color_bg/bg_blue_big.jpg"); }
-//   .o-blur--red {background-image: url("../images/color_bg/bg_red_big.jpg"); }
-//   .o-blur--green {background-image: url("../images/color_bg/bg_green_big.jpg"); }
-//   .o-blur--purple {background-image: url("../images/color_bg/bg_purple_big.jpg"); }
-// }
-
 [class^="o-gradient"],
 [class*=" o-gradient"] {
   position: relative;
@@ -74,22 +50,6 @@
 
   color: rgba(white, .6);
   text-align: right;
-}
-
-.o-fog {
-  .device--is-mobile & {
-    display: none;
-  }
-  
-  @include stretch-overlay;
-
-  z-index: $index--b;
-
-  .top--is-off & {
-    visibility: hidden;
-    
-    z-index: -1;
-  }
 }
 
 .o-description__title {
