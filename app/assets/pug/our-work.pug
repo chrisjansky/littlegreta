@@ -25,14 +25,31 @@ block template-content
         p.m-portfolio__intro Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
 
       .m-portfolio__loop
-        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "sK06UNxxpGE", "DYROsn8AyDI"]
-          a.m-portfolio__item(href="javascript:", class=index < 4 ? "portfolio--large" : "portfolio--small")
-            .m-portfolio__holder
-              img.m-portfolio__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/1440x810", alt="Portfolio image")
-            .m-portfolio__info
-              strong.m-portfolio__name
+        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "sK06UNxxpGE"]
+          a.m-portfolio__item.o-work(href="javascript:", class=index < 4 ? "portfolio--large" : "portfolio--small")
+            .o-work__holder
+              img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/1440x810", alt="Portfolio image")
+            .o-work__info
+              strong.o-work__name
                 faker-name-title/
-              p.m-portfolio__description
+              p.o-work__description
                 +dummy(90, "chars")
+                | &emsp;
+              if index % 3 == 0
+                mark.o-work__hint Visit Site
+                  include ../svg/caret-right.svg
+              else
+                mark.o-work__hint Read Success Story
+                  include ../svg/caret-right.svg
+
+        //- Without a(href)
+        .m-portfolio__item.o-work(class="portfolio--small")
+          .o-work__holder
+            img.o-work__image(src="http://source.unsplash.com/DYROsn8AyDI/16x10", data-src="http://source.unsplash.com/DYROsn8AyDI/1440x810", alt="Portfolio image")
+          .o-work__info
+            strong.o-work__name
+              faker-name-title/
+            p.o-work__description
+              +dummy(90, "chars")
 
       a.m-portfolio__button.o-cta--light(href="javascript:") Load More Projects

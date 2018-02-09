@@ -32,70 +32,10 @@
     @include clearfix;
   }
 
-  &__holder {
-    position: relative;
-    padding-bottom: 62.5%;
-    background-color: $grey-9;
-
-    overflow: hidden;
-
-    &.image--is-loaded {
-      background-color: black;
-    }
-  }
-
   &__item {
-    padding: .75em 2em;
-
-    text-align: left;
-    text-decoration: none;
-    @include link--black;
-
     &:nth-child(3),
     &:nth-child(3n+5) {
       clear: both;
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    position: absolute;
-
-    transition: opacity .25s, transform 10s;
-
-    .m-portfolio__item:hover .image--is-loaded & {
-      opacity: .75;
-      transform: scale(1.1);
-    }
-  }
-
-  &__info {
-    position: relative;
-
-    .portfolio--large & {
-      font-size: 1.25em;
-    }
-  }
-
-  &__name {
-    position: absolute;
-    top: 0;
-
-    font-weight: $font__sans--regular;
-
-    .m-portfolio__item:hover & {
-      visibility: hidden;
-    }
-  }
-
-  &__description {
-    margin-bottom: 0;
-
-    .m-portfolio__item:not(:hover) & {
-      visibility: hidden;
     }
   }
 
