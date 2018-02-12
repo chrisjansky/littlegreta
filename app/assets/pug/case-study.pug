@@ -1,69 +1,81 @@
 extends templates/_site
 
 block template-content
-  - var intro = {background: "top/photo3.jpg", text: "Design labels for a&nbsp;Czech craft brewery&rsquo;s new range of beers.", anchor: "#more", hint: "Continue to Case Study"}
-  include section/_intro
+  +sticky(null)
 
-  #more.o-hero
-    .o-fog
+  .m-intro.blur--blue
+    a.m-intro__logo.o-logo--normal(href="index")
+      include ../svg/logo_symbol.svg
+      strong.o-logo__text Little Greta
+    h1.m-intro__text Bzenia Winery rebranding — how we created a new visual identity and an e-commerce website incorporating augmented reality.
+    +introNav(null)
 
-    .o-hero__overlay.l-wrap
-      .o-hero__content
-        p.t-big
-          | Caption that is totally optional. 
-          +dummy(20, "text")
+  .o-hero
+    img.o-hero__image(data-src="http://source.unsplash.com/sj4M_cwUGB0/1920x1080", data-lazy, alt="Case study image")
 
-    .o-hero__background
-      img.o-hero__image(src="http://unsplash.it/2880/1600/?image=201", alt="unsplash.it")
+  main.o-description
+    .o-description__aside
+      h1.o-description__title Deliverables
+      ul
+        li Conceptualisation
+        li Brand design
+        li Packaging
+        li Graphic Design
+        li Web design and build
+        li Social media
+        li Photography
+        li Image Retouching
+        li Video
+        li Augmented reality
+        li Translations
 
-  main.l-section--light
-    .l-wrap.l-wrap--section
+    .o-description__body
+      .o-description__block--primary
+        h2.o-description__title Brief
+        p
+          +dummy(50, "text")
+          | 
+          a(href="javacript:") And this is what a link looks like.
 
-      .o-description.l-asym
-        .o-description__title.l-asym__title
-          strong.t-caps--1 Project Brief
-        .o-description__primary.l-asym__content
-          p.t-lead: +dummy(40, "text")
+      .o-description__block--secondary
+        h2.o-description__title Action
+        p: +dummy(60, "text")
 
-        .l-asym__title
-          strong.t-smallcaps Action
-        .l-asym__content
-          p: +dummy(60, "text")
+      .o-description__block--secondary
+        h2.o-description__title Result
+        p
+          +dummy(40, "text")
+          | 
+          a(href="javacript:") And this is what a link looks like.
 
-        .l-asym__title
-          strong.t-smallcaps Result
-        .l-asym__content
-          p: +dummy(40, "text")
+  section.m-project__photos
+    .o-gallery
+
+      each size, index in ["medium", "small", "full", "small", "medium"]
+        - var count, width, height
+        case size
+          when "full"
+            - count = 1
+            - width = 2880
+            - height = 1620
+          when "small"
+            - count = 3
+            - width = 960
+            - height = 720
+          when "medium"
+            - count = 2
+            - width = 1440
+            - height = 900
+
+        - var n = 1
+        while n <= count
+          .o-gallery__item(class="item--" + size)
+            .o-gallery__holder(class="holder--" + size)
+              img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/" + width + "x" + height + "?sig=" + (n * (index + 1)), data-lazy, alt="Dummy photo")
+          - n++
 
   section.l-section--dark
-    .l-wrap.l-wrap--section
-
-      .o-gallery(data-masonry)
-        .o-sizer--column(data-column)
-        .o-sizer--gutter(data-gutter)
-
-        each size in ["small", "full", "small", "medium"]
-
-            - var count = 1, width = 1600, height = 900
-            case size
-              when "full"
-                - width = 2560
-                - height = 1200
-              when "small"
-                - count = 3
-                - width = 780
-              when "medium"
-                - count = 2
-                - width = 1200
-
-            - var n = 1
-            while n <= count
-              img.o-gallery__image(src="http://unsplash.it/#{width}/#{height}/?image=#{n * 10}", alt="unsplash.it", class="o-gallery__image--#{size}", data-masonry-item)
-              - n++
-
-  section.l-section--dark
-    .l-wrap.l-wrap--section
-
+    .l-wrap
       .o-outro.l-asym
         .o-outro__title.l-asym__title
           strong.t-caps Testimonial
@@ -72,14 +84,4 @@ block template-content
           include ../svg/_source/quote_line.svg
           span.o-quote__source Andy Hertzfeld
 
-      - var exit = {current: "", theme: "light"}
-      footer.o-exit.o-exit--push(class="o-exit--#{exit.theme}")
-        .l-inline
-          .o-exit__cell.l-inline__cell
-            include partial/_context
-
-          .o-exit__cell.l-inline__cell
-            a(href="our-work", class="i-link--#{exit.theme}").o-button--text.ss-thumbnails.right More Projects
-
-        small.o-exit__copyright.t-small &copy; 2015 Little Greta Ltd.
-
+  +footer("short", null)

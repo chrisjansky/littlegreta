@@ -1,0 +1,57 @@
+.o-description {
+  padding: 5em 3.5em 1em;
+
+  display: flex;
+  justify-content: space-between;
+
+  p, ul {
+    margin: 0;
+    color: $grey-5;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+  &__body {
+    flex-basis: 50%;
+
+    padding-left: 1.5em;
+  }
+
+  &__aside {
+    @include collapse-children;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      font-size: 1.25em;
+    }
+  }
+
+  &__block--primary {
+    p {
+      font-size: 1.25em;
+    }
+  }
+
+  &__title {
+    font-size: 1.25em;
+    font-weight: $font__sans--regular;
+    
+    margin-top: 2.5em;
+    margin-bottom: .5em;
+  }
+}
+
+[class^="o-description__block"],
+[class*=" o-description__block"] {
+  &:first-child > :first-child {
+    margin-top: 0;
+  }
+  &:last-child > :last-child {
+    margin-bottom: 0;
+  }
+}
