@@ -3,22 +3,27 @@
 
   color: $grey-8;
   background-color: $grey-0;
+
+  &__title {
+    @include a-caps;
+  }
+
+  &__list {
+    @include reset-list;
+
+    @include media($phone) {
+      margin-top: em($ratio--s);
+    }
+
+    @include media($portable) {
+      display: inline-block;
+      vertical-align: middle;
+
+      margin-left: em($ratio--m);
+    }
+  }
 }
 
-.o-social__list {
-  @include reset-list;
-
-  @include media($phone) {
-    margin-top: em($ratio--s);
-  }
-  @include media($portable) {
-    display: inline-block;
-
-    vertical-align: middle;
-
-    margin-left: em($ratio--m);
-  }
-}
 
 [class^="o-social__item--"],
 [class*=" o-social__item--"] {

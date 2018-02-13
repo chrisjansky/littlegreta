@@ -62,5 +62,8 @@
 
   &__smallcaps {
     display: block;
+    color: $grey-4;
+
+    @include a-smallcaps;
   }
 }

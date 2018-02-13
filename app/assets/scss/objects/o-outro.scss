@@ -1,14 +1,10 @@
 .o-outro {
-  padding: 2em 3.5em 6em;
+  padding: 1em 3.5em 6em;
 
   text-align: center;
 
   &__title {
-    font-style: 1.25em;
-    font-weight: $font__sans--regular;
-    letter-spacing: .125em;
-    text-transform: uppercase;
-
+    @include a-caps(false);
     color: $grey-6;
   }
 

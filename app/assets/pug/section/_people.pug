@@ -26,7 +26,7 @@ section.m-people.l-section--light
                 img.o-person__image(src="assets/images/people/" + person.image, alt="Portrait of " + person.name)
 
             .o-person__info
-              strong.o-person__name.t-caps= person.name
+              strong.o-person__name= person.name
               small.o-person__position.t-small
                 span.o-person__group= group.title.charAt(0).toUpperCase() + group.title.slice(1)
                 != person.position

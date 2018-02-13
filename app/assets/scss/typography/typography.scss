@@ -58,24 +58,25 @@
   background-image: #{"linear"}-gradient(to right, rgba(white, .5), rgba(white, .25));
 }
 
-[class^="t-caps"],
-[class*=" t-caps"] {
+@mixin a-caps($bold: true) {
   font-size: em($unit--s);
 
   @include media($large) {
     font-size: em($ratio--b);
   }
 
-  font-weight: $font__sans--bold;
-  letter-spacing: em($ratio--t);
+  letter-spacing: .125em;
   text-transform: uppercase;
-}
-.t-caps--1 {
-  color: $color-1;
+
+  @if $bold {
+    font-weight: $font__sans--bold;
+  }
+  @else {
+    font-weight: $font__sans--regular;
+  }
 }
 
-[class^="t-smallcaps"],
-[class*=" t-smallcaps"] {
+@mixin a-smallcaps {
   font-size: em($unit--xs);
 
   @include media($large) {
@@ -83,13 +84,6 @@
   }
 
   font-weight: $font__sans--regular;
-  letter-spacing: em($ratio--t);
+  letter-spacing: .125em;
   text-transform: uppercase;
-}
-// Used in intro hint
-.t-smallcaps--1 {
-  color: $color-1--lighter;
-}
-.t-smallcaps--light {
-  color: $grey-4;
 }

@@ -32,7 +32,7 @@
 
 .o-person__name {
   display: block;
-  font-weight: $font__sans--bold;
+  @include a-caps;
 
   transition: color $duration--s;
 
