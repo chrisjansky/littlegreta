@@ -74,14 +74,18 @@ block template-content
               img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/" + width + "x" + height + "?sig=" + (n * (index + 1)), data-lazy, alt="Dummy photo")
           - n++
 
-  section.l-section--dark
-    .l-wrap
-      .o-outro.l-asym
-        .o-outro__title.l-asym__title
-          strong.t-caps Testimonial
-        .o-outro__content.l-asym__content
-          blockquote.o-quote: +dummy(30, "text")
-          include ../svg/_source/quote_line.svg
-          span.o-quote__source Andy Hertzfeld
+  section.o-outro
+    h4.o-outro__title Testimonial
+    .o-outro__content
+      blockquote.o-outro__quote.blur--purple “We’re now planning a mobile app enabling us to administer orders made during wine tastings as well as other things, including new packaging and social media. And, again, it will be with Little Greta.”
+      span.o-outro__source Andy Hertzfeld
+
+  section.m-news
+    h4.m-news__head See Also
+    a.m-news__item(href="case-study")
+      .m-news__overlay
+        h2.m-news__title Bzenia Winery 2013
+        strong.m-news__hint Read Success Story
+      img.m-news__image(data-src="http://source.unsplash.com/a4xt7ieZ85A/1920x1000", data-lazy, alt="Placeholder")
 
   +footer("short", null)

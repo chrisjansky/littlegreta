@@ -1,0 +1,35 @@
+.o-outro {
+  padding: 2em 3.5em 6em;
+
+  text-align: center;
+
+  &__title {
+    font-style: 1.25em;
+    font-weight: $font__sans--regular;
+    letter-spacing: .125em;
+    text-transform: uppercase;
+
+    color: $grey-6;
+  }
+
+  &__content {
+    background-color: white;
+  }
+
+  &__quote {
+    display: block;
+    color: $color-1;
+
+    margin: 1em auto;
+    max-width: 25em;
+
+    font-family: $font__display;
+    font-weight: $font__display--book;
+    font-size: $font--600;
+    font-style: italic;
+  }
+
+  &__source {
+  }
+}
+

@@ -4,10 +4,13 @@
   line-height: 1;
 }
 
-@mixin new-head--b {
+@mixin new-head--b($margin: true) {
   font-size: $font--500;
   font-weight: $font__sans--light;
-  margin-bottom: .25em;
+
+  @if $margin == true {
+    margin-bottom: .25em;
+  }
 }
 
 .t-h1 {

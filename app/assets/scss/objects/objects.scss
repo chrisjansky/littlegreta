@@ -14,44 +14,6 @@
   @include linear-gradient(to right, $color-1--light, $color-2);
 }
 
-.o-outro {
-  @include media($small) {
-    margin-bottom: em($ratio--m);
-  }
-
-  @include media($large) {
-    margin-bottom: em($ratio--xl);
-  }
-}
-.o-outro__title {
-  @include media($small) {
-    margin-bottom: em($ratio--s);
-  }
-
-  @include media($large) {
-    margin-top: em($ratio--s);
-  }
-}
-
-.o-quote {
-  margin: 0;
-
-  font-size: em($ratio--m);
-  font-family: $font__serif;
-  font-weight: $font__serif--book;
-
-  font-style: italic;
-
-  color: white;
-}
-
-.o-quote__source {
-  display: block;
-
-  color: rgba(white, .6);
-  text-align: right;
-}
-
 .o-circle {
   @include media($mobile) {
     width: em($ratio--xl);
