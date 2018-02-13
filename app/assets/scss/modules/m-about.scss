@@ -35,13 +35,14 @@
   }
 
   &__text {
-    margin: 3em auto;
-    max-width: 62em;
+    margin: 4em auto;
+    max-width: 56em;
+    columns: 2;
+    column-gap: 3em;
 
     font-size: 1.125em;
     text-align: left;
-    columns: 2;
-    color: $grey-3;
+    color: $grey-5;
 
     @include collapse-children;
 
