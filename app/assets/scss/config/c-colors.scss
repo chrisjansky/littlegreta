@@ -58,8 +58,8 @@ $c-select__background: $color-1--light;
 $c-select__text: $color-1--dark;
 
 // Social colors.
-$c-facebook:  #4668B3;
-$c-twitter:   $color-1--lighter;
+$c-facebook:  hsb(221, 61, 70);
+$c-twitter:   hsb(203, 88, 95);
 $c-vimeo:     #1ab7ea;
 $c-instagram: #e1306c;
 $c-tumblr:    $grey-4;
@@ -74,3 +74,5 @@ $grey--600: $grey-3;
 $grey--700: $grey-2;
 $grey--900: $grey-0;
 $c-select--bg: $c-select__background;
+
+$gradient--instagram: radial-gradient(farthest-corner at 0% 0%, #FFB140, #FF5445, #FC2B82, #8E40B7);

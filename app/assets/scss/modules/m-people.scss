@@ -1,6 +1,7 @@
 .m-people__title {
-  color: $grey-3;
+  @include new-head--b(false);
 
+  color: black;
   text-align: center;
 }
 

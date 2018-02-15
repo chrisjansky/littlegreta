@@ -1,6 +1,32 @@
-section.m-blog
-  h3.m-blog__title.t-h3
-    | &hellip;&thinsp;
-    span.t-gradient--opaque and their Thoughts
+section.m-feed
+  h3.m-feed__title
+    | &hellip;&thinsp;and 
+    span.t-gradient--2.t-gradient--small their thoughts
   
-  .m-blog__feed
+  .m-feed__loop
+    each item, index in ["instagram", "twitter", "facebook", "twitter", "facebook", "instagram"]
+      a.m-feed__item(class="media--" + item, href="javascript:")
+        if item == "instagram"
+          .m-feed__holder
+            img.m-feed__image(src="http://source.unsplash.com/random/400x300?sig=" + index, alt="Placeholder")
+        .m-feed__content
+          span.m-feed__icon
+            case item
+              when "facebook"
+                include ../../svg/social-facebook.svg
+              when "twitter"
+                include ../../svg/social-twitter.svg
+              when "instagram"
+                include ../../svg/social-instagram.svg
+          - var randomCount = Math.ceil(Math.random() * 5) * 5
+          p.m-feed__text: +dummy(randomCount)
+          mark.m-feed__date 1 Day Ago
+
+  h4.m-feed__outro
+    | Follow Us on 
+    a.m-feed__link--facebook(href="https://www.facebook.com/LittleGretaLtd/", target="_blank") Facebook
+    | , 
+    a.m-feed__link--twitter(href="https://twitter.com/littlegretacz", target="_blank") Twitter
+    |  and 
+    a.m-feed__link--instagram(href="https://www.instagram.com/littlegreta/", target="_blank") Instagram
+    | .

@@ -1,0 +1,189 @@
+.m-feed {
+  padding: 4em;
+  text-align: center;
+  @include collapse-children;
+
+  &__title {
+    @include new-head--b(false);
+    margin-bottom: 1em;
+  }
+
+  &__loop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-basis: calc(25% - 1em);
+
+    text-decoration: none;
+  }
+
+  &__holder {
+    flex-basis: 50%;
+    margin: .5em;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: black;
+  }
+
+  &__image {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: opacity .25s, transform 10s;
+
+    .m-feed__item:hover & {
+      opacity: .75;
+      transform: scale(1.1);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+    background-color: black;
+
+    transition: background-color .25s;
+
+    margin: .5em;
+    padding: 2em;
+    min-height: 13em;
+
+    .media--facebook & {
+      flex-grow: 1;
+
+      background-color: $c-facebook;
+    }
+    .media--facebook:hover & {
+      background-color: hsb(221, 65, 60);
+    }
+
+    .media--twitter & {
+      flex-grow: 1;
+
+      background-color: $c-twitter;
+    }
+    .media--twitter:hover & {
+      background-color: hsb(203, 90, 82);
+    }
+
+    .media--instagram & {
+      position: relative;
+
+      flex-basis: 50%;
+
+      background-image: $gradient--instagram;
+
+      &:before {
+        content: "";
+        position: absolute;
+
+        left: 0;
+        top: 50%;
+        transform: translate(-.5em, -50%);
+        transition: transform .25s;
+
+        border: 1em solid transparent;
+        border-left-color: white;
+
+      }
+    }
+    .media--instagram:hover &:before {
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.375em;
+    height: 1.375em;
+
+    line-height: 0;
+  }
+
+  &__date {
+    color: currentColor;
+    background-color: transparent;
+    opacity: .8;
+
+    font-size: .625em;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+  }
+
+  &__outro {
+    font-size: 2em;
+    font-weight: $font__sans--light;
+    
+    margin-top: 3em;
+  }
+
+  &__link--facebook {
+    &:link, &:visited {
+      color: $c-facebook;
+    }
+  }
+  &__link--twitter {
+    &:link, &:visited {
+      color: $c-twitter;
+    }
+  }
+
+  &__link--instagram {
+    position: relative;
+    background-color: white;
+
+    &:link, &:visited {
+      color: $c-instagram;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      pointer-events: none;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: $gradient--instagram;
+      mix-blend-mode: overlay;
+    }
+  }
+}
+
+.media--instagram {
+  display: flex;
+
+  flex-basis: calc(50% - 2em);
+}
+
+[class^="m-feed__link--"],
+[class*=" m-feed__link--"] {
+  display: inline-block;
+  text-decoration: none;
+
+  font-weight: $font__sans--bold;
+
+  transition: transform .25s;
+
+  &:hover, &:active {
+    transform: translateY(-.125rem);
+  }
+}
