@@ -16,7 +16,7 @@ block template-content
           h2.m-news__title
             faker-name-title/
           strong.m-news__hint Read Success Story
-        img.m-news__image(data-src="http://source.unsplash.com/" + item + "/1920x1000", data-lazy, alt="Placeholder")
+        img.m-news__image(data-src="http://source.unsplash.com/" + item + "/1440x810", data-srcset="http://source.unsplash.com/" + item + "/800x450 800w, http://source.unsplash.com/" + item + "/1440x810 1440w, http://source.unsplash.com/" + item + "/1920x1080 1920w, http://source.unsplash.com/" + item + "/2880x1620 2880w", data-lazy, alt="Placeholder")
 
   +about("short")
   include section/_featured

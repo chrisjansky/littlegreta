@@ -11,7 +11,7 @@ block template-content
     +introNav(null)
 
   .o-hero
-    img.o-hero__image(data-src="http://source.unsplash.com/sj4M_cwUGB0/1920x1080", data-lazy, alt="Case study image")
+    img.o-hero__image(data-src="http://source.unsplash.com/sj4M_cwUGB0/1440x900", data-srcset="http://source.unsplash.com/sj4M_cwUGB0/800x500 800w, http://source.unsplash.com/sj4M_cwUGB0/1440x900 1440w, http://source.unsplash.com/sj4M_cwUGB0/1920x1200 1920w, http://source.unsplash.com/sj4M_cwUGB0/2880x1800 2880w", data-lazy, alt="About Us image")
 
   main.o-description
     .o-description__aside
@@ -52,27 +52,28 @@ block template-content
     .o-gallery
 
       each size, index in ["medium", "small", "full", "small", "medium"]
-        - var count, width, height
+
         case size
           when "full"
-            - count = 1
-            - width = 2880
-            - height = 1620
-          when "small"
-            - count = 3
-            - width = 960
-            - height = 720
-          when "medium"
-            - count = 2
-            - width = 1440
-            - height = 900
+            .o-gallery__item(class="item--" + size)
+              .o-gallery__holder(class="holder--" + size)
+                img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/1440x810?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x450?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x810?sig=" + (n * (index + 1)) + " 1440w, http://source.unsplash.com/random/1920x1080?sig=" + (n * (index + 1)) + " 1920w, http://source.unsplash.com/random/2880x1620?sig=" + (n * (index + 1)) + " 2880w", data-lazy, alt="Dummy photo")
 
-        - var n = 1
-        while n <= count
-          .o-gallery__item(class="item--" + size)
-            .o-gallery__holder(class="holder--" + size)
-              img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/" + width + "x" + height + "?sig=" + (n * (index + 1)), data-lazy, alt="Dummy photo")
-          - n++
+          when "small"
+            - var n = 1
+            while n <= 3
+              .o-gallery__item(class="item--" + size)
+                .o-gallery__holder(class="holder--" + size)
+                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1024x768?sig=" + (n * (index + 1)) + " 1024w, http://source.unsplash.com/random/1440x1080?sig=" + (n * (index + 1)) + " 1440w", data-lazy, alt="Dummy photo")
+              - n++
+
+          when "medium"
+            - var n = 1
+            while n <= 2
+              .o-gallery__item(class="item--" + size)
+                .o-gallery__holder(class="holder--" + size)
+                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x900?sig=" + (n * (index + 1)) + " 1440w", data-lazy, alt="Dummy photo")
+              - n++
 
   section.o-outro
     h4.o-outro__title Testimonial
@@ -86,6 +87,6 @@ block template-content
       .m-news__overlay
         h2.m-news__title Bzenia Winery 2013
         strong.m-news__hint Read Success Story
-      img.m-news__image(data-src="http://source.unsplash.com/a4xt7ieZ85A/1920x1000", data-lazy, alt="Placeholder")
+      img.m-news__image(data-src="http://source.unsplash.com/a4xt7ieZ85A/1440x810", data-srcset="http://source.unsplash.com/a4xt7ieZ85A/800x450 800w, http://source.unsplash.com/a4xt7ieZ85A/1440x810 1440w, http://source.unsplash.com/a4xt7ieZ85A/1920x1080 1920w, http://source.unsplash.com/a4xt7ieZ85A/2880x1620 2880w", data-lazy, alt="Placeholder")
 
   +footer("short", null)
