@@ -1,0 +1,61 @@
+.m-locations {
+  color: white;
+  background-color: hsb(235, 20, 12);
+
+  &__wrap {
+    @include new-wrap;
+  }
+
+  &__title {
+    font-size: $font--500;
+    font-weight: $font__sans--light;
+
+    margin-bottom: .5em;
+  }
+
+  &__outro {
+    @include collapse-children;
+
+    p {
+      max-width: 20em;
+
+      font-size: $font--500;
+      font-weight: $font__sans--light;
+      line-height: $spacing--s;
+
+      color: $grey-5;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    margin: -1.5em;
+  }
+
+  @at-root [class^="m-locations__button"],
+  [class*=" m-locations__button"] {
+    padding: 1em;
+    margin: .5em;
+
+    text-decoration: none;
+
+    @include a-caps(false);
+  }
+
+  &__button--primary {
+    &:link, &:visited {
+      color: $color-3;
+    }
+    &:hover, &:active {
+      color: $color-3--darker;
+    }
+  }
+  &__button--secondary {
+    &:link, &:visited {
+      color: $color-4--light;
+    }
+    &:hover, &:active {
+      color: $color-4--dark;
+    }
+  }
+}
