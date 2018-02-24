@@ -1,11 +1,3 @@
-$("[data-masonry]").imagesLoaded(function() {
-  $("[data-masonry]").masonry({
-    itemSelector: "[data-masonry-item]",
-    columnWidth: "[data-column]",
-    gutter: "[data-gutter]"
-  });
-});
-
 var currentDevice;
 
 if (isDesktop()) {
