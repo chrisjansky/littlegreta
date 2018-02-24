@@ -23,7 +23,7 @@
     font-weight: $font__display--book;
     font-size: $font--600;
     font-style: italic;
-    line-height: 1.333;
+    line-height: $spacing--s;
   }
 
   &__source {
