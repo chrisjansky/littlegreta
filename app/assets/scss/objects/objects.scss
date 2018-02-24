@@ -1,19 +1,3 @@
-[class^="o-gradient"],
-[class*=" o-gradient"] {
-  position: relative;
-  &:after {
-    content: "";
-
-    @include position(absolute, null 0 0 0);
-
-    height: $line--m;
-  }
-}
-
-.o-gradient--1:after {
-  @include linear-gradient(to right, $color-1--light, $color-2);
-}
-
 .o-circle {
   @include media($mobile) {
     width: em($ratio--xl);
