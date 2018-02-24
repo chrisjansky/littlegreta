@@ -40,6 +40,7 @@ $grey-4:  hsb($c-hue1 + $c-offset1, 14, 47);
 $grey-3:  hsb($c-hue1 + $c-offset2, 16, 37);
 $grey-2:  hsb($c-hue1 + $c-offset2, 18, 27);
 $grey-1:  hsb($c-hue1 + $c-offset2, 20, 17);
+$grey-05: hsb($c-hue1 + $c-offset2, 20, 12);
 $grey-0:  hsb($c-hue1 + $c-offset2, 22, 07);
 
 // Interactive.
@@ -63,6 +64,8 @@ $c-twitter:   hsb(203, 88, 95);
 $c-vimeo:     #1ab7ea;
 $c-instagram: #e1306c;
 $c-tumblr:    $grey-4;
+
+$c-error: hsb(35, 100, 100);
 
 // Temp
 $grey--000: $grey-9;

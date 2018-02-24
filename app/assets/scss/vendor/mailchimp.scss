@@ -2,15 +2,11 @@
   display: inline-block;
 
   input.mce_inline_error {
-    border-color: $color-4 !important;
+    border-color: $c-error !important;
   }
 }
 
 #mce-success-response {
-  margin-top: em($ratio--m);
-
-  @include media($desktop) {
-    width: flex-grid(8, $columns__desktop);
-    @include shift(2 of $columns__desktop);
-  }
+  margin-top: 2.5em;
+  max-width: 40em;
 }

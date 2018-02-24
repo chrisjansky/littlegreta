@@ -1,61 +1,104 @@
 .m-subscribe {
-  text-align: center;
-}
-
-.m-subscribe__title {
   color: white;
-}
+  background-color: $grey-05;
 
-.m-subscribe__text {
-  color: $grey-9;
-
-  margin-top: em($ratio--b);
-
-  @include media($desktop) {
-    margin-top: em($ratio--m);
+  &__wrap {
+    @include new-wrap;
   }
 
-  @include media($desktop) {
-    width: flex-grid(8, $columns__desktop);
-    @include shift(2 of $columns__desktop);
-  }
-}
+  &__title {
+    font-size: $font--500;
+    font-weight: $font__sans--light;
 
-.m-subscribe__form {
-  @include media($tablet) {
-    margin-bottom: em($unit--m);
+    margin-bottom: 0;
   }
 
-  @include media($desktop) {
-    display: inline-block;
-  }
-}
-.m-subscribe__submit {
-  @include media($small) {
-    display: block;
+  &__text {
+    max-width: 20em;
+    margin-top: 0;
 
-    margin-top: em($ratio--xs);
-  }
+    font-size: $font--500;
+    font-weight: $font__sans--light;
+    line-height: $spacing--s;
 
-  color: $color-2--lighter;
-
-  @include state--hover {
-    color: $color-2;
+    color: $grey-5;
   }
 
-  // Optical alignment of icon
-  &:after {
+  &__form {
+    font-size: 1.125em;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__holder {
     position: relative;
-    top: .125em;
   }
-}
-.m-subscribe__hint {
-  display: inline-block;
 
-  @include media($large) {
-    margin-left: em($ratio--b);
+  &__input {
+    min-width: 20em;
+
+    font-family: inherit;
+    line-height: inherit;
+
+    padding: .5em 0;
+    border: 0;
+    border-bottom: 1px solid $grey-3;
+    color: currentColor;
+    background-color: transparent;
+
+    transition: border-color .25s;
+
+    &::placeholder {
+      color: $grey-5;
+    }
+
+    &:focus {
+      outline: 0;
+
+      border-color: $grey-5;
+    }
   }
-}
-.m-subscribe__note {
-  margin-right: em($ratio--b);
+
+  &__submit {
+    position: absolute;
+    right: -.5em;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-family: inherit;
+    line-height: inherit;
+
+    color: $color-2--darker;
+    background-color: transparent;
+
+    border: 0;
+    padding: .5em;
+
+    cursor: pointer;
+
+    &:hover, &:active {
+      color: $color-2;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__button {
+    margin-left: 4em;
+
+    text-decoration: none;
+    @include a-caps(false);
+
+    &:link, &:visited {
+      color: $color-2;
+    }
+    &:hover, &:active {
+      color: $color-2--lighter;
+    }
+  }
 }

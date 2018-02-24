@@ -15,16 +15,11 @@ block template-content
 
   include section/_contact
 
-  include partial/_social
+  section.m-subscribe
+    .m-subscribe__wrap
+      h3.m-subscribe__title Stay Connected
+      p.m-subscribe__text We publish interesting stuff. Be part of it.
 
-  section.l-section--dark
-    .l-wrap
-      .m-subscribe
-        h3.m-subscribe__title.t-h3
-          span.t-gradient--2 Stay Connected
-
-        p.m-subscribe__text.t-lead We publish interesting stuff. Be part of it.
-
-        include partial/_mailchimp.html
+      include partial/_mailchimp.html
 
   +footer("contact-us")
