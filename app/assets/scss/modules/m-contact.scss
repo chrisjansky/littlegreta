@@ -51,8 +51,9 @@
 
 [class^="m-contact__button"],
 [class*=" m-contact__button"] {
-  text-transform: uppercase;
-  letter-spacing: .0625em;
+  text-decoration: none;
+
+  @include a-caps(false);
 }
 
 .m-contact__button--1 {
