@@ -45,6 +45,7 @@
   display: block;
 
   color: $grey-6;
+  font-size: em($unit--s);
 
   @include media($large) {
     font-size: em($unit--xs);
