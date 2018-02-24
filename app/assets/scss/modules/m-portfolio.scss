@@ -14,9 +14,7 @@
   }
 
   &__title {
-    font-size: $font--600;
-    font-weight: $font__sans--regular;
-    line-height: 1;
+    @include new-head--c;
   }
 
   &__intro {

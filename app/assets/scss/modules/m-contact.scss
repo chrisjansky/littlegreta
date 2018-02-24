@@ -17,13 +17,20 @@
 }
 
 .m-contact__title {
-  color: $grey-2;
-
-  margin-bottom: em($ratio--s);
+  @include new-head--c;
 }
 
 .m-contact__name {
   color: $grey-2;
+
+  font-size: em($unit--m);
+  font-weight: $font__sans--regular;
+
+  @include media($large) {
+    font-size: em($unit--l);
+  }
+
+  @include margin(em($ratio--s) null);
 }
 
 .m-contact__circle {

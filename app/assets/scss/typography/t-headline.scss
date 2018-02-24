@@ -13,72 +13,8 @@
   }
 }
 
-.t-h1 {
-  font-size: em($ratio--l);
-  font-family: $font__display;
-  font-weight: $font__display--book;
-
-  @include margin(em($ratio--xs) null);
-
-  @include media($medium) {
-    font-size: em($unit--h);
-  }
-  @include media($desktop) {
-    font-size: em($ratio--xxl);
-
-    @include margin(em($ratio--xs) null);
-  }
-}
-
-.t-h2 {
-  font-size: em($unit--xl);
-  font-weight: $font__sans--light;
-
-  @include media($tablet) {
-    font-size: em($ratio--l);
-  }
-  @include media($desktop) {
-    font-size: em($ratio--xl);
-  }
-
-  line-height: $spacing--xxs;
-
-  @include margin(em($ratio--xs) null);
-}
-
-.t-h3 {
-  font-size: em($ratio--m);
+@mixin new-head--c {
+  font-size: $font--600;
   font-weight: $font__sans--regular;
-
-  @include media($large) {
-    font-size: em($ratio--l);
-  }
-
-  line-height: $spacing--xs;
-
-  @include margin(em($ratio--xs) null);
-}
-
-.t-h4 {
-  font-size: em($unit--l);
-  font-weight: $font__sans--regular;
-
-  line-height: $spacing--s;
-
-  @include media($desktop) {
-    font-weight: $font__sans--bold;
-  }
-
-  @include margin(em($ratio--b, $unit--l) null);
-}
-
-.t-h5 {
-  font-size: em($unit--m);
-  font-weight: $font__sans--regular;
-
-  @include media($large) {
-    font-size: em($unit--l);
-  }
-
-  @include margin(em($ratio--s) null);
+  line-height: 1;
 }

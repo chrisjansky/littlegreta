@@ -1,13 +1,13 @@
 main.m-contact
   .l-wrap
 
-    h2.m-contact__title.t-h2
+    h2.m-contact__title
       span.t-gradient--light Get in Touch
 
     .m-contact__list
       each item, index in contact
         .m-contact__item
-          h5.m-contact__name.t-h5
+          h5.m-contact__name
             span(class="t-underline--" + (index + 1))= item.name
 
           .m-contact__circle.o-circle
