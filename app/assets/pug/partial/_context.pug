@@ -1,7 +1,0 @@
-ul.o-context
-  each instance in pages
-    if (exit.current == instance.name)
-      unless (exit.current == "Home")
-        li.o-context__item: span.o-context__selected= instance.name
-    else
-      li.o-context__item: a.o-context__link(class="i-link--#{exit.theme}", href=instance.anchor)= instance.name
