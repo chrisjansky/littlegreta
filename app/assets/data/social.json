@@ -1,0 +1,29 @@
+{
+  "social": [
+    {
+      "id": "fb",
+      "title": "Facebook",
+      "href": "https://www.facebook.com/LittleGretaLtd/"
+    },
+    {
+      "id": "tw",
+      "title": "Twitter",
+      "href": "https://twitter.com/littlegretacz"
+    },
+    {
+      "id": "ig",
+      "title": "Instagram",
+      "href": "https://www.instagram.com/littlegreta/"
+    },
+    {
+      "id": "vi",
+      "title": "Vimeo",
+      "href": "https://vimeo.com/littlegreta"
+    },
+    {
+      "id": "tb",
+      "title": "Tumblr",
+      "href": "http://littlegreta.tumblr.com"
+    }
+  ]
+}

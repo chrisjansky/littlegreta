@@ -1,27 +1,21 @@
-mixin footer(type, active)
-  footer.m-footer(class="footer--" + type)
-    .m-footer__wrap
-      if type == "full"
-        h2.m-footer__title.t-h2
-          span.t-gradient--dark.t-gradient--small Get in Touch
+mixin footer(active)
+  footer.m-footer
+    .m-footer__body
+      a.m-footer__logo.o-logo--small(href="index.html")
+        include ../../svg/logo_symbol.svg
+        strong.o-logo__text Little Greta
 
-        .m-footer__outro
-          p.t-lead.t-antiqua We have offices in the UK, Germany, the USA, and the Czech Republic, where Little Greta originates and where much of our team and infrastructure remains.
-          .m-footer__actions
-            a.o-cta--dark(href="mailto:info@littlegreta.co.uk") Get in Touch
-            a.o-cta--dark(href="contact-us") Our Locations
+      nav.m-footer__nav.o-nav
+        each instance in pages
+          unless active == "index" && instance.anchor == active
+            if active == instance.anchor
+              mark.o-nav__active= instance.name
+            else
+              a.o-nav__link(href=instance.anchor)= instance.name
 
-      else
-        a.m-footer__logo.o-logo--small(href="index")
-          include ../../svg/logo_symbol.svg
-          strong.o-logo__text Little Greta
+      include ../partial/_social
 
-        nav.m-footer__nav.o-nav
-          each instance in pages
-            unless active == "index" && instance.anchor == active
-              if active == instance.anchor
-                mark.o-nav__active= instance.name
-              else
-                a.o-nav__link(href=instance.anchor)= instance.name
-
-      small.m-footer__copyright © Copyright 2018 Little Greta&emsp;Registered in England and Wales, no. 10123289 and the Czech Republic, no. 28275705
+    small.m-footer__copyright
+      | © Copyright 2018 Little Greta&emsp;
+      span.m-footer__break
+      | Registered in England and Wales, no. 10123289 and the Czech Republic, no. 28275705

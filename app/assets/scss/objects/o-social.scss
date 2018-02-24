@@ -1,95 +1,53 @@
 .o-social {
-  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 
-  color: $grey-8;
-  background-color: $grey-0;
+  display: flex;
 
-  &__title {
-    @include a-caps;
+  @at-root [class^="o-social__link--"],
+  [class*=" o-social__link--"] {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+    box-sizing: content-box;
+
+    margin: .25em;
+    padding: .25em;
+
+    &:link, &:visited {
+      color: white;
+    }
   }
 
-  &__list {
-    @include reset-list;
-
-    @include media($phone) {
-      margin-top: em($ratio--s);
-    }
-
-    @include media($portable) {
-      display: inline-block;
-      vertical-align: middle;
-
-      margin-left: em($ratio--m);
-    }
+  &__icon {
+    fill: currentColor;
   }
 }
 
-
-[class^="o-social__item--"],
-[class*=" o-social__item--"] {
-  display: inline-block;
-
-  & + & {
-    margin-left: em($ratio--b);
-  }
-}
-
-.o-social__link--facebook {
-  @include state--link {
+.o-social__link--fb {
+  @include state--active {
     color: $c-facebook;
   }
 }
-.o-social__link--twitter {
-  @include state--link {
+.o-social__link--tw {
+  @include state--active {
     color: $c-twitter;
   }
 }
-.o-social__link--instagram {
-  @include state--link {
+.o-social__link--ig {
+  @include state--active {
     color: $c-instagram;
   }
 }
-.o-social__link--vimeo {
-  @include state--link {
+.o-social__link--vi {
+  @include state--active {
     color: $c-vimeo;
   }
 }
-.o-social__link--tumblr {
-  @include state--link {
-    color: $c-tumblr;
-  }
-}
-
-[class^="o-social__link--"],
-[class*=" o-social__link--"] {
-  text-decoration: none;
-
-  display: block;
-
-  width: em($circle--s);
-  height: em($circle--s);
-
-  @include media($large) {
-    width: em($circle--b);
-    height: em($circle--b);
-  }
-
-  overflow: hidden;
-
-  border: $line--s solid $grey-2;
-
-  border-radius: 50%;
-
+.o-social__link--tb {
   @include state--active {
-    color: white;
-    border-color: $grey-3;
-  }
-}
-
-.o-social__icon {
-  line-height: em($circle--s);
-
-  @include media($large) {
-    line-height: em($circle--b);
+    color: $c-tumblr;
   }
 }

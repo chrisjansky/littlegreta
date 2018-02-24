@@ -18,7 +18,7 @@ main.m-contact
               each line in item.contact
                 li= line
 
-            a.m-contact__button.o-button--text(href="mailto:" + item.email, class="m-contact__button--" + (index + 1)) Email 
+            a.m-contact__button(href="mailto:" + item.email, class="m-contact__button--" + (index + 1)) Email 
               = item.person
 
             if item.address
