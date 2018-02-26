@@ -1,16 +1,54 @@
 .m-locations {
+  position: relative;
+  text-align: center;
+
   color: white;
-  background-color: hsb(235, 20, 12);
+  background-color: $grey-05;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 66.666vmin;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    background-repeat: no-repeat;
+    background-size: 70vw;
+  }
+
+  &:before {
+    left: 0;
+    background-image: url("../images/map-left.svg");
+    background-position: right 40%;
+
+    width: 33.333%;
+  }
+  &:after {
+    right: 0;
+    background-image: url("../images/map-right.svg");
+    background-position: left 40%;
+
+    width: 22.5%;
+  }
 
   &__wrap {
     @include new-wrap;
+
+    position: relative;
+    z-index: 10;
   }
 
   &__title {
     font-size: $font--500;
     font-weight: $font__sans--light;
 
-    margin-bottom: .5em;
+    margin-bottom: 0;
   }
 
   &__outro {
@@ -18,6 +56,7 @@
 
     p {
       max-width: 20em;
+      margin: 0 auto 1.5em;
 
       font-size: $font--500;
       font-weight: $font__sans--light;
@@ -29,6 +68,7 @@
 
   &__actions {
     display: flex;
+    justify-content: center;
     margin: -1.5em;
   }
 
