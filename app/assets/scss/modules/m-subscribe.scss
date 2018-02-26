@@ -2,6 +2,8 @@
   color: white;
   background-color: $grey-05;
 
+  text-align: center;
+
   &__wrap {
     @include new-wrap;
   }
@@ -15,7 +17,7 @@
 
   &__text {
     max-width: 20em;
-    margin-top: 0;
+    margin: 0 auto 1em;
 
     font-size: $font--500;
     font-weight: $font__sans--light;
