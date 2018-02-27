@@ -4,7 +4,7 @@
   @include collapse-children;
 
   &__title {
-    @include new-head--b(false);
+    @include head--3(false);
     margin-bottom: 1em;
   }
 

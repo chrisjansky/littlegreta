@@ -1,20 +1,21 @@
-@mixin new-head--a {
+@mixin head--1 {
   font-size: $font--700;
   font-weight: $font__sans--light;
   line-height: 1;
 }
 
-@mixin new-head--b($margin: true) {
-  font-size: $font--500;
-  font-weight: $font__sans--light;
-
-  @if $margin == true {
-    margin-bottom: .25em;
-  }
-}
-
-@mixin new-head--c {
+@mixin head--2 {
   font-size: $font--600;
   font-weight: $font__sans--regular;
   line-height: 1;
 }
+
+@mixin head--3($margin: true) {
+  font-size: $font--500;
+  font-weight: $font__sans--light;
+
+  @if $margin == true {
+    margin: .25em 0;
+  }
+}
+
