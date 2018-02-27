@@ -66,7 +66,7 @@
       background-color: $c-facebook;
     }
     .media--facebook:hover & {
-      background-color: hsb(221, 65, 60);
+      background-color: $c-facebook--hover;
     }
 
     .media--twitter & {
@@ -75,7 +75,7 @@
       background-color: $c-twitter;
     }
     .media--twitter:hover & {
-      background-color: hsb(203, 90, 82);
+      background-color: $c-twitter--hover;
     }
 
     .media--instagram & {
