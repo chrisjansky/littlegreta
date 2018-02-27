@@ -41,13 +41,6 @@ $line--m: 3px;
 $line--b: 2px;
 $line--s: 1px;
 
-// Icons
-$icon--l:  48;
-$icon--m:  32;
-$icon--b:  24;
-$icon--s:  20;
-$icon--xs: 16;
-
 $circle--b: 60;
 $circle--s: 40;
 
@@ -62,22 +55,7 @@ $index--xs:  10;
 $index--xxs: 1;
 $index--n:  -1;
 
-// Widths
-$width--xl: 800;
-$width--l:  740;
-$width--m:  560;
-$width--b:  400;
-$width--s:  220;
-$width--xs: 140;
-
 // Heights
-$height--full: 109vh;
-$height--xxl: 800;
-$height--xl:  520;
-$height--l:  round(modular-scale(1, $base-1 * $spacing--l, $multiplier-1));
-$height--m:  round(modular-scale(1, $base-1 * $spacing--m, $multiplier-1));
-$height--b:  round(modular-scale(1, $base-1 * $spacing--b, $multiplier-1));
-$height--s:  round(modular-scale(1, $base-1 * $spacing--s, $multiplier-1));
 $height--xs: round(modular-scale(1, $base-1 * $spacing--xs, $multiplier-1));
 
 // Ratios
