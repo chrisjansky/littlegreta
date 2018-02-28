@@ -1,10 +1,21 @@
 .o-hero {
-  position: relative;
-  height: 90vmin;
+  @at-root [class^="o-hero--"],
+  [class*=" o-hero--"] {
+    position: relative;
+    height: 90vmin;
 
-  color: white;
+    color: white;
 
-  overflow: hidden;
+    overflow: hidden;
+  }
+
+  &--normal {
+    height: 90vmin;
+  }
+
+  &--slim {
+    height: 60vmin;
+  }
 
   &__image,
   &__video {
