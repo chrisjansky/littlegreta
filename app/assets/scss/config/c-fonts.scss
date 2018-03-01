@@ -1,21 +1,21 @@
-// Families.
+/* Families. */
 $font__sans: "europa", sans-serif;
 $font__serif: "freight-text-pro", serif;
 $font__display: "freight-display-pro", serif;
 
-// Weights.
+/* Weights. */
 $font__sans--light: 300;
-$font__sans--regular: 400; // With italics
+$font__sans--regular: 400; /* With italics */
 $font__sans--bold: 700;
 
-// $font__serif--light: 300;
-$font__serif--book: 400; // With italics
-// $font__serif--bold: 700;
+/* $font__serif--light: 300; */
+$font__serif--book: 400; /* With italics */
+/* $font__serif--bold: 700; */
 
 $font__display--light: 300;
-$font__display--book: 400; // With italics
+$font__display--book: 400; /* With italics */
 
-// Defaults.
+/* Defaults. */
 $default__size: $ratio--b;
 $default__family: $font__sans;
 $default__weight: $font__sans--regular;

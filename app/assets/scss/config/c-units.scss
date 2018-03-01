@@ -1,9 +1,9 @@
-// Source:
-// https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss
+/* Source: */
+/* https:/*github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss */
 $multiplier-1: $minor-sixth;
 $multiplier-2: $major-second;
 
-// Bases
+/* Bases */
 $base-1: 16;
 $base-2: 18;
 
@@ -19,7 +19,7 @@ $unit--s:   round(modular-scale(-2, $base-2, $multiplier-2));
 $unit--xs:  floor(modular-scale(-3, $base-2, $multiplier-2));
 $unit--xxs: floor(modular-scale(-6, $base-2, $multiplier-2));
 
-// Spacing
+/* Spacing */
 $spacing--l:   2;
 $spacing--m:   1.875;
 $spacing--b:   1.5;
@@ -27,15 +27,15 @@ $spacing--s:   1.333;
 $spacing--xs:  1.25;
 $spacing--xxs: 1.125;
 
-// Radius
+/* Radius */
 $radius--l: 4px;
 $radius--b: 2px;
 
-// Opacity
+/* Opacity */
 $opacity--m: .95;
 $opacity--b: .85;
 
-// Thickness
+/* Thickness */
 $line--l: 4px;
 $line--m: 3px;
 $line--b: 2px;
@@ -44,7 +44,7 @@ $line--s: 1px;
 $circle--b: 60;
 $circle--s: 40;
 
-// Z-index
+/* Z-index */
 $index--xxl: 500;
 $index--xl:  400;
 $index--l:   300;
@@ -55,10 +55,10 @@ $index--xs:  10;
 $index--xxs: 1;
 $index--n:  -1;
 
-// Heights
+/* Heights */
 $height--xs: round(modular-scale(1, $base-1 * $spacing--xs, $multiplier-1));
 
-// Ratios
+/* Ratios */
 $ratio--xxh: round(modular-scale(+7, $base-1, $multiplier-1));
 $ratio--xh:  round(modular-scale(+6, $base-1, $multiplier-1));
 $ratio--h:   round(modular-scale(+5, $base-1, $multiplier-1));
@@ -72,7 +72,7 @@ $ratio--xs:  round(modular-scale(-2, $base-1, $multiplier-1));
 $ratio--xxs: round(modular-scale(-3, $base-1, $multiplier-1));
 $ratio--t:   round(modular-scale(-4, $base-1, $multiplier-1));
 
-// New font sizes
+/* New font sizes */
 $font--500: 2.25em;
 $font--600: 3.5em;
 $font--700: 4.5em;

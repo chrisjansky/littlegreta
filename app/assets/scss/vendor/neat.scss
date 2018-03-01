@@ -10,13 +10,13 @@ $desktop:    new-breakpoint(min-width em($device__desktop), $columns__desktop);
 
 $widescreen: new-breakpoint(min-width em($device__widescreen), $columns__desktop);
 
-// Phone & phablet <<
+/* Phone & phablet << */
 $small:      new-breakpoint(max-width em($device__tablet - 1));
-// >> Phablet
+/* >> Phablet */
 $portable:   new-breakpoint(min-width em($device__phablet));
-// Phablet & tablet
+/* Phablet & tablet */
 $medium:     new-breakpoint(min-width em($device__phablet) max-width em($device__desktop - 1));
-// >> Tablet
+/* >> Tablet */
 $large:      new-breakpoint(min-width em($device__tablet));
-// << Desktop
+/* << Desktop */
 $mobile:     new-breakpoint(max-width em($device__desktop - 1));

@@ -1,7 +1,7 @@
-// Bourbon
+/* Bourbon */
 @import "bourbon";
 
-// Mixins
+/* Mixins */
 @import "chj-framework/app/assets/scss/mixins/_mixins";
 @import "chj-framework/app/assets/scss/mixins/_center";
 @import "chj-framework/app/assets/scss/mixins/_color";
@@ -11,30 +11,30 @@
 @import "chj-framework/app/assets/scss/mixins/_wrap";
 @import "mixins/_lg-mixins";
 
-// Config
+/* Config */
 @import "config/c-colors";
 @import "config/c-units";
 @import "config/c-fonts";
 @import "config/c-transitions";
 @import "config/c-bourbon";
 
-// Neat
+/* Neat */
 @import "neat";
 
-// Vendor
+/* Vendor */
 @import "vendor/neat";
 @import "vendor/mailchimp";
 @import "vendor/featherlight";
 @import "vendor/lazyload";
 @import "vendor/headroom";
 
-// Base
+/* Base */
 @import "chj-framework/app/assets/scss/base/b-default";
 @import "chj-framework/app/assets/scss/base/b-interactive";
 @import "chj-framework/app/assets/scss/base/b-typography";
 @import "base/b-interactive";
 
-// Layout
+/* Layout */
 @import "layout/l-wrap";
 
 /*
@@ -49,5 +49,5 @@ Objects
 
 @import "misc/*";
 
-// Modules
+/* Modules */
 @import "modules/*";

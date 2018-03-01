@@ -6,8 +6,8 @@ $c-hue4: 255;
 $c-offset1: 10;
 $c-offset2: 20;
 
-// Primary colors.
-$color-1--lighter: hsb($c-hue1 - $c-offset2, 091, 100); // S90 = error?
+/* Primary colors. */
+$color-1--lighter: hsb($c-hue1 - $c-offset2, 091, 100); /* S90 = error? */
 $color-1--light:   hsb($c-hue1 - $c-offset1, 085, 095);
 $color-1:          hsb($c-hue1, 085, 100);
 $color-1--dark:    hsb($c-hue1 + $c-offset1, 090, 080);
@@ -30,7 +30,7 @@ $color-4--light:   hsb($c-hue4 - $c-offset1, 035, 100);
 $color-4:          hsb($c-hue4, 045, 090);
 $color-4--dark:    hsb($c-hue4, 055, 080);
 
-// Neutral colors.
+/* Neutral colors. */
 $grey-9:  hsb($c-hue1, 01, 98);
 $grey-8:  hsb($c-hue1, 02, 92);
 $grey-7:  hsb($c-hue1, 03, 77);
@@ -43,7 +43,7 @@ $grey-1:  hsb($c-hue1 + $c-offset2, 20, 17);
 $grey-05: hsb($c-hue1 + $c-offset2, 20, 12);
 $grey-0:  hsb($c-hue1 + $c-offset2, 22, 07);
 
-// Interactive.
+/* Interactive. */
 $c-link--light: $color-2--light;
 $c-link: $color-1;
 $c-link--dark: $color-2--dark;
@@ -58,7 +58,7 @@ $c-active--dark: $color-3--dark;
 $c-select__background: $color-1--light;
 $c-select__text: $color-1--dark;
 
-// Social colors.
+/* Social colors. */
 $c-facebook:        hsb(221, 61, 70);
 $c-facebook--hover: hsb(221, 65, 60);
 $c-twitter:         hsb(203, 88, 95);
@@ -69,7 +69,7 @@ $c-tumblr:          $grey-4;
 
 $c-error: hsb(35, 100, 100);
 
-// Temp
+/* Temp */
 $grey--000: $grey-9;
 $grey--100: $grey-8;
 $grey--200: $grey-7;
