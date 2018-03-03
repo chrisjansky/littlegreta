@@ -19,9 +19,10 @@
   background-color: transparent;
 
   svg {
-    stroke: currentColor;
-
+    width: 1.25em;
     margin-left: .5em;
+
+    stroke: currentColor;
   }
 
   .device--is-desktop .o-dropdown:hover &,
@@ -32,6 +33,7 @@
 
 .o-dropdown__content {
   position: absolute;
+  top: 100%;
   left: -30%;
   right: -30%;
 
@@ -45,13 +47,6 @@
 
   transition: opacity $duration--s, transform $duration--s, visibility 0 $duration--s;
 
-  @include media($small) {
-    bottom: 100%;
-  }
-  @include media($large) {
-    top: 100%;
-  }
-
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
     visibility: visible;
@@ -63,14 +58,11 @@
 
   &:before {
     display: block;
+    content: "";
 
     @include margin(null auto);
 
     @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), up);
-
-    @include media($large) {
-      content: "";
-    }
   }
   &:after {
     display: block;
@@ -78,10 +70,6 @@
     @include margin(null auto);
 
     @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), down);
-
-    @include media($small) {
-      content: "";
-    }
   }
 }
 

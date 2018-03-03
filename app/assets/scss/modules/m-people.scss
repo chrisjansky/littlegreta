@@ -3,7 +3,7 @@
   background-color: $grey-9;
 
   &__title {
-    @include head--3(false);
+    @include head--3;
 
     color: black;
     text-align: center;

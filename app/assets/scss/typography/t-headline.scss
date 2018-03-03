@@ -29,13 +29,9 @@
     font-size: $font--600; }
 }
 
-@mixin head--3($margin: true) {
+@mixin head--3($light: true) {
   font-size: 1.25em;
   font-weight: $font__sans--regular;
-
-  @if $margin == true {
-    margin: 1.5em 0;
-  }
 
   @include media($large) {
     font-size: 1.5em;
@@ -43,7 +39,11 @@
 
   @include media($desktop) {
     font-size: $font--500;
-    font-weight: $font__sans--light;
+    line-height: $spacing--s;
+    
+    @if $light == "true" {
+      font-weight: $font__sans--light;    
+    }
   }
 }
 

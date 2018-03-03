@@ -52,6 +52,20 @@
     }
   }
 
+  &__content {
+    @include media($small) {
+      top: auto;
+      bottom: 100%;
+
+      &:before {
+        content: none;
+      }
+      &:after {
+        content: "";
+      }
+    }
+  }
+
   &__toggle,
   &__close {
     appearance: none;
@@ -59,6 +73,7 @@
     border: 0;
     background-color: transparent;
     
+    font-size: .875em;
     font-family: inherit;
     color: $color-1;
 

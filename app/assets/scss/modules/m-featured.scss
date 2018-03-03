@@ -9,8 +9,9 @@
   }
 
   &__title {
-    @include head--3(true);
+    @include head--3;
     margin-top: 0;
+    margin-bottom: 1.5em;
   }
 
   &__loop {

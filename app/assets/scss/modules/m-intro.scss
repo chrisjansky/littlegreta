@@ -25,19 +25,23 @@
     max-width: 25em;
     margin: 0 auto;
 
-    font-size: $font--500;
-    font-weight: $font__sans--regular;
-    line-height: 1.4;
+    @include head--3(false);
   }
 
   &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 2em auto;
+    max-width: 40em;
+
     @include media($small) {
-      display: none; }
+      font-size: .75em;
+    }
 
     @include media($widescreen) {
-      font-size: 1.125em; }
-
-    margin-top: 2em;
+      font-size: 1.125em;
+    }
 
     & > * {
       animation: fadeIn .25s backwards;
@@ -54,7 +58,6 @@
   &__nav-active,
   &__dropdown {
     padding: .5em;
-    margin: 1.75em;
   }
 
   &__nav-active {
