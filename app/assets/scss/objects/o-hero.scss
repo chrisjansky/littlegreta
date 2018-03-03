@@ -64,11 +64,14 @@
 
     backdrop-filter: saturate(180%) blur(20px);
 
-    transition: transform .25s, opacity .25s;
-    transform: translateY(.5em);
-    opacity: 0;
+    .device--is-desktop & {
+      transition: transform .25s, opacity .25s;
+      transform: translateY(.5em);
+      opacity: 0;
+    }
 
-    .o-hero:hover & {
+
+    .device--is-desktop .o-hero:hover & {
       transform: translateY(0);
       opacity: 1;
     }
