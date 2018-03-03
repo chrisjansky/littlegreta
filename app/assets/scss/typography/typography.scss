@@ -82,3 +82,17 @@
   letter-spacing: .125em;
   text-transform: uppercase;
 }
+
+@mixin p--big {
+  font-size: 1.125em;
+
+  @include media($desktop) {
+    font-size: 1.5em;
+  }
+
+  @include media($widescreen) {
+    font-size: $font--500;
+    font-weight: $font__sans--light;
+    line-height: $spacing--s;
+  }
+}

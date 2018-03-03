@@ -62,7 +62,6 @@
 
   &__title {
     @include head--3;
-
     margin-bottom: 0;
   }
 
@@ -73,19 +72,9 @@
       max-width: 20em;
       margin: 0 auto 1.5em;
 
-      font-size: 1.125em;
-
       color: $grey-5;
 
-      @include media($desktop) {
-        font-size: 1.5em;
-      }
-
-      @include media($widescreen) {
-        font-size: $font--500;
-        font-weight: $font__sans--light;
-        line-height: $spacing--s;
-      }
+      @include p--big;
     }
   }
 
