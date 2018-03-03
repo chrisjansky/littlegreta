@@ -3,6 +3,10 @@
 
   position: relative;
   z-index: $index--l;
+
+  &__wrap {
+    @include new-wrap;
+  }
 }
 
 .m-contact__list {
@@ -12,7 +16,6 @@
 }
 
 .m-contact__item {
-  margin: 1em;
   flex-basis: 11em;
 }
 

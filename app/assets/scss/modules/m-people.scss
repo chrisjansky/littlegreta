@@ -2,6 +2,10 @@
   color: $grey-4;
   background-color: $grey-9;
 
+  &__wrap {
+    @include new-wrap;
+  }
+
   &__title {
     @include head--3;
 
@@ -16,6 +20,8 @@
     align-items: center;
 
     margin-top: em($ratio--m);
+    margin-left: -.5em;
+    margin-right: -.5em;
 
     @include media($large) {
       margin-top: em($ratio--l);

@@ -45,23 +45,3 @@
   @include media($desktop) {
     padding: 3em 2em; }
 }
-
-.l-wrap {
-  padding: em($unit--xl) em($unit--b);
-
-  margin-right: auto;
-  margin-left: auto;
-
-  @include clearfix;
-  @include collapse-children;
-
-  @include media($phablet) {
-    padding: em($unit--xxl) em($ratio--m);
-  }
-  @include media($tablet) {
-    padding: em($ratio--l);
-  }
-  @include media($desktop) {
-    padding: 4em;
-  }
-}
