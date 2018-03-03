@@ -1,11 +1,52 @@
 @mixin new-wrap {
-  padding: 4em;
-
   @include collapse-children;
+
+  padding: 1.75em 1.5em;
+
+  @include media($tablet) {
+    padding: 3em 2.5em; }
+  
+  @include media($desktop) {
+    padding: 4em; }
+}
+
+@mixin wrap--square {
+  @include collapse-children;
+
+  padding: 1.5em;
+
+  @include media($tablet) {
+    padding: 2.5em; }
+  
+  @include media($desktop) {
+    padding: 4em; }
+}
+
+@mixin short-wrap {
+  @include collapse-children;
+
+  padding: 1.5em;
+
+  @include media($tablet) {
+    padding: 2em 2.5em; }
+  
+  @include media($desktop) {
+    padding: 2.5em 4em; }
+}
+
+@mixin slim-wrap {
+  @include collapse-children;
+
+  padding: 1.75em .5em;
+
+  @include media($tablet) {
+    padding: 2em 1em; }
+  
+  @include media($desktop) {
+    padding: 3em 2em; }
 }
 
 .l-wrap {
-  // Changed
   padding: em($unit--xl) em($unit--b);
 
   margin-right: auto;

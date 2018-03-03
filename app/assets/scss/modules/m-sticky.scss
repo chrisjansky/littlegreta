@@ -1,5 +1,5 @@
 .m-sticky {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -8,20 +8,91 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 2em;
+  padding: 1em 1.5em;
+
+  @include media($desktop) {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
 
   background-color: rgba(white, .95);
   backdrop-filter: saturate(250%) blur(20px);
 
+  .menu--is-active & {
+    bottom: 0;
+
+    flex-direction: column;
+
+    transform: translateY(0);
+  }
+
   transform: translateY(-100%); /* Headroom */
 
-  .device--is-desktop & {
-    @include media($large) {
-      position: fixed;
+  &__nav {
+    @include media($small) {
+      display: none;
+    }
+
+    .menu--is-active & {
+      display: block;
+
+      font-size: 2.5em;
+      font-weight: $font__sans--light;
     }
   }
 
   &__dropdown {
+    @include media($small) {
+      display: none;
+    }
     margin-left: 5%; /* Center the navigation */
+
+    .menu--is-active & {
+      display: block;
+    }
+  }
+
+  &__toggle,
+  &__close {
+    appearance: none;
+    padding: .25em;
+    border: 0;
+    background-color: transparent;
+    
+    font-family: inherit;
+    color: $color-1;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__toggle {
+    text-transform: uppercase;
+    letter-spacing: .125em;
+
+    .menu--is-active & {
+      display: none;
+    }
+
+    @include media($large) {
+      display: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+
+    font-size: 1.5em;
+
+    body:not(.menu--is-active) & {
+      display: none;
+    }
+    
+    @include media($large) {
+      display: none;
+    }
   }
 }

@@ -10,7 +10,7 @@
   }
 
   &__title {
-    @include head--1;
+    @include head--1("regular");
   }
 
   &__emphasis {
@@ -26,12 +26,18 @@
   }
 
   &__intro {
-    font-size: 1.75em;
+    font-size: 1.125em;
     color: $grey-2;
 
     max-width: 40em;
     margin-left: auto;
     margin-right: auto;
+
+    @include media($large) {
+      font-size: 1.25em; }
+
+    @include media($widescreen) {
+      font-size: 1.75em; }
   }
 
   &__text {

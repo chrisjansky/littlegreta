@@ -33,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 3em;
+    @include wrap--square;
 
     transition: background-color .5s;
 
@@ -46,10 +46,11 @@
   }
 
   &__title {
-    font-size: $font--700;
-    font-weight: $font__sans--bold;
-    line-height: 1.25;
-    letter-spacing: -.125rem;
+    @include head--1("bold");
+
+    @include media($large) {
+      letter-spacing: -.0625rem;
+    }
 
     margin: 0;
 
@@ -80,7 +81,7 @@
 
   &__hint {
     font-weight: $font__sans--regular;
-    font-size: .875em;
+    font-size: .75em;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .125em;
@@ -91,11 +92,13 @@
 
     backdrop-filter: saturate(180%) blur(20px);
 
-    transition: transform .25s, opacity .25s;
-    transform: translateY(.5em);
-    opacity: 0;
+    .device--is-desktop & {
+      transition: transform .25s, opacity .25s;
+      transform: translateY(.5em);
+      opacity: 0;
+    }
 
-    .image--is-loaded:hover & {
+    .device--is-desktop .image--is-loaded:hover & {
       transform: translateY(0);
       opacity: 1;
     }

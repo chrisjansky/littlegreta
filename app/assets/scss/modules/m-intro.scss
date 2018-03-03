@@ -7,16 +7,14 @@
   @include new-wrap;
 
   &__logo {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
   }
 
   &__title {
     max-width: 20em;
     margin: 0 auto;
 
-    font-size: $font--700;
-    font-weight: $font__sans--light;
-    line-height: 1.25;
+    @include head--1(false);
 
     strong {
       font-weight: $font__sans--bold;
@@ -33,7 +31,12 @@
   }
 
   &__nav {
-    font-size: 1.125em;
+    @include media($small) {
+      display: none; }
+
+    @include media($widescreen) {
+      font-size: 1.125em; }
+
     margin-top: 2em;
 
     & > * {

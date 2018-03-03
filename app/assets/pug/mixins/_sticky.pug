@@ -4,7 +4,7 @@ mixin sticky(active)
       include ../../svg/logo_symbol.svg
       strong.o-logo__text Little Greta
 
-    nav.o-nav
+    nav.m-sticky__nav.o-nav
       each instance in pages
         unless active == "index" && instance.anchor == active
           if active == instance.anchor
@@ -23,3 +23,7 @@ mixin sticky(active)
           each instance in ["DE", "CZ"]
             li.o-dropdown__item
               a(href="javascript:").o-dropdown__link= instance
+
+    button.m-sticky__toggle(type="button", data-toggle="menu") Menu
+
+    button.m-sticky__close(type="button", data-toggle="menu") &times;

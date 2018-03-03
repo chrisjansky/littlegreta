@@ -1,13 +1,19 @@
 .m-services {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50em;
 
-  margin: 4em auto 0;
-  max-width: 65em;
-}
+  @include media($large) {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.m-services__item {
-  font-size: 1.125em;
+  @include media($desktop) {
+    margin-top: 4em; }
+
+  @include media($widescreen) {
+    font-size: 1.125em; }
 }
 
 [class^="m-services__name"],

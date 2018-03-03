@@ -9,32 +9,48 @@
   justify-content: center;
   align-items: center;
 
-  min-height: 66.666vmin;
+  @include media($small) {
+    padding-top: 7.5em; }
+
+  @include media($large) {
+    min-height: 66.666vmin; }
 
   &:before,
   &:after {
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
+    height: 75%;
 
     background-repeat: no-repeat;
-    background-size: 70vw;
+    background-size: 70vmax;
+
+    @include media($large) {
+      height: 100%;
+    }
   }
 
   &:before {
     left: 0;
     background-image: url("../images/map-left.svg");
-    background-position: right 40%;
+    background-position: right center;
 
-    width: 33.333%;
+    width: 60%;
+
+    @include media($large) {
+      width: 33.333%;
+    }
   }
   &:after {
     right: 0;
     background-image: url("../images/map-right.svg");
-    background-position: left 40%;
+    background-position: left center;
 
-    width: 22.5%;
+    width: 40%;
+
+    @include media($large) {
+      width: 22.5%;
+    }
   }
 
   &__wrap {
@@ -45,8 +61,7 @@
   }
 
   &__title {
-    font-size: $font--500;
-    font-weight: $font__sans--light;
+    @include head--3(false);
 
     margin-bottom: 0;
   }
@@ -58,11 +73,15 @@
       max-width: 20em;
       margin: 0 auto 1.5em;
 
-      font-size: $font--500;
-      font-weight: $font__sans--light;
-      line-height: $spacing--s;
+      font-size: 1.125em;
 
       color: $grey-5;
+
+      @include media($widescreen) {
+        font-size: $font--500;
+        font-weight: $font__sans--light;
+        line-height: $spacing--s;
+      }
     }
   }
 

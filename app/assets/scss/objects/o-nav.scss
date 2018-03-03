@@ -1,14 +1,21 @@
 .o-nav {
-  font-size: 1.125em;
+  text-align: center;
+  
   color: $color-1;
+
+  @include media($desktop) {
+    font-size: 1.125em; }
 
   &__link,
   &__active {
-    padding-left: 1em;
-    padding-right: 1em;
+    @include media($small) {
+      display: block;
+    }
 
-    margin-left: .5em;
-    margin-right: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+
+    margin: .5em;
   }
 
   &__active {

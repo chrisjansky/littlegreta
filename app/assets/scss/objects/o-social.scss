@@ -1,9 +1,10 @@
 .o-social {
+  display: flex;
+  justify-content: center;
+
   list-style-type: none;
   padding-left: 0;
-  margin: 0;
-
-  display: flex;
+  margin: -.5em;
 
   @at-root [class^="o-social__link--"],
   [class*=" o-social__link--"] {

@@ -42,12 +42,14 @@
   }
 }
 
-.portfolio--large {
-  float: left;
-  width: 50%;
-}
+@include media($widescreen) {
+  .portfolio--large {
+    float: left;
+    width: 50%;
+  }
 
-.portfolio--small {
-  float: left;
-  width: 33.333%;
+  .portfolio--small {
+    float: left;
+    width: 33.333%;
+  }  
 }

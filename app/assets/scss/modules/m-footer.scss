@@ -1,16 +1,30 @@
 .m-footer {
   color: $grey-4;
   background-color: $grey-0;
-  padding: 2.5em 4em;
+
+  @include short-wrap;
+
+  @include media($small) {
+    text-align: center;
+  }
 
   &__body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include media($large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__logo {
     @include link--white;
+  }
+
+  &__nav {
+    @include media($small) {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
   }
 
   &__copyright {

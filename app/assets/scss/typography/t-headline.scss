@@ -1,21 +1,49 @@
-@mixin head--1 {
-  font-size: $font--700;
-  font-weight: $font__sans--light;
-  line-height: 1;
+@mixin head--1($type: false) {
+  font-size: 1.75em;
+  line-height: $spacing--xs;
+
+  @include media($large) {
+    font-size: 3em; }
+
+  @include media($widescreen) {
+    font-size: $font--700; }
+
+  @if $type == "bold" {
+    font-weight: $font__sans--bold;
+  } @else if $type == "regular" {
+    font-weight: $font__sans--regular;
+  } @else {
+    font-weight: $font__sans--light;
+  }
 }
 
 @mixin head--2 {
-  font-size: $font--600;
+  font-size: 1.5em;
   font-weight: $font__sans--regular;
-  line-height: 1;
+  line-height: $spacing--xs;
+
+  @include media($large) {
+    font-size: 2.5em; }
+
+  @include media($desktop) {
+    font-size: $font--600; }
 }
 
 @mixin head--3($margin: true) {
-  font-size: $font--500;
-  font-weight: $font__sans--light;
+  font-size: 1.25em;
+  font-weight: $font__sans--regular;
 
   @if $margin == true {
-    margin: .25em 0;
+    margin: 1.5em 0;
+  }
+
+  @include media($large) {
+    font-size: 1.5em;
+  }
+
+  @include media($desktop) {
+    font-size: $font--500;
+    font-weight: $font__sans--light;
   }
 }
 

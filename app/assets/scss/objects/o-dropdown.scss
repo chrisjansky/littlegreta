@@ -31,7 +31,9 @@
 }
 
 .o-dropdown__content {
-  @include position(absolute, 100% -30% null -30%);
+  position: absolute;
+  left: -30%;
+  right: -30%;
 
   text-align: center;
 
@@ -43,6 +45,13 @@
 
   transition: opacity $duration--s, transform $duration--s, visibility 0 $duration--s;
 
+  @include media($small) {
+    bottom: 100%;
+  }
+  @include media($large) {
+    top: 100%;
+  }
+
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
     visibility: visible;
@@ -53,12 +62,26 @@
   }
 
   &:before {
-    content: "";
     display: block;
 
     @include margin(null auto);
 
     @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), up);
+
+    @include media($large) {
+      content: "";
+    }
+  }
+  &:after {
+    display: block;
+
+    @include margin(null auto);
+
+    @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), down);
+
+    @include media($small) {
+      content: "";
+    }
   }
 }
 

@@ -1,9 +1,21 @@
 .o-work {
-  padding: 1em 2em;
+  display: block;
 
   text-align: left;
   text-decoration: none;
   @include link--black;
+
+  @include media($small) {
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  @include media($large) {
+    padding: 1em; }
+
+  @include media($widescreen) {
+    padding: 1em 2em; }
 
   &__holder {
     position: relative;
@@ -34,40 +46,54 @@
 
   &__info {
     position: relative;
+    padding: 1em;
 
-    margin-top: 1em;
-    min-height: 3em;
+    @include media($large) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
 
-    .portfolio--large & {
-      font-size: 1.25em;
+    @include media($widescreen) {
+      min-height: 3em;
+
+      .portfolio--large & {
+        font-size: 1.25em;
+      }
     }
   }
 
   &__name {
     font-weight: $font__sans--regular;
 
-    .o-work:hover & {
-      display: none;
-    }
+    .device--is-desktop .o-work:hover & {
+      display: none; }
   }
 
   &__description {
     margin: 0;
-    display: inline;
 
-    .o-work:not(:hover) & {
-      visibility: hidden;
+    .device--is-mobile & {
+      color: $grey-5;
     }
+
+    .device--is-desktop & {
+      display: inline; }
+
+    .device--is-desktop .o-work:not(:hover) & {
+      visibility: hidden; }
   }
 
   &__hint {
-    display: inline;
-    white-space: nowrap;
-
     color: $grey-7;
     background-color: transparent;
 
-    .o-work:not(:hover) & {
+    .device--is-desktop & {
+      display: inline;
+      white-space: nowrap;
+    }
+
+    .device--is-desktop .o-work:not(:hover) & {
       position: absolute;
       bottom: 0;
       left: 0;
