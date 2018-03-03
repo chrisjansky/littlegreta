@@ -1,5 +1,5 @@
 .o-outro {
-  padding: 1em 3.5em 6em;
+  @include new-wrap;
 
   text-align: center;
 
@@ -16,17 +16,22 @@
     display: block;
     color: $color-1;
 
-    margin: 1em auto;
+    margin: .75em auto;
     max-width: 25em;
 
+    font-size: 2em;
     font-family: $font__display;
     font-weight: $font__display--book;
-    font-size: $font--600;
     font-style: italic;
-    line-height: $spacing--s;
-  }
 
-  &__source {
+
+    @include media($large) {
+      font-size: 2.75em;
+    }
+    @include media($desktop) {
+      font-size: $font--600;
+      line-height: $spacing--s;
+    }
   }
 }
 

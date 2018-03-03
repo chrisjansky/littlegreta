@@ -1,10 +1,29 @@
 .o-gallery {
   @include clearfix;
+  margin: -.5em;
+
+  @include media($desktop) {
+    margin: -1em;
+  }
+
+  @include media($widescreen) {
+    margin: -1.5em;
+  }
 
   &__item {
-    float: left;
+    margin: .5em;
 
-    padding: 1.5em;
+    @include media($large) {
+      float: left;
+    }
+
+    @include media($desktop) {
+      padding: .5em;
+    }
+
+    @include media($widescreen) {
+      padding: 1em;
+    }
   }
 
   &__holder {
@@ -24,14 +43,16 @@
   }
 }
 
-.item--full {
-  width: 100%;
-}
-.item--small {
-  width: 33.333%;
-}
-.item--medium {
-  width: 50%;
+@include media($large) {
+  .item--full {
+    width: calc(100% - 1em);
+  }
+  .item--small {
+    width: calc(33.333% - 1em);
+  }
+  .item--medium {
+    width: calc(50% - 1em);
+  }
 }
 
 .holder--small {

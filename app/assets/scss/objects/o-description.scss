@@ -1,8 +1,11 @@
 .o-description {
-  padding: 5em 3.5em 1em;
+  @include new-wrap;
+  padding-bottom: 0 !important;
 
-  display: flex;
-  justify-content: space-between;
+  @include media($large) {
+    display: flex;
+    justify-content: space-between;
+  }
 
   p, ul {
     margin: 0;
@@ -14,35 +17,52 @@
     border-bottom: 1px solid;
   }
 
-  &__body {
+  &__section--body {
     flex-basis: 50%;
 
-    padding-left: 1.5em;
+    @include media($tablet) {
+      padding-left: .5em;
+    }
+    @include media($desktop) {
+      padding-left: 1em;
+    }
+    @include media($widescreen) {
+      padding-left: 1.5em;
+    }
   }
 
-  &__aside {
+  &__section--aside {
     @include collapse-children;
+
+    margin-bottom: 1.5em;
+
+    @include media($desktop) {
+      font-size: 1.25em;
+    }
 
     ul {
       list-style-type: none;
       padding-left: 0;
 
-      font-size: 1.25em;
     }
   }
 
   &__block--primary {
-    p {
+    @include media($desktop) {
       font-size: 1.25em;
     }
   }
 
   &__title {
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: $font__sans--regular;
     
-    margin-top: 2.5em;
+    margin-top: 1.5em;
     margin-bottom: .5em;
+
+    @include media($desktop) {
+      margin-top: 2.5em;
+    }
   }
 }
 
