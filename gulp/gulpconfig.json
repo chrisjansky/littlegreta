@@ -42,7 +42,6 @@
 
     "node_modules/headroom.js/dist/headroom.js",
     "node_modules/featherlight/src/featherlight.js",
-    "node_modules/waypoints/lib/jquery.waypoints.js",
     "node_modules/vanilla-lazyload/dist/lazyload.js",
 
     "bower_components/chj-framework/app/assets/js/chj-detect.js",
