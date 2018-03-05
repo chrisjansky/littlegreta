@@ -1,0 +1,7 @@
+.page--exit {
+  transition: opacity $duration--l;
+
+  opacity: 0;
+}
+
+/* Not style for .page--enter, performance bottleneck */

@@ -19,10 +19,10 @@ html.no-js(lang="en")
     script(type="text/javascript") try{Typekit.load({ async: true });}catch(e){}
 
   body
-    block template-body
-
-    block template-content
-      p Hello.
+    #barba-wrapper
+      .barba-container
+        block template-content
+          p Hello.
 
     block template-foot
       script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")

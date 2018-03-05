@@ -1,18 +1,17 @@
 extends _basic
 
+include /../bower_components/chj-framework/app/assets/jade/mixins/_dummy
+include ../mixins/_intro-nav
+include ../mixins/_about
+include ../mixins/_sticky
+include ../mixins/_footer
+
 append template-head
   = '\n'
   <!-- build:css /assets/css/style-min.css -->
   <!-- inject:css -->
   <!-- endinject -->
   <!-- endbuild -->
-
-block template-body
-  include /../bower_components/chj-framework/app/assets/jade/mixins/_dummy
-  include ../mixins/_intro-nav
-  include ../mixins/_about
-  include ../mixins/_sticky
-  include ../mixins/_footer
 
 block template-content
   p Basic template.

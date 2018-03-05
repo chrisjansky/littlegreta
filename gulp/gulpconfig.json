@@ -43,6 +43,7 @@
     "node_modules/headroom.js/dist/headroom.js",
     "node_modules/featherlight/src/featherlight.js",
     "node_modules/vanilla-lazyload/dist/lazyload.js",
+    "node_modules/barba.js/dist/barba.js",
 
     "bower_components/chj-framework/app/assets/js/chj-detect.js",
 
