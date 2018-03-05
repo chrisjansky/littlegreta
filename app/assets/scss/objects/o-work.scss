@@ -30,17 +30,17 @@
   }
 
   &__image {
+    position: absolute;
+
     width: 100%;
     height: 100%;
     object-fit: cover;
 
-    position: absolute;
-
-    transition: opacity .25s, transform 10s;
+    will-change: opacity;
+    transition: opacity .25s;
 
     a.o-work:hover .image--is-loaded & {
       opacity: .75;
-      transform: scale(1.1);
     }
   }
 
