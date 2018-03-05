@@ -70,8 +70,7 @@
       opacity: 0;
     }
 
-
-    .device--is-desktop .o-hero:hover & {
+    .device--is-desktop .o-hero--normal:hover & {
       transform: translateY(0);
       opacity: 1;
     }
