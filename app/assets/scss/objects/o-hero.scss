@@ -40,14 +40,29 @@
 
     text-decoration: none;
 
-    background-color: rgba(black, .5);
-    transition: background-color .5s;
-
     &:link, &:visited {
       color: white;
     }
-    &:hover {
-      background-color: rgba(black, 0);
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      background-color: black;
+
+      will-change: opacity;
+      transition: opacity .5s;
+
+      opacity: .5;
+    }
+    &:hover:after {
+      opacity: 0;
     }
   }
 
@@ -61,18 +76,5 @@
     padding: 1.25em 2.5em;
     background-color: rgba(black, .75);
     border-radius: 1.75em;
-
-    backdrop-filter: saturate(180%) blur(20px);
-
-    .device--is-desktop & {
-      transition: transform .25s, opacity .25s;
-      transform: translateY(.5em);
-      opacity: 0;
-    }
-
-    .device--is-desktop .o-hero--normal:hover & {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 }
