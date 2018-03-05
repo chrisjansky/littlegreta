@@ -21,8 +21,6 @@
     height: 80vmin;
     overflow: hidden;
 
-    text-decoration: none;
-
     &:link, &:visited {
       color: white;
     }
@@ -41,14 +39,27 @@
 
     @include wrap--square;
 
-    transition: background-color .5s;
-
-    .image--is-loaded &       { background-color: rgba(black, .5); }
-    .image--is-loaded:hover & { background-color: rgba(black, .25); }
-
     &:before {
       content: "";
     }
+    &:after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      background-color: black;
+
+      will-change: opacity;
+      transition: opacity .5s;
+    }
+
+    .image--is-loaded &:after       { opacity: .5; }
+    .image--is-loaded:hover &:after { opacity: .25; }
   }
 
   &__title {
@@ -59,30 +70,14 @@
     }
 
     margin: 0;
-
-    transition: transform 10s;
-
-    .image--is-loaded:hover & {
-      transform: scale(1.15);
-    }
   }
 
   &__image {
-    position: absolute;
-    /* Fix 1px rounding error during scale transition */
-    top: -1px;
-    left: -1px;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
+    width: 100%;
+    height: 100%;
     max-width: initial;
 
     object-fit: cover;
-
-    transition: transform 10s, opacity .25s;
-
-    .image--is-loaded:hover & {
-      transform: scale(1.1);
-    }
   }
 
   &__hint {
@@ -95,18 +90,5 @@
     padding: 1.25em 2.5em;
     background-color: rgba(black, .75);
     border-radius: 1.75em;
-
-    backdrop-filter: saturate(180%) blur(20px);
-
-    .device--is-desktop & {
-      transition: transform .25s, opacity .25s;
-      transform: translateY(.5em);
-      opacity: 0;
-    }
-
-    .device--is-desktop .image--is-loaded:hover & {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 }
