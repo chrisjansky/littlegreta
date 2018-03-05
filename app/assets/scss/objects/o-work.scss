@@ -55,7 +55,7 @@
     }
 
     @include media($widescreen) {
-      min-height: 3em;
+      min-height: 4em;
 
       .portfolio--large & {
         font-size: 1.25em;
