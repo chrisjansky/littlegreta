@@ -1,44 +1,23 @@
 .o-person {
-  position: relative;
-
   margin: 1em .5em;
   flex-basis: 16em;
 
-  &:hover {
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
 }
 
 .o-person__portrait {
-  display: table-cell;
-}
-
-.o-person__circle {
   margin-right: 1em;
 }
 
 .o-person__image {
   border-radius: 50%;
   filter: grayscale(100%);
-
-  transition: transform $duration--s, filter $duration--s;
-
-  .device--is-desktop .o-person:hover &,
-  .hover--is-active & {
-    filter: grayscale(0);
-    transform: scale(.95);
-  }
 }
 
 .o-person__name {
   display: block;
   @include a-caps;
-
-  transition: color $duration--s;
-
-  .o-person:hover & {
-    color: $grey-2;
-  }
 }
 
 .o-person__position {
@@ -50,104 +29,5 @@
   @include media($large) {
     font-size: em($unit--xs);
     line-height: $spacing--s;
-  }
-}
-
-.o-person__group {
-  .device--is-mobile & {
-    display: none;
-  }
-
-  .device--is-desktop & {
-    @include position(absolute, 0 null null null);
-
-    opacity: 0;
-
-    transition: opacity $duration--b;
-  }
-
-  .device--is-desktop .o-person:hover & {
-    opacity: 1;
-  }
-
-  .o-person--finance & {
-    color: $color-1;
-  }
-  .o-person--sales & {
-    color: $color-3;
-  }
-  .o-person--development & {
-    color: $grey-7;
-  }
-  .o-person--creative & {
-    color: $color-2;
-  }
-}
-
-.o-person__info {
-  display: table-cell;
-  vertical-align: middle;
-
-  .device--is-desktop & {
-    padding-top: em($ratio--s);
-  }
-}
-
-.o-person__detail {
-  @include position(absolute, 85% 0% null 0%);
-  z-index: $index--s;
-
-  @include media($desktop) {
-    left: -15%;
-    right: -15%;
-  }
-
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(em($ratio--b));
-
-  transition: opacity $duration--b, transform $duration--b, visibility 0 $duration--b;
-
-  &:before {
-    display: block;
-    @include margin(null auto);
-
-    content: "";
-    @include triangle(em($ratio--s), rgba($grey-1, $opacity--m), up);
-  }
-
-  .device--is-desktop .o-person:hover &,
-  .hover--is-active & {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .hover--is-active & {
-    transition-delay: 0;
-  }
-  .device--is-desktop .o-person:hover & {
-    transition-delay: $duration--l;
-  }
-}
-
-.o-person__content {
-  color: $grey-8;
-  background-color: rgba($grey-1, $opacity--m);
-
-  padding: em($ratio--b);
-  border-radius: $radius--l;
-
-  font-size: em($unit--s);
-
-  strong {
-    display: block;
-    color: $grey-9;
-
-    margin-top: em($ratio--xxs);
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 }

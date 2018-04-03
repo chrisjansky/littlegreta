@@ -21,25 +21,11 @@ section.m-people
           - var random = Math.floor((Math.random() * 2))
           - var person = group.members[random]
 
-          div.o-person(class="o-person--" + group.title, data-hover)
-            .o-person__portrait
-              .o-person__circle.o-circle
-                img.o-person__image(src="assets/images/people/" + person.image, alt="Portrait of " + person.name)
+          article.o-person
+            .o-person__portrait.o-circle
+              img.o-person__image(src="assets/images/people/" + person.image, alt="Portrait of " + person.name)
 
             .o-person__info
               strong.o-person__name= person.name
-              small.o-person__position
-                span.o-person__group= group.title.charAt(0).toUpperCase() + group.title.slice(1)
-                != person.position
-
-              .o-person__detail
-                .o-person__content
-                  strong Education
-                  != person.education
-
-                  strong Hobbies
-                  != person.hobbies
-
-                  strong 3 Love Brands
-                  != person.favourites
+              small.o-person__position!= person.position
           - i++
