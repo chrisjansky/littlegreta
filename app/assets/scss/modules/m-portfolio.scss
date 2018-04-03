@@ -43,7 +43,8 @@
 
     @include media($desktop) {
       &:nth-child(3),
-      &:nth-child(3n+5) {
+      &:nth-child(5),
+      &:nth-child(3n+7) {
         clear: both;
       }
     }
