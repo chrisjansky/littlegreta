@@ -106,6 +106,8 @@
     }
 
     .media--instagram & {
+      flex-grow: 1;
+
       position: relative;
       margin-left: calc(50% + .25em);
 
