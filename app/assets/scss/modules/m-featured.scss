@@ -24,7 +24,8 @@
       width: 50%;
 
       &:nth-child(2n+1) {
-        clear: both; }
+        clear: both;
+      }
     }
   }
 
@@ -32,6 +33,7 @@
     margin-top: 1.5em;
 
     @include media($large) {
-      margin-top: 3em; }
+      margin-top: 3em;
+    }
   }
 }

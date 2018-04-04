@@ -4,7 +4,8 @@
   color: $color-1;
 
   @include media($desktop) {
-    font-size: 1.125em; }
+    font-size: 1.125em;
+  }
 
   &__link,
   &__active {

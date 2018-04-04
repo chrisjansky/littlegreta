@@ -10,10 +10,12 @@
   align-items: center;
 
   @include media($small) {
-    padding-top: 7.5em; }
+    padding-top: 7.5em;
+  }
 
   @include media($large) {
-    min-height: 66.666vmin; }
+    min-height: 66.666vmin;
+  }
 
   &:before,
   &:after {

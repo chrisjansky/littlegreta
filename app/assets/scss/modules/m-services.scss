@@ -10,10 +10,12 @@
   }
 
   @include media($desktop) {
-    margin-top: 4em; }
+    margin-top: 4em;
+  }
 
   @include media($widescreen) {
-    font-size: 1.125em; }
+    font-size: 1.125em;
+  }
 }
 
 [class^="m-services__name"],

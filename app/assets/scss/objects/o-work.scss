@@ -12,10 +12,12 @@
   }
 
   @include media($large) {
-    padding: 1em; }
+    padding: 1em;
+  }
 
   @include media($widescreen) {
-    padding: 1em 2em; }
+    padding: 1em 2em;
+  }
 
   &__holder {
     position: relative;
@@ -67,7 +69,8 @@
     font-weight: $font__sans--regular;
 
     .device--is-desktop .o-work:hover & {
-      display: none; }
+      display: none;
+    }
   }
 
   &__description {
@@ -78,10 +81,12 @@
     }
 
     .device--is-desktop & {
-      display: inline; }
+      display: inline;
+    }
 
     .device--is-desktop .o-work:not(:hover) & {
-      visibility: hidden; }
+      visibility: hidden;
+    }
   }
 
   &__hint {
