@@ -16,7 +16,7 @@ hr {
   border-bottom: none;
 
   @include margin(1em null);
-  @include rgba(border-color, $grey--200, .5);
+  @include rgba(border-color, $grey-7, .5);
 }
 
 img {

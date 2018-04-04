@@ -44,16 +44,10 @@ $grey-05: hsb($c-hue1 + $c-offset2, 20, 12);
 $grey-0:  hsb($c-hue1 + $c-offset2, 22, 07);
 
 /* Interactive. */
-$c-link--light: $color-2--light;
 $c-link: $color-1;
-$c-link--dark: $color-2--dark;
-
 $c-visited: $c-link;
 $c-hover: $color-1--lighter;
-
 $c-active: $color-3;
-$c-active--light: $color-3--light;
-$c-active--dark: $color-3--dark;
 
 $c-select__background: $color-1--light;
 $c-select__text: $color-1--dark;
@@ -68,16 +62,5 @@ $c-instagram:       #e1306c;
 $c-tumblr:          $grey-4;
 
 $c-error: hsb(35, 100, 100);
-
-/* Temp */
-$grey--000: $grey-9;
-$grey--100: $grey-8;
-$grey--200: $grey-7;
-$grey--300: $grey-6;
-$grey--400: $grey-5;
-$grey--600: $grey-3;
-$grey--700: $grey-2;
-$grey--900: $grey-0;
-$c-select--bg: $c-select__background;
 
 $gradient--instagram: radial-gradient(farthest-corner at 0% 0%, #FFB140, #FF5445, #FC2B82, #8E40B7);
