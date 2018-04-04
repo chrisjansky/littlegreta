@@ -58,8 +58,8 @@
 
 .featherlight-iframe {
   .featherlight-inner {
-    width: em(300);
-    height: em(200);
+    width: 18em;
+    height: 12em;
 
     @include media($large) {
       width: 60vw;

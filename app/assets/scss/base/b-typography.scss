@@ -1,0 +1,10 @@
+body {
+  font: $default__weight 1em $default__family;
+  line-height: $default__leading;
+}
+
+::selection {
+  background-color: $c-select__bg;
+  color: $c-select__text;
+  text-shadow: none;
+}

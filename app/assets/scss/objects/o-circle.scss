@@ -1,9 +1,9 @@
 .o-circle {
   @include media($mobile) {
-    width: em($ratio--xl);
+    width: 3.75em;
   }
   @include media($desktop) {
-    width: em($unit--xxh);
+    width: 5em;
   }
 
   background-color: white;

@@ -54,10 +54,10 @@
 }
 
 @mixin a-caps($bold: true) {
-  font-size: em($unit--s);
+  font-size: .875em;
 
   @include media($large) {
-    font-size: em($ratio--b);
+    font-size: 1em;
   }
 
   letter-spacing: .09375em;
@@ -72,10 +72,10 @@
 }
 
 @mixin a-smallcaps {
-  font-size: em($unit--xs);
+  font-size: .75em;
 
   @include media($large) {
-    font-size: em($unit--s);
+    font-size: .875em;
   }
 
   font-weight: $font__sans--regular;

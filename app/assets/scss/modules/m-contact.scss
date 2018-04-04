@@ -26,18 +26,18 @@
 .m-contact__name {
   color: $grey-2;
 
-  font-size: em($unit--m);
+  font-size: 1.25em;
   font-weight: $font__sans--regular;
 
   @include media($large) {
-    font-size: em($unit--l);
+    font-size: 1.5em;
   }
 
-  @include margin(em($ratio--s) null);
+  @include margin(.625em null);
 }
 
 .m-contact__circle {
-  @include margin(em($ratio--m) auto null);
+  @include margin(1.625em auto null);
 
   filter: grayscale(100%);
 }
@@ -50,10 +50,10 @@
 
     &:last-child {
       color: $grey-6;
-      margin-bottom: em($ratio--s);
+      margin-bottom: .625em;
 
       @include media($portable) {
-        min-height: em(48);
+        min-height: 3em;
       }
     }
   }

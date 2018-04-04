@@ -1,3 +1,22 @@
+a {
+  &:link {
+    color: $c-link;
+  }
+  &:visited {
+    color: $c-visited;
+  }
+  &:hover {
+    color: $c-hover;
+  }
+  &:active {
+    color: $c-active;
+  }
+}
+
+nav a {
+  text-decoration: none;
+}
+
 @mixin link--white {
   @include state--link {
     color: white;

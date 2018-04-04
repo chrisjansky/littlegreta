@@ -14,7 +14,7 @@
   color: currentColor;
   font-family: inherit;
   line-height: 1;
-  letter-spacing: em($ratio--t);
+  letter-spacing: .125em;
   
   background-color: transparent;
 
@@ -62,19 +62,19 @@
 
     @include margin(null auto);
 
-    @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), up);
+    @include triangle(.625em, rgba($grey-0, $opacity--b), up);
   }
   &:after {
     display: block;
 
     @include margin(null auto);
 
-    @include triangle(em($ratio--s), rgba($grey-0, $opacity--b), down);
+    @include triangle(.625em, rgba($grey-0, $opacity--b), down);
   }
 }
 
 .o-dropdown__list {
-  @include padding(em($ratio--s) em($ratio--b));
+  @include padding(.625em 1em);
   @include margin(0 null);
 
   display: inline-block;
@@ -89,15 +89,14 @@
 }
 
 .o-dropdown__item {
-  line-height: em($height--xs);
+  @include padding(null .375em);
 
+  line-height: 2em;
+  letter-spacing: .125em;
+  
   & > * {
-    font-size: em($unit--s);
+    font-size: .875em;
   }
-
-  @include padding(null em($ratio--xs));
-
-  letter-spacing: em($ratio--t);
 }
 
 .o-dropdown__link {

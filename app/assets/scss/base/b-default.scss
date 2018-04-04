@@ -1,0 +1,35 @@
+body,
+input,
+textarea,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+hr {
+  border-top: $line--s solid;
+  border-bottom: none;
+
+  @include margin(1em null);
+  @include rgba(border-color, $grey--200, .5);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+canvas,
+iframe {
+  display: block;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}

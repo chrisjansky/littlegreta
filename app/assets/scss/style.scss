@@ -30,9 +30,8 @@
 @import "vendor/barba";
 
 /* Base */
-@import "chj-framework/app/assets/scss/base/b-default";
-@import "chj-framework/app/assets/scss/base/b-interactive";
-@import "chj-framework/app/assets/scss/base/b-typography";
+@import "base/b-default";
+@import "base/b-typography";
 @import "base/b-interactive";
 
 /* Layout */
