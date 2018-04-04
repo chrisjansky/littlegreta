@@ -3,7 +3,8 @@
   background-color: $grey-9;
 
   &__wrap {
-    @include new-wrap;
+    @include new-wrap(true);
+    max-width: $width--l;
   }
 
   &__title {
@@ -14,17 +15,25 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-gap: 1em .5em;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media($tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media($desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include media($widescreen) {
+      grid-template-columns: repeat(5, 1fr);
+    }
 
     margin-top: em($ratio--m);
-    margin-left: -.5em;
-    margin-right: -.5em;
 
     @include media($large) {
       margin-top: em($ratio--l);
+      grid-gap: 2em 1em;
     }
   }  
 }

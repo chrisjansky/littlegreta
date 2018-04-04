@@ -1,12 +1,10 @@
 .o-person {
-  margin: 1em .5em;
-  flex-basis: 16em;
-
   display: flex;
   align-items: center;
 }
 
 .o-person__portrait {
+  flex-shrink: 0;
   margin-right: 1em;
 }
 
@@ -22,12 +20,13 @@
 
 .o-person__position {
   display: block;
+  margin-top: .25em;
 
   color: $grey-6;
-  font-size: em($unit--s);
+  font-size: .625em;
+  line-height: $spacing--xs;
 
   @include media($large) {
-    font-size: em($unit--xs);
-    line-height: $spacing--s;
+    font-size: .75em;
   }
 }
