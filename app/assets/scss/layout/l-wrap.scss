@@ -1,13 +1,19 @@
-@mixin new-wrap {
+@mixin new-wrap($center: false) {
   @include collapse-children;
 
   padding: 1.75em 1.5em;
 
   @include media($tablet) {
-    padding: 3em 2.5em; }
-  
+    padding: 3em 2.5em;
+  }
   @include media($desktop) {
-    padding: 4em; }
+    padding: 4em;
+  }
+
+  @if $center == true {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin wrap--square {

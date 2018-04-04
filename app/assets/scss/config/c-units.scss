@@ -55,6 +55,9 @@ $index--xs:  10;
 $index--xxs: 1;
 $index--n:  -1;
 
+$width--b: 40em;
+$width--l: 100em;
+
 /* Heights */
 $height--xs: round(modular-scale(1, $base-1 * $spacing--xs, $multiplier-1));
 
