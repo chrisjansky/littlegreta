@@ -8,7 +8,7 @@ module.exports = function(config, gulp, plugins, browserSync, emitty, beepbeep, 
       .pipe(plugins.sassGlob())
 
       .pipe(plugins.sass({
-        includePaths: require('node-neat').with('./node_modules/breakpoint-sass/stylesheets/', './bower_components/', bourbon.includePaths)
+        includePaths: ['./bower_components/', './node_modules/include-media/dist', bourbon.includePaths]
       })
 
       .on('error', function (error) {

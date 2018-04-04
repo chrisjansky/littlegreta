@@ -35,11 +35,11 @@
     margin: 2em auto;
     max-width: $width--b;
 
-    @include media($small) {
+    @include media("<tablet") {
       font-size: .75em;
     }
 
-    @include media($widescreen) {
+    @include media("≥widescreen") {
       font-size: 1.125em;
     }
 

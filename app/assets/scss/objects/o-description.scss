@@ -2,7 +2,7 @@
   @include new-wrap;
   padding-bottom: 0 !important;
 
-  @include media($large) {
+  @include media("≥tablet") {
     display: flex;
     justify-content: space-between;
   }
@@ -20,13 +20,13 @@
   &__section--body {
     flex-basis: 50%;
 
-    @include media($tablet) {
+    @include media("≥tablet","<desktop") {
       padding-left: .5em;
     }
-    @include media($desktop) {
+    @include media("≥desktop") {
       padding-left: 1em;
     }
-    @include media($widescreen) {
+    @include media("≥widescreen") {
       padding-left: 1.5em;
     }
   }
@@ -36,7 +36,7 @@
 
     margin-bottom: 1.5em;
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       font-size: 1.25em;
     }
 
@@ -48,7 +48,7 @@
   }
 
   &__block--primary {
-    @include media($desktop) {
+    @include media("≥desktop") {
       font-size: 1.25em;
     }
   }
@@ -60,7 +60,7 @@
     margin-top: 1.5em;
     margin-bottom: .5em;
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       margin-top: 2.5em;
     }
   }

@@ -9,11 +9,11 @@
   justify-content: center;
   align-items: center;
 
-  @include media($small) {
+  @include media("<tablet") {
     padding-top: 7.5em;
   }
 
-  @include media($large) {
+  @include media("≥tablet") {
     min-height: 66.666vmin;
   }
 
@@ -27,7 +27,7 @@
     background-repeat: no-repeat;
     background-size: 70vmax;
 
-    @include media($large) {
+    @include media("≥tablet") {
       height: 100%;
     }
   }
@@ -39,7 +39,7 @@
 
     width: 60%;
 
-    @include media($large) {
+    @include media("≥tablet") {
       width: 33.333%;
     }
   }
@@ -50,7 +50,7 @@
 
     width: 40%;
 
-    @include media($large) {
+    @include media("≥tablet") {
       width: 22.5%;
     }
   }

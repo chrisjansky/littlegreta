@@ -8,7 +8,7 @@
     margin-top: 2em;
     margin-bottom: 2em;
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       margin-top: 4em;
       margin-bottom: 4em;
     }
@@ -65,7 +65,7 @@
   &__title {
     @include head--1("bold");
 
-    @include media($large) {
+    @include media("≥tablet") {
       letter-spacing: -.0625rem;
     }
 

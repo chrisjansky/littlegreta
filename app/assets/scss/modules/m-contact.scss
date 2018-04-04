@@ -29,7 +29,7 @@
   font-size: 1.25em;
   font-weight: $font__sans--regular;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: 1.5em;
   }
 
@@ -52,7 +52,7 @@
       color: $grey-6;
       margin-bottom: .625em;
 
-      @include media($portable) {
+      @include media("≥phablet") {
         min-height: 3em;
       }
     }

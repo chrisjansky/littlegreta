@@ -33,11 +33,11 @@
     margin-left: auto;
     margin-right: auto;
 
-    @include media($large) {
+    @include media("≥tablet") {
       font-size: 1.25em;
     }
 
-    @include media($widescreen) {
+    @include media("≥widescreen") {
       font-size: 1.75em;
     }
   }
@@ -58,7 +58,7 @@
       margin: 1.5em 0;
     }
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       font-size: 1.125em;
 
       margin-top: 4em;

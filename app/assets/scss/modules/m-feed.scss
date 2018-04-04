@@ -25,10 +25,10 @@
 
     text-decoration: none;
 
-    @include media($mobile) {
+    @include media("<desktop") {
       font-size: .75em;
     }
-    @include media($large) {
+    @include media("≥tablet") {
       flex-basis: 25%;
     }
   }
@@ -46,7 +46,7 @@
 
     background-color: black;
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       width: calc(50% - 1em);
       margin: .5em;
     }
@@ -82,7 +82,7 @@
     padding: 1em;
     min-height: 13em;
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       margin: .5em;
       padding: 2em;
     }
@@ -113,7 +113,7 @@
 
       background-image: $gradient--instagram;
 
-      @include media($desktop) {
+      @include media("≥desktop") {
         margin-left: calc(50% + .5em);
       }
 
@@ -204,7 +204,7 @@
 
   flex-basis: 100%;  
 
-  @include media($large) {
+  @include media("≥tablet") {
     flex-basis: 50%;
   }
 }

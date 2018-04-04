@@ -19,7 +19,7 @@
   }
 
   &__item {
-    @include media($large) {
+    @include media("≥tablet") {
       float: left;
       width: 50%;
 
@@ -32,7 +32,7 @@
   &__button {
     margin-top: 1.5em;
 
-    @include media($large) {
+    @include media("≥tablet") {
       margin-top: 3em;
     }
   }

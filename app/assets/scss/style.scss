@@ -1,5 +1,6 @@
 /* Bourbon */
 @import "bourbon";
+@import "include-media";
 
 /* Mixins */
 @import "chj-framework/app/assets/scss/mixins/_mixins";
@@ -16,13 +17,8 @@
 @import "config/c-units";
 @import "config/c-fonts";
 @import "config/c-transitions";
-@import "config/c-bourbon";
 
-/* Neat */
-@import "neat";
-
-/* Vendor */
-@import "vendor/neat";
+@import "vendor/include-media";
 @import "vendor/mailchimp";
 @import "vendor/featherlight";
 @import "vendor/lazyload";

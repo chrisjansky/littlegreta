@@ -26,7 +26,7 @@
   font-size: .625em;
   line-height: $spacing--xs;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: .75em;
   }
 }

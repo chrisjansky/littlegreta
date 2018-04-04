@@ -19,19 +19,19 @@
     grid-gap: 1em .5em;
     grid-template-columns: repeat(2, 1fr);
 
-    @include media($tablet) {
+    @include media("≥tablet","<desktop") {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include media($desktop) {
+    @include media("≥desktop") {
       grid-template-columns: repeat(4, 1fr);
     }
-    @include media($widescreen) {
+    @include media("≥widescreen") {
       grid-template-columns: repeat(5, 1fr);
     }
 
     margin-top: 1.625em;
 
-    @include media($large) {
+    @include media("≥tablet") {
       margin-top: 2.75em;
       grid-gap: 2em 1em;
     }

@@ -4,12 +4,12 @@
 
   @include short-wrap;
 
-  @include media($small) {
+  @include media("<tablet") {
     text-align: center;
   }
 
   &__body {
-    @include media($large) {
+    @include media("≥tablet") {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -21,7 +21,7 @@
   }
 
   &__nav {
-    @include media($small) {
+    @include media("<tablet") {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
     }

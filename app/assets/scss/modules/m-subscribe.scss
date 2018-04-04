@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
 
-    @include media($mobile) {
+    @include media("<desktop") {
       flex-direction: column;
     }
   }
@@ -42,7 +42,7 @@
   &__input {
     min-width: 14em;
 
-    @include media($large) {
+    @include media("≥tablet") {
       min-width: 20em;
     }
 
@@ -95,10 +95,10 @@
   }
 
   &__button {
-    @include media($mobile) {
+    @include media("<desktop") {
       margin-top: 2em;
     }
-    @include media($desktop) {
+    @include media("≥desktop") {
       margin-left: 4em;
     }
 

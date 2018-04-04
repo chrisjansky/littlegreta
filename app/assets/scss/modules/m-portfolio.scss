@@ -10,7 +10,7 @@
 
     margin-bottom: 1.5em;
 
-    @include media($large) {
+    @include media("≥tablet") {
       margin-bottom: 3em;
     }
   }
@@ -26,7 +26,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @include media($large) {
+    @include media("≥tablet") {
       font-size: 1.25em;
     }
   }
@@ -36,12 +36,12 @@
   }
 
   &__item {
-    @include media($tablet) {
+    @include media("≥tablet","<desktop") {
       float: left;
       width: 50%;
     }
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       &:nth-child(3),
       &:nth-child(5),
       &:nth-child(3n+7) {
@@ -53,13 +53,13 @@
   &__button {
     margin-top: 1.5em;
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       margin-top: 3em;
     }
   }
 }
 
-@include media($desktop) {
+@include media("≥desktop") {
   .portfolio--large {
     float: left;
     width: 50%;

@@ -2,26 +2,27 @@
   @include clearfix;
   margin: -.5em;
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     margin: -1em;
   }
 
-  @include media($widescreen) {
+  @include media("≥widescreen") {
     margin: -1.5em;
   }
 
   &__item {
     margin: .5em;
+    box-sizing: border-box;
 
-    @include media($large) {
+    @include media("≥tablet") {
       float: left;
     }
 
-    @include media($desktop) {
+    @include media("≥desktop") {
       padding: .5em;
     }
 
-    @include media($widescreen) {
+    @include media("≥widescreen") {
       padding: 1em;
     }
   }
@@ -43,7 +44,7 @@
   }
 }
 
-@include media($large) {
+@include media("≥tablet") {
   .item--full {
     width: calc(100% - 1em);
   }

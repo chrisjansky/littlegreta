@@ -25,7 +25,7 @@
 
   background-repeat: repeat-x;
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     background-size: 100% $line--m;
   }
 }
@@ -56,7 +56,7 @@
 @mixin a-caps($bold: true) {
   font-size: .875em;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: 1em;
   }
 
@@ -74,7 +74,7 @@
 @mixin a-smallcaps {
   font-size: .75em;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: .875em;
   }
 
@@ -86,11 +86,11 @@
 @mixin p--big {
   font-size: 1.125em;
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     font-size: 1.5em;
   }
 
-  @include media($widescreen) {
+  @include media("≥widescreen") {
     font-size: $font--500;
     font-weight: $font__sans--light;
     line-height: $spacing--s;

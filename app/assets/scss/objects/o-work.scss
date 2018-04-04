@@ -1,21 +1,22 @@
 .o-work {
   display: block;
+  box-sizing: border-box;
 
   text-align: left;
   text-decoration: none;
   @include link--black;
 
-  @include media($small) {
+  @include media("<tablet") {
     &:not(:first-child) {
       margin-top: 1em;
     }
   }
 
-  @include media($large) {
+  @include media("≥tablet") {
     padding: 1em;
   }
 
-  @include media($widescreen) {
+  @include media("≥widescreen") {
     padding: 1em 2em;
   }
 
@@ -50,13 +51,13 @@
     position: relative;
     padding: 1em;
 
-    @include media($large) {
+    @include media("≥tablet") {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0;
     }
 
-    @include media($widescreen) {
+    @include media("≥widescreen") {
       min-height: 4em;
 
       .portfolio--large & {

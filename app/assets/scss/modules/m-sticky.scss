@@ -10,7 +10,7 @@
   justify-content: space-between;
   padding: 1em 1.5em;
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
@@ -29,7 +29,7 @@
   transform: translateY(-100%); /* Headroom */
 
   &__nav {
-    @include media($small) {
+    @include media("<tablet") {
       display: none;
     }
 
@@ -42,7 +42,7 @@
   }
 
   &__dropdown {
-    @include media($small) {
+    @include media("<tablet") {
       display: none;
     }
     margin-left: 5%; /* Center the navigation */
@@ -53,7 +53,7 @@
   }
 
   &__content {
-    @include media($small) {
+    @include media("<tablet") {
       top: auto;
       bottom: 100%;
 
@@ -90,7 +90,7 @@
       display: none;
     }
 
-    @include media($large) {
+    @include media("≥tablet") {
       display: none;
     }
   }
@@ -106,7 +106,7 @@
       display: none;
     }
     
-    @include media($large) {
+    @include media("≥tablet") {
       display: none;
     }
   }

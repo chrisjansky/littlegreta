@@ -2,7 +2,7 @@
 .featherlight {
   z-index: $index--xl;
 
-  @include media($phone) {
+  @include media("<phablet") {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -61,7 +61,7 @@
     width: 18em;
     height: 12em;
 
-    @include media($large) {
+    @include media("≥tablet") {
       width: 60vw;
       height: 40vw;
     }

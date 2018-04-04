@@ -4,16 +4,16 @@
   margin-right: auto;
   max-width: 50em;
 
-  @include media($large) {
+  @include media("≥tablet") {
     display: flex;
     justify-content: space-between;
   }
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     margin-top: 4em;
   }
 
-  @include media($widescreen) {
+  @include media("≥widescreen") {
     font-size: 1.125em;
   }
 }
@@ -38,7 +38,7 @@
   color: $grey-3;
   list-style-type: none;
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     line-height: $spacing--m;
   }
 }

@@ -1,8 +1,8 @@
 .o-circle {
-  @include media($mobile) {
+  @include media("<desktop") {
     width: 3.75em;
   }
-  @include media($desktop) {
+  @include media("≥desktop") {
     width: 5em;
   }
 

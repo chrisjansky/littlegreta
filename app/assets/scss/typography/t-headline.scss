@@ -2,11 +2,11 @@
   font-size: 1.75em;
   line-height: $spacing--xs;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: 3em;
   }
 
-  @include media($widescreen) {
+  @include media("≥widescreen") {
     font-size: $font--700;
   }
 
@@ -24,11 +24,11 @@
   font-weight: $font__sans--regular;
   line-height: $spacing--xs;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: 2.5em;
   }
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     font-size: $font--600;
   }
 }
@@ -37,11 +37,11 @@
   font-size: 1.25em;
   font-weight: $font__sans--regular;
 
-  @include media($large) {
+  @include media("≥tablet") {
     font-size: 1.5em;
   }
 
-  @include media($desktop) {
+  @include media("≥desktop") {
     font-size: $font--500;
     line-height: $spacing--s;
     
