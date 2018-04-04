@@ -7,7 +7,7 @@ $c-offset1: 10;
 $c-offset2: 20;
 
 /* Primary colors. */
-$color-1--lighter: hsb($c-hue1 - $c-offset2, 091, 100); /* S90 = error? */
+$color-1--lighter: hsb($c-hue1 - $c-offset2, 090, 100);
 $color-1--light:   hsb($c-hue1 - $c-offset1, 085, 095);
 $color-1:          hsb($c-hue1, 085, 100);
 $color-1--dark:    hsb($c-hue1 + $c-offset1, 090, 080);
