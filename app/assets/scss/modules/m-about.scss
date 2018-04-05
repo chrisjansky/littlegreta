@@ -2,7 +2,7 @@
   text-align: center;
 
   &__wrap {
-    @include new-wrap;
+    @include wrap;
   }
 
   &__header {

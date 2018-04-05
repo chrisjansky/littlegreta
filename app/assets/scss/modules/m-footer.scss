@@ -2,7 +2,7 @@
   color: $grey--400;
   background-color: $grey--000;
 
-  @include short-wrap;
+  @include wrap--short;
 
   @include media("<tablet") {
     text-align: center;

@@ -1,5 +1,5 @@
 .o-description {
-  @include new-wrap;
+  @include wrap;
   padding-bottom: 0 !important;
 
   @include media("≥tablet") {

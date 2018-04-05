@@ -3,7 +3,7 @@
   background-color: $grey--900;
 
   &__wrap {
-    @include new-wrap(true);
+    @include wrap(true);
     max-width: $width--l;
   }
 

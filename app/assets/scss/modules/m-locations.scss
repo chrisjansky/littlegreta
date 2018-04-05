@@ -56,7 +56,7 @@
   }
 
   &__wrap {
-    @include new-wrap;
+    @include wrap;
 
     position: relative;
     z-index: 10;

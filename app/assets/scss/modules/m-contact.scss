@@ -5,7 +5,7 @@
   z-index: $index--l;
 
   &__wrap {
-    @include new-wrap;
+    @include wrap;
   }
 }
 

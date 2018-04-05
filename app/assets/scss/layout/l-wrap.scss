@@ -1,4 +1,4 @@
-@mixin new-wrap($center: false) {
+@mixin wrap($center: false) {
   @include collapse-children;
 
   padding: 1.75em 1.5em;
@@ -30,7 +30,7 @@
   }
 }
 
-@mixin short-wrap {
+@mixin wrap--short {
   @include collapse-children;
 
   padding: 1.5em;
@@ -44,7 +44,7 @@
   }
 }
 
-@mixin slim-wrap {
+@mixin wrap--slim {
   @include collapse-children;
 
   padding: 1.75em .5em;
