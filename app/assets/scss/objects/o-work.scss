@@ -23,7 +23,7 @@
   &__holder {
     position: relative;
     padding-bottom: 62.5%;
-    background-color: $grey-9;
+    background-color: $grey--900;
 
     overflow: hidden;
 
@@ -78,7 +78,7 @@
     margin: 0;
 
     .device--is-mobile & {
-      color: $grey-5;
+      color: $grey--500;
     }
 
     .device--is-desktop & {
@@ -91,7 +91,7 @@
   }
 
   &__hint {
-    color: $grey-7;
+    color: $grey--700;
     background-color: transparent;
 
     .device--is-desktop & {

@@ -24,7 +24,7 @@
 }
 
 .m-contact__name {
-  color: $grey-2;
+  color: $grey--200;
 
   font-size: 1.25em;
   font-weight: $font__sans--regular;
@@ -49,7 +49,7 @@
     list-style: none;
 
     &:last-child {
-      color: $grey-6;
+      color: $grey--600;
       margin-bottom: .625em;
 
       @include media("≥phablet") {

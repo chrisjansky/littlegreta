@@ -1,6 +1,6 @@
 .m-subscribe {
   color: white;
-  background-color: $grey-05;
+  background-color: $grey--050;
 
   text-align: center;
 
@@ -17,7 +17,7 @@
     max-width: 20em;
     margin: 0 auto 1em;
 
-    color: $grey-5;
+    color: $grey--500;
 
     @include p--big;
   }
@@ -51,20 +51,20 @@
 
     padding: .5em 0;
     border: 0;
-    border-bottom: 1px solid $grey-3;
+    border-bottom: 1px solid $grey--300;
     color: currentColor;
     background-color: transparent;
 
     transition: border-color .25s;
 
     &::placeholder {
-      color: $grey-5;
+      color: $grey--500;
     }
 
     &:focus {
       outline: 0;
 
-      border-color: $grey-5;
+      border-color: $grey--500;
     }
   }
 

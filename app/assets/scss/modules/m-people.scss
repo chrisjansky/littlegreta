@@ -1,6 +1,6 @@
 .m-people {
-  color: $grey-4;
-  background-color: $grey-9;
+  color: $grey--400;
+  background-color: $grey--900;
 
   &__wrap {
     @include new-wrap(true);

@@ -5,7 +5,7 @@
 
   &__title {
     @include a-caps(false);
-    color: $grey-6;
+    color: $grey--600;
   }
 
   &__content {

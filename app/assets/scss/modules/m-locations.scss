@@ -3,7 +3,7 @@
   text-align: center;
 
   color: white;
-  background-color: $grey-05;
+  background-color: $grey--050;
 
   display: flex;
   justify-content: center;
@@ -74,7 +74,7 @@
       max-width: 20em;
       margin: 0 auto 1.5em;
 
-      color: $grey-5;
+      color: $grey--500;
 
       @include p--big;
     }

@@ -62,14 +62,14 @@
 
     @include margin(null auto);
 
-    @include triangle(.625em, rgba($grey-0, $opacity--b), up);
+    @include triangle(.625em, rgba($grey--000, $opacity--b), up);
   }
   &:after {
     display: block;
 
     @include margin(null auto);
 
-    @include triangle(.625em, rgba($grey-0, $opacity--b), down);
+    @include triangle(.625em, rgba($grey--000, $opacity--b), down);
   }
 }
 
@@ -79,7 +79,7 @@
 
   display: inline-block;
 
-  background-color: rgba($grey-0, $opacity--b);
+  background-color: rgba($grey--000, $opacity--b);
   border-radius: $radius--b;
   backdrop-filter: saturate(180%) blur(20px);
 

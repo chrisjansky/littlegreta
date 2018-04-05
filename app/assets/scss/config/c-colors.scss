@@ -31,17 +31,17 @@ $color-4:          hsb($c-hue4, 045, 090);
 $color-4--dark:    hsb($c-hue4, 055, 080);
 
 /* Neutral colors. */
-$grey-9:  hsb($c-hue1, 01, 98);
-$grey-8:  hsb($c-hue1, 02, 92);
-$grey-7:  hsb($c-hue1, 03, 77);
-$grey-6:  hsb($c-hue1 + $c-offset1, 10, 67);
-$grey-5:  hsb($c-hue1 + $c-offset1, 12, 57);
-$grey-4:  hsb($c-hue1 + $c-offset1, 14, 47);
-$grey-3:  hsb($c-hue1 + $c-offset2, 16, 37);
-$grey-2:  hsb($c-hue1 + $c-offset2, 18, 27);
-$grey-1:  hsb($c-hue1 + $c-offset2, 20, 17);
-$grey-05: hsb($c-hue1 + $c-offset2, 20, 12);
-$grey-0:  hsb($c-hue1 + $c-offset2, 22, 07);
+$grey--900: hsb($c-hue1, 01, 98);
+$grey--800: hsb($c-hue1, 02, 92);
+$grey--700: hsb($c-hue1, 03, 77);
+$grey--600: hsb($c-hue1 + $c-offset1, 10, 67);
+$grey--500: hsb($c-hue1 + $c-offset1, 12, 57);
+$grey--400: hsb($c-hue1 + $c-offset1, 14, 47);
+$grey--300: hsb($c-hue1 + $c-offset2, 16, 37);
+$grey--200: hsb($c-hue1 + $c-offset2, 18, 27);
+$grey--100: hsb($c-hue1 + $c-offset2, 20, 17);
+$grey--050: hsb($c-hue1 + $c-offset2, 20, 12);
+$grey--000: hsb($c-hue1 + $c-offset2, 22, 07);
 
 /* Interactive. */
 $c-link: $color-1;
@@ -59,7 +59,7 @@ $c-twitter:         hsb(203, 88, 95);
 $c-twitter--hover:  hsb(203, 90, 82);
 $c-vimeo:           #1ab7ea;
 $c-instagram:       #e1306c;
-$c-tumblr:          $grey-4;
+$c-tumblr:          $grey--400;
 
 $c-error: hsb(35, 100, 100);
 
