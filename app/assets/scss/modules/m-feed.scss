@@ -2,9 +2,7 @@
   text-align: center;
 
   @include wrap--slim;
-  max-width: 90em;
-  margin-left: auto;
-  margin-right: auto;
+  @include container(90em);
 
   &__title {
     @include head--3;
