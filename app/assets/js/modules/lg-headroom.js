@@ -1,6 +1,10 @@
 module.exports = {
   init: (function instance() {
-    new Headroom(document.getElementById("js-headroom")).init();
+    var headroomEl = document.getElementById("js-headroom");
+
+    if (headroomEl !== null) {
+      new Headroom(headroomEl).init();
+    }
 
     /* Return to make later calls possible */
     return instance;
