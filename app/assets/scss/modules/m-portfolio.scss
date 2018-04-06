@@ -32,21 +32,16 @@
   }
 
   &__loop {
-    @include clearfix;
+    display: grid;
+
+    @include media("≥tablet") {
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 
   &__item {
-    @include media("≥tablet","<desktop") {
-      float: left;
-      width: 50%;
-    }
-
-    @include media("≥desktop") {
-      &:nth-child(3),
-      &:nth-child(5),
-      &:nth-child(3n+7) {
-        clear: both;
-      }
+    @include media("≥tablet") {
+      grid-column: span 2;
     }
   }
 
@@ -59,14 +54,8 @@
   }
 }
 
-@include media("≥desktop") {
-  .portfolio--large {
-    float: left;
-    width: 50%;
+.portfolio--large {
+  @include media("≥desktop") {
+    grid-column: span 3;
   }
-
-  .portfolio--small {
-    float: left;
-    width: 33.333%;
-  }  
 }

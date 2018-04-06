@@ -15,17 +15,10 @@
   }
 
   &__loop {
-    @include clearfix;
-  }
+    display: grid;
 
-  &__item {
     @include media("≥tablet") {
-      float: left;
-      width: 50%;
-
-      &:nth-child(2n+1) {
-        clear: both;
-      }
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
