@@ -1,10 +1,10 @@
 /* Spacing */
-$spacing--l:   2;
-$spacing--m:   1.875;
-$spacing--b:   1.5;
-$spacing--s:   1.333;
-$spacing--xs:  1.25;
-$spacing--xxs: 1.125;
+$leading--l:   2;
+$leading--m:   1.875;
+$leading--b:   1.5;
+$leading--s:   1.333;
+$leading--xs:  1.25;
+$leading--xxs: 1.125;
 
 /* Radius */
 $radius--b: 2px;
@@ -16,6 +16,15 @@ $opacity--b: .85;
 $line--m: 3px;
 $line--b: 2px;
 $line--s: 1px;
+
+/* Transitions. */
+$duration--l:  .5s;
+$duration--b:  .25s;
+$duration--s:  .125s;
+
+$timing--l: $ease-in-out-quint;
+$timing--b: $ease-in-out-cubic;
+$timing--out: $ease-out-cubic;
 
 /* Z-index */
 $index--xxl: 500;

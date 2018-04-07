@@ -1,6 +1,6 @@
 @mixin head--1($type: false) {
   font-size: 1.75em;
-  line-height: $spacing--xs;
+  line-height: $leading--xs;
 
   @include media("≥tablet") {
     font-size: 3em;
@@ -22,7 +22,7 @@
 @mixin head--2 {
   font-size: 1.5em;
   font-weight: $font__sans--regular;
-  line-height: $spacing--xs;
+  line-height: $leading--xs;
 
   @include media("≥tablet") {
     font-size: 2.5em;
@@ -43,7 +43,7 @@
 
   @include media("≥desktop") {
     font-size: $font--500;
-    line-height: $spacing--s;
+    line-height: $leading--s;
     
     @if $light == "true" {
       font-weight: $font__sans--light;    

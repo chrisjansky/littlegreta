@@ -7,11 +7,11 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: .125em;
-  line-height: $spacing--xs;
+  line-height: $leading--xs;
 
   border-radius: 1.625em;
 
-  transition: box-shadow .25s, color .25s, background-color .25s;
+  transition: $duration--b;
 }
 
 .o-cta--light {

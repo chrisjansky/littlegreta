@@ -37,6 +37,6 @@
   list-style-type: none;
 
   @include media("≥desktop") {
-    line-height: $spacing--m;
+    line-height: $leading--m;
   }
 }

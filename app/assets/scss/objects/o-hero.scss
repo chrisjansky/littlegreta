@@ -57,7 +57,7 @@
       background-color: black;
 
       will-change: opacity;
-      transition: opacity .5s;
+      transition: opacity $duration--l;
 
       opacity: .5;
     }

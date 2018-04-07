@@ -24,7 +24,7 @@
 
   color: $grey--600;
   font-size: .625em;
-  line-height: $spacing--xs;
+  line-height: $leading--xs;
 
   @include media("≥tablet") {
     font-size: .75em;

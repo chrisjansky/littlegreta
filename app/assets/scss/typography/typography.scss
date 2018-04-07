@@ -93,6 +93,6 @@
   @include media("≥widescreen") {
     font-size: $font--500;
     font-weight: $font__sans--light;
-    line-height: $spacing--s;
+    line-height: $leading--s;
   }
 }

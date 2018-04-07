@@ -55,7 +55,7 @@
     color: currentColor;
     background-color: transparent;
 
-    transition: border-color .25s;
+    transition: border-color $duration--b;
 
     &::placeholder {
       color: $grey--500;

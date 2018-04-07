@@ -30,7 +30,7 @@
     }
     @include media("≥desktop") {
       font-size: $font--600;
-      line-height: $spacing--s;
+      line-height: $leading--s;
     }
   }
 }
