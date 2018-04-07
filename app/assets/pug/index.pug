@@ -10,13 +10,11 @@ block template-content
     +introNav("index")
 
   .m-news
-    each item in ["pMEGruJJ6Ko", "eHD8Y1Znfpk", "gz5T9K0joRQ"]
-      a.m-news__item(href="case-study")
-        .m-news__overlay
-          h2.m-news__title
-            faker-name-title/
-          strong.m-news__hint Read Success Story
-        img.m-news__image(data-src="http://source.unsplash.com/" + item + "/1440x810", data-srcset="http://source.unsplash.com/" + item + "/800x450 800w, http://source.unsplash.com/" + item + "/1440x810 1440w, http://source.unsplash.com/" + item + "/1920x1080 1920w, http://source.unsplash.com/" + item + "/2880x1620 2880w", data-lazy, alt="Placeholder")
+    each image in ["pMEGruJJ6Ko", "eHD8Y1Znfpk", "gz5T9K0joRQ"]
+      +newsItem(image)
+
+    .m-news__outro
+      a.m-news__button.o-cta--light(href="news-archive") View Older
 
   +about("short")
   include section/_featured

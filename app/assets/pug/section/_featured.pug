@@ -1,19 +1,19 @@
-section.m-featured
-  .m-featured__wrap
-    .m-featured__header
-      h1.m-featured__title Selected Projects
+section.s-featured.m-works
+  .m-works__wrap
+    .m-works__header
+      h1.m-works__title Selected Projects
 
-    .m-featured__loop
+    .m-works__loop
       each item, index in ["IF2MIzP2wXI", "Qe_dS4-jO6E", "HmREZuu4XuY", "asZvnGnpL7Q"]
-        a.m-featured__item.o-work(href="case-study")
+        a.s-featured__item.o-work(href="case-study")
           .o-work__holder
             img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/800x500", data-srcset="http://source.unsplash.com/" + item + "/800x500 800w, http://source.unsplash.com/" + item + "/1440x900 1440w", alt="Featured image")
           .o-work__info
             strong.o-work__name
               faker-name-title/
             p.o-work__description
-              +dummy(100, "chars")
-              | &emsp;
+              +dummy(80, "chars")
+              | &ensp;
             if index % 2 == 0
               mark.o-work__hint Visit Site
                 include ../../svg/caret-right.svg
@@ -21,4 +21,4 @@ section.m-featured
               mark.o-work__hint Read Success Story
                 include ../../svg/caret-right.svg
 
-    a.m-featured__button.o-cta--light(href="our-work") View More Projects
+    a.m-works__button.o-cta--light(href="our-work") View More Projects

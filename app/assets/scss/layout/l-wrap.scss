@@ -49,11 +49,19 @@
 
   padding: 1.75em .5em;
 
-  @include media("≥tablet","<desktop") {
-    padding: 2em 1em;
+  @include media("≥phablet", "<tablet") {
+    padding: 1em;
+  }
+
+  @include media("≥tablet", "<desktop") {
+    padding: 1.5em;
+  }
+
+  @include media("≥desktop", "<widescreen") {
+    padding: 2.5em;
   }
   
-  @include media("≥desktop") {
-    padding: 3em 2em;
+  @include media("≥widescreen") {
+    padding: 3em 4em;
   }
 }

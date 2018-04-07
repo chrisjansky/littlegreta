@@ -1,1 +1,36 @@
+.s-featured {
+  padding-bottom: 2em;
 
+  &__item {
+    @include media("≥tablet") {
+      grid-column: span 3;
+    }
+    @include media("≥widescreen") {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.s-portfolio {
+  @at-root [class^="s-portfolio__item"],
+  [class*=" s-portfolio__item"] {
+
+  }
+  &__item {
+    @include media("≥tablet") {
+      grid-column: span 2;
+    }
+
+    @include media("≥tablet", "<desktop") {
+      font-size: .875em;
+    }
+  }
+  &__item--large {
+    @include media("≥tablet") {
+      grid-column: span 3;
+    }
+    @include media("≥widescreen") {
+      font-size: 1.25em;
+    }
+  }
+}

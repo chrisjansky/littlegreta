@@ -1,94 +1,38 @@
 .m-news {
-  text-align: center;
-
-  &__head {
-    @include a-caps(false);
-    color: $grey--600;
-
-    margin-top: 2em;
-    margin-bottom: 2em;
-
-    @include media("≥desktop") {
-      margin-top: 4em;
-      margin-bottom: 4em;
-    }
+  &__wrap {
+    @include wrap--slim;
+    padding-top: 0 !important;
   }
 
-  &__item {
-    display: block;
-    position: relative;
-
-    height: 80vmin;
-    overflow: hidden;
-
-    &:link, &:visited {
-      color: white;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    @include wrap--square;
-
-    &:before {
-      content: "";
-    }
-    &:after {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-
-      background-color: black;
-
-      will-change: opacity;
-      transition: opacity .5s;
-    }
-
-    .image--is-loaded &:after       { opacity: .5; }
-    .image--is-loaded:hover &:after { opacity: .25; }
-  }
-
-  &__title {
-    @include head--1("bold");
+  &__grid {
+    display: grid;
+    grid-gap: .5em;
 
     @include media("≥tablet") {
-      letter-spacing: -.0625rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
     }
 
-    margin: 0;
+    @include media("≥widescreen") {
+      grid-gap: 2em;
+    }
+  }
+  
+  &__outro {
+    text-align: center;
+
+    padding-bottom: 1em;
+
+    @include media("≥desktop") {
+      padding-bottom: 2em;
+    }
   }
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    max-width: initial;
+  &__button {
+    margin-top: 1.5em;
 
-    object-fit: cover;
-  }
-
-  &__hint {
-    font-weight: $font__sans--regular;
-    font-size: .75em;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: .125em;
-
-    padding: 1.25em 2.5em;
-    background-color: rgba(black, .75);
-    border-radius: 1.75em;
+    @include media("≥tablet") {
+      margin-top: 3em;
+    }
   }
 }

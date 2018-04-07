@@ -1,4 +1,4 @@
-.m-portfolio {
+.m-works {
   text-align: center;
 
   &__wrap {
@@ -15,13 +15,16 @@
     }
   }
 
-  &__title {
+  &__headline {
     @include head--2;
+  }
+
+  &__title {
+    @include head--3;
   }
 
   &__intro {
     color: $grey--200;
-
     @include container(30em);
 
     @include media("≥tablet") {
@@ -31,29 +34,24 @@
 
   &__loop {
     display: grid;
+    grid-gap: 1.5em 1em;
 
     @include media("≥tablet") {
       grid-template-columns: repeat(6, 1fr);
     }
-  }
-
-  &__item {
-    @include media("≥tablet") {
-      grid-column: span 2;
+    @include media("≥desktop") {
+      grid-gap: 1em 2em;
+    }
+    @include media("≥widescreen") {
+      grid-gap: 1.5em 4em;
     }
   }
 
   &__button {
     margin-top: 1.5em;
 
-    @include media("≥desktop") {
+    @include media("≥tablet") {
       margin-top: 3em;
     }
-  }
-}
-
-.portfolio--large {
-  @include media("≥desktop") {
-    grid-column: span 3;
   }
 }

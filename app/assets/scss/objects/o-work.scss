@@ -6,20 +6,6 @@
   text-decoration: none;
   @include link--black;
 
-  @include media("<tablet") {
-    &:not(:first-child) {
-      margin-top: 1em;
-    }
-  }
-
-  @include media("≥tablet") {
-    padding: 1em;
-  }
-
-  @include media("≥widescreen") {
-    padding: 1em 2em;
-  }
-
   &__holder {
     position: relative;
     padding-bottom: 62.5%;
@@ -40,73 +26,84 @@
     object-fit: cover;
 
     will-change: opacity;
-    transition: opacity .25s;
+    transition: opacity $duration--b;
 
-    a.o-work:hover .image--is-loaded & {
+    .o-work:hover .image--is-loaded & {
       opacity: .75;
     }
   }
 
   &__info {
     position: relative;
-    padding: 1em;
+    margin: .75em 1em 0;
 
     @include media("≥tablet") {
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 0;
+      margin-left: 0;
     }
 
-    @include media("≥widescreen") {
-      min-height: 4em;
-
-      .portfolio--large & {
-        font-size: 1.25em;
-      }
+    @include media("≥desktop") {
+      height: 3em;
+      overflow: hidden;
     }
   }
 
   &__name {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
     font-weight: $font__sans--regular;
 
-    .device--is-desktop .o-work:hover & {
-      display: none;
+    @include media("≥desktop") {
+      .device--is-desktop .o-work:hover & {
+        display: none;
+      }
     }
   }
 
   &__description {
     margin: 0;
+    color: $grey--500;
 
-    .device--is-mobile & {
-      color: $grey--500;
-    }
+    @include media("≥desktop") {
+      .device--is-desktop & {
+        color: black;
+        display: inline;
+      }
 
-    .device--is-desktop & {
-      display: inline;
-    }
-
-    .device--is-desktop .o-work:not(:hover) & {
-      visibility: hidden;
+      .device--is-desktop .o-work:not(:hover) & {
+        visibility: hidden;
+        display: block;
+        margin-top: -1.5em; /* Overlap name */
+      }
     }
   }
 
   &__hint {
-    color: $grey--700;
+    color: $color-1;
     background-color: transparent;
 
-    .device--is-desktop & {
-      display: inline;
-      white-space: nowrap;
-    }
-
-    .device--is-desktop .o-work:not(:hover) & {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-
     .o-work:hover & {
-      color: $color-1;
+      color: $color-1--lighter;
+    }
+
+    @include media("≥desktop") {
+      .device--is-desktop & {
+        display: inline;
+        white-space: nowrap;
+
+        color: $grey--700;
+      }
+      .device--is-desktop .o-work:hover & {
+        color: $color-1;
+      }
+
+      .device--is-desktop .o-work:not(:hover) & {
+        position: absolute;
+        top: 1.5em; /* Right below name */
+        left: 0;
+      }
     }
 
     svg {

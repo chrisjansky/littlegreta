@@ -16,15 +16,16 @@ block template-content
     video.o-hero__video(autoplay, loop)
       source(src="assets/video/showreel-2016.webm", type="video/webm")
 
-  section.m-portfolio
-    .m-portfolio__wrap
-      .m-portfolio__header
-        h1.m-portfolio__title: span.t-gradient--2 Our Work
-        p.m-portfolio__intro Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
+  section.m-works
+    .m-works__wrap
+      .m-works__header
+        h1.m-works__headline
+          span.t-gradient--2 Our Work
+        p.m-works__intro Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
 
-      .m-portfolio__loop
-        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA"]
-          a.m-portfolio__item.o-work(href="case-study", class=index < 6 ? "portfolio--large" : "portfolio--small")
+      .m-works__loop
+        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "pw_Ube1_rhs"]
+          a.o-work(href="case-study", class=index < 6 ? "s-portfolio__item--large" : "s-portfolio__item")
             .o-work__holder
               img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/800x500", data-srcset="http://source.unsplash.com/" + item + "/800x500 800w, http://source.unsplash.com/" + item + "/1440x900 1440w", alt="Portfolio image")
             .o-work__info
@@ -32,7 +33,7 @@ block template-content
                 faker-name-title/
               p.o-work__description
                 +dummy(80, "chars")
-                | &emsp;
+                | &ensp;
               if index % 3 == 0
                 mark.o-work__hint Visit Site
                   include ../svg/caret-right.svg
@@ -40,16 +41,6 @@ block template-content
                 mark.o-work__hint Read Success Story
                   include ../svg/caret-right.svg
 
-        //- Without a(href)
-        .m-portfolio__item.o-work(class="portfolio--small")
-          .o-work__holder
-            img.o-work__image(src="http://source.unsplash.com/DYROsn8AyDI/16x10", data-src="http://source.unsplash.com/DYROsn8AyDI/800x500", data-srcset="http://source.unsplash.com/DYROsn8AyDI/800x500 800w, http://source.unsplash.com/DYROsn8AyDI/1440x900 1440w", alt="Portfolio image")
-          .o-work__info
-            strong.o-work__name
-              faker-name-title/
-            p.o-work__description
-              +dummy(90, "chars")
-
-      a.m-portfolio__button.o-cta--light(href="javascript:") Load More Projects
+      a.m-works__button.o-cta--light(href="javascript:") Load More Projects
 
   +footer("our-work")
