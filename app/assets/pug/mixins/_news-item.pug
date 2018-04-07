@@ -1,0 +1,7 @@
+mixin newsItem(image)
+  a.o-news(href="case-study")
+    .o-news__overlay
+      h2.o-news__title
+        faker-name-title/
+      strong.o-news__hint Read Success Story
+    img.o-news__image(data-src="http://source.unsplash.com/" + image + "/1440x810", data-srcset="http://source.unsplash.com/" + image + "/800x450 800w, http://source.unsplash.com/" + image + "/1440x810 1440w, http://source.unsplash.com/" + image + "/1920x1080 1920w, http://source.unsplash.com/" + image + "/2880x1620 2880w", data-lazy, alt="Placeholder")
