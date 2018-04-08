@@ -1,3 +1,10 @@
+$breakpoints: (
+  phablet: 500px,
+  tablet: 760px,
+  desktop: 980px,
+  widescreen: 1260px
+);
+
 /* Spacing */
 $leading--l:   2;
 $leading--m:   1.75;
