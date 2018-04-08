@@ -45,8 +45,7 @@
 .m-contact__details {
   ul {
     padding-left: 0;
-
-    list-style: none;
+    list-style-type: none;
 
     &:last-child {
       color: $grey--600;
