@@ -10,7 +10,7 @@ block template-content
     h1.m-intro__text Bzenia Winery rebranding — how we created a new visual identity and an e-commerce website incorporating augmented reality.
     +introNav(null)
 
-  .o-hero--normal
+  .o-hero--normal(data-inview="long")
     img.o-hero__image(data-src="http://source.unsplash.com/sj4M_cwUGB0/1440x900", data-srcset="http://source.unsplash.com/sj4M_cwUGB0/800x500 800w, http://source.unsplash.com/sj4M_cwUGB0/1440x900 1440w, http://source.unsplash.com/sj4M_cwUGB0/1920x1200 1920w, http://source.unsplash.com/sj4M_cwUGB0/2880x1800 2880w", data-lazy, alt="About Us image")
 
   main.o-description
@@ -55,14 +55,14 @@ block template-content
 
         case size
           when "full"
-            .o-gallery__item(class="item--" + size)
+            .o-gallery__item(class="item--" + size, data-inview="normal")
               .o-gallery__holder(class="holder--" + size)
                 img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/1440x810?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x450?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x810?sig=" + (n * (index + 1)) + " 1440w, http://source.unsplash.com/random/1920x1080?sig=" + (n * (index + 1)) + " 1920w, http://source.unsplash.com/random/2880x1620?sig=" + (n * (index + 1)) + " 2880w", data-lazy, alt="Dummy photo")
 
           when "small"
             - var n = 1
             while n <= 3
-              .o-gallery__item(class="item--" + size)
+              .o-gallery__item(class="item--" + size, data-inview="normal")
                 .o-gallery__holder(class="holder--" + size)
                   img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1024x768?sig=" + (n * (index + 1)) + " 1024w, http://source.unsplash.com/random/1440x1080?sig=" + (n * (index + 1)) + " 1440w", data-lazy, alt="Dummy photo")
               - n++
@@ -70,7 +70,7 @@ block template-content
           when "medium"
             - var n = 1
             while n <= 2
-              .o-gallery__item(class="item--" + size)
+              .o-gallery__item(class="item--" + size, data-inview="normal")
                 .o-gallery__holder(class="holder--" + size)
                   img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x900?sig=" + (n * (index + 1)) + " 1440w", data-lazy, alt="Dummy photo")
               - n++
