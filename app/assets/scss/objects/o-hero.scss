@@ -27,18 +27,24 @@
 
   &__overlay {
     position: absolute;
+    z-index: 10;
+
     width: 100%;
     height: 100%;
-    z-index: 10;
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding: 3em;
+    padding: 1.5em;
 
     text-decoration: none;
+
+    @include media("≥tablet") {
+      padding: 3em;
+    }
 
     &:link, &:visited {
       color: white;
