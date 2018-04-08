@@ -23,7 +23,7 @@
 
     text-decoration: none;
 
-    @include media("<desktop") {
+    @include media("<laptop") {
       font-size: .75em;
     }
     @include media("≥tablet") {
@@ -44,7 +44,7 @@
 
     background-color: black;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       width: calc(50% - 1em);
       margin: .5em;
     }
@@ -80,7 +80,7 @@
     padding: 1em;
     min-height: 13em;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       margin: .5em;
       padding: 2em;
     }
@@ -111,7 +111,7 @@
 
       background-image: $gradient--instagram;
 
-      @include media("≥desktop") {
+      @include media("≥laptop") {
         margin-left: calc(50% + .5em);
       }
 

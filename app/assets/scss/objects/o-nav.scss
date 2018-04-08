@@ -3,7 +3,7 @@
   
   color: $color-1;
 
-  @include media("≥desktop") {
+  @include media("≥laptop") {
     font-size: 1.125em;
   }
 

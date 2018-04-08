@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
 
-    @include media("<desktop") {
+    @include media("<laptop") {
       flex-direction: column;
     }
   }
@@ -95,10 +95,10 @@
   }
 
   &__button {
-    @include media("<desktop") {
+    @include media("<laptop") {
       margin-top: 2em;
     }
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       margin-left: 4em;
     }
 

@@ -13,7 +13,7 @@
       grid-gap: 1em;
     }
 
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       grid-gap: 2em;
     }
   }
@@ -23,7 +23,7 @@
 
     padding-bottom: 1em;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       padding-bottom: 2em;
     }
   }

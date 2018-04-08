@@ -5,7 +5,7 @@
     @include media("≥tablet") {
       grid-column: span 3;
     }
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       font-size: 1.25em;
     }
   }
@@ -13,7 +13,7 @@
 
 .s-portfolio {
   &__item {
-    @include media("≥tablet", "<desktop") {
+    @include media("≥tablet", "<laptop") {
       font-size: .875em;
     }
     @include media("≥tablet") {
@@ -24,7 +24,7 @@
     @include media("≥tablet") {
       grid-column: span 3;
     }
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       font-size: 1.25em;
     }
   }

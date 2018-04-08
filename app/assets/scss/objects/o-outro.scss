@@ -28,7 +28,7 @@
     @include media("≥tablet") {
       font-size: 2.75em;
     }
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       font-size: $font--600;
       line-height: $leading--s;
     }

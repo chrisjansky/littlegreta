@@ -20,13 +20,13 @@
   &__section--body {
     flex-basis: 50%;
 
-    @include media("≥tablet","<desktop") {
+    @include media("≥tablet","<laptop") {
       padding-left: .5em;
     }
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       padding-left: 1em;
     }
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       padding-left: 1.5em;
     }
   }
@@ -36,7 +36,7 @@
 
     margin-bottom: 1.5em;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       font-size: 1.25em;
     }
 
@@ -48,7 +48,7 @@
   }
 
   &__block--primary {
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       font-size: 1.25em;
     }
   }
@@ -60,7 +60,7 @@
     margin-top: 1.5em;
     margin-bottom: .5em;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       margin-top: 2.5em;
     }
   }

@@ -45,7 +45,7 @@
       margin-left: 0;
     }
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       .device--is-desktop & {
         height: 3em;
         overflow: hidden;
@@ -61,7 +61,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       .device--is-desktop .o-work:hover & {
         display: none;
       }
@@ -72,7 +72,7 @@
     margin: 0;
     color: $grey--500;
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       .device--is-desktop & {
         color: black;
         display: inline;
@@ -94,7 +94,7 @@
       color: $color-1--lighter;
     }
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       .device--is-desktop & {
         display: inline;
         white-space: nowrap;

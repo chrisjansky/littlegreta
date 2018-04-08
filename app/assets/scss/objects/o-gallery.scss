@@ -2,11 +2,11 @@
   @include clearfix;
   margin: -.5em;
 
-  @include media("≥desktop") {
+  @include media("≥laptop") {
     margin: -1em;
   }
 
-  @include media("≥widescreen") {
+  @include media("≥desktop") {
     margin: -1.5em;
   }
 
@@ -18,11 +18,11 @@
       float: left;
     }
 
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       padding: .5em;
     }
 
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       padding: 1em;
     }
   }

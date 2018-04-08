@@ -10,11 +10,11 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include media("≥desktop") {
+  @include media("≥laptop") {
     margin-top: 4em;
   }
 
-  @include media("≥widescreen") {
+  @include media("≥desktop") {
     font-size: 1.125em;
   }
 }

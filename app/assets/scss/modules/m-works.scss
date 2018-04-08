@@ -42,10 +42,10 @@
     @include media("≥tablet") {
       grid-template-columns: repeat(6, 1fr);
     }
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       grid-gap: 1em 2em;
     }
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       grid-gap: 1.5em 4em;
     }
   }

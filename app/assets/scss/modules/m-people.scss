@@ -19,13 +19,13 @@
     grid-gap: 1em .5em;
     grid-template-columns: repeat(2, 1fr);
 
-    @include media("≥tablet","<desktop") {
+    @include media("≥tablet","<laptop") {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include media("≥desktop") {
+    @include media("≥laptop") {
       grid-template-columns: repeat(4, 1fr);
     }
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       grid-template-columns: repeat(5, 1fr);
     }
 

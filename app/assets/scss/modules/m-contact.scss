@@ -21,7 +21,7 @@
     @include media("≥phablet") {
       flex-basis: 12.5em;
     }
-    @include media("<widescreen") {
+    @include media("<desktop") {
       font-size: .875em;
     }
   }

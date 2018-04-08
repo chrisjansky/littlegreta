@@ -39,7 +39,7 @@
       font-size: .75em;
     }
 
-    @include media("≥widescreen") {
+    @include media("≥desktop") {
       font-size: 1.125em;
     }
 
