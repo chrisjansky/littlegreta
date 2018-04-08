@@ -21,4 +21,11 @@ section.s-featured.m-works
               mark.o-work__hint Read Success Story
                 include ../../svg/caret-right.svg
 
+    .m-partners
+      h2.m-partners__title Few of the brands we’ve worked with
+      .m-partners__list
+        each logo in ["heineken", "hrabal", "jarosov", "lays", "lipton", "martini", "mnm", "monster", "lays", "lipton", "martini", "mnm", "heineken", "hrabal", "jarosov", "lays", "lipton", "martini"]
+          .m-partners__item
+            img.m-partners__image(src="assets/images/temp/logo-" + logo + ".svg", alt="Logo")
+
     a.m-works__button(href="our-work") View More Projects

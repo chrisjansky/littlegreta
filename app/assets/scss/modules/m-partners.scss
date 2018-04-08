@@ -1,0 +1,31 @@
+.m-partners {
+  @include container(80em);
+
+  &__title {
+    color: $grey--400;
+    @include a-smallcaps;
+
+    margin: 6em 0 1em;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    flex: 0 0 3em;
+    margin: .75em 1.25em;
+
+    opacity: .5;
+
+    @include media("≥tablet") {
+      flex-basis: 4em;
+    }
+    @include media("≥desktop") {
+      margin: 1.5em 2.25em;
+    }
+  }
+}
