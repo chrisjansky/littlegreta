@@ -24,10 +24,17 @@ block template-content
         p.m-works__intro Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
 
       .m-works__loop
-        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "pw_Ube1_rhs", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4"]
+        each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "pw_Ube1_rhs", "asZvnGnpL7Q", "HmREZuu4XuY", "video"]
           a.o-work(href="case-study", class=index < 6 ? "s-portfolio__item--large" : "s-portfolio__item")
             .o-work__holder
-              img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/800x500", data-srcset="http://source.unsplash.com/" + item + "/800x500 800w, http://source.unsplash.com/" + item + "/1440x900 1440w", alt="Portfolio image")
+              if item == "video"
+                video.o-work__video(autoplay muted loop)
+                  source(src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm")
+                  source(src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg")
+                  source(src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4")
+                  source(src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp")
+              else
+                img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/800x500", data-srcset="http://source.unsplash.com/" + item + "/800x500 800w, http://source.unsplash.com/" + item + "/1440x900 1440w", alt="Portfolio image")
             .o-work__info
               strong.o-work__name
                 faker-name-title/
