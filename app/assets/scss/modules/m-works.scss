@@ -34,8 +34,11 @@
 
   &__loop {
     display: grid;
-    grid-gap: 1.5em 1em;
+    grid-gap: 1em;
 
+    @include media("≥phablet") {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include media("≥tablet") {
       grid-template-columns: repeat(6, 1fr);
     }

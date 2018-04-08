@@ -13,12 +13,11 @@
 
 .s-portfolio {
   &__item {
-    @include media("≥tablet") {
-      grid-column: span 2;
-    }
-
     @include media("≥tablet", "<desktop") {
       font-size: .875em;
+    }
+    @include media("≥tablet") {
+      grid-column: span 2;
     }
   }
   &__item--large {
