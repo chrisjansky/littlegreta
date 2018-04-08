@@ -1,5 +1,5 @@
 .headroom {
-  transition: transform $duration--b;
+  transition: transform $duration--b ease-in-out;
 
   &.headroom--not-top {
     transform: translateY(0);

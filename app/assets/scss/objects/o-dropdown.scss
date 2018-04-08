@@ -45,7 +45,7 @@
   opacity: 0;
   transform: translateY(.5em);
 
-  transition: opacity $duration--s, transform $duration--s, visibility 0 $duration--s;
+  transition: opacity $duration--s, transform $duration--s ease-in-out, visibility 0 $duration--s;
 
   .device--is-desktop .o-dropdown:hover &,
   .hover--is-active & {
