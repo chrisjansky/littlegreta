@@ -46,4 +46,4 @@ dist
 app/assets/temp
 app/assets/fonts
 app/assets/pug/data
-app/assets/svg/*
+app/assets/svg/*.svg
