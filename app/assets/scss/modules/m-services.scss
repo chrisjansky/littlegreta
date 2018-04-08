@@ -1,10 +1,16 @@
 .m-services {
   margin-top: 2em;
-  @include container(50em);
+  @include container(60em);
+
+  display: grid;
+  grid-gap: 1em;
+
+  @include media("≥phablet", "<tablet") {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @include media("≥tablet") {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @include media("≥desktop") {
@@ -32,9 +38,9 @@
 .m-services__list {
   margin-top: .5em;
   padding-left: 0;
+  list-style-type: none;
 
   color: $grey--300;
-  list-style-type: none;
 
   @include media("≥desktop") {
     line-height: $leading--m;
