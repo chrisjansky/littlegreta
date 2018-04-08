@@ -29,6 +29,8 @@
   }
 
   &__button {
+    @include cta("light");
+    
     margin-top: 1.5em;
 
     @include media("≥tablet") {

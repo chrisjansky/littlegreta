@@ -69,6 +69,10 @@
     margin-top: 2.5em;
   }
 
+  &__button {
+    @include cta("light");
+  }
+
   &__partners {
     text-align: center;
 
