@@ -1,107 +1,111 @@
 .m-contact {
   text-align: center;
 
-  position: relative;
-  z-index: $index--l;
-
   &__wrap {
     @include wrap;
   }
-}
 
-.m-contact__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-.m-contact__item {
-  flex-basis: 11em;
-}
-
-.m-contact__title {
-  @include head--2;
-}
-
-.m-contact__name {
-  color: $grey--200;
-
-  font-size: 1.25em;
-  font-weight: $font__sans--regular;
-
-  @include media("≥tablet") {
-    font-size: 1.5em;
+    margin: -.5em auto;
+    max-width: 100em;
   }
 
-  @include margin(.625em null);
-}
+  &__item {
+    flex-basis: 10em;
+    margin: .5em 0;
 
-.m-contact__circle {
-  @include margin(1.625em auto null);
+    @include media("≥phablet") {
+      flex-basis: 12.5em;
+    }
+    @include media("<widescreen") {
+      font-size: .875em;
+    }
+  }
 
-  filter: grayscale(100%);
-}
+  &__title {
+    @include head--2;
+  }
 
-.m-contact__details {
-  ul {
-    padding-left: 0;
-    list-style-type: none;
+  &__name {
+    color: $grey--200;
 
-    &:last-child {
-      color: $grey--600;
-      margin-bottom: .625em;
+    font-size: 1.25em;
+    font-weight: $font__sans--regular;
 
-      @include media("≥phablet") {
-        min-height: 3em;
+    @include media("≥tablet") {
+      font-size: 1.5em;
+    }
+
+    @include margin(0 null .625em);
+  }
+
+  &__circle {
+    @include margin(1.625em auto null);
+
+    filter: grayscale(100%);
+  }
+
+  &__details {
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+
+      &:last-child {
+        color: $grey--600;
+        margin-bottom: 0;
       }
     }
   }
-}
 
-[class^="m-contact__button"],
-[class*=" m-contact__button"] {
-  text-decoration: none;
+  @at-root [class^="m-contact__button"],
+  [class*=" m-contact__button"] {
+    text-decoration: none;
 
-  @include a-caps(false);
-}
+    @include a-caps(false);
+  }
 
-.m-contact__button--1 {
-  @include state--link {
-    color: $color-4;
+  &__button--1 {
+    @include state--link {
+      color: $color-4;
+    }
+    @include state--active {
+      color: $color-4--dark;
+    }
   }
-  @include state--active {
-    color: $color-4--dark;
+  &__button--2 {
+    @include state--link {
+      color: $color-1--light;
+    }
+    @include state--active {
+      color: $color-1;
+    }
   }
-}
-.m-contact__button--2 {
-  @include state--link {
-    color: $color-1--light;
+  &__button--3 {
+    @include state--link {
+      color: $color-1--lighter;
+    }
+    @include state--active {
+      color: $color-1--light;
+    }
   }
-  @include state--active {
-    color: $color-1;
+  &__button--4 {
+    @include state--link {
+      color: $color-3;
+    }
+    @include state--active {
+      color: $color-3--dark;
+    }
   }
-}
-.m-contact__button--3 {
-  @include state--link {
-    color: $color-1--lighter;
-  }
-  @include state--active {
-    color: $color-1--light;
-  }
-}
-.m-contact__button--4 {
-  @include state--link {
-    color: $color-3;
-  }
-  @include state--active {
-    color: $color-3--dark;
-  }
-}
-.m-contact__button--5 {
-  @include state--link {
-    color: $color-2;
-  }
-  @include state--active {
-    color: $color-2--dark;
+  &__button--5 {
+    @include state--link {
+      color: $color-2;
+    }
+    @include state--active {
+      color: $color-2--dark;
+    }
   }
 }
