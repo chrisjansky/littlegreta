@@ -10,6 +10,13 @@ module.exports = {
       }
     }
 
+    var barbaLinks = document.querySelectorAll('[data-barba="reload"]');
+    barbaLinks.forEach(function(element) {
+      element.addEventListener('click', function() {
+        document.body.classList.remove('menu--is-active');
+      })
+    });
+
     /* Return to make later calls possible */
     return instance;
   /* Auto run */

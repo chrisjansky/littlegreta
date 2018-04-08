@@ -1,6 +1,6 @@
 mixin sticky(active)
   header#js-headroom.m-sticky
-    a.m-sticky__logo.o-logo--small(href="index")
+    a.m-sticky__logo.o-logo--small(href="index", data-barba="reload")
       include ../../svg/logo_symbol.svg
       strong.o-logo__text Little Greta
 
@@ -10,7 +10,7 @@ mixin sticky(active)
           if active == instance.anchor
             mark.o-nav__active= instance.name
           else
-            a.o-nav__link(href=instance.anchor)= instance.name
+            a.o-nav__link(href=instance.anchor, data-barba="reload")= instance.name
 
     .m-sticky__dropdown.o-dropdown(data-hover)
       button.o-dropdown__toggle(type="button")
@@ -22,7 +22,7 @@ mixin sticky(active)
             span.o-dropdown__selected EN
           each instance in ["DE", "CZ"]
             li.o-dropdown__item
-              a(href="javascript:").o-dropdown__link= instance
+              a(href="javascript:", data-barba="reload").o-dropdown__link= instance
 
     button.m-sticky__toggle(type="button", data-toggle="menu") Menu
 
