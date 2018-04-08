@@ -10,7 +10,7 @@ block template-content
     h1.m-intro__text Watch the highlight reel of our multimedia work or browse through some of our projects and clients.
     +introNav("our-work")
 
-  section.o-hero--normal
+  section.o-hero--normal(data-inview="long")
     a.o-hero__overlay(href="http://player.vimeo.com/video/259061553?autoplay=1", data-featherlight="iframe")
       span.o-hero__play: include ../svg/shape-play.svg
     video.o-hero__video(autoplay, loop)
@@ -25,7 +25,7 @@ block template-content
 
       .m-works__loop
         each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "pw_Ube1_rhs", "asZvnGnpL7Q", "HmREZuu4XuY", "video"]
-          a.o-work(href="case-study", class=index < 6 ? "s-portfolio__item--large" : "s-portfolio__item")
+          a.o-work(href="case-study", class=index < 6 ? "s-portfolio__item--large" : "s-portfolio__item", data-inview="normal")
             .o-work__holder
               if item == "video"
                 video.o-work__video(autoplay muted loop)

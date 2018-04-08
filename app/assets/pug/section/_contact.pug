@@ -6,7 +6,7 @@ main.m-contact
 
     .m-contact__list
       each item, index in contact
-        .m-contact__item
+        .m-contact__item(data-inview="short")
           h5.m-contact__name
             span(class="t-underline--" + (index + 1))= item.name
 

@@ -1,5 +1,6 @@
 .m-locations {
   position: relative;
+  z-index: -1; /* Behind footer */
   text-align: center;
 
   color: white;

@@ -2,6 +2,7 @@
 var
   lgHeadroom = require('./modules/lg-headroom.js'),
   lgLazy = require('./modules/lg-lazyload.js'),
+  lgInview = require('./modules/lg-inview.js'),
   lgToggle = require('./modules/lg-toggle.js');
 
 /* Barba.js */
@@ -21,6 +22,7 @@ addEventListener('popstate', function (event) {
 /* Event based here */
 Barba.Dispatcher.on('newPageReady', function() {
   lgLazy.init();
+  lgInview.init();
   lgToggle.attach();
 });
 

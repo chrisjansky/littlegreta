@@ -21,7 +21,7 @@ section.m-people
           - var random = Math.floor((Math.random() * 2))
           - var person = group.members[random]
 
-          article.o-person
+          article.o-person(data-inview="short")
             .o-person__portrait.o-circle
               img.o-person__image(src="assets/images/people/" + person.image, alt="Portrait of " + person.name)
 

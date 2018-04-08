@@ -1,0 +1,50 @@
+[data-inview="short"] {
+  transition: $duration--b $e-out__medium;
+  opacity: 0;
+  transform: translateY(25%);
+
+  &:nth-child(3n) {
+    transition-delay: $duration--b;
+  }
+  &:nth-child(even) {
+    transition-delay: $duration--s;
+  }
+
+  &.is--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-inview="normal"] {
+  transition: $duration--l $e-out__fast;
+  opacity: 0;
+  transform: translateY(5em);
+
+  &:nth-child(3n) {
+    transition-delay: $duration--b;
+  }
+  &:nth-child(even) {
+    transition-delay: $duration--s;
+  }
+
+  &.is--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-inview="long"] {
+  transition: .75s $e-out__fast;
+  opacity: 0;
+  transform: translateY(50%);
+
+  &:nth-child(even) {
+    transition-delay: $duration--s;
+  }
+
+  &.is--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

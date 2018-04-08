@@ -4,7 +4,7 @@ module.exports = {
       elements_selector: '[data-src]',
       data_src: 'src',
       callback_load: function(element) {
-        element.parentNode.classList.add("image--is-loaded");
+        element.parentNode.classList.add('image--is-loaded');
       }
     });
   
