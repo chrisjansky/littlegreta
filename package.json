@@ -6,7 +6,7 @@
     "gulp": "gulp",
     "svg": "gulp svg",
     "build": "gulp build",
-    "bower": "bower"
+    "bower": "bower install"
   },
   "author": "",
   "license": "ISC",
