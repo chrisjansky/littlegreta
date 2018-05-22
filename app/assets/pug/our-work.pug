@@ -34,7 +34,7 @@ block template-content
                   source(src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4")
                   source(src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp")
               else
-                img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/800x500", data-srcset="http://source.unsplash.com/" + item + "/800x500 800w, http://source.unsplash.com/" + item + "/1440x900 1440w", alt="Portfolio image")
+                img.o-work__image(src="http://source.unsplash.com/" + item + "/16x10", data-src="http://source.unsplash.com/" + item + "/800x500", data-srcset="http://source.unsplash.com/" + item + "/800x500 800w, http://source.unsplash.com/" + item + "/1440x900 1440w", sizes="(min-width: 500px) 50vw, 100vw", alt="Portfolio image")
             .o-work__info
               strong.o-work__name
                 faker-name-title/

@@ -51,7 +51,7 @@ block template-content
   section.m-project__photos
     .o-gallery
 
-      each size, index in ["medium", "small", "full", "small", "medium"]
+      each size, index in ["medium", "small", "square", "full", "tall"]
 
         case size
           when "full"
@@ -64,7 +64,7 @@ block template-content
             while n <= 3
               .o-gallery__item(class="item--" + size, data-inview="normal")
                 .o-gallery__holder(class="holder--" + size)
-                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1024x768?sig=" + (n * (index + 1)) + " 1024w, http://source.unsplash.com/random/1440x1080?sig=" + (n * (index + 1)) + " 1440w", data-lazy, alt="Dummy photo")
+                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x600?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1024x768?sig=" + (n * (index + 1)) + " 1024w, http://source.unsplash.com/random/1440x1080?sig=" + (n * (index + 1)) + " 1440w", sizes="(min-width: 760px) 33.333vw, 100vw", data-lazy, alt="Dummy photo")
               - n++
 
           when "medium"
@@ -72,7 +72,23 @@ block template-content
             while n <= 2
               .o-gallery__item(class="item--" + size, data-inview="normal")
                 .o-gallery__holder(class="holder--" + size)
-                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x900?sig=" + (n * (index + 1)) + " 1440w", data-lazy, alt="Dummy photo")
+                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x500?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x900?sig=" + (n * (index + 1)) + " 1440w", sizes="(min-width: 760px) 50vw, 100vw", data-lazy, alt="Dummy photo")
+              - n++
+
+          when "square"
+            - var n = 1
+            while n <= 2
+              .o-gallery__item(class="item--" + size, data-inview="normal")
+                .o-gallery__holder(class="holder--" + size)
+                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x800?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x800?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x1440?sig=" + (n * (index + 1)) + " 1440w", sizes="(min-width: 760px) 50vw, 100vw", data-lazy, alt="Dummy photo")
+              - n++
+
+          when "tall"
+            - var n = 1
+            while n <= 3
+              .o-gallery__item(class="item--" + size, data-inview="normal")
+                .o-gallery__holder(class="holder--" + size)
+                  img.o-gallery__image(class="image--" + size, data-src="http://source.unsplash.com/random/800x1200?sig=" + (n * (index + 1)), data-srcset="http://source.unsplash.com/random/800x1200?sig=" + (n * (index + 1)) + " 800w, http://source.unsplash.com/random/1440x2160?sig=" + (n * (index + 1)) + " 1440w", sizes="(min-width: 760px) 33.333vw, 100vw", data-lazy, alt="Dummy photo")
               - n++
 
   section.o-outro

@@ -48,10 +48,12 @@
   .item--full {
     width: calc(100% - 1em);
   }
-  .item--small {
+  .item--small,
+  .item--tall {
     width: calc(33.333% - 1em);
   }
-  .item--medium {
+  .item--medium,
+  .item--square {
     width: calc(50% - 1em);
   }
 }
@@ -61,4 +63,10 @@
 }
 .holder--full {
   padding-bottom: 56.25%; /* 16:9 */
+}
+.holder--square {
+  padding-bottom: 100%; /* 1:1 */
+}
+.holder--tall {
+  padding-bottom: 150%; /* 2:3 */
 }
