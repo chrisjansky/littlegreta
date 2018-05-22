@@ -1,14 +1,12 @@
 .m-locations {
-  position: relative;
-  z-index: -1; /* Behind footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   text-align: center;
 
   color: white;
   background-color: $grey--050;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   @include media("<tablet") {
     padding-top: 7.5em;

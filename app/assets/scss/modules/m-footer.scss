@@ -1,4 +1,7 @@
 .m-footer {
+  position: relative;
+  z-index: 10; /* Above .m-locations */
+
   color: $grey--400;
   background-color: $grey--000;
 
