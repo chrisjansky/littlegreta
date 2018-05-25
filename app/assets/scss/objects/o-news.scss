@@ -7,7 +7,7 @@
 
   text-align: center;
 
-  &:link, &:visited {
+  &, &:link, &:visited {
     color: white;
   }
 
@@ -45,7 +45,7 @@
     }
 
     .image--is-loaded &:after       { opacity: .5; }
-    .image--is-loaded:hover &:after { opacity: .25; }
+    a.image--is-loaded:hover &:after { opacity: .25; }
   }
 
   &__title {

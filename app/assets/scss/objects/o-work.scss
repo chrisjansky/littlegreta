@@ -32,7 +32,7 @@
     will-change: opacity;
     transition: opacity $duration--b;
 
-    .o-work:hover .image--is-loaded & {
+    a.o-work:hover .image--is-loaded & {
       opacity: .75;
     }
   }
