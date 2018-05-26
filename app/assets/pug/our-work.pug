@@ -10,11 +10,12 @@ block template-content
     h1.m-intro__text Watch the highlight reel of our multimedia work or browse through some of our projects and clients.
     +introNav("our-work")
 
-  section.o-hero--normal(data-inview="long")
-    a.o-hero__overlay(href="http://player.vimeo.com/video/259061553?autoplay=1", data-featherlight="iframe")
+  section.o-hero--video(data-inview="long")
+    .o-hero__overlay(data-toggle="Video" data-play="vimeo")
       span.o-hero__play: include ../svg/shape-play.svg
-    video.o-hero__video(autoplay, loop)
-      source(src="assets/video/showreel-2016.webm", type="video/webm")
+    video.o-hero__poster(autoplay loop muted playsinline)
+      source(src="assets/video/showreel-2018.mp4", type="video/mp4")
+    iframe#vimeo.o-hero__video(src="https://player.vimeo.com/video/259061553" width="1280" height="544" frameborder="0" allowfullscreen)
 
   section.m-works
     .m-works__wrap

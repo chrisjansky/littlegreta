@@ -17,6 +17,16 @@ module.exports = {
       })
     });
 
+    var playLinks = document.querySelectorAll('[data-play]');
+    playLinks.forEach(function(element) {
+      element.addEventListener('click', function() {
+        var target = document.getElementById(element.dataset.play);
+        var player = new Vimeo.Player(target);
+
+        player.play();
+      })
+    });
+
     /* Return to make later calls possible */
     return instance;
   /* Auto run */
