@@ -30,6 +30,7 @@
 
   &__poster {
     z-index: 50;
+    background-color: black;
 
     transition: opacity $duration--b ease, transform $duration--b ease, visibility 0s $duration--l;
 
