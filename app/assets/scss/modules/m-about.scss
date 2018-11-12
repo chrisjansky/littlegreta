@@ -47,7 +47,7 @@
     columns: 2;
     column-gap: 3em;
     column-width: 12em;
-    
+
     text-align: left;
     color: $grey--500;
 
@@ -84,5 +84,10 @@
     color: $grey--400;
 
     @include a-smallcaps;
+  }
+
+  &__awards {
+    margin: 5em auto 0;
+    max-width: 60em;
   }
 }

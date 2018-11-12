@@ -10,8 +10,9 @@ block template-content
     +introNav("index")
 
   .m-news
-    each image in ["pMEGruJJ6Ko", "eHD8Y1Znfpk", "gz5T9K0joRQ"]
-      +newsItem(image)
+    .m-news__container
+      each image, index in ["pMEGruJJ6Ko", "eHD8Y1Znfpk", "gz5T9K0joRQ"]
+        +newsItem(image, index)
 
     .m-news__outro
       a.m-news__button(href="news-archive") View Older
