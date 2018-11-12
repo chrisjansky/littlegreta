@@ -3,14 +3,12 @@ module.exports = function(config, gulp, plugins, browserSync, browserify, babeli
   var bundler = watchify(browserify({
     entries: [config.dev.jsBundle],
     debug: true
-  }));
+  })).transform(babelify, {
+    presets: ['env']
+  });
 
   gulp.task('scripts', function() {
     return bundler
-      .transform(babelify, {
-        presets: ['env']
-      })
-
       .bundle()
 
       .pipe(source('bundle.js'))
