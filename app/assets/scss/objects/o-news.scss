@@ -38,7 +38,7 @@
       height: 100%;
       z-index: -1;
 
-      background-color: black;
+      background-color: $grey--000;
 
       will-change: opacity;
       transition: opacity $duration--l;

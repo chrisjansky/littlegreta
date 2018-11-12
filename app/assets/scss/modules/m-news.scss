@@ -17,7 +17,7 @@
       grid-gap: 2em;
     }
   }
-  
+
   &__outro {
     text-align: center;
 
@@ -30,11 +30,17 @@
 
   &__button {
     @include cta("light");
-    
+
     margin-top: 1.5em;
 
     @include media("≥tablet") {
       margin-top: 3em;
     }
+  }
+
+  /* Index page */
+  &__container {
+    overflow: hidden;
+    background-color: $grey--000;
   }
 }
