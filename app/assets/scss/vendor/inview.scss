@@ -1,50 +1,33 @@
 [data-inview="short"] {
-  transition: $duration--b $e-out__medium;
-  opacity: 0;
-  transform: translateY(25%);
+  transition: opacity $duration--xxl, transform $duration--xxl $e-out__fast;
 
-  &:nth-child(3n) {
-    transition-delay: $duration--b;
-  }
-  &:nth-child(even) {
-    transition-delay: $duration--s;
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i + 1}n) { transition-delay: $i * .0625s; }
   }
 
-  &.is--in-view {
-    opacity: 1;
-    transform: translateY(0);
+  &:not(.is--in-view) {
+    opacity: 0;
+    transform: translateY(3em);
   }
 }
 
 [data-inview="normal"] {
-  transition: $duration--l $e-out__fast;
-  opacity: 0;
-  transform: translateY(5em);
+  transition: opacity $duration--l, transform $duration--l $e-out__fast;
+  &:nth-child(3n) { transition-delay: $duration--b; }
+  &:nth-child(even) { transition-delay: $duration--s; }
 
-  &:nth-child(3n) {
-    transition-delay: $duration--b;
-  }
-  &:nth-child(even) {
-    transition-delay: $duration--s;
-  }
-
-  &.is--in-view {
-    opacity: 1;
-    transform: translateY(0);
+  &:not(.is--in-view) {
+    opacity: 0;
+    transform: translateY(5em);
   }
 }
 
 [data-inview="long"] {
-  transition: .75s $e-out__fast;
-  opacity: 0;
-  transform: translateY(50%);
+  transition: opacity $duration--xl, transform $duration--xl $e-out__fast;
+  &:nth-child(even) { transition-delay: $duration--s; }
 
-  &:nth-child(even) {
-    transition-delay: $duration--s;
-  }
-
-  &.is--in-view {
-    opacity: 1;
-    transform: translateY(0);
+  &:not(.is--in-view) {
+    opacity: 0;
+    transform: translateY(50%);
   }
 }

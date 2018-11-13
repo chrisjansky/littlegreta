@@ -15,21 +15,6 @@
   }
 
   svg {
-    transition: opacity $duration--xl, transform $duration--xl $e-out__fast;
-    opacity: 0;
-    transform: translateY(3em);
-
     margin: .5em;
-
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i + 1}) {
-        transition-delay: $i * .0625s;
-      }
-    }
-  }
-
-  &.is--in-view svg {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
