@@ -19,6 +19,9 @@
     strong {
       font-weight: $font__sans--bold;
     }
+
+    transition: opacity $duration--l;
+    html.wf-loading & { opacity: 0; }
   }
 
   &__text {
@@ -35,23 +38,8 @@
     margin: 2em auto;
     max-width: $width--b;
 
-    @include media("<tablet") {
-      font-size: .75em;
-    }
-
-    @include media("≥desktop") {
-      font-size: 1.125em;
-    }
-
-    & > * {
-      animation: fadeIn .25s backwards;
-    }
-
-    @for $i from 1 through 5 {
-      & > :nth-child(#{$i}) {
-        animation-delay: $i * .0625s;
-      }
-    }
+    @include media("<tablet") { font-size: .75em; }
+    @include media("≥desktop") { font-size: 1.125em; }
   }
 
   &__nav-link,

@@ -8,6 +8,7 @@
 
   @include media("≥desktop") {
     font-size: $font--700;
+    line-height: $leading--xxs;
   }
 
   @if $type == "bold" {
@@ -44,10 +45,9 @@
   @include media("≥laptop") {
     font-size: $font--500;
     line-height: $leading--s;
-    
+
     @if $light == "true" {
-      font-weight: $font__sans--light;    
+      font-weight: $font__sans--light;
     }
   }
 }
-

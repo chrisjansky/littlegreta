@@ -25,14 +25,15 @@ $line--b: 2px;
 $line--s: 1px;
 
 /* Transitions. */
-$duration--xl: 1s;
+$duration--xxl: 1s;
+$duration--xl: .75s;
 $duration--l:  .5s;
 $duration--b:  .25s;
 $duration--s:  .125s;
 
-$e-in__fast:     cubic-bezier(0.95, 0.05, 0.795, 0.035); /* easeInExpo */
-$e-out__fast:    cubic-bezier(0.19, 1, 0.22, 1);         /* easeOutExpo */
-$e-out__medium:  cubic-bezier(0.165, 0.84, 0.44, 1);     /* easeOutQuad */
+$e-in__fast:     cubic-bezier(0.95, 0.05, 0.795, 0.035);  /* easeInExpo */
+$e-out__fast:    cubic-bezier(0.19, 1, 0.22, 1);          /* easeOutExpo */
+$e-out__medium:  cubic-bezier(0.165, 0.84, 0.44, 1);      /* easeOutQuad */
 
 /* Z-index */
 $index--xxl: 500;

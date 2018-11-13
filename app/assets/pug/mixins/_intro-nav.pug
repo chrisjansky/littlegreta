@@ -3,11 +3,11 @@ mixin introNav(active)
     each instance in pages
       unless active == "index" && instance.anchor == active
         if active == instance.anchor
-          mark.m-intro__nav-active= instance.name
+          mark.m-intro__nav-active(data-inview="short")= instance.name
         else
-          a.m-intro__nav-link(href=instance.anchor)= instance.name
+          a.m-intro__nav-link(href=instance.anchor data-inview="short")= instance.name
 
-    span.m-intro__dropdown.o-dropdown(data-hover)
+    span.m-intro__dropdown.o-dropdown(data-hover data-inview="short")
       button.o-dropdown__toggle(type="button")
         | EN
         include ../../svg/caret-down.svg
