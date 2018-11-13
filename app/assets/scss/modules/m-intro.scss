@@ -6,6 +6,14 @@
 
   @include wrap;
 
+  /* Prevent Typekit FOUT */
+  &__logo,
+  &__title,
+  &__text {
+    transition: opacity $duration--l;
+    html.wf-loading & { opacity: 0; }
+  }
+
   &__logo {
     margin-bottom: 1.25em;
   }
@@ -19,9 +27,6 @@
     strong {
       font-weight: $font__sans--bold;
     }
-
-    transition: opacity $duration--l;
-    html.wf-loading & { opacity: 0; }
   }
 
   &__text {

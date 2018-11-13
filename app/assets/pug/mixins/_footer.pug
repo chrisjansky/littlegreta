@@ -1,21 +1,22 @@
 mixin footer(active)
-  footer.m-footer
-    .m-footer__body
-      a.m-footer__logo.o-logo--small(href="index.html")
-        include ../../svg/logo_symbol.svg
-        strong.o-logo__text Little Greta
+  footer.m-footer(data-present="container")
+    .m-footer__wrap
+      .m-footer__body
+        a.m-footer__logo.o-logo--small(href="index.html" data-present="child")
+          include ../../svg/logo_symbol.svg
+          strong.o-logo__text Little Greta
 
-      nav.m-footer__nav.o-nav
-        each instance in pages
-          unless active == "index" && instance.anchor == active
-            if active == instance.anchor
-              mark.o-nav__active= instance.name
-            else
-              a.o-nav__link(href=instance.anchor)= instance.name
+        nav.m-footer__nav.o-nav
+          each instance in pages
+            unless active == "index" && instance.anchor == active
+              if active == instance.anchor
+                mark.o-nav__active(data-present="child")= instance.name
+              else
+                a.o-nav__link(href=instance.anchor data-present="child")= instance.name
 
-      include ../partial/_social
+        include ../partial/_social
 
-    small.m-footer__copyright
-      | © Copyright 2018 Little Greta&emsp;
-      span.m-footer__break
-      | Registered in England and Wales, no. 10123289 and the Czech Republic, no. 28275705
+      small.m-footer__copyright(data-present="child")
+        | © Copyright 2018 Little Greta&emsp;
+        span.m-footer__break
+        | Registered in England and Wales, no. 10123289 and the Czech Republic, no. 28275705

@@ -10,8 +10,9 @@ block template-content
     h1.m-intro__text Meet good-karma believers, fair players, dreamers-but-doers and enthusiasts full of ideas.
     +introNav("about-us")
 
-  section.o-hero--normal(data-inview="long")
-    img.o-hero__image(data-src="http://source.unsplash.com/wgivdx9dBdQ/1440x900", data-srcset="http://source.unsplash.com/wgivdx9dBdQ/800x500 800w, http://source.unsplash.com/wgivdx9dBdQ/1440x900 1440w, http://source.unsplash.com/wgivdx9dBdQ/1920x1200 1920w, http://source.unsplash.com/wgivdx9dBdQ/2880x1800 2880w", data-lazy, alt="About Us image")
+  section.o-hero--normal
+    .o-hero__body(data-inview="long")
+      img.o-hero__image(data-src="http://source.unsplash.com/wgivdx9dBdQ/1440x900", data-srcset="http://source.unsplash.com/wgivdx9dBdQ/800x500 800w, http://source.unsplash.com/wgivdx9dBdQ/1440x900 1440w, http://source.unsplash.com/wgivdx9dBdQ/1920x1200 1920w, http://source.unsplash.com/wgivdx9dBdQ/2880x1800 2880w" data-lazy alt="About Us image")
 
   +about("full")
 

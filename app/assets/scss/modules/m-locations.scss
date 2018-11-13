@@ -1,58 +1,61 @@
 .m-locations {
-  position: relative;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 
-  text-align: center;
+  &__body {
+    position: relative;
 
-  color: white;
-  background-color: $grey--050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  @include media("<tablet") {
-    padding-top: 7.5em;
-  }
+    text-align: center;
 
-  @include media("≥tablet") {
-    min-height: 66.666vmin;
-  }
+    color: white;
 
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 75%;
-
-    background-repeat: no-repeat;
-    background-size: 70vmax;
-
-    @include media("≥tablet") {
-      height: 100%;
+    @include media("<tablet") {
+      padding-top: 7.5em;
     }
-  }
-
-  &:before {
-    left: 0;
-    background-image: url("../images/map-left.svg");
-    background-position: right center;
-
-    width: 60%;
 
     @include media("≥tablet") {
-      width: 33.333%;
+      min-height: 66.666vmin;
     }
-  }
-  &:after {
-    right: 0;
-    background-image: url("../images/map-right.svg");
-    background-position: left center;
 
-    width: 40%;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 75%;
 
-    @include media("≥tablet") {
-      width: 22.5%;
+      background-repeat: no-repeat;
+      background-size: 70vmax;
+
+      @include media("≥tablet") {
+        height: 100%;
+      }
+    }
+
+    &:before {
+      left: 0;
+      background-image: url("../images/map-left.svg");
+      background-position: right center;
+
+      width: 60%;
+
+      @include media("≥tablet") {
+        width: 33.333%;
+      }
+    }
+    &:after {
+      right: 0;
+      background-image: url("../images/map-right.svg");
+      background-position: left center;
+
+      width: 40%;
+
+      @include media("≥tablet") {
+        width: 22.5%;
+      }
     }
   }
 

@@ -1,7 +1,7 @@
 section.s-featured.m-works
   .m-works__wrap
     .m-works__header
-      h1.m-works__title Selected Projects
+      h1.m-works__title(data-inview="short") Selected Projects
 
     .m-works__loop
       each item, index in ["IF2MIzP2wXI", "Qe_dS4-jO6E", "HmREZuu4XuY", "asZvnGnpL7Q"]
@@ -22,10 +22,10 @@ section.s-featured.m-works
                 include ../../svg/caret-right.svg
 
     .m-partners
-      h2.m-partners__title Few of the brands we’ve worked with
+      h2.m-partners__title(data-inview="short") Few of the brands we’ve worked with
       .m-partners__list
         each logo in ["heineken", "hrabal", "jarosov", "lays", "lipton", "martini", "mnm", "monster", "lays", "lipton", "martini", "mnm", "heineken", "hrabal", "jarosov", "lays", "lipton", "martini"]
-          .m-partners__item
+          .m-partners__item(data-inview="short")
             img.m-partners__image(src="assets/images/temp/logo-" + logo + ".svg", alt="Logo")
 
     a.m-works__button(href="our-work") View More Projects

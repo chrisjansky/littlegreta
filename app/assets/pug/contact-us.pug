@@ -10,8 +10,9 @@ block template-content
     h1.m-intro__text We are a mere e-mail away from starting something amazing together.
     +introNav("contact-us")
 
-  section.o-hero--slim(data-inview="long")
-    img.o-hero__image(data-src="assets/images/map-whole.svg", data-lazy, alt="Little Greta Office Locations")
+  section.o-hero--slim
+    .o-hero__body(data-inview="long")
+      img.o-hero__image(data-src="assets/images/map-whole.svg", data-lazy, alt="Little Greta Office Locations")
 
   include section/_contact
 

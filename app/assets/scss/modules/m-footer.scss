@@ -1,14 +1,20 @@
 .m-footer {
-  position: relative;
-  z-index: 10; /* Above .m-locations */
-
-  color: $grey--400;
-  background-color: $grey--000;
-
-  @include wrap--short;
+  overflow: hidden;
 
   @include media("<tablet") {
     text-align: center;
+  }
+
+  &__wrap {
+    color: $grey--400;
+    background-color: $grey--000;
+
+    @include wrap--short;
+
+    transition: transform $duration--xl $e-both__medium;
+    .m-footer:not(.is--present) & {
+      transform: translateY(100%);
+    }
   }
 
   &__body {

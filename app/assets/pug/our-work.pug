@@ -10,19 +10,20 @@ block template-content
     h1.m-intro__text Watch the highlight reel of our multimedia work or browse through some of our projects and clients.
     +introNav("our-work")
 
-  section.o-hero--video(data-inview="long")
-    .o-hero__overlay(data-toggle="Video" data-play="vimeo")
-      span.o-hero__play: include ../svg/shape-play.svg
-    video.o-hero__poster(autoplay loop muted playsinline)
-      source(src="assets/video/showreel-2018.mp4", type="video/mp4")
-    iframe#vimeo.o-hero__video(src="https://player.vimeo.com/video/259061553" width="1280" height="544" frameborder="0" allowfullscreen)
+  section.o-hero--video
+    .o-hero__body(data-inview="long")
+      .o-hero__overlay(data-toggle="Video" data-play="vimeo")
+        span.o-hero__play: include ../svg/shape-play.svg
+      video.o-hero__poster(autoplay loop muted playsinline)
+        source(src="assets/video/showreel-2018.mp4", type="video/mp4")
+      iframe#vimeo.o-hero__video(src="https://player.vimeo.com/video/259061553" width="1280" height="544" frameborder="0" allowfullscreen)
 
   section.m-works
     .m-works__wrap
       .m-works__header
         h1.m-works__headline
-          span.t-gradient--2 Our Work
-        p.m-works__intro Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
+          span.t-gradient--2(data-inview="short") Our Work
+        p.m-works__intro(data-inview="short") Large. Small. Czech. Indian. American. Multinational&hellip; we have them all under our belt. Take a look below.
 
       .m-works__loop
         each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "pw_Ube1_rhs", "asZvnGnpL7Q", "HmREZuu4XuY", "video"]

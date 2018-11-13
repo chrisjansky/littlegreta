@@ -1,6 +1,6 @@
 ul.o-social
   each item in social
-    li.o-social__item
+    li.o-social__item(data-present="child")
       a(class="o-social__link--" + item.id, href=item.href)
         span.o-social__icon
           case item.id

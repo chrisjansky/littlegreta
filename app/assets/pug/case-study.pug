@@ -10,40 +10,41 @@ block template-content
     h1.m-intro__text Bzenia Winery rebranding — how we created a new visual identity and an e-commerce website incorporating augmented reality.
     +introNav(null)
 
-  .o-hero--normal(data-inview="long")
-    img.o-hero__image(data-src="http://source.unsplash.com/sj4M_cwUGB0/1440x900", data-srcset="http://source.unsplash.com/sj4M_cwUGB0/800x500 800w, http://source.unsplash.com/sj4M_cwUGB0/1440x900 1440w, http://source.unsplash.com/sj4M_cwUGB0/1920x1200 1920w, http://source.unsplash.com/sj4M_cwUGB0/2880x1800 2880w", data-lazy, alt="About Us image")
+  .o-hero--normal
+    .o-hero__body(data-inview="long")
+      img.o-hero__image(data-src="http://source.unsplash.com/sj4M_cwUGB0/1440x900", data-srcset="http://source.unsplash.com/sj4M_cwUGB0/800x500 800w, http://source.unsplash.com/sj4M_cwUGB0/1440x900 1440w, http://source.unsplash.com/sj4M_cwUGB0/1920x1200 1920w, http://source.unsplash.com/sj4M_cwUGB0/2880x1800 2880w", data-lazy, alt="About Us image")
 
   main.o-description
     .o-description__section--aside
-      h1.o-description__title Deliverables
+      h1.o-description__title(data-inview="short") Deliverables
       ul
-        li Conceptualisation
-        li Brand design
-        li Packaging
-        li Graphic Design
-        li Web design and build
-        li Social media
-        li Photography
-        li Image Retouching
-        li Video
-        li Augmented reality
-        li Translations
+        li(data-inview="short") Conceptualisation
+        li(data-inview="short") Brand design
+        li(data-inview="short") Packaging
+        li(data-inview="short") Graphic Design
+        li(data-inview="short") Web design and build
+        li(data-inview="short") Social media
+        li(data-inview="short") Photography
+        li(data-inview="short") Image Retouching
+        li(data-inview="short") Video
+        li(data-inview="short") Augmented reality
+        li(data-inview="short") Translations
 
     .o-description__section--body
       .o-description__block--primary
-        h2.o-description__title Brief
-        p
+        h2.o-description__title(data-inview="short") Brief
+        p(data-inview="short")
           +dummy(50, "text")
           | 
           a(href="javacript:") And this is what a link looks like.
 
       .o-description__block--secondary
-        h2.o-description__title Action
-        p: +dummy(60, "text")
+        h2.o-description__title(data-inview="short") Action
+        p(data-inview="short"): +dummy(60, "text")
 
       .o-description__block--secondary
-        h2.o-description__title Result
-        p
+        h2.o-description__title(data-inview="short") Result
+        p(data-inview="short")
           +dummy(40, "text")
           | 
           a(href="javacript:") And this is what a link looks like.

@@ -20,14 +20,16 @@ block template-content
   +about("short")
   include section/_featured
   
-  .m-locations(data-inview="long")
-    .m-locations__wrap
-      h2.m-locations__title Get in Touch
+  .m-end
+    .m-locations(data-inview="normal")
+      .m-locations__body
+        .m-locations__contents
+          h2.m-locations__title(data-inview="short") Get in Touch
 
-      .m-locations__outro
-        p We have offices in the UK, Germany, the USA, and the Czech Republic, where Little Greta originates and where much of our team and infrastructure remains.
-        .m-locations__actions
-          a.m-locations__button--primary(href="mailto:info@littlegreta.co.uk") Get in Touch
-          a.m-locations__button--secondary(href="contact-us.html") Our Locations
+          .m-locations__outro(data-inview="short")
+            p We have offices in the UK, Germany, the USA, and the Czech Republic, where Little Greta originates and where much of our team and infrastructure remains.
+            .m-locations__actions
+              a.m-locations__button--primary(href="mailto:info@littlegreta.co.uk" data-inview="short") Get in Touch
+              a.m-locations__button--secondary(href="contact-us.html" data-inview="short") Our Locations
 
-  +footer("index")
+    +footer("index")

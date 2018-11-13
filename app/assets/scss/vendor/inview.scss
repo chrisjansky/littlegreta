@@ -1,13 +1,13 @@
 [data-inview="short"] {
   transition: opacity $duration--xxl, transform $duration--xxl $e-out__fast;
 
-  @for $i from 1 through 7 {
+  @for $i from 1 through 10 {
     &:nth-child(#{$i + 1}n) { transition-delay: $i * .0625s; }
   }
 
   &:not(.is--in-view) {
     opacity: 0;
-    transform: translateY(3em);
+    transform: translateY(3rem);
   }
 }
 
@@ -18,7 +18,7 @@
 
   &:not(.is--in-view) {
     opacity: 0;
-    transform: translateY(5em);
+    transform: translateY(5rem);
   }
 }
 
@@ -29,5 +29,20 @@
   &:not(.is--in-view) {
     opacity: 0;
     transform: translateY(50%);
+  }
+}
+
+[data-present="child"] {
+  transition: opacity $duration--xxl, transform $duration--xxl $e-out__fast;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) { transition-delay: $duration--l + $i * .0625s; }
+  }
+
+  [data-present="container"]:not(.is--present) & {
+    opacity: 0;
+    transform: translateY(3rem);
+
+    transition-delay: 0s;
   }
 }
