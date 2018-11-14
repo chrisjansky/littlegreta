@@ -15,8 +15,7 @@
     padding-bottom: 1.5em;
   }
 
-  background-color: rgba(white, .95);
-  backdrop-filter: saturate(250%) blur(20px);
+  background-color: white;
 
   .menu--is-active & {
     bottom: 0;
@@ -28,10 +27,16 @@
 
   transform: translateY(-100%); /* Headroom */
 
+  &__logo,
+  &__dropdown {
+    transition: opacity $duration--xxl;
+
+    .m-sticky:not(.headroom--pinned) & { opacity: 0; }
+    .m-sticky.headroom--pinned & { transition-delay: $duration--l; }
+  }
+
   &__nav {
-    @include media("<tablet") {
-      display: none;
-    }
+    @include media("<tablet") { display: none; }
 
     .menu--is-active & {
       display: block;
@@ -39,12 +44,19 @@
       font-size: 2.5em;
       font-weight: $font__sans--light;
     }
+
+    & > * {
+      opacity: 0;
+      transition: opacity $duration--xxl;
+    }
+    .headroom--pinned & > * { opacity: 1; }
+    @for $i from 1 through 5 {
+      .headroom--pinned & > :nth-child(#{$i}) { transition-delay: $duration--b + $i * .0625s; }
+    }
   }
 
   &__dropdown {
-    @include media("<tablet") {
-      display: none;
-    }
+    @include media("<tablet") { display: none; }
     margin-left: 5%; /* Center the navigation */
 
     .menu--is-active & {
@@ -72,7 +84,7 @@
     padding: .25em;
     border: 0;
     background-color: transparent;
-    
+
     font-size: .875em;
     font-family: inherit;
     color: $color-1;
@@ -105,7 +117,7 @@
     body:not(.menu--is-active) & {
       display: none;
     }
-    
+
     @include media("≥tablet") {
       display: none;
     }
