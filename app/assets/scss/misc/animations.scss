@@ -1,0 +1,19 @@
+@keyframes blink {
+  10%,
+  18%,
+  74% {
+    transform: none;
+    animation-timing-function: $e-in__fast;
+  }
+  12%,
+  20%,
+  76% {
+    transform: translateY(25%) scaleY(0.5);
+  }
+  16%,
+  24%,
+  80% {
+    transform: none;
+    animation-timing-function: $e-out__fast;
+  }
+}
