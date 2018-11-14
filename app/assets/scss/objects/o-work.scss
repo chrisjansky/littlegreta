@@ -34,6 +34,7 @@
 
     a[href].o-work:hover .image--is-loaded & {
       opacity: .75;
+      @include cursor-arrow;
     }
   }
 

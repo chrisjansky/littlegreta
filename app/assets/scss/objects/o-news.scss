@@ -11,6 +11,10 @@
     color: white;
   }
 
+  &[href]:hover {
+    @include cursor-arrow;
+  }
+
   &__overlay {
     position: absolute;
     width: 100%;
