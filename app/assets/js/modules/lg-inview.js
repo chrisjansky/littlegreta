@@ -1,7 +1,5 @@
 module.exports = {
   init: (function instance() {
-    inView.threshold(0.25);
-
     inView('[data-inview]').on('enter', function(element) {
       element.classList.add('is--in-view');
     });
