@@ -5,7 +5,7 @@ var
 
 var
   transBasic = "easeInOutCubic",
-  transFastOut = "easeOutQuint"
+  transFastOut = "easeOutQuint";
 
 jQuery.easing.def = transBasic;
 

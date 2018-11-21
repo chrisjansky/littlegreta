@@ -7,14 +7,14 @@ module.exports = {
         var classAttr = this.getAttribute('data-toggle');
 
         document.body.classList.toggle(classAttr + '--is-active');
-      }
+      };
     }
 
     var barbaLinks = document.querySelectorAll('[data-barba="reload"]');
     barbaLinks.forEach(function(element) {
       element.addEventListener('click', function() {
         document.body.classList.remove('menu--is-active');
-      })
+      });
     });
 
     var playLinks = document.querySelectorAll('[data-play]');
@@ -24,11 +24,11 @@ module.exports = {
         var player = new Vimeo.Player(target);
 
         player.play();
-      })
+      });
     });
 
     /* Return to make later calls possible */
     return instance;
   /* Auto run */
   })()
-}
+};

@@ -7,9 +7,9 @@ module.exports = {
         element.parentNode.classList.add('image--is-loaded');
       }
     });
-  
+
     /* Return to make later calls possible */
     return instance;
   /* Auto run */
   })()
-}
+};

@@ -9,7 +9,7 @@ var
 Barba.Pjax.init();
 Barba.Prefetch.init();
 
-let barbaClicked = false;
+var barbaClicked = false;
 
 Barba.Dispatcher.on('linkClicked', function() {
   barbaClicked = true;
@@ -35,7 +35,7 @@ Barba.Dispatcher.on('transitionCompleted', function() {
     window.scroll({
       top: 0,
       behaviour: 'smooth'
-    })
+    });
   }
 });
 
@@ -53,7 +53,7 @@ var lgTransition = Barba.BaseTransition.extend({
     return new Promise(function(resolve, reject) {
       container.addEventListener('transitionend', function() {
         resolve();
-      })
+      });
     });
   },
   enter: function() {
@@ -72,4 +72,4 @@ var lgTransition = Barba.BaseTransition.extend({
 
 Barba.Pjax.getTransition = function() {
   return lgTransition;
-}
+};
