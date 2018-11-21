@@ -17,11 +17,7 @@
 @import "config/c-units";
 @import "config/c-fonts";
 
-@import "vendor/inview";
-@import "vendor/mailchimp";
-@import "vendor/lazyload";
-@import "vendor/headroom";
-@import "vendor/barba";
+@import "vendor/*";
 
 /* Base */
 @import "base/b-default";

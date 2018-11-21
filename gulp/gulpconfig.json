@@ -44,6 +44,7 @@
     "node_modules/in-view/dist/in-view.min.js",
     "node_modules/vanilla-lazyload/dist/lazyload.iife.js",
     "node_modules/barba.js/dist/barba.js",
+    "node_modules/pace-progress/pace.js",
 
     "bower_components/chj-framework/app/assets/js/chj-detect.js",
 
