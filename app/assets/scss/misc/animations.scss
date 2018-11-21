@@ -17,3 +17,13 @@
     animation-timing-function: $e-out__fast;
   }
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+  }
+}

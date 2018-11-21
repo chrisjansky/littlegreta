@@ -1,28 +1,21 @@
-.o-nav {
+@mixin nav {
   text-align: center;
-  
   color: $color-1;
+  @include media("≥laptop") { font-size: 1.125em; }
+}
 
-  @include media("≥laptop") {
-    font-size: 1.125em;
-  }
+@mixin nav-item {
+  @include media("<tablet") { display: block; }
 
-  &__link,
-  &__active {
-    @include media("<tablet") {
-      display: block;
-    }
+  padding-left: .5em;
+  padding-right: .5em;
 
-    padding-left: .5em;
-    padding-right: .5em;
+  margin: .5em;
+}
 
-    margin: .5em;
-  }
+@mixin nav-active {
+  color: currentColor;
+  background-color: transparent;
 
-  &__active {
-    color: currentColor;
-    background-color: transparent;
-
-    opacity: .5;
-  }
+  opacity: .5;
 }

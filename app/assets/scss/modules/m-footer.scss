@@ -30,10 +30,18 @@
   }
 
   &__nav {
+    @include nav;
     @include media("<tablet") {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
     }
+  }
+
+  @at-root [class^="m-footer__item"] {
+    @include nav-item;
+  }
+  .m-footer__item--active {
+    @include nav-active;
   }
 
   &__copyright {

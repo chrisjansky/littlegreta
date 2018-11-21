@@ -4,14 +4,15 @@ mixin sticky(active)
       include ../../svg/logo_symbol.svg
       strong.o-logo__text Little Greta
 
-    nav.m-sticky__nav.o-nav
+    nav.m-sticky__nav
       each instance in pages
         unless active == "index" && instance.anchor == active
           if active == instance.anchor
-            mark.o-nav__active= instance.name
+            mark.m-sticky__item--active= instance.name
           else
-            a.o-nav__link(href=instance.anchor, data-barba="reload")= instance.name
+            a.m-sticky__item(href=instance.anchor, data-barba="reload")= instance.name
 
-    button.m-sticky__toggle(type="button", data-toggle="menu") Menu
+    span.m-sticky__placeholder
 
-    button.m-sticky__close(type="button", data-toggle="menu") &times;
+    button.m-sticky__button--open(type="button" data-toggle="menu") Menu
+    button.m-sticky__button--close(type="button" data-toggle="menu") &times;

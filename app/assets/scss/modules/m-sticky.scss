@@ -27,7 +27,8 @@
 
   transform: translateY(-100%); /* Headroom */
 
-  &__logo {
+  &__logo,
+  &__button--open {
     transition: opacity $duration--xxl;
 
     .m-sticky:not(.headroom--pinned) & { opacity: 0; }
@@ -35,27 +36,53 @@
   }
 
   &__nav {
-    @include media("<tablet") { display: none; }
+    @include nav;
 
-    .menu--is-active & {
-      display: block;
-
+    @include media("<tablet") {
+      display: none;
       font-size: 2.5em;
       font-weight: $font__sans--light;
-    }
 
-    & > * {
-      opacity: 0;
-      transition: opacity $duration--xxl;
-    }
-    .headroom--pinned & > * { opacity: 1; }
-    @for $i from 1 through 5 {
-      .headroom--pinned & > :nth-child(#{$i}) { transition-delay: $duration--b + $i * .0625s; }
+      .menu--is-active & {
+        display: block;
+      }
     }
   }
 
-  &__toggle,
-  &__close {
+  @at-root [class^="m-sticky__item"] {
+    @include nav-item;
+
+    .menu--is-active &,
+    .headroom--pinned & {
+      animation: appear $duration--xl $e-out__fast backwards;
+    }
+
+    @include media("<tablet") {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * .0625s;
+        }
+      }
+    }
+    @include media("≥tablet") {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: $duration--l + $i * .0625s; /* After headroom finishes */
+        }
+      }
+    }
+  }
+  &__item--active {
+    @include nav-active;
+  }
+
+  &__placeholder {
+    @include media("≥tablet") {
+      width: 8em; /* Counterbalance to .m-sticky__logo */
+    }
+  }
+
+  @at-root [class^="m-sticky__button"] {
     appearance: none;
     padding: .25em;
     border: 0;
@@ -64,38 +91,29 @@
     font-size: .875em;
     font-family: inherit;
     color: $color-1;
+    line-height: 1;
+    text-transform: uppercase;
 
     &:focus {
       outline: 0;
     }
+
+    @include media("≥tablet") { display: none; }
   }
 
-  &__toggle {
-    text-transform: uppercase;
+  &__button--open {
     letter-spacing: .125em;
 
-    .menu--is-active & {
-      display: none;
-    }
-
-    @include media("≥tablet") {
-      display: none;
-    }
+    .menu--is-active & { display: none; }
   }
 
-  &__close {
+  &__button--close {
     position: absolute;
     top: .5em;
     right: .5em;
 
     font-size: 1.5em;
 
-    body:not(.menu--is-active) & {
-      display: none;
-    }
-
-    @include media("≥tablet") {
-      display: none;
-    }
+    body:not(.menu--is-active) & { display: none; }
   }
 }

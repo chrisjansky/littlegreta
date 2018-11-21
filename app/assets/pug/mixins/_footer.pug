@@ -6,13 +6,13 @@ mixin footer(active)
           include ../../svg/logo_symbol.svg
           strong.o-logo__text Little Greta
 
-        nav.m-footer__nav.o-nav
+        nav.m-footer__nav
           each instance in pages
             unless active == "index" && instance.anchor == active
               if active == instance.anchor
-                mark.o-nav__active(data-present="child")= instance.name
+                mark.m-footer__item--active(data-present="child")= instance.name
               else
-                a.o-nav__link(href=instance.anchor data-present="child")= instance.name
+                a.m-footer__item(href=instance.anchor data-present="child")= instance.name
 
         include ../partial/_social
 
