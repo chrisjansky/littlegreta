@@ -27,8 +27,7 @@
 
   transform: translateY(-100%); /* Headroom */
 
-  &__logo,
-  &__dropdown {
+  &__logo {
     transition: opacity $duration--xxl;
 
     .m-sticky:not(.headroom--pinned) & { opacity: 0; }
@@ -52,29 +51,6 @@
     .headroom--pinned & > * { opacity: 1; }
     @for $i from 1 through 5 {
       .headroom--pinned & > :nth-child(#{$i}) { transition-delay: $duration--b + $i * .0625s; }
-    }
-  }
-
-  &__dropdown {
-    @include media("<tablet") { display: none; }
-    margin-left: 5%; /* Center the navigation */
-
-    .menu--is-active & {
-      display: block;
-    }
-  }
-
-  &__content {
-    @include media("<tablet") {
-      top: auto;
-      bottom: 100%;
-
-      &:before {
-        content: none;
-      }
-      &:after {
-        content: "";
-      }
     }
   }
 
