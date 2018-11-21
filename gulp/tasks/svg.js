@@ -10,8 +10,8 @@ module.exports = function(config, gulp, plugins, del) {
     return gulp.src(config.dev.svgSourceGlob)
       .pipe(plugins.imagemin([
         plugins.imagemin.svgo({plugins: [
-          {removeUselessStrokeAndFill: false},
-          {cleanupIDs: false}
+          {cleanupIDs: false},
+          {removeViewBox: false}
         ]})
       ]))
       .pipe(gulp.dest(config.dev.svgBuild));
