@@ -10,8 +10,10 @@
   &__logo,
   &__title,
   &__text {
-    transition: opacity $duration--l;
     html.wf-loading & { opacity: 0; }
+    html.wf-active & {
+      animation: appear $duration--xl $e-out__fast backwards;
+    }
   }
 
   &__logo {
