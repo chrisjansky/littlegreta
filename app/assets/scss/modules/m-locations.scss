@@ -3,7 +3,7 @@
   height: 65vmin;
 
   &__body {
-    padding: 1.125em;
+    padding: 1em;
 
     display: flex;
     flex-direction: column;
@@ -25,17 +25,7 @@
     margin: 0 auto;
 
     cursor: default;
-    font-size: 1.5em;
-    font-weight: $font__sans--regular;
-
-    @include media("≥tablet") {
-      font-size: 3.5vmax;
-      font-weight: $font__sans--light;
-      line-height: $leading--s;
-    }
-    @include media("≥desktop") {
-      line-height: $leading--xs;
-    }
+    @include title-fluid;
   }
 
   &__actions {

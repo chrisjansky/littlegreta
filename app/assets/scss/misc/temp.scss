@@ -18,7 +18,7 @@
 .blur--blue {
   &:before {
     mix-blend-mode: overlay;
-    background-image: radial-gradient(farthest-side at 25% 25%, hsb(190, 60, 100), hsb(260, 100, 20));
+    background-image: radial-gradient(farthest-side at 25% 25%, hsb(190, 70, 100), hsb(260, 100, 20));
   }
 }
 
@@ -27,7 +27,7 @@
 
   &:before {
     mix-blend-mode: overlay;
-    background-image: radial-gradient(farthest-side at 75% 25%, hsb(170, 40, 100), hsb(210, 100, 20));
+    background-image: radial-gradient(farthest-side at 75% 25%, hsb(170, 40, 100), hsb(240, 100, 30));
   }
 }
 
@@ -36,7 +36,7 @@
 
   &:before {
     mix-blend-mode: color-dodge;
-    background-image: radial-gradient(farthest-side at 75% 25%, hsb(330, 90, 60), hsb(220, 100, 40));
+    background-image: radial-gradient(farthest-side at 75% 25%, hsb(20, 90, 80), hsb(220, 100, 40));
   }
 }
 

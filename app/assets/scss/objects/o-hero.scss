@@ -123,13 +123,6 @@
     margin: 0 auto;
 
     cursor: default;
-    font-size: 1.5em;
-    font-weight: $font__sans--regular;
-
-    @include media("≥tablet") {
-      font-size: 3.5vmax;
-      font-weight: $font__sans--light;
-      line-height: $leading--s;
-    }
+    @include title-fluid;
   }
 }

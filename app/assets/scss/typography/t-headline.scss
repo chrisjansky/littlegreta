@@ -37,6 +37,7 @@
 @mixin head--3($light: true) {
   font-size: 1.25em;
   font-weight: $font__sans--regular;
+  line-height: $leading--s;
 
   @include media("≥tablet") {
     font-size: 1.5em;

@@ -1,15 +1,9 @@
 .m-intro {
-  @at-root [class^="m-intro--"] {
-    @include wrap;
-    text-align: center;
+  @include wrap;
+  text-align: center;
 
-    color: hsb(215, 100, 100);
-    background-color: white;
-  }
-
-  &--teal { color: hsb(180, 100, 70); }
-  &--purple { color: hsb(270, 80, 60); }
-  &--green { color: hsb(140, 100, 60); }
+  color: hsb(215, 100, 100);
+  background-color: white;
 
   /* Prevent Typekit FOUT */
   &__logo,
@@ -61,10 +55,7 @@
   }
 
   &__nav-active {
-    color: currentColor;
-    background-color: transparent;
-
-    opacity: .5;
+    @include nav-active;
   }
 }
 
