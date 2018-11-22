@@ -3,7 +3,7 @@ extends templates/_site
 block template-content
   +sticky("index")
 
-  .m-intro--blue(data-blur="#00D4FF, #001EB3")
+  .m-intro--blue.blur--blue
     a.m-intro__logo.o-logo--normal(href="index")
       include ../svg/logo_symbol.svg
     h1.m-intro__title We are #[strong Little Greta], <br>an award-winning agency helping brands launch, relaunch and grow.
@@ -21,15 +21,11 @@ block template-content
   include section/_featured
   
   .m-end
-    .m-locations(data-inview="normal")
+    .m-locations(data-ruscha="#FF0000, #FFAA00, #00FFAA, #0001B3, #FF8000, #0080FF")
       .m-locations__body
-        .m-locations__contents
-          h2.m-locations__title(data-inview="short") Get in Touch
-
-          .m-locations__outro(data-inview="short")
-            p We have offices in the UK, Germany, the USA, and the Czech Republic, where Little Greta originates and where much of our team and infrastructure remains.
-            .m-locations__actions
-              a.m-locations__button--primary(href="mailto:info@littlegreta.co.uk" data-inview="short") Get in Touch
-              a.m-locations__button--secondary(href="contact-us.html" data-inview="short") Our Locations
+        h1.m-locations__text(data-inview="short") We have offices in the <mark class="m-locations__mark" data-mark data-present="container">UK</mark>, <mark class="m-locations__mark" data-mark data-present="container">Germany</mark>, the <mark class="m-locations__mark" data-mark data-present="container">USA</mark>, and the <mark class="m-locations__mark" data-mark data-present="container">Czech Republic</mark>, where Little Greta originates and where much of our team and infrastructure remains.
+        .m-locations__actions
+          a.m-locations__button--primary(href="mailto:info@littlegreta.co.uk" data-inview="short") <span class="m-locations__arrow">&rarr;</span>&thinsp;Get in Touch
+          a.m-locations__button--secondary(href="contact-us.html" data-inview="short") <span class="m-locations__arrow">&rarr;</span>&thinsp;Our Locations
 
     +footer("index")

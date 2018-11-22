@@ -15,6 +15,9 @@ var barbaClicked = false;
 
 Barba.Dispatcher.on('linkClicked', function() {
   barbaClicked = true;
+
+  /* Destroy previous Waypoints */
+  Waypoint.destroyAll();
 });
 
 addEventListener('popstate', function (event) {
@@ -23,12 +26,10 @@ addEventListener('popstate', function (event) {
 
 /* Event based here */
 Barba.Dispatcher.on('newPageReady', function() {
-  /* Destroy previous Waypoints */
-  Waypoint.destroyAll();
-
   lgInview.init();
   lgLazy.init();
   lgToggle.attach();
+  lgTwo.destroy();
 });
 
 /* Direct DOM manupulation here */
@@ -79,3 +80,9 @@ var lgTransition = Barba.BaseTransition.extend({
 Barba.Pjax.getTransition = function() {
   return lgTransition;
 };
+
+var markEl = document.querySelectorAll("[data-mark]");
+markEl.forEach(function(instance) {
+  var elToPrepend = document.createElement("span");
+  instance.prepend(elToPrepend);
+});

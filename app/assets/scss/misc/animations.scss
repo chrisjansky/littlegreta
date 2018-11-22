@@ -27,3 +27,12 @@
     opacity: 1;
   }
 }
+
+@keyframes mark {
+  from {
+    transform: scale(0, 1) skewX(-10deg);
+  }
+  to {
+    transform: scale(1, 1) skewX(0deg);
+  }
+}
