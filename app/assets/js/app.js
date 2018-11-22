@@ -80,9 +80,3 @@ var lgTransition = Barba.BaseTransition.extend({
 Barba.Pjax.getTransition = function() {
   return lgTransition;
 };
-
-var markEl = document.querySelectorAll("[data-mark]");
-markEl.forEach(function(instance) {
-  var elToPrepend = document.createElement("span");
-  instance.prepend(elToPrepend);
-});

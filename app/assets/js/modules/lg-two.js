@@ -2,10 +2,17 @@ var twoObj, instance;
 
 module.exports = {
   render: (function render() {
+    var markEl = document.querySelectorAll("[data-mark]");
+    markEl.forEach(function(instance) {
+      var elToPrepend = document.createElement("span");
+      instance.prepend(elToPrepend);
+    });
+
     instance = document.querySelector("[data-ruscha]");
-    
+
     if (instance !== null) {
       var colors = instance.dataset.ruscha.split(", ");
+      var orb = instance.dataset.orb.split(", ");
       colors.index = 0;
 
       var blurW = instance.offsetWidth;
@@ -45,8 +52,8 @@ module.exports = {
       var radialGradient = twoObj.makeRadialGradient(
         0, 0,
         radius,
-        new Two.Stop(0.25, '#08194D', 1),
-        new Two.Stop(0.75, 'rgb(0, 0, 255)', 0)
+        new Two.Stop(0.25, orb[0], 1),
+        new Two.Stop(0.75, orb[1], 0)
       );
 
       var vignette = twoObj.makeRectangle(twoObj.width / 2, twoObj.height / 2, twoObj.width, twoObj.height);

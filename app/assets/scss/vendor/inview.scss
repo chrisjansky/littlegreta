@@ -46,3 +46,34 @@
     transition-delay: 0s;
   }
 }
+
+[data-mark] {
+  position: relative;
+  white-space: nowrap;
+
+  color: currentColor;
+  background-color: inherit;
+
+  span {
+    position: absolute;
+    height: .035em;
+    bottom: .1em;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    background-color: white;
+    transform: scale(1, 0);
+    transform-origin: center left;
+  }
+
+  &.is--present span {
+    animation: mark $duration--xxl $e-out__fast forwards;
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-of-type(#{$i}) span {
+      animation-delay: $duration--b + $i * .0625s;
+    }
+  }
+}

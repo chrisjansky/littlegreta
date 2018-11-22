@@ -26,10 +26,6 @@
     }
   }
 
-  &__title {
-    @include head--2;
-  }
-
   &__name {
     color: $grey--200;
 

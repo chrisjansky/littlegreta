@@ -38,36 +38,6 @@
     }
   }
 
-  &__mark {
-    position: relative;
-
-    color: currentColor;
-    background-color: inherit;
-
-    span {
-      position: absolute;
-      top: .1em;
-      bottom: -.05em;
-      left: -.1em;
-      right: -.1em;
-      z-index: -1;
-
-      background-color: rgba($grey--000, .75);
-      transform: scale(1, 0);
-      transform-origin: center left;
-    }
-
-    &.is--present span {
-      animation: mark $duration--xxl $e-out__fast forwards;
-    }
-
-    @for $i from 1 through 4 {
-      &:nth-of-type(#{$i}) span {
-        animation-delay: $duration--b + $i * .0625s;
-      }
-    }
-  }
-
   &__actions {
     display: flex;
     justify-content: center;
