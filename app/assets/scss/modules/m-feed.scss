@@ -38,7 +38,7 @@
     bottom: 0;
 
     width: calc(50% - .5em);
-     
+
     margin: .25em;
     overflow: hidden;
 
@@ -57,7 +57,7 @@
     height: 100%;
     object-fit: cover;
 
-    transition: opacity .25s, transform 10s;
+    transition: opacity $duration--b, transform 10s;
 
     .m-feed__item:hover & {
       opacity: .75;
@@ -157,7 +157,7 @@
 
   &__outro {
     @include head--3("true");
-    
+
     margin: 2.5em .5em 0;
   }
 
@@ -200,7 +200,7 @@
 .media--instagram {
   position: relative;
 
-  flex-basis: 100%;  
+  flex-basis: 100%;
 
   @include media("≥tablet") {
     flex-basis: 50%;

@@ -2,7 +2,7 @@
   transition: opacity $duration--xxl, transform $duration--xxl $e-out__fast;
 
   @for $i from 1 through 10 {
-    &:nth-child(#{$i + 1}n) { transition-delay: $i * .0625s; }
+    &:nth-child(#{$i + 1}n) { transition-delay: $i * $duration--xs; }
   }
 
   &:not(.is--in-view) {
@@ -36,7 +36,7 @@
   transition: opacity $duration--xxl, transform $duration--xxl $e-out__fast;
 
   @for $i from 1 through 10 {
-    &:nth-child(#{$i}) { transition-delay: $duration--l + $i * .0625s; }
+    &:nth-child(#{$i}) { transition-delay: $duration--l + $i * $duration--xs; }
   }
 
   [data-present="container"]:not(.is--present) & {
@@ -73,7 +73,7 @@
 
   @for $i from 1 through 4 {
     &:nth-of-type(#{$i}) span {
-      animation-delay: $duration--b + $i * .0625s;
+      animation-delay: $duration--b + $i * $duration--xs;
     }
   }
 }

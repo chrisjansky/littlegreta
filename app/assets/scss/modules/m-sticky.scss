@@ -60,14 +60,14 @@
     @include media("<tablet") {
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
-          animation-delay: $i * .0625s;
+          animation-delay: $i * $duration--xs;
         }
       }
     }
     @include media("≥tablet") {
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
-          animation-delay: $duration--l + $i * .0625s; /* After headroom finishes */
+          animation-delay: $duration--l + $i * $duration--xs; /* After headroom finishes */
         }
       }
     }
