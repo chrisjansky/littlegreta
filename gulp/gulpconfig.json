@@ -45,6 +45,9 @@
     "node_modules/vanilla-lazyload/dist/lazyload.iife.js",
     "node_modules/barba.js/dist/barba.js",
     "node_modules/pace-progress/pace.js",
+    "node_modules/two.js/build/two.js",
+    "node_modules/waypoints/lib/noframework.waypoints.js",
+    "node_modules/waypoints/lib/shortcuts/inview.js",
 
     "app/assets/temp/bundle.js"
   ]

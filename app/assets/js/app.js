@@ -4,7 +4,8 @@ var
   lgHeadroom = require('./modules/lg-headroom.js'),
   lgLazy = require('./modules/lg-lazyload.js'),
   lgInview = require('./modules/lg-inview.js'),
-  lgToggle = require('./modules/lg-toggle.js');
+  lgToggle = require('./modules/lg-toggle.js'),
+  lgTwo = require('./modules/lg-two.js');
 
 /* Barba.js */
 Barba.Pjax.init();
@@ -22,14 +23,18 @@ addEventListener('popstate', function (event) {
 
 /* Event based here */
 Barba.Dispatcher.on('newPageReady', function() {
-  lgLazy.init();
+  /* Destroy previous Waypoints */
+  Waypoint.destroyAll();
+
   lgInview.init();
+  lgLazy.init();
   lgToggle.attach();
 });
 
 /* Direct DOM manupulation here */
 Barba.Dispatcher.on('transitionCompleted', function() {
   lgHeadroom.init();
+  lgTwo.render();
 
   /* Don't change scroll position if back button pressed */
   if (barbaClicked) {

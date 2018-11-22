@@ -1,10 +1,15 @@
 .m-intro {
-  text-align: center;
+  @at-root [class^="m-intro--"] {
+    @include wrap;
+    text-align: center;
 
-  color: $color-1;
-  background-color: white;
+    color: hsb(215, 100, 100);
+    background-color: white;
+  }
 
-  @include wrap;
+  &--teal { color: hsb(180, 100, 70); }
+  &--purple { color: hsb(270, 80, 60); }
+  &--green { color: hsb(140, 100, 60); }
 
   /* Prevent Typekit FOUT */
   &__logo,
@@ -24,6 +29,7 @@
     max-width: 20em;
     margin: 0 auto;
 
+    cursor: default;
     @include head--1(false);
 
     strong {
@@ -42,7 +48,7 @@
     display: flex;
     justify-content: space-between;
 
-    margin: 2em auto;
+    margin: 2em auto 0;
     max-width: $width--b;
 
     @include media("<tablet") { font-size: .75em; }
@@ -60,65 +66,14 @@
 
     opacity: .5;
   }
-
-  .m-intro__logo,
-  .m-intro__nav-link {
-    &:link, &:visited {
-      color: currentColor;
-    }
-    &:hover, &:active {
-      color: #444;
-    }
-  }
 }
 
-[class^="blur--"],
-[class*=" blur--"] {
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    pointer-events: none;
-
-    width: 100%;
-    height: 100%;
+.m-intro__logo,
+.m-intro__nav-link {
+  &:link, &:visited {
+    color: currentColor;
   }
-}
-
-.blur--blue {
-  &:before {
-    mix-blend-mode: overlay;
-    background-image: radial-gradient(farthest-side at 25% 25%, hsb(190, 60, 100), hsb(260, 100, 20));
-  }
-}
-
-.blur--teal {
-  color: hsb(190, 90, 70);
-
-  &:before {
-    mix-blend-mode: overlay;
-    background-image: radial-gradient(farthest-side at 75% 25%, hsb(170, 40, 100), hsb(210, 100, 20));
-  }
-}
-
-.blur--purple {
-  color: hsb(270, 80, 60);
-
-  &:before {
-    mix-blend-mode: color-dodge;
-    background-image: radial-gradient(farthest-side at 75% 25%, hsb(330, 90, 60), hsb(220, 100, 40));
-  }
-}
-
-.blur--green {
-  color: hsb(120, 100, 30);
-
-  &:before {
-    mix-blend-mode: screen;
-    background-image: radial-gradient(farthest-side at 25% 25%, hsb(70, 100, 80), hsb(160, 100, 40));
+  &:hover, &:active {
+    color: #444;
   }
 }
