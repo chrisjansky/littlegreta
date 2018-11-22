@@ -46,11 +46,6 @@
     "node_modules/barba.js/dist/barba.js",
     "node_modules/pace-progress/pace.js",
 
-    "bower_components/chj-framework/app/assets/js/chj-detect.js",
-
-    "app/assets/temp/bundle.js",
-    "app/assets/js/lg-base.js",
-    "app/assets/js/lg-main.js",
-    "app/assets/js/lg-hover.js"
+    "app/assets/temp/bundle.js"
   ]
 }

@@ -1,5 +1,6 @@
 /* Store for later and initialize inside */
 var
+  lgDetect = require('./modules/lg-detect.js'),
   lgHeadroom = require('./modules/lg-headroom.js'),
   lgLazy = require('./modules/lg-lazyload.js'),
   lgInview = require('./modules/lg-inview.js'),
