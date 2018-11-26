@@ -2,7 +2,7 @@
   text-align: center;
 
   &__wrap {
-    @include wrap--slim;
+    @include wrap;
   }
 
   &__header {
@@ -11,16 +11,12 @@
     margin-bottom: 1.5em;
 
     @include media("≥tablet") {
-      margin-bottom: 3em;
+      margin-bottom: 4em;
     }
   }
 
   &__headline {
     @include head--2;
-  }
-
-  &__title {
-    @include head--3;
   }
 
   &__intro {
