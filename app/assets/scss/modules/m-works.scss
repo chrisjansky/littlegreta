@@ -5,29 +5,6 @@
     @include wrap;
   }
 
-  &__header {
-    @include collapse-children;
-
-    margin-bottom: 1.5em;
-
-    @include media("≥tablet") {
-      margin-bottom: 4em;
-    }
-  }
-
-  &__headline {
-    @include head--2;
-  }
-
-  &__intro {
-    color: $grey--200;
-    @include container(30em);
-
-    @include media("≥tablet") {
-      font-size: 1.25em;
-    }
-  }
-
   &__loop {
     display: grid;
     grid-gap: 1em;

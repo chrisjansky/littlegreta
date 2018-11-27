@@ -35,6 +35,7 @@ $duration--xs: .0625s;
 $e-in__fast:     cubic-bezier(0.95, 0.05, 0.795, 0.035);  /* easeInExpo */
 $e-out__fast:    cubic-bezier(0.19, 1, 0.22, 1);          /* easeOutExpo */
 $e-both__fast:   cubic-bezier(1, 0, 0, 1);                /* easeInOutExpo */
+$e-out__medium:  cubic-bezier(0.165, 0.84, 0.44, 1);      /* easeOutQuart */
 $e-both__medium: cubic-bezier(0.77, 0, 0.175, 1);         /* easeInOutQuart */
 
 /* Z-index */
