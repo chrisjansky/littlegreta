@@ -48,8 +48,8 @@
       transition: opacity $duration--l;
     }
 
-    .image--is-loaded &:after       { opacity: .5; }
-    a.image--is-loaded:hover &:after { opacity: .25; }
+    .image--is-loaded &:after { opacity: .5; }
+    .device--is-desktop a.image--is-loaded:hover &:after { opacity: .25; }
   }
 
   &__title {
