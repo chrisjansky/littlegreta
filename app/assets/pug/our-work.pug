@@ -20,6 +20,17 @@ block template-content
 
   section.m-works
     .m-works__wrap
+      header.m-works__header
+        h1.m-works__title(data-inview="short")
+          span.t-gradient--1 WIP
+          | , in the pipeline and pitching
+        ul.m-works__wip
+          each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            li(data-inview="short")
+              +dummy(10, "words")
+              span Country
+      h2.m-works__title(data-inview="short") Recently 
+        span.t-gradient--2 launched
       .m-works__loop
         each item, index in ["pw_Ube1_rhs", "jUwvjOmCTWc", "Qe_dS4-jO6E", "asZvnGnpL7Q", "HmREZuu4XuY", "Oyf11MfUfE4", "Kx8DDqb6Wbw", "1IN9WyQp56A", "TGYQVFiYpWw", "YhJkERWHFnU", "IF2MIzP2wXI", "d3-rmjTcblc", "QouiCn7u6kw", "hqCEQTc5gZA", "pw_Ube1_rhs", "asZvnGnpL7Q", "HmREZuu4XuY", "video"]
           a.o-work(href="case-study", class=index < 6 ? "s-portfolio__item--large" : "s-portfolio__item", data-inview="normal")

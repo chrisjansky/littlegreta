@@ -32,4 +32,49 @@
       margin-top: 4em;
     }
   }
+
+  &__header {
+    @include collapse-children;
+    margin-bottom: 2em;
+
+    @include media("≥tablet") {
+      margin-bottom: 3em;
+    }
+  }
+
+  &__title {
+    @include head--3;
+  }
+
+  &__wip {
+    list-style-type: none;
+    text-align: left;
+    line-height: $leading--s;
+    max-width: 70em;
+    margin: 0 auto;
+
+    padding-left: 0;
+
+    li {
+      margin-bottom: .5em;
+    }
+
+    span {
+      color: $grey--600;
+    }
+
+    @include media("≥phablet") {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 3.5em; /* Optical center */
+
+      li {
+        flex-basis: 50%;
+      }
+    }
+
+    @include media("≥tablet") {
+      font-size: 1.25em;
+    }
+  }
 }
