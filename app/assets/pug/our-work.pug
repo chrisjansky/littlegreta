@@ -24,9 +24,9 @@ block template-content
         h1.m-works__title(data-inview="short")
           span.t-gradient--1 WIP
           | , in the pipeline and pitching
-        ul.m-works__wip
+        ul.m-works__wip(data-inview="short")
           each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-            li(data-inview="short")
+            li
               +dummy(10, "words")
               span Country
       h2.m-works__title(data-inview="short") Recently 

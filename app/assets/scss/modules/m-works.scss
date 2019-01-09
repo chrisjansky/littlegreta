@@ -48,14 +48,14 @@
 
   &__wip {
     list-style-type: none;
-    text-align: left;
     line-height: $leading--s;
-    max-width: 70em;
+    max-width: 75em;
     margin: 0 auto;
 
     padding-left: 0;
 
     li {
+      color: $grey--200;
       margin-bottom: .5em;
     }
 
@@ -64,16 +64,15 @@
     }
 
     @include media("≥phablet") {
-      display: flex;
-      flex-wrap: wrap;
-      padding-left: 3.5em; /* Optical center */
-
-      li {
-        flex-basis: 50%;
-      }
+      columns: 2;
+      column-gap: 1em;
     }
 
-    @include media("≥tablet") {
+    @include media("≥desktop") {
+      font-size: 1.125em;
+    }
+
+    @include media("≥widescreen") {
       font-size: 1.25em;
     }
   }
