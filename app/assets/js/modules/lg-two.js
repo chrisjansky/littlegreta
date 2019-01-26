@@ -64,16 +64,22 @@ module.exports = {
       var mouse = new Two.Vector(twoObj.width / 2, twoObj.height / 2);
       var destination = new Two.Vector();
 
-    $(window)
-      .bind('resize', function(e) {
-        blurW = instance.offsetWidth;
-        blurH = instance.offsetHeight;
+    window.addEventListener('resize', function(e) {
+      blurW = instance.offsetWidth;
+      blurH = instance.offsetHeight;
 
-        twoObj.trigger('resize');
-      })
-      .bind('mousemove', function(e) {
-        mouse.set(e.clientX, e.clientY);
-      });
+      twoObj.trigger('resize');
+    });
+    window.addEventListener('mousemove', function(e) {
+      mouse.set(e.clientX, e.clientY);
+    });
+
+    window.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+      var touch = e.originalEvent.changedTouches[0];
+      mouse.set(touch.pageX, touch.pageY);
+      return false;
+    });
 
     twoObj
       .bind('resize', function() {
@@ -111,6 +117,9 @@ module.exports = {
           destination
             .subSelf(radialGradient.center)
             .multiplyScalar(0.1)
+        );
+        radialGradient.focal.copy(
+          radialGradient.center.multiplyScalar(0.75)
         );
 
         var o = linearGradient.stops[1].offset;
