@@ -1,3 +1,5 @@
+console.info("%c Website design & front-end: Christian Jánský; ►www.christianjansky.name", "font-size: 1.25em;");
+
 /* Store for later and initialize inside */
 var
   lgDetect = require('./modules/lg-detect.js'),
