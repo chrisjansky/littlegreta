@@ -180,19 +180,21 @@
       color: $c-instagram;
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 100;
-      pointer-events: none;
+    @supports (mix-blend-mode: overlay) {
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        pointer-events: none;
 
-      width: 100%;
-      height: 100%;
+        width: 100%;
+        height: 100%;
 
-      background-image: $gradient--instagram;
-      mix-blend-mode: overlay;
+        background-image: $gradient--instagram;
+        mix-blend-mode: overlay;
+      }
     }
   }
 }
